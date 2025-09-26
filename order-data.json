@@ -1,0 +1,92 @@
+{
+  "orderInfo": {
+    "orderNumber": "ORD-2024-001234",
+    "orderDate": "15 October 2024",
+    "orderTime": "2:30 PM",
+    "salesCrew": "Sarah Johnson",
+    "retailLocation": "Castlery Sydney"
+  },
+  "items": [
+    {
+      "productName": "Sebastian 3-Seater Sofa",
+      "options": "Colour: Charcoal Grey | Fabric: Premium Linen",
+      "unitPrice": "$1,299.00",
+      "originalPrice": "$1,599.00",
+      "quantity": 1,
+      "deliveryTime": "4-6 weeks",
+      "isClearance": true,
+      "isCustomized": false
+    },
+    {
+      "productName": "Oslo Coffee Table",
+      "options": "Size: Large | Material: Oak Wood",
+      "unitPrice": "$599.00",
+      "originalPrice": null,
+      "quantity": 1,
+      "deliveryTime": "2-3 weeks",
+      "isClearance": false,
+      "isCustomized": false
+    },
+    {
+      "productName": "Luna Floor Lamp",
+      "options": "Finish: Black | Bulb: LED (included)",
+      "unitPrice": "$199.00",
+      "originalPrice": null,
+      "quantity": 2,
+      "deliveryTime": "1-2 weeks",
+      "isClearance": false,
+      "isCustomized": false
+    }
+  ],
+  "pricing": {
+    "itemSubtotal": "$2,296.00",
+    "shipping": "$99.00",
+    "services": {
+      "current": "$150.00",
+      "original": "$200.00",
+      "name": "Assembly Service"
+    },
+    "promotions": [
+      {
+        "name": "Early Bird Discount",
+        "amount": "-$50.00"
+      }
+    ],
+    "taxTotal": "$249.50",
+    "displayTotal": "$2,494.50"
+  },
+  "addresses": {
+    "shipping": {
+      "firstName": "Emma",
+      "lastName": "Thompson",
+      "company": "Thompson Design Studio",
+      "address1": "123 Collins Street",
+      "address2": "Level 15, Suite 1502",
+      "city": "Melbourne",
+      "region": "VIC",
+      "zip": "3000",
+      "country": "Australia",
+      "phone": "+61 412 345 678"
+    },
+    "billing": {
+      "firstName": "Emma",
+      "lastName": "Thompson",
+      "company": "Thompson Design Studio",
+      "address1": "123 Collins Street",
+      "address2": "Level 15, Suite 1502",
+      "city": "Melbourne",
+      "region": "VIC",
+      "zip": "3000",
+      "country": "Australia",
+      "phone": "+61 412 345 678"
+    }
+  },
+  "delivery": {
+    "remarks": "Please call 30 minutes before delivery. Access via main entrance, security code: 1234. Leave with concierge if no answer.",
+    "paymentMethods": [
+      "Credit Card ending in 4567",
+      "Visa •••• 4567"
+    ],
+    "shippingPreference": "White Glove Delivery - Professional assembly and setup included. Delivery team will call 1 hour before arrival."
+  }
+}
