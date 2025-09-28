@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+
+      @font-face {
+        font-family: "MinervaModern";
+        src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
+          url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff")
+            format("woff");
+      }
+
+      html {
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table
+      cellpadding="0"
+      cellspacing="0"
+      style="width: 100%; border: 0; background-color: #f2f2f2"
+    >
+      <tbody style="background-color: #f2f2f2">
+        <tr>
+          <td>
+            <table
+              cellpadding="0"
+              cellspacing="0"
+              style="
+                margin: 0 auto;
+                width: 1080px;
+                border: 0;
+                background-color: #fff;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      cellpadding="0"
+                      cellspacing="0"
+                      style="
+                        width: 1080px;
+                        border: 0;
+                        font-family: poppins, Arial, Helvetica, sans-serif;
+                        background-color: #773925;
+                      "
+                    >
+                      <tbody>
+                        <!-- AU header -->
+                        <tr>
+                          <td>
+                            <table
+                              cellspacing="0"
+                              cellpadding="0"
+                              style="
+                                padding: 30px 0;
+                                width: 100%;
+                                border: 0;
+                                text-align: center;
+                              "
+                            >
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: center">
+                                    <a
+                                      href="https://www.castlery.com/au"
+                                      style="
+                                        display: inline-block;
+                                        border: none;
+                                        outline: none;
+                                      "
+                                      title="Castlery.com"
+                                      target="_blank"
+                                    >
+                                      <img
+                                        src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636338526/email/castlery-logo-terracotta.png"
+                                        width="155"
+                                        style="
+                                          display: inline-block;
+                                          border: none;
+                                          outline: none;
+                                        "
+                                        alt="Castlery"
+                                      />
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <!-- AU Banner -->
+                        <tr>
+                          <td style="text-align: center; padding: 10px 50px">
+                            Good news: your swatches are on their way!
+                          </td>
+                        </tr>
+                        <!-- 01 -->
+                        <tr>
+                          <td style="text-align: center">
+                            <!-- banner -->
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              style="padding: 24px 0; width: 100%; border: 0"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: center">
+                                    <img
+                                      src="https://cslr-email.s3-ap-southeast-1.amazonaws.com/ERP/swatch-email/banner_v1.png"
+                                      width="1080"
+                                      height="300"
+                                      style="display: inline-block"
+                                      alt="Banner.jpg"
+                                    />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- title -->
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              style="
+                                position: relative;
+                                margin: 0 auto;
+                                width: 861px;
+                                background-color: #fff;
+                                z-index: 8;
+                              "
+                            >
+                              <tbody>
+                                <tr>
+                                  <td height="65">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td
+                                    style="
+                                      font: bold 30px MinervaModern, Arial,
+                                        Helvetica, sans-serif;
+                                      text-align: center;
+                                    "
+                                  >
+                                    Hey, ${customer.firstname},
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="45">&nbsp;</td>
+                                </tr>
+
+                                <tr>
+                                  <td
+                                    style="
+                                      font-size: 16px;
+                                      line-height: 1.5;
+                                      text-align: center;
+                                    "
+                                  >
+                                    Your swatch order&nbsp;
+                                    <span style="font-weight: bold"
+                                      >&lt;#${transaction.custbody_cslr_sales_order_number}&gt;</span
+                                    >&nbsp; has just left our warehouse and is
+                                    on its way to you! It may take up to 2 weeks
+                                    for it to arrive in your mailbox.​<br />​<br />
+
+                                    In the meantime, feel free to
+                                    <a
+                                      href="https://www.castlery.com/au/contact-us"
+                                      target="_blank"
+                                      style="color: #a45b37"
+                                    >
+                                      contact us </a
+                                    >.if you have any questions.​
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td height="45">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      style="
+                                        margin: 0 auto;
+                                        width: 80%;
+                                        text-align: center;
+                                      "
+                                    >
+                                      <thead>
+                                        <tr style="background: #dbcfb5">
+                                          <th
+                                            style="
+                                              padding: 15px;
+                                              font-weight: bold;
+                                            "
+                                          >
+                                            Shipping Address
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            style="
+                                              padding: 30px;
+                                              border: 1px solid #dbcfb5;
+                                              text-align: center;
+                                            "
+                                          >
+                                          ${transaction.custbody_cslr_address1}<br />
+                                          <#if transaction.custbody_cslr_address2?length!=0>
+                                            ${transaction.custbody_cslr_address2}<br />
+                                          </#if>
+                                          ${transaction.custbody_cslr_city}
+                                          ${transaction.custbody_cslr_state}
+                                          ${transaction.custbody_cslr_zip},
+                                          ${transaction.custbody_cslr_country}
+                                        </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="65">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- 03 -->
+                            <!-- Terms Conditions -->
+                            <!-- Insert Product Recs Here -->
+                            <!-- End Product Recs -->
+                            <!-- Footer Links -->
+                          </td>
+                        </tr>
+                        <!-- Divider -->
+                        <tr>
+                          <td
+                            height="0"
+                            style="border-bottom: 1px solid #dbcfb5"
+                          ></td>
+                        </tr>
+                        <!-- Why shopping with us? -->
+                        <tr>
+                          <td>
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              style="
+                                width: 100%;
+                                border: 0;
+                                background-image: url('https://cslr-email.s3-ap-southeast-1.amazonaws.com/ERP/swatch-email/Lily-Sideboard_v1.png');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: 100% 100%;
+                              "
+                            >
+                              <tbody>
+                                <tr>
+                                  <td height="65">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td
+                                    style="
+                                      font: bold 30px MinervaModern, Arial,
+                                        Helvetica, sans-serif;
+                                      line-height: 36px;
+                                      text-align: center;
+                                    "
+                                  >
+                                    Things to love about shopping with us
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="45">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      style="width: 100%; border: 0"
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td style="width: 55%">
+                                            <table
+                                              cellpadding="0"
+                                              cellspacing="0"
+                                              style="width: 100%; border: 0"
+                                            >
+                                              <tbody>
+                                                <tr>
+                                                  <td>
+                                                    <a
+                                                      href="https://www.castlery.com/au/delivery"
+                                                      target="_blank"
+                                                      style="
+                                                        color: #a45b37;
+                                                        font: bolder 24px
+                                                            MinervaModern,
+                                                          Arial, Helvetica,
+                                                          sans-serif;
+                                                        line-height: 1.5;
+                                                        text-decoration: none;
+                                                        outline: none;
+                                                      "
+                                                    >
+                                                      Flat-rate shipping
+                                                    </a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td width="25">&nbsp;</td>
+                                                  <td>
+                                                    <a
+                                                      href="https://www.castlery.com/au/delivery"
+                                                      target="_blank"
+                                                      style="
+                                                        color: #666;
+                                                        font-size: 16px;
+                                                        line-height: 1.5;
+                                                        text-decoration: none;
+                                                        outline: none;
+                                                      "
+                                                    >
+                                                      We offer a simple,
+                                                      flat-rate fee on all
+                                                      orders.
+                                                    </a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td colspan="2" height="25">
+                                                    &nbsp;
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            <table
+                                              cellpadding="0"
+                                              cellspacing="0"
+                                              style="width: 100%; border: 0"
+                                            >
+                                              <tbody>
+                                                <tr>
+                                                  <td>
+                                                    <a
+                                                      href="https://www.castlery.com/au/sales-and-refunds"
+                                                      target="_blank"
+                                                      style="
+                                                        color: #a45b37;
+                                                        font: bolder 24px
+                                                            MinervaModern,
+                                                          Arial, Helvetica,
+                                                          sans-serif;
+                                                        line-height: 1.5;
+                                                        text-decoration: none;
+                                                        outline: none;
+                                                      "
+                                                    >
+                                                      30-day returns
+                                                    </a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td width="25">&nbsp;</td>
+                                                  <td>
+                                                    <a
+                                                      href="https://www.castlery.com/au/sales-and-refunds"
+                                                      target="_blank"
+                                                      style="
+                                                        color: #666;
+                                                        font-size: 16px;
+                                                        line-height: 1.5;
+                                                        text-decoration: none;
+                                                        outline: none;
+                                                      "
+                                                    >
+                                                      Just in case you change
+                                                      your mind.
+                                                    </a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td colspan="2" height="25">
+                                                    &nbsp;
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            <table
+                                              cellpadding="0"
+                                              cellspacing="0"
+                                              style="width: 100%; border: 0"
+                                            >
+                                              <tbody>
+                                                <tr>
+                                                  <td>
+                                                    <a
+                                                      href="https://www.castlery.com/au/warranty"
+                                                      target="_blank"
+                                                      style="
+                                                        color: #a45b37;
+                                                        font: bolder 24px
+                                                            MinervaModern,
+                                                          Arial, Helvetica,
+                                                          sans-serif;
+                                                        line-height: 1.5;
+                                                        text-decoration: none;
+                                                        outline: none;
+                                                      "
+                                                    >
+                                                      Purchase with WARRANTY
+                                                    </a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td width="25">&nbsp;</td>
+                                                  <td>
+                                                    <a
+                                                      href="https://www.castlery.com/au/warranty"
+                                                      target="_blank"
+                                                      style="
+                                                        color: #666;
+                                                        font-size: 16px;
+                                                        line-height: 1.5;
+                                                        text-decoration: none;
+                                                        outline: none;
+                                                      "
+                                                    >
+                                                      Shop with confidence.
+                                                      Check product listing for
+                                                      full warranty details.
+                                                    </a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td colspan="2" height="25">
+                                                    &nbsp;
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            In the meantime, start planning for your dream home
+                            with our full collection.
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td align="center">
+                            <a
+                              href="{{ event.payment_link }}"
+                              style="
+                                display: block;
+                                border: 1px solid #c1af86;
+                                color: #ffffff;
+                                font-family: 'Poppins', 'Helvetica Neue',
+                                  Helvetica, Arial, sans-serif;
+                                background-color: #a45b37;
+                                width: 188px;
+                                height: 48px;
+                                line-height: 48px;
+                                font-size: 18px;
+                                text-decoration: none;
+                              "
+                              target="_blank"
+                            >
+                              BROWSE ALL
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              style="
+                margin: 0 auto;
+                width: 1080px;
+                border: 0;
+                background-color: #773925;
+              "
+            >
+              <tr height="0">
+                <td style="padding: 0 50px">
+                  <div
+                    style="
+                      border-bottom-color: #c1af86;
+                      border-bottom-style: solid;
+                      border-bottom-width: 1px;
+                    "
+                  ></div>
+                </td>
+              </tr>
+            </table>
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              width="1080"
+              style="background-color: #773925"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      style="width: 980px"
+                    >
+                      <tbody>
+                        <tr>
+                          <td colspan="5" style="text-align: center">
+                            <a
+                              href="http://www.instagram.com/castleryAU"
+                              style="
+                                display: inline-block;
+                                font-size: 13px;
+                                text-decoration: none;
+                                margin: 0 20px;
+                              "
+                              target="_blank"
+                            >
+                              <img
+                                width="38"
+                                height="38"
+                                src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636338987/email/footer/IG.png"
+                                style="display: block"
+                              />
+                            </a>
+                            <a
+                              href="https://www.facebook.com/CastleryAU"
+                              style="
+                                display: inline-block;
+                                font-size: 13px;
+                                text-decoration: none;
+                                margin: 0 20px;
+                              "
+                              target="_blank"
+                            >
+                              <img
+                                width="38"
+                                height="38"
+                                src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636338988/email/footer/FB.png"
+                                style="display: block"
+                              />
+                            </a>
+                            <a
+                              href="http://www.pinterest.com/castleryAU"
+                              style="
+                                display: inline-block;
+                                font-size: 13px;
+                                text-decoration: none;
+                                margin: 0 20px;
+                              "
+                              target="_blank"
+                            >
+                              <img
+                                width="38"
+                                height="38"
+                                src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636338987/email/footer/Pinterest.png"
+                                style="display: block"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              font-size: 12px;
+                              font-family: 'SanomatSans';
+                              text-transform: uppercase;
+                              letter-spacing: 0.1em;
+                              text-align: center;
+                            "
+                          >
+                            <a
+                              href="https://www.castlery.com/au/terms-of-use"
+                              style="
+                                color: #dbcfb5;
+
+                                text-decoration: none;
+                              "
+                              >Terms of Use</a
+                            >
+                            <span style="color: #dbcfb5"> | </span>
+                            <a
+                              href="https://www.castlery.com/au/privacy-policy"
+                              style="
+                                color: #dbcfb5;
+
+                                text-decoration: none;
+                              "
+                              >Privacy Policy</a
+                            >
+                            <span style="color: #dbcfb5"> | </span>
+                            <a
+                              href="https://www.castlery.com/au/sales-and-refund"
+                              style="
+                                color: #dbcfb5;
+
+                                text-decoration: none;
+                              "
+                              >Sales Policy</a
+                            >
+                          </td>
+                        </tr>
+                        <tr height="53"></tr>
+                        <tr>
+                          <td
+                            style="
+                              font-size: 21px;
+                              text-align: center;
+                              color: #f7f3e7;
+                            "
+                          >
+                            Mailing Address: Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit, sed diam
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div
+      class="gmailfix"
+      style="white-space: nowrap; font: 15px courier; line-height: 0"
+    >
+      &nbsp;
+    </div>
+  </body>
+</html>
