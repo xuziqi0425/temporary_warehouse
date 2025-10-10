@@ -1,112 +1,142 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
 
-<head>
-	<style>
-		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+      @font-face {
+        font-family: "MinervaModern";
+        src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
+          url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff")
+            format("woff");
+      }
+    </style>
+  </head>
 
-		@font-face {
-			font-family: "MinervaModern";
-			src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
-				url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff") format("woff");
-		}
-	</style>
-</head>
+  <body>
+    <table
+      bgcolor="#f2f2f2"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+    >
+      <tbody>
+        <tr>
+          <td align="center" bgcolor="#f2f2f2">
+            <table
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              style="margin: 0 auto; background-color: #ffffff"
+              width="680"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      width="614"
+                    >
+                      <!-- AU header.txt -->
+                      <#include "1096" />
 
-<body>
-	<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%">
-		<tbody>
-			<tr>
-				<td align="center" bgcolor="#f2f2f2">
-					<table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; background-color: #ffffff"
-						width="680">
-						<tbody>
-							<tr>
-								<td>
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="614">
-										<!-- AU header.txt -->
-										<#include "1096" />
-
-										<!-- Main -->
-										<tbody>
-											<tr height="10">
-												<td>&nbsp;</td>
-											</tr>
-											<tr>
-												<td align="center" style="vertical-align: top">
-													<table cellpadding="0" cellspacing="0" style="border-spacing: 0">
-														<tbody>
-															<tr>
-																<td>
-																	<img
-																		src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636341187/email/ERP/Banner.jpg"
-																		width="614" />
-																</td>
-															</tr>
-															<tr>
-																<td height="20">&nbsp;</td>
-															</tr>
-														</tbody>
-													</table>
-												</td>
-											</tr>
-											<tr>
-												<td height="30">&nbsp;</td>
-											</tr>
-											<tr>
-												<td style="
-                              font-family: poppins,'Helvetica Neue', Arial, sans-serif;
+                      <!-- Main -->
+                      <tbody>
+                        <tr height="10">
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center" style="vertical-align: top">
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              style="border-spacing: 0"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <img
+                                      src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636341187/email/ERP/Banner.jpg"
+                                      width="614"
+                                    />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="20">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="30">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              font-family: poppins, 'Helvetica Neue', Arial,
+                                sans-serif;
                               color: #323433;
                               font-size: 14px;
                               text-align: left;
                               line-height: 1.5em;
-                            ">
-													<p>Dear <b>${customer.firstName}</b>,</p>
+                            "
+                          >
+                            <p>Dear <b>${customer.firstName}</b>,</p>
 
-													<p>
-														Thank you for your purchase with Castlery! Kindly
-														refer to attached for your e-invoice.
-													</p>
+                            <p>
+                              Thank you for your purchase with Castlery! Kindly
+                              refer to attached for your e-invoice.
+                            </p>
 
-													<p>
-														Should you require any assistance with your order,
-														or you have any general queries, please contact us
-														at
-														<a href="mailto:help.au@castlery.com" style="color: #A45B37">help.au@castlery.com</a>.
-													</p>
+                            <p>
+                              Should you require any assistance with your order,
+                              or you have any general queries, please contact us
+                              at
+                              <a
+                                href="mailto:help.au@castlery.com"
+                                style="color: #a45b37"
+                                >help.au@castlery.com</a
+                              >.
+                            </p>
 
-													<p>Thank you for choosing Castlery!</p>
+                            <p>Thank you for choosing Castlery!</p>
 
-													<p>Warmest Regards,</p>
+                            <p>Warmest Regards,</p>
 
-													<p>
-														<span style="font-weight: 700; color: #424242">Castlery</span>
-													</p>
-												</td>
-											</tr>
-											<tr>
-												<td height="40">&nbsp;</td>
-											</tr>
-											<tr>
-												<td height="15">&nbsp;</td>
-											</tr>
-											<tr>
-												<td height="20">&nbsp;</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-							<!-- AU FAQ.txt -->
-							<#include "1099" />
-							<!-- AU footer.txt -->
-							<#include "1098" />
-						</tbody>
-					</table>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</body>
-
+                            <p>
+                              <span style="font-weight: 700; color: #424242"
+                                >Castlery</span
+                              >
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="40">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td height="15">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td height="20">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- AU FAQ.txt -->
+                <#include "1099" />
+                <!-- AU footer.txt -->
+                <#include "1098" />
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
