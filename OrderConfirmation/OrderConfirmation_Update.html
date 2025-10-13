@@ -35,7 +35,7 @@
           format("woff");
         font-weight: 400;
       }
-      * :not(body){
+      * :not(body) {
         background: #773925;
       }
       img {
@@ -44,9 +44,6 @@
       p {
         margin: 0;
         padding: 0;
-      }
-      .gmailfix {
-        display: none !important;
       }
       table {
         border-spacing: 0;
@@ -95,7 +92,6 @@
     </style>
   </head>
   <body
-
     leftmargin="0"
     marginheight="0"
     marginwidth="0"
@@ -181,11 +177,11 @@
                         <table border="0" cellpadding="0" cellspacing="0">
                           <tbody style="background-color: #773925">
                             <!-- header start -->
-                            <tr height="51"></tr>
+                            <tr height="70"></tr>
                             <tr>
                               <td align="center">
                                 <a
-                                  href="https://www.castlery.com/au/"
+                                  href="#"
                                   style="
                                     border: none;
                                     display: inline-block;
@@ -201,14 +197,15 @@
                                       border: none;
                                       display: inline-block;
                                       outline: none;
-                                      width: 162.5px;
                                     "
-                                    width="162.5"
+                                    width="320"
                                   />
                                 </a>
                               </td>
                             </tr>
-                            <tr height="107"></tr>
+                            <tr>
+                              <td height="100">&nbsp;</td>
+                            </tr>
                             <tr height="59">
                               <td
                                 style="
@@ -233,7 +230,7 @@
                                   width="980"
                                 >
                                   <tr height="25">
-                                    <td></td>
+                                    <td>&nbsp;</td>
                                   </tr>
                                   <tr>
                                     <td
@@ -243,12 +240,15 @@
                                       <table
                                         cellpadding="0"
                                         cellspacing="0"
-                                      
-                                        style="border-spacing: 0;position: relative; left: -76px;"
+                                        style="
+                                          border-spacing: 0;
+                                          position: relative;
+                                          left: -76px;
+                                        "
                                       >
                                         <tbody>
                                           <tr>
-                                            <td >
+                                            <td>
                                               <img
                                                 src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002636/email/order-confirmation-main.png"
                                                 width="1081"
@@ -307,9 +307,7 @@
                                                 style="
                                                   font-family: 'AimeItalic';
                                                 "
-                                                >[#{{
-                                                event.ReferenceNumber|default:''
-                                                }}]</span
+                                                >[#{{ event.ReferenceNumber|default:'' }}]</span
                                               >
                                               is in and confirmed.
                                             </td>
@@ -347,16 +345,16 @@
                                     <td height="56"></td>
                                   </tr>
                                   <table
-                                    width="1080"
+                                    width="1082"
                                     style="
-                                      margin-left: -50px;
+                                      margin-left: -51px;
                                       background-color: #f5f1e5;
                                       padding: 0 50px;
                                     "
                                     class="table-border-fix"
                                   >
                                     <tr class="bg-white">
-                                      <td height="61"></td>
+                                      <td height="55"></td>
                                     </tr>
                                     <tr
                                       style="text-align: center"
@@ -369,8 +367,8 @@
                                             color: #3a131f;
                                           "
                                         >
-                                          Order #{{
-                                          event.ReferenceNumber|default:'' }}
+                                          Order [#{{
+                                          event.ReferenceNumber|default:'' }}]
                                         </div>
                                         <div
                                           style="
@@ -387,15 +385,13 @@
                                         <div
                                           style="font-size: 27px; color: #666"
                                         >
-                                          Sales Crew: {{
-                                          event.SalesCrew|default:'' }} @ {{
-                                          event.Retail|default:'' }}
+                                          Sales Crew: {{ event.SalesCrew|default:'' }} @ {{ event.Retail|default:'' }}
                                         </div>
                                         {% endif %}
                                       </td>
                                     </tr>
                                     <tr class="bg-white">
-                                      <td height="20"></td>
+                                      <td height="40"></td>
                                     </tr>
                                     <tr class="bg-white">
                                       <td>
@@ -469,31 +465,26 @@
                                                     <div
                                                       style="margin-bottom: 5px"
                                                     >
-                                                      {{
-                                                      item.ProductName|default:''
-                                                      }} {% if item.Clearance %}
-                                                      <sup
+                                                      {{ item.ProductName|default:'' }} {% if item.Clearance %}
+                                                      <span
                                                         style="
-                                                          color: #d23b3f;
-                                                          font-weight: 600;
+                                                          color: #D25C1B;
+                                            
                                                           margin-left: 5px;
-                                                          font-size: 75%;
-                                                          top: -0.45em;
+                                                          font-size: 20px;
+                                                  
                                                         "
                                                       >
-                                                        Clearance </sup
-                                                      >{% endif %}
+                                                        Clearance </span>{% endif %}
                                                     </div>
                                                     <div
                                                       style="
-                                                        color: #888;
-                                                        font-size: 12px;
+                                                        color: #767676;
+                                                        font-size: 20px;
                                                         margin: 0;
                                                       "
                                                     >
-                                                      {{
-                                                      item.OptionsText|default:''
-                                                      }}
+                                                      {{ item.OptionsText|default:'' }}
                                                     </div>
                                                     {% if item.IsCustomized %}
                                                     <div
@@ -533,9 +524,9 @@
                                                     >
                                                       <div
                                                         style="
-                                                          color: #888;
-                                                          font-size: 12px;
-                                                          margin-top: 2px;
+                                                         color: #767676;
+                                                        font-size: 20px;
+                                                        margin: 0;
                                                         "
                                                       >
                                                         {{ op|default:'' }}
@@ -553,23 +544,19 @@
                                               >
                                                 <div>
                                                   <div>
-                                                    {{
-                                                    item.UnitPrice.DiscountUnitPrice|default:''
-                                                    }}
+                                                    {{ item.UnitPrice.DiscountUnitPrice|default:'' }}
                                                   </div>
                                                 </div>
                                                 {% if item.UnitPrice.OriginalPrice %}
                                                 <div>
                                                   <div
                                                     style="
-                                                      font-size: 0.8rem;
+                                                      font-size: 20px;
                                                       text-decoration: line-through;
-                                                      color: #aaa;
+                                                      color:#767676;
                                                     "
                                                   >
-                                                    {{
-                                                    item.UnitPrice.OriginalPrice|default:''
-                                                    }}
+                                                    {{ item.UnitPrice.OriginalPrice|default:'' }}
                                                   </div>
                                                 </div>
                                                 {% endif %}
@@ -590,7 +577,7 @@
                                               >
                                                 {{ item.Deliver|default:'' }}
                                               </td>
-                                            </tr>   
+                                            </tr>
                                             {% endfor %}
                                             <tr height="0">
                                               <td
@@ -599,6 +586,7 @@
                                                   border-bottom-color: #c1af86;
                                                   border-bottom-style: solid;
                                                   border-bottom-width: 1px;
+                                                  padding-top: 33px;
                                                 "
                                               ></td>
                                             </tr>
@@ -621,91 +609,128 @@
                                         >
                                           <colgroup>
                                             <col />
-                                            <col style="width: 207px" />
+                                            <col style="width: 269px" />
                                           </colgroup>
                                           <tbody>
                                             <tr style="text-align: right">
-                                              <td class="middle-section-title">
+                                              <td
+                                                class="middle-section-title"
+                                                style="padding-top: 48px"
+                                              >
                                                 Item Subtotal
                                               </td>
 
                                               <td
                                                 class="middle-section-description"
+                                                style="
+                                                  padding-right: 60px;
+                                                  padding-top: 48px;
+                                                "
                                               >
                                                 {{
                                                 event.OrderTotal.ItemSubtotal|default:''
                                                 }}
                                               </td>
                                             </tr>
+
                                             <tr style="text-align: right">
-                                              <td class="middle-section-title">
+                                              <td
+                                                class="middle-section-title"
+                                                style="padding-top: 48px"
+                                              >
                                                 Shipping
                                               </td>
                                               <td
                                                 class="middle-section-description"
+                                                style="
+                                                  padding-right: 60px;
+                                                  padding-top: 48px;
+                                                "
                                               >
-                                                {{
-                                                event.OrderTotal.Shipping.Current|default:''
-                                                }}
+                                                {{ event.OrderTotal.Shipping.Current|default:'' }}
                                               </td>
                                             </tr>
                                             {% if event.OrderTotal.Services.Current > 0 %}
                                             <tr style="text-align: right">
-                                              <td class="middle-section-title">
+                                              <td
+                                                class="middle-section-title"
+                                                style="padding-top: 48px"
+                                              >
                                                 Services
                                               </td>
                                               <td
                                                 class="middle-section-description"
+                                                style="
+                                                  padding-right: 60px;
+                                                  padding-top: 48px;
+                                                "
                                               >
-                                                {{
-                                                event.OrderTotal.Services.Current|default:''
-                                                }}<span
+                                                {{ event.OrderTotal.Services.Current|default:'' }}
+                                                <span
                                                   style="
                                                     text-decoration: line-through;
                                                     color: #aaa;
                                                   "
-                                                  >{{
-                                                  event.OrderTotal.Services.Original|default:''
-                                                  }}</span
+                                                  >{{ event.OrderTotal.Services.Original|default:'' }}</span
                                                 >
                                               </td>
                                             </tr>
                                             {% endif %}
                                             {% for promotion in event.OrderTotal.PromotionAdjustments %}
                                             <tr style="text-align: right">
-                                              <td class="middle-section-title">
+                                              <td
+                                                class="middle-section-title"
+                                                style="padding-top: 48px"
+                                              >
                                                 {{ promotion.Name|default:'' }}
                                               </td>
                                               <td
                                                 class="middle-section-description"
+                                                style="
+                                                  padding-right: 60px;
+                                                  padding-top: 48px;
+                                                "
                                               >
-                                                {{ promotion.Amount|default:''
-                                                }}
+                                                {{ promotion.Amount|default:'' }}
                                               </td>
                                             </tr>
                                             {% endfor %}
                                             <tr style="text-align: right">
-                                              <td class="middle-section-title">
+                                              <td
+                                                class="middle-section-title"
+                                                style="padding-top: 48px"
+                                              >
                                                 GST (Included in Price)
                                               </td>
                                               <td
                                                 class="middle-section-description"
+                                                style="
+                                                  padding-right: 60px;
+                                                  padding-top: 48px;
+                                                "
                                               >
-                                                {{
-                                                event.OrderTotal.TaxTotal|default:''
-                                                }}
+                                                {{ event.OrderTotal.TaxTotal|default:'' }}
                                               </td>
                                             </tr>
                                             <tr style="text-align: right">
-                                              <td class="middle-section-title">
+                                              <td
+                                                class="middle-section-title"
+                                                style="
+                                                  padding-top: 48px;
+                                                  padding-bottom: 37px;
+                                                "
+                                              >
                                                 Total (Incl. GST)
                                               </td>
                                               <td
                                                 class="middle-section-description"
+                                                style="
+                                                  padding-right: 60px;
+                                                  padding-top: 48px;
+                                                  padding-bottom: 37px;
+                                                "
                                               >
-                                                {{
-                                                event.OrderTotal.DisplayTotal|default:''
-                                                }}
+                                                {{ event.OrderTotal.DisplayTotal|default:'' }}
                                               </td>
                                             </tr>
                                           </tbody>
@@ -735,16 +760,31 @@
                                           "
                                         >
                                           <colgroup>
-                                            <col style="width: 50%" />
-                                            <col style="width: 50%" />
+                                            <col style="width: 391px" />
+                                            <col style="width: 120px" />
+                                            <col style="width: 391px" />
                                           </colgroup>
 
                                           <thead>
                                             <tr>
-                                              <td class="middle-section-title">
+                                              <td
+                                                class="middle-section-title"
+                                                width="391"
+                                                style="padding-top: 25px"
+                                              >
                                                 Delivery Address
                                               </td>
-                                              <td class="middle-section-title">
+                                              <td
+                                                width="120"
+                                                style="padding-top: 25px"
+                                              >
+                                                &nbsp;
+                                              </td>
+                                              <td
+                                                class="middle-section-title"
+                                                width="391"
+                                                style="padding-top: 25px"
+                                              >
                                                 Billing Address
                                               </td>
                                             </tr>
@@ -754,7 +794,10 @@
                                               <td style="margin-top: 10px"></td>
                                             </tr>
                                             <tr>
-                                              <td style="vertical-align: top">
+                                              <td
+                                                style="vertical-align: top"
+                                                width="391"
+                                              >
                                                 <div
                                                   class="middle-section-description"
                                                 >
@@ -800,7 +843,11 @@
                                                   </div>
                                                 </div>
                                               </td>
-                                              <td style="vertical-align: top">
+                                              <td width="120">&nbsp;</td>
+                                              <td
+                                                style="vertical-align: top"
+                                                width="391"
+                                              >
                                                 <div
                                                   class="middle-section-description"
                                                 >
@@ -852,7 +899,7 @@
 
                                         <table
                                           style="
-                                            margin: 20px 0px 10px;
+                                            margin: 70px 0px;
                                             border-collapse: collapse;
 
                                             font-size: 14px;
@@ -861,8 +908,9 @@
                                           "
                                         >
                                           <colgroup>
-                                            <col style="width: 50%" />
-                                            <col style="width: 50%" />
+                                            <col style="width: 391px" />
+                                            <col style="width: 120px" />
+                                            <col style="width: 391px" />
                                           </colgroup>
                                           <thead>
                                             <tr>
@@ -870,6 +918,7 @@
                                                 Payment Method
                                               </td>
                                               {% if event.ShippingPreference %}<!-- delivery preference -->
+                                              <td width="120">&nbsp;</td>
                                               <td class="middle-section-title">
                                                 Shipping Preference
                                               </td>
@@ -893,13 +942,12 @@
                                                 </div>
                                               </td>
                                               {% if event.ShippingPreference %}<!-- delivery preference -->
+                                              <td width="120">&nbsp;</td>
                                               <td style="vertical-align: top">
                                                 <div
                                                   class="middle-section-description"
                                                 >
-                                                  {{
-                                                  event.ShippingPreference|default:''
-                                                  }}
+                                                  {{ event.ShippingPreference|default:'' }}
                                                 </div>
                                               </td>
                                               {% endif %}
@@ -938,9 +986,7 @@
                                                   class="middle-section-description"
                                                 >
                                                   <div>
-                                                    {{
-                                                    event.DeliveryRemarks|default:''
-                                                    }}
+                                                    {{ event.DeliveryRemarks|default:'' }}
                                                   </div>
                                                 </div>
                                               </td>
@@ -955,7 +1001,7 @@
                                   </table>
 
                                   <tr>
-                                    <td height="79"></td>
+                                    <td height="70"></td>
                                   </tr>
                                   <tr>
                                     <td
@@ -1028,9 +1074,7 @@
                                               will contact you as soon as
                                               possible. For more information,
                                               please click
-                                              <a
-                                                href="https://www.castlery.com/au/blog/covid-19?utm_campaign=au-ship-2108&amp;utm_source=system-generated-email&amp;utm_medium=email"
-                                                style="color: #a45b37"
+                                              <a href="https://www.castlery.com/au/blog/covid-19?utm_campaign=au-ship-2108&amp;utm_source=system-generated-email&amp;utm_medium=email" style="color: #a45b37"
                                                 >here</a
                                               >.
                                             </td>
@@ -1090,9 +1134,7 @@
                                               cannot alter an order once it has
                                               been placed and payment processed.
                                               Please contact us through
-                                              <a
-                                                href="mailto:help.au@castlery.com"
-                                                style="color: #a45b37"
+                                              <a href="mailto:help.au@castlery.com" style="color: #a45b37"
                                                 >help.au@castlery.com</a
                                               >
                                               if you need to alter/cancel or
@@ -1161,108 +1203,126 @@
                       <td
                         colspan="5"
                         style="
-                          border-bottom-color: #c1af86;
+                          border-bottom-color: #F7F3E7;
                           border-bottom-style: solid;
                           border-bottom-width: 1px;
                         "
                       ></td>
                     </tr>
-                    <tr height="78"></tr>
-                    <tr style="text-align: center">
-                      <td style="font-size: 45px; color: #f7f3e7" colspan="5">
+                    <tr height="73"></tr>
+                    <tr>
+                      <td
+                        colspan="5"
+                        style="
+                          font-family: Aime;
+                          font-size: 45px;
+                          color: #f7f3e7;
+                          text-align: center;
+                        "
+                      >
                         More reasons to love us
                       </td>
                     </tr>
-                    <tr height="66"></tr>
-
                     <tr>
-                      <td align="center">
-                        <a
-                          href="https://www.castlery.com/au/faq?utm_campaign=order-confirmation&amp;utm_source=system-generated-email&amp;utm_medium=email"
-                          style="text-decoration: none"
-                          target="__blank"
+                      <td
+                        colspan="5"
+                        align="center"
+                        style="padding: 60px 0 0px"
+                      >
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          style="margin: 0 auto"
                         >
-                          <img
-                            src="https://res.cloudinary.com/cslrstag/image/upload/f_auto,q_auto/v1636094353/email/icons/live-chat.png"
-                            width="49"
-                          />
-                          <div
-                            style="
-                              font-family: 'MinervaModern', 'Helvetica Neue',
-                                Helvetica, Arial, sans-serif;
-                              font-size: 14px;
-                              font-weight: 700;
-                              -webkit-font-smoothing: antialiased;
-                              -moz-osx-font-smoothing: grayscale;
-                              color: #dbcfb5;
-                              letter-spacing: 1px;
-                              display: block;
-                              margin-top: 16px;
-                            "
-                          >
-                            LIVE CHAT
-                          </div>
-                        </a>
-                      </td>
-                      <td width="70"></td>
-                      <td align="center">
-                        <a
-                          href="https://wa.me/61482072880"
-                          style="text-decoration: none"
-                          target="__blank"
-                        >
-                          <img
-                            src="https://res.cloudinary.com/cslrstag/image/upload/f_auto,q_auto/v1636094353/email/icons/call-us.png"
-                            width="49"
-                          />
-                          <div
-                            style="
-                              font-family: 'MinervaModern', 'Helvetica Neue',
-                                Helvetica, Arial, sans-serif;
-                              font-size: 14px;
-                              font-weight: 700;
-                              -webkit-font-smoothing: antialiased;
-                              -moz-osx-font-smoothing: grayscale;
-                              color: #dbcfb5;
-                              letter-spacing: 1px;
-                              display: block;
-                              margin-top: 16px;
-                            "
-                          >
-                            WHATSAPP +61 482-072-880
-                          </div>
-                        </a>
-                      </td>
-                      <td width="70"></td>
-                      <td align="center">
-                        <a
-                          href="mailto:help.au@castlery.com"
-                          style="text-decoration: none"
-                        >
-                          <img
-                            src="https://res.cloudinary.com/cslrstag/image/upload/f_auto,q_auto/v1636094353/email/icons/email-us.png"
-                            width="49"
-                          />
-                          <div
-                            style="
-                              font-family: 'MinervaModern', 'Helvetica Neue',
-                                Helvetica, Arial, sans-serif;
-                              font-size: 14px;
-                              font-weight: 700;
-                              -webkit-font-smoothing: antialiased;
-                              -moz-osx-font-smoothing: grayscale;
-                              color: #dbcfb5;
-                              letter-spacing: 1px;
-                              display: block;
-                              margin-top: 16px;
-                            "
-                          >
-                            EMAIL US
-                          </div>
-                        </a>
+                          <tr>
+                            <!-- FREE SWATCHES -->
+                            <td align="center" style="padding: 0 60px">
+                              <div>
+                                <img
+                                  src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png"
+                                  width="49"
+                                />
+                                <div
+                                  style="
+                                    margin-top: 30px;
+                                    font-family: 'MinervaModern',
+                                      'Helvetica Neue', Helvetica, Arial,
+                                      sans-serif;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    -webkit-font-smoothing: antialiased;
+                                    -moz-osx-font-smoothing: grayscale;
+                                    color: #f7f3e7;
+                                    letter-spacing: 1px;
+                                    text-transform: uppercase;
+                                  "
+                                >
+                                  FREE SWATCHES
+                                </div>
+                              </div>
+                            </td>
+
+                            <!-- FLAT RATE SHIPPING -->
+                            <td align="center" style="padding: 0 60px">
+                              <div>
+                                <img
+                                  src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png"
+                                  width="49"
+                                />
+                                <div
+                                  style="
+                                    margin-top: 30px;
+                                    font-family: 'MinervaModern',
+                                      'Helvetica Neue', Helvetica, Arial,
+                                      sans-serif;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    -webkit-font-smoothing: antialiased;
+                                    -moz-osx-font-smoothing: grayscale;
+                                    color: #f7f3e7;
+                                    letter-spacing: 1px;
+                                    text-transform: uppercase;
+                                  "
+                                >
+                                  FLAT RATE SHIPPING
+                                </div>
+                              </div>
+                            </td>
+
+                            <!-- 30-DAY RETURNS -->
+                            <td align="center" style="padding: 0 60px">
+                              <div>
+                                <img
+                                  src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png"
+                                  width="49"
+                                />
+                                <div
+                                  style="
+                                    margin-top: 30px;
+                                    font-family: 'MinervaModern',
+                                      'Helvetica Neue', Helvetica, Arial,
+                                      sans-serif;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    -webkit-font-smoothing: antialiased;
+                                    -moz-osx-font-smoothing: grayscale;
+                                    color: #f7f3e7;
+                                    letter-spacing: 1px;
+                                    text-transform: uppercase;
+                                  "
+                                >
+                                  30-DAY RETURNS
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
-                    <tr height="79"></tr>
+                    <tr>
+                      <td height="80">&nbsp;</td>
+                    </tr>
                   </tbody>
                 </table>
               </td>
@@ -1278,7 +1338,7 @@
                       <td
                         colspan="3"
                         style="
-                          border-bottom-color: #c1af86;
+                          border-bottom-color: #F7F3E7;
                           border-bottom-style: solid;
                           border-bottom-width: 1px;
                         "
@@ -1317,7 +1377,7 @@
                                         >
                                           <img
                                             height="38"
-                                            src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636338987/email/footer/IG.png"
+                                            src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png"
                                             style="display: block"
                                           />
                                         </a>
@@ -1335,7 +1395,7 @@
                                         >
                                           <img
                                             height="38"
-                                            src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636338988/email/footer/FB.png"
+                                            src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png"
                                             style="display: block"
                                           />
                                         </a>
@@ -1353,7 +1413,7 @@
                                         >
                                           <img
                                             height="38"
-                                            src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636338987/email/footer/Pinterest.png"
+                                            src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png"
                                             style="display: block"
                                           />
                                         </a>
@@ -1374,38 +1434,48 @@
                           font-size: 12px;
                           font-family: 'SanomatSans';
                           text-transform: uppercase;
-                          letter-spacing: 0.1em;
+                          letter-spacing: 0.2em;
                           text-align: center;
                         "
                       >
                         <a
-                          href="https://www.castlery.com/au/terms-of-use"
+                          href="#"
                           style="
-                            color: #dbcfb5;
+                            color: #f7f3e7;
 
                             text-decoration: none;
                           "
-                          >Terms of Use</a
+                          >UNSUBSCRIBE</a
                         >
-                        <span style="color: #dbcfb5"> | </span>
+                        <span style="color: #dbcfb5; padding: 0 5px"> | </span>
                         <a
                           href="https://www.castlery.com/au/privacy-policy"
                           style="
-                            color: #dbcfb5;
+                            color: #f7f3e7;
 
                             text-decoration: none;
                           "
-                          >Privacy Policy</a
+                          >PRIVACY POLICY</a
                         >
-                        <span style="color: #dbcfb5"> | </span>
+                        <span style="color: #dbcfb5; padding: 0 5px"> | </span>
                         <a
-                          href="https://www.castlery.com/au/sales-and-refund"
+                          href="#"
                           style="
-                            color: #dbcfb5;
+                            color: #f7f3e7;
 
                             text-decoration: none;
                           "
-                          >Sales Policy</a
+                          >CONTACT US</a
+                        >
+                        <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+                        <a
+                          href="#"
+                          style="
+                            color: #f7f3e7;
+
+                            text-decoration: none;
+                          "
+                          >REFER A FRIEND</a
                         >
                       </td>
                     </tr>
@@ -1423,19 +1493,32 @@
                       </td>
                     </tr>
                     <tr height="64"></tr>
+                    <tr>
+                      <td style="text-align: center">
+                  
+                          <img
+                            src="https://res.cloudinary.com/castlery/image/upload/v1760003274/email/template-v-update-last-bottom.png"
+                            width="156"
+                            style="
+                              display: inline-block;
+                              border: none;
+                              outline: none;
+                            "
+                            alt="Castlery"
+                          />
+                  
+                      </td>
+                    </tr>
+                    <tr height="64"></tr>
                   </tbody>
                 </table>
               </td>
             </tr>
+
             <!-- footer end -->
           </tbody>
         </div>
       </table>
     </div>
-
-    <div
-      class="gmailfix"
-      style="white-space: nowrap; font: 15px courier; line-height: 0"
-    ></div>
   </body>
 </html>
