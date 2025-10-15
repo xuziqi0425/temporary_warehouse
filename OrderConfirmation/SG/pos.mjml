@@ -46,7 +46,7 @@
         </mj-text>
         <mj-image padding="21px 0 30px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002636/email/order-confirmation-main.png" width="680px" />
         <mj-text font-size="28px" color="#9BA3C1" font-family="Aime" font-style="italic" align="center">
-          Hey {{
+          Hey                     {{
                                                 event.ShippingAddress.FirstName|default:''
                                                 }} {{
                                                 event.ShippingAddress.LastName|default:''
@@ -82,8 +82,8 @@
         </mj-text>
         <mj-text font-size="17px" align="center" padding-top="11px" color="#3A131F">
           Placed on
-          {{ event.CompletedAt|format_date_string|date:'d F o'|default:'' }},
-          {{ event.CompletedAt|format_date_string|time:'g:i A'|default:'' }}
+                                        {{ event.CompletedAt|format_date_string|date:'d F o'|default:'' }},
+                                        {{ event.CompletedAt|format_date_string|time:'g:i A'|default:'' }}
         </mj-text>
         {% if event.SalesCrew %}
         <mj-text color="#3A131F" font-size="17px" align="center">
@@ -105,22 +105,22 @@
           </colgroup>
           <!-- Table Header -->
           <tr>
-            <th style="text-align: left; font-size: 9px;  font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;">
+            <th style="text-align: left; font-size: 9px;  font-family: 'SanomatSans';padding-bottom: 10px;">
               ITEM DESCRIPTION
             </th>
-            <th style="text-align: center; font-size: 9px; font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;">
+            <th style="text-align: center; font-size: 9px; font-family: 'SanomatSans';padding-bottom: 10px;">
               UNIT PRICE
             </th>
-            <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;">
+            <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans';padding-bottom: 10px;">
               QTY
             </th>
-            <th style=" text-align: center; font-size: 9px; font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;">
+            <th style=" text-align: center; font-size: 9px; font-family: 'SanomatSans';padding-bottom: 10px;">
               EST DELIVERY
             </th>
           </tr>
           {% for item in event.Items %}
           <tr>
-            <td align="left" font-family="Aime" padding-right="40px" style="color: #3A131F;" valign="top">
+            <td align="left" font-family="Aime" padding-right="40px" style="color: #3A131F;">
               <div style="line-height: 1.2">
                 <div>
                   <div style="margin-bottom: 5px;font-size: 16px">
@@ -129,6 +129,8 @@
                     <span style="
                         color: #D25C1B;
                         margin-left: 5px;
+                       
+                       
                       ">
                       Clearance </span>{% endif %}
                   </div>
@@ -181,7 +183,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
               </div>
               {% endfor %}
             </td>
-            <td align="center" padding="0 5px" style="color: #3A131F;" valign="top">
+            <td align="center" padding="0 5px" style="color: #3A131F;">
 
               <div style="font-size: 16px">
                 {{
@@ -204,14 +206,13 @@ https://www.castlery.com/au/sales-and-refunds" style="
               </div>
               {% endif %}
             </td>
-            <td align="center" padding="0 5px" style="font-size: 16px;color: #3A131F;" valign="top">
+            <td align="center" padding="0 5px" style="font-size: 16px;color: #3A131F;">
               {{ item.Quantity|default:'' }}
             </td>
             <td align="left" padding="0 5px" style="
               color: #3A131F;
               font-size: 16px;
-            "
-            valign="top">
+            ">
               {{ item.Deliver|default:'' }}
             </td>
           </tr>
@@ -234,21 +235,21 @@ https://www.castlery.com/au/sales-and-refunds" style="
         <!-- 使用表格来实现精确的两列布局 -->
         <mj-table>
           <tr>
-            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans'; color: #3A131F; width: 80%;letter-spacing: 0.15em;">
+            <td style="padding: 8px 0; text-align: right; font-size: 14px; font-family: 'SanomatSans'; color: #3A131F; width: 80%;">
               ITEM SUBTOTAL
             </td>
 
-            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime'; color: #3A131F; width: 20%;">
+            <td style="padding: 8px 0; text-align: right; font-size: 18px; font-family: 'Aime'; color: #3A131F; width: 20%;">
               {{
                                             event.OrderTotal.ItemSubtotal|default:''
                                             }}
             </td>
           </tr>
           <tr>
-            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans'; color: #3A131F;letter-spacing: 0.15em;">
+            <td style="padding: 8px 0; text-align: right; font-size: 14px; font-family: 'SanomatSans'; color: #3A131F;">
               SHIPPING
             </td>
-            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime'; color: #3A131F;">
+            <td style="padding: 8px 0; text-align: right; font-size: 18px; font-family: 'Aime'; color: #3A131F;">
               {{
                                             event.OrderTotal.Shipping.Current|default:''
                                             }}
@@ -256,10 +257,10 @@ https://www.castlery.com/au/sales-and-refunds" style="
           </tr>
           {% if event.OrderTotal.Services.Current > 0 %}
           <tr align="right">
-            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans'; color: #3A131F;letter-spacing: 0.15em;">
-              SERVICES
+            <td sstyle="padding: 8px 0; text-align: right; font-size: 14px; font-family: 'SanomatSans'; color: #3A131F;">
+              Services
             </td>
-            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime'; color: #3A131F;">
+            <td style="padding: 8px 0; text-align: right; font-size: 18px; font-family: 'Aime'; color: #3A131F;">
               {{
                                             event.OrderTotal.Services.Current|default:''
                                             }}
@@ -275,29 +276,29 @@ https://www.castlery.com/au/sales-and-refunds" style="
           {% endif %}
           {% for promotion in event.OrderTotal.PromotionAdjustments %}
           <tr align="right">
-            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans'; color: #3A131F;text-transform: uppercase;letter-spacing: 0.15em;">
+            <td style="padding: 8px 0; text-align: right; font-size: 14px; font-family: 'SanomatSans'; color: #3A131F;">
               {{ promotion.Name|default:'' }}
             </td>
-            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime'; color: #3A131F;">
+            <td style="padding: 8px 0; text-align: right; font-size: 18px; font-family: 'Aime'; color: #3A131F;">
               {{ promotion.Amount|default:'' }}
             </td>
           </tr>
           {% endfor %}
           <tr>
-            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans'; color: #3A131F;letter-spacing: 0.15em;">
+            <td style="padding: 8px 0; text-align: right; font-size: 14px; font-family: 'SanomatSans'; color: #3A131F;">
               GST (INCLUDED IN PRICE)
             </td>
-            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime'; color: #3A131F;">
+            <td style="padding: 8px 0; text-align: right; font-size: 18px; font-family: 'Aime'; color: #3A131F;">
               {{
                                             event.OrderTotal.TaxTotal|default:''
                                             }}
             </td>
           </tr>
           <tr>
-            <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans'; color: #3A131F;letter-spacing: 0.15em;">
+            <td style="padding: 8px 0 ; text-align: right; font-size: 14px; font-family: 'SanomatSans'; color: #3A131F;">
               TOTAL (INCL. GST)
             </td>
-            <td style="padding: 12px 0 8px 0; text-align: right; font-size: 16px; font-family: 'Aime'; color: #3A131F;">
+            <td style="padding: 12px 0 8px 0; text-align: right; font-size: 18px; font-family: 'Aime'; color: #3A131F;">
               {{
                                             event.OrderTotal.DisplayTotal|default:''
                                             }}
@@ -312,11 +313,11 @@ https://www.castlery.com/au/sales-and-refunds" style="
         <!-- Delivery and Billing Address -->
         <mj-table>
           <tr>
-            <td style="padding: 0 20px 0 0; vertical-align: top; width: 50%;color: #3A131F;">
-             
-                <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';text-transform: uppercase;color: #3A131F;padding: 0;"> DELIVERY ADDRESS</div>
-     
-              <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.2" padding="0">
+            <td style="padding: 0 20px 0 0; vertical-align: top; width: 50%;">
+              <mj-text font-size="12px" font-family="SanomatSans" color="#3A131F" text-transform="uppercase" letter-spacing="0.1em" padding="0 0 0 0">
+                DELIVERY ADDRESS
+              </mj-text>
+              <mj-text font-size="14px" font-family="Aime" color="#3A131F" line-height="1.2" padding="0">
                 <div style="color: #3A131F;padding-top: 10px;">
                   <div>
                     {{
@@ -360,12 +361,12 @@ https://www.castlery.com/au/sales-and-refunds" style="
                 </div>
               </mj-text>
             </td>
-            <td style="padding: 0; vertical-align: top; width: 50%;color: #3A131F;">
-            
-                <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';text-transform: uppercase;color: #3A131F;padding:0 0 15px 0"> BILLING ADDRESS</div>
-
-              <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.5" padding="0">
-                <div style="color: #3A131F;">
+            <td style="padding: 0; vertical-align: top; width: 50%;">
+              <mj-text font-size="12px" font-family="SanomatSans" color="#3A131F" text-transform="uppercase" letter-spacing="0.1em" padding="0 0 15px 0">
+                BILLING ADDRESS
+              </mj-text>
+              <mj-text font-size="14px" font-family="Aime" color="#3A131F" line-height="1.5" padding="0">
+                <div style="color: #3A131F;padding-top: 10px;">
                   <div>
                     {{
                                                 event.BillingAddress.FirstName|default:''
@@ -418,13 +419,13 @@ https://www.castlery.com/au/sales-and-refunds" style="
       <mj-column width="100%">
         <mj-table>
           <tr>
-            <td style="padding: 0 20px 0 5px; vertical-align: top; width: 50%;color: #3A131F;">
-
-              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';text-transform: uppercase;padding: 0 0 15px 0;">PAYMENT METHOD</div>
-
-
-              <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.5" padding="0">
-                <div style="color: #3A131F;">{{
+            <td style="padding: 0 20px 0 5px; vertical-align: top; width: 50%;">
+              <mj-text font-size="12px" font-family="SanomatSans" color="#3A131F" text-transform="uppercase" letter-spacing="0.1em" padding="0 0 15px 0">
+                PAYMENT METHOD
+              </mj-text>
+              <br />
+              <mj-text font-size="14px" font-family="Aime" color="#3A131F" line-height="1.5" padding="0">
+                <div style="color: #3A131F;padding-top: 10px;">{{
                                                 event.DeliveryRemarks|default:''
                                                 }}</div>
 
@@ -436,16 +437,17 @@ https://www.castlery.com/au/sales-and-refunds" style="
               </mj-text>
             </td>
             {% if event.ShippingPreference %}
-            <td style="padding: 0 0 0 20px; vertical-align: top; width: 50%;color: #3A131F;">
-
-              <div style="letter-spacing: 0.15em;font-size:9px;font-family: 'SanomatSans';text-transform: uppercase;padding: 0 0 15px 0;letter-spacing: 0.15em;color: #3A131F;">SHIPPING PREFERENCE</div>
-
-              <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.5" padding="0">
-                <div style="color: #3A131F;">
-                  {{
+            <td style="padding: 0 0 0 20px; vertical-align: top; width: 50%;">
+              <mj-text font-size="12px" font-family="SanomatSans" color="#3A131F" text-transform="uppercase" letter-spacing="0.1em" padding="0 0 15px 0">
+                SHIPPING PREFERENCE
+              </mj-text>
+              <br />
+              <mj-text font-size="14px" font-family="Aime" color="#3A131F" line-height="1.5" padding="0">
+               <div style="color: #3A131F;padding-top: 10px;">
+               {{
                                               event.ShippingPreference|default:''
                                               }}
-                </div>
+               </div> 
               </mj-text>
             </td>
             {% endif %}
@@ -459,16 +461,16 @@ https://www.castlery.com/au/sales-and-refunds" style="
       <mj-column width="100%">
         <mj-table>
           <tr>
-            <td style="color: #3A131F;letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';padding: 0 0 15px 0">
-            
+            <td>
+              <mj-text font-size="12px" font-family="SanomatSans" color="#3A131F" letter-spacing="0.1em">
                 DELIVERY REMARKS
-
+              </mj-text>
             </td>
           </tr>
           <tr>
             <td>
-              <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.5" padding-top="0px">
-                <div style="color: #3A131F;"> {{
+              <mj-text font-size="14px" font-family="Aime" color="#3A131F" line-height="1.5" padding-top="0px">
+               <div style="color: #3A131F;padding-top: 10px;"> {{
                                                 event.DeliveryRemarks|default:''
                                                 }}</div>
               </mj-text>
@@ -587,19 +589,19 @@ https://www.castlery.com/au/sales-and-refunds" style="
     <mj-section background-color="#773925" padding="0 70px">
       <mj-column width="33.33%">
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" align="center" />
-        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="1px" padding="9px 0 0">
           FREE SWATCHES
         </mj-text>
       </mj-column>
       <mj-column width="33.33%">
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" align="center" />
-        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="1px" padding="9px 0 0">
           FLAT RATE SHIPPING
         </mj-text>
       </mj-column>
       <mj-column width="33.33%">
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" align="center" />
-        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="1px" padding="9px 0 0">
           30-DAY RETURNS
         </mj-text>
       </mj-column>
