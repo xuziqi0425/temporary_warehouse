@@ -1,0 +1,233 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'AimeItalic';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'MinervaModern';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .hey-name {
+        font-family: 'AimeItalic', Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding: 60px 250px 40px;
+        font-size: 45px;
+        color: #9ba3c1;
+      }
+
+      .hey-name-content {
+        font-family: 'Aime', Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 27px;
+        color: #f7f3e7;
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-family="Aime" />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body background-color="#fff" width="680px">
+    <!-- Header Section -->
+    <mj-section background-color="#773925" padding="44px 0 46px">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" alt="Castlery" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Thank you message -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text font-family="Aime" font-size="38px" color="#f7f3e7" align="center">
+          Thank you for choosing Castlery
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Hey Customer Name -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text font-family="AimeItalic" font-size="28px" color="#9ba3c1" align="center" padding="37px 0 21px">
+          Hey [Customer Name],
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Main content -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text font-family="Aime" font-size="17px" color="#f7f3e7" align="center" line-height="1.2">
+          Here is the e-invoice for your recent Castlery order.<br />
+          You'll find it attached for your records.​<br /><br />
+          If you have any questions, reach out to us at
+          <span style="font-family: AimeItalic; color: #f7f3e7">hello.sg@castlery.com</span>.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider -->
+    <mj-section background-color="#773925" padding="36px 0 18px">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Need more inspiration -->
+    <mj-section background-color="#773925" padding="10px 0 0px">
+      <mj-column>
+        <mj-text font-family="Aime" font-size="28px" color="#f7f3e7" align="center">
+          Need more home inspiration?
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0">
+      <mj-column >
+        <mj-text font-family="Aime" font-size="17px" color="#f7f3e7" align="center" padding="0">
+          Check out our newest designs.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Banner image -->
+    <mj-section background-color="#773925" padding="15px 0 27px">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760065945/email/invoice-first.png" width="617px" height="auto" alt="Banner" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Browse button -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" color="#f7f3e7" font-family="SanomatSans" font-size="11px" font-weight="400" width="260px" height="29px" border-radius="2px" padding="0">
+          BROWSE NEW ARRIVALS
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Warmest regards -->
+    <mj-section background-color="#773925" padding="44px 0 18px">
+      <mj-column>
+        <mj-text font-family="Aime" font-size="17px" color="#f7f3e7" align="center">
+          Warmest regards,​
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Logo again -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" alt="Castlery" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider -->
+    <mj-section background-color="#773925" padding="53px 0 19px">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- More reasons to love us -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text font-family="Aime" font-size="28px" color="#F7F3E7" align="center">
+          More reasons to love us
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 70px">
+      <mj-column width="33.33%">
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" align="center" />
+        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+          FREE SWATCHES
+        </mj-text>
+      </mj-column>
+      <mj-column width="33.33%">
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" align="center" />
+        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+          FLAT RATE SHIPPING
+        </mj-text>
+      </mj-column>
+      <mj-column width="33.33%">
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" align="center" />
+        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+          30-DAY RETURNS
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Section -->
+    <mj-section background-color="#773925" padding="50px 0 35px">
+      <mj-column>
+        <mj-divider border-color="#F7F3E7" border-width="1px" padding="0 30px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text align="center">
+          <a href="http://www.instagram.com/castleryAU" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
+          </a>
+          <a href="https://www.facebook.com/CastleryAU" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
+          </a>
+          <a href="http://www.pinterest.com/castleryAU" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="20px 0 10px">
+      <mj-column>
+        <mj-text font-family="SanomatSans" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em">
+          <a href="https://www.castlery.com/au/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <a href="https://www.castlery.com/au/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <a href="https://www.castlery.com/au/referral" style="color: #F7F3E7; text-decoration: none;">REFER A FRIEND</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 20px">
+      <mj-column>
+        <mj-text font-size="13px" color="#F7F3E7" align="center">
+          Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 44px">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/v1760003274/email/template-v-update-last-bottom.png" width="98px" align="center" />
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
