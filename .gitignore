@@ -1,0 +1,29 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+./vscode/launch.json
+
+# dependencies
+/node_modules
+/pnpm-lock.yaml
+/package.json
+
+# testing
+/coverage
+
+# production
+/build
+build.*
+build-prod.zip
+build-test.zip
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.envrc
+*.zip
+
+# secrets
+secrets.*.js
