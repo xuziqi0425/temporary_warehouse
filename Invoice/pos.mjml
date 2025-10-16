@@ -43,13 +43,41 @@
         font-size: 27px;
         color: #f7f3e7;
       }
+
+      /* Mobile fixes for white lines */
+      @media only screen and (max-width: 480px) {
+        .mj-section {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        
+        .mj-section table {
+          margin: 0 !important;
+          border-spacing: 0 !important;
+          border-collapse: collapse !important;
+        }
+        
+        .mj-section td {
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        
+        /* Ensure seamless background */
+        .mj-body {
+          background-color: #773925 !important;
+        }
+        
+        .mj-wrapper {
+          background-color: #773925 !important;
+        }
+      }
     </mj-style>
     <mj-attributes>
       <mj-text font-family="Aime" />
     </mj-attributes>
   </mj-head>
 
-  <mj-body background-color="#fff" width="680px">
+  <mj-body background-color="#773925" width="680px">
     <!-- Header Section -->
     <mj-section background-color="#773925" padding="44px 0 46px">
       <mj-column>
@@ -82,7 +110,7 @@
           Here is the e-invoice for your recent Castlery order.<br />
           You'll find it attached for your records.​<br /><br />
           If you have any questions, reach out to us at
-          <span style="font-family: AimeItalic; color: #f7f3e7">hello.sg@castlery.com</span>.
+           <a href="mailto:help.au@castlery.com" style="font-family: AimeItalic;color: #F7F3E7; text-decoration: none;"><em>hello.sg@castlery.com</em></a>.
         </mj-text>
       </mj-column>
     </mj-section>
@@ -104,7 +132,7 @@
     </mj-section>
 
     <mj-section background-color="#773925" padding="0">
-      <mj-column >
+      <mj-column>
         <mj-text font-family="Aime" font-size="17px" color="#f7f3e7" align="center" padding="0">
           Check out our newest designs.
         </mj-text>
@@ -126,23 +154,6 @@
         </mj-button>
       </mj-column>
     </mj-section>
-
-    <!-- Warmest regards -->
-    <mj-section background-color="#773925" padding="44px 0 18px">
-      <mj-column>
-        <mj-text font-family="Aime" font-size="17px" color="#f7f3e7" align="center">
-          Warmest regards,​
-        </mj-text>
-      </mj-column>
-    </mj-section>
-
-    <!-- Logo again -->
-    <mj-section background-color="#773925" padding="0">
-      <mj-column>
-        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" alt="Castlery" />
-      </mj-column>
-    </mj-section>
-
     <!-- Divider -->
     <mj-section background-color="#773925" padding="53px 0 19px">
       <mj-column>
