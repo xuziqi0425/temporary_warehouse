@@ -414,6 +414,8 @@
                                       </thead>
                                       <tbody>
                                         {% for item in event.Items %}
+                                        {% empty %}
+                                        <tr><td colspan="4" style="text-align: center; padding: 20px;">No items found</td></tr>
                                         <tr>
                                           <td
                                             align="left"
@@ -474,6 +476,8 @@ https://www.castlery.com/au/sales-and-refunds"
                                               </div>
                                             </div>
                                             {% for op in item.BundleLineItems %}
+                                            {% empty %}
+                                            <!-- No bundle items -->
                                             <div>
                                               <div>
                                                 <div
@@ -508,8 +512,7 @@ https://www.castlery.com/au/sales-and-refunds"
                                                 }}
                                               </div>
                                             </div>
-                                            {% if item.UnitPrice.OriginalPrice
-                                            %}
+                                            {% if item.UnitPrice.OriginalPrice %}
                                             <div>
                                               <div
                                                 style="
@@ -604,8 +607,7 @@ https://www.castlery.com/au/sales-and-refunds"
                                             }}
                                           </td>
                                         </tr>
-                                        {% if event.OrderTotal.Services.Current
-                                        > 0 %}
+                                        {% if event.OrderTotal.Services.Current > 0 %}
                                         <tr align="right">
                                           <td
                                             style="
@@ -631,8 +633,10 @@ https://www.castlery.com/au/sales-and-refunds"
                                             >
                                           </td>
                                         </tr>
-                                        {% endif %} {% for promotion in
-                                        event.OrderTotal.PromotionAdjustments %}
+                                        {% endif %}
+                                        {% for promotion in event.OrderTotal.PromotionAdjustments %}
+                                        {% empty %}
+                                        <!-- No promotions -->
                                         <tr align="right">
                                           <td
                                             style="
@@ -870,8 +874,9 @@ https://www.castlery.com/au/sales-and-refunds"
                                           </td>
                                           <td style="vertical-align: top">
                                             <div style="color: #666">
-                                              {% for payment in
-                                              event.PaymentMethods %}
+                                              {% for payment in event.PaymentMethods %}
+                                              {% empty %}
+                                              <!-- No payment methods -->
                                               <div>
                                                 {{ payment|default:'' }}
                                               </div>
@@ -881,7 +886,8 @@ https://www.castlery.com/au/sales-and-refunds"
                                         </tr>
                                       </tbody>
                                     </table>
-                                    {% if event.ShippingPreference %}<!-- delivery preference -->
+                                    {% if event.ShippingPreference %}
+                                    <!-- delivery preference -->
                                     <table
                                       style="
                                         margin-bottom: 10px;
