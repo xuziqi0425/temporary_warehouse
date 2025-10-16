@@ -58,13 +58,13 @@
 
     <mj-section padding="0 49px" background-color="#773925">
       <mj-column css-class="order-header-text" padding-bottom="40px">
-        <mj-text font-size="17px" align="center" padding-bottom="0px">
+        <mj-text font-size="16px" align="center" padding-bottom="0px" line-height="1.2">
           Your order <em>#{{ event.ReferenceNumber|default:'' }}</em> is in and confirmed.
         </mj-text>
-        <mj-text font-size="17px" align="center" padding-top="2px">
+        <mj-text font-size="16px" align="center" padding-top="2px" line-height="1.2">
           We're so excited to get your new pieces to you!​
         </mj-text>
-        <mj-text font-size="17px" align="center">
+        <mj-text font-size="16px" align="center" line-height="1.2">
           We’ll be in touch with updates as
           your delivery date approaches. All
           the details for your order are
@@ -80,13 +80,13 @@
         <mj-text font-size="28px" align="center" color="#3A131F">
           Order #{{ event.ReferenceNumber|default:''}}
         </mj-text>
-        <mj-text font-size="17px" align="center" padding-top="11px" color="#3A131F">
+        <mj-text font-size="16px" align="center" padding-top="11px" color="#3A131F">
           Placed on
           {{ event.CompletedAt|format_date_string|date:'d F o'|default:'' }},
           {{ event.CompletedAt|format_date_string|time:'g:i A'|default:'' }}
         </mj-text>
         {% if event.SalesCrew %}
-        <mj-text color="#3A131F" font-size="17px" align="center">
+        <mj-text color="#3A131F" font-size="16px" align="center">
           Sales Crew: {{ event.SalesCrew|default:''
                                       }}
         </mj-text>
@@ -469,7 +469,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
             <td>
               <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.5" padding-top="0px">
                 <div style="color: #3A131F;"> {{
-                                                event.DeliveryRemarks|default:''
+                                                event.DeliveryRemarks|default:'-'
                                                 }}</div>
               </mj-text>
             </td>
