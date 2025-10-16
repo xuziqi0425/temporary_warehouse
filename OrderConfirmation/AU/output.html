@@ -300,10 +300,10 @@
                           </colgroup>
                           <!-- Table Header -->
                           <tr>
-                            <th style="text-align: left; font-size: 9px;  font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;"> ITEM DESCRIPTION </th>
-                            <th style="text-align: center; font-size: 9px; font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;"> UNIT PRICE </th>
-                            <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;"> QTY </th>
-                            <th style=" text-align: center; font-size: 9px; font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;"> EST DELIVERY </th>
+                            <th style="text-align: left; font-size: 9px;  font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;"> ITEM DESCRIPTION </th>
+                            <th style="text-align: center; font-size: 9px; font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;"> UNIT PRICE </th>
+                            <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;"> QTY </th>
+                            <th style=" text-align: center; font-size: 9px; font-family: 'SanomatSans';padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;"> EST DELIVERY </th>
                           </tr> {% for item in event.Items %} <tr>
                             <td align="left" font-family="Aime" padding-right="40px" style="color: #3A131F;" valign="top">
                               <div style="line-height: 1.2">
@@ -512,7 +512,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
                         <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                           <tr>
                             <td style="padding: 0 20px 0 0; vertical-align: top; width: 50%;color: #3A131F;">
-                              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';text-transform: uppercase;color: #3A131F;padding:0 0 4px 0"> DELIVERY ADDRESS</div>
+                              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';text-transform: uppercase;color: #3A131F;padding:0"> DELIVERY ADDRESS</div>
                               <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.2" padding="0">
                                 <div style="color: #3A131F;">
                                   <div>
@@ -549,7 +549,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
                               </mj-text>
                             </td>
                             <td style="padding: 0; vertical-align: top; width: 50%;color: #3A131F;">
-                              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';text-transform: uppercase;color: #3A131F;padding:0 0 4px 0"> BILLING ADDRESS</div>
+                              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';text-transform: uppercase;color: #3A131F;padding:0"> BILLING ADDRESS</div>
                               <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.5" padding="0">
                                 <div style="color: #3A131F;">
                                   <div>
@@ -605,7 +605,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:0 40px 5px 0px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:5px 40px 5px 0px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:640px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
@@ -615,7 +615,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
                         <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                           <tr>
                             <td style="padding: 0 20px 0 5px; vertical-align: top; width: 50%;color: #3A131F;">
-                              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';text-transform: uppercase;padding: 0 0 4px 0;">PAYMENT METHOD</div>
+                              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';text-transform: uppercase;padding: 0;">PAYMENT METHOD</div>
                               <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.5" padding="0">
                                 <div style="color: #3A131F;">{{ event.DeliveryRemarks|default:''
                                                 }}</div> {% for payment in event.PaymentMethods %} <div style="color: #3A131F;">
@@ -623,7 +623,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
                                 </div> {% endfor %}
                               </mj-text>
                             </td> {% if event.ShippingPreference %} <td style="padding: 0 0 0 20px; vertical-align: top; width: 50%;color: #3A131F;">
-                              <div style="letter-spacing: 0.15em;font-size:9px;font-family: 'SanomatSans';text-transform: uppercase;padding: 0 0 4px 0;letter-spacing: 0.15em;color: #3A131F;">SHIPPING PREFERENCE</div>
+                              <div style="letter-spacing: 0.15em;font-size:9px;font-family: 'SanomatSans';text-transform: uppercase;padding: 0;letter-spacing: 0.15em;color: #3A131F;">SHIPPING PREFERENCE</div>
                               <mj-text font-size="16px" font-family="Aime" color="#3A131F" line-height="1.5" padding="0">
                                 <div style="color: #3A131F;">
                                   {{ event.ShippingPreference|default:''
@@ -651,7 +651,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:0 0 9px 5px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:5px 0 9px 5px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:675px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
@@ -660,7 +660,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                           <tr>
-                            <td style="color: #3A131F;letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';padding: 0 0 4px 0"> DELIVERY REMARKS </td>
+                            <td style="color: #3A131F;letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans';padding: 0"> DELIVERY REMARKS </td>
                           </tr>
                           <tr>
                             <td>
