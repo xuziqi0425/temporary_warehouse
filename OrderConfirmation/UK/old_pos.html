@@ -284,8 +284,7 @@
                                       <span
                                         style="font-weight: 600; color: #424242"
                                       >
-                                        #{{ event.ReferenceNumber|default:''
-                                        }}</span
+                                        #{{ event.ReferenceNumber|default:'' }}</span
                                       >
                                       has successfully been placed.
                                     </div>
@@ -316,15 +315,10 @@
                                         color: #424242;
                                       "
                                     >
-                                      Order #{{ event.ReferenceNumber|default:''
-                                      }}
+                                      Order #{{ event.ReferenceNumber|default:'' }}
                                     </div>
                                     <div style="color: #666; margin-top: 6px">
-                                      Placed on {{
-                                      event.CompletedAt|format_date_string|date:'d
-                                      F o'|default:'' }}, {{
-                                      event.CompletedAt|format_date_string|time:'g:i
-                                      A'|default:'' }}
+                                      Placed on {{ event.CompletedAt|format_date_string|date:'d F o'|default:'' }}, {{ event.CompletedAt|format_date_string|time:'g:i A'|default:'' }}
                                     </div>
                                     {% if event.SalesCrew %}
                                     <div
@@ -335,8 +329,7 @@
                                         margin-top: 6px;
                                       "
                                     >
-                                      Sales Crew: {{ event.SalesCrew|default:''
-                                      }}
+                                      Sales Crew: {{ event.SalesCrew|default:'' }}
                                     </div>
                                     {% endif %}
                                   </td>
@@ -389,9 +382,7 @@
                                               width: 20%;
                                             "
                                           >
-                                            {{
-                                            event.WithDeliveryDateDisplay|default:''
-                                            }}
+                                            {{ event.WithDeliveryDateDisplay|default:'' }}
                                           </th>
                                         </tr>
                                         <tr height="0">
@@ -415,8 +406,7 @@
                                             <div style="line-height: 1.2">
                                               <div>
                                                 <div style="margin-bottom: 5px">
-                                                  {{ item.ProductName|default:''
-                                                  }} {% if item.Clearance %}
+                                                  {{ item.ProductName|default:'' }} {% if item.Clearance %}
                                                   <sup
                                                     style="
                                                       color: #d23b3f;
@@ -437,8 +427,7 @@
                                                     margin: 0;
                                                   "
                                                 >
-                                                  {{ item.OptionsText|default:''
-                                                  }}
+                                                  {{ item.OptionsText|default:'' }}
                                                 </div>
                                                 {% if item.IsCustomized %}
                                                 <div
@@ -497,13 +486,10 @@ https://www.castlery.com/uk/sales-and-refunds"
                                           >
                                             <div>
                                               <div>
-                                                {{
-                                                item.UnitPrice.DiscountUnitPrice|default:''
-                                                }}
+                                                {{ item.UnitPrice.DiscountUnitPrice|default:'' }}
                                               </div>
                                             </div>
-                                            {% if item.UnitPrice.OriginalPrice
-                                            %}
+                                            {% if item.UnitPrice.OriginalPrice %}
                                             <div>
                                               <div
                                                 style="
@@ -512,9 +498,7 @@ https://www.castlery.com/uk/sales-and-refunds"
                                                   color: #aaa;
                                                 "
                                               >
-                                                {{
-                                                item.UnitPrice.OriginalPrice|default:''
-                                                }}
+                                                {{ item.UnitPrice.OriginalPrice|default:'' }}
                                               </div>
                                             </div>
                                             {% endif %}
@@ -542,24 +526,19 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             align="left"
                                             style="padding: 15px"
                                           >
-                                            Extended Guarantee: {{
-                                            item.Warranty.DurationMonths|default:''
-                                            }} months
+                                            Extended Guarantee: {{ item.Warranty.DurationMonths|default:'' }} months
                                           </td>
                                           <td
                                             align="center"
                                             style="padding: 15px"
                                           >
-                                            {{
-                                            item.Warranty.OfferCost|default:''
-                                            }}
+                                            {{ item.Warranty.OfferCost|default:'' }}
                                           </td>
                                           <td
                                             align="center"
                                             style="padding: 15px"
                                           >
-                                            {{ item.Warranty.Quantity|default:''
-                                            }}
+                                            {{ item.Warranty.Quantity|default:'' }}
                                           </td>
                                           <td
                                             align="center"
@@ -613,9 +592,7 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             Item Subtotal
                                           </td>
                                           <td>
-                                            {{
-                                            event.OrderTotal.ItemSubtotal|default:''
-                                            }}
+                                            {{ event.OrderTotal.ItemSubtotal|default:'' }}
                                           </td>
                                         </tr>
                                         <tr align="right">
@@ -628,9 +605,7 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             Shipping
                                           </td>
                                           <td>
-                                            {{
-                                            event.OrderTotal.Shipping.Current|default:''
-                                            }}
+                                            {{ event.OrderTotal.Shipping.Current|default:'' }}
                                           </td>
                                         </tr>
                                         {% if event.OrderTotal.Services.Current
@@ -645,18 +620,14 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             Services
                                           </td>
                                           <td>
-                                            {{
-                                            event.OrderTotal.Services.Current|default:''
-                                            }}
+                                            {{ event.OrderTotal.Services.Current|default:'' }}
                                             <span
                                               style="
                                                 font-size: 0.8rem;
                                                 text-decoration: line-through;
                                                 color: #aaa;
                                               "
-                                              >{{
-                                              event.OrderTotal.Services.Original|default:''
-                                              }}</span
+                                              >{{ event.OrderTotal.Services.Original|default:'' }}</span
                                             >
                                           </td>
                                         </tr>
@@ -687,9 +658,7 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             VAT (Included in Price)
                                           </td>
                                           <td>
-                                            {{
-                                            event.OrderTotal.TaxTotal|default:''
-                                            }}
+                                            {{ event.OrderTotal.TaxTotal|default:'' }}
                                           </td>
                                         </tr>
                                         {% endif %} {% if
@@ -704,9 +673,7 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             Guarantee Total
                                           </td>
                                           <td>
-                                            {{
-                                            event.OrderTotal.WarrantyTotal|default:''
-                                            }}
+                                            {{ event.OrderTotal.WarrantyTotal|default:'' }}
                                           </td>
                                         </tr>
                                         {% endif %}
@@ -720,9 +687,7 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             Total (Incl. VAT)
                                           </td>
                                           <td>
-                                            {{
-                                            event.OrderTotal.DisplayTotal|default:''
-                                            }}
+                                            {{ event.OrderTotal.DisplayTotal|default:'' }}
                                           </td>
                                         </tr>
                                       </tbody>
@@ -781,86 +746,50 @@ https://www.castlery.com/uk/sales-and-refunds"
                                           <td style="vertical-align: top">
                                             <div style="color: #666">
                                               <div>
-                                                {{
-                                                event.ShippingAddress.FirstName|default:''
-                                                }} {{
-                                                event.ShippingAddress.LastName|default:''
-                                                }}
+                                                {{ event.ShippingAddress.FirstName|default:'' }} {{ event.ShippingAddress.LastName|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.ShippingAddress.Company|default:''
-                                                }}
+                                                {{ event.ShippingAddress.Company|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.ShippingAddress.Address2|default:''
-                                                }}
+                                                {{ event.ShippingAddress.Address2|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.ShippingAddress.Address1|default:''
-                                                }}
+                                                {{ event.ShippingAddress.Address1|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.ShippingAddress.City|default:''
-                                                }}, {{
-                                                event.ShippingAddress.Region }}
-                                                {{ event.ShippingAddress.Zip }}
+                                                {{ event.ShippingAddress.City|default:'' }}, {{ event.ShippingAddress.Region }} {{ event.ShippingAddress.Zip }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.ShippingAddress.Country|default:''
-                                                }}
+                                                {{ event.ShippingAddress.Country|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.ShippingAddress.Phone|default:''
-                                                }}
+                                                {{ event.ShippingAddress.Phone|default:'' }}
                                               </div>
                                             </div>
                                           </td>
                                           <td style="vertical-align: top">
                                             <div style="color: #666">
                                               <div>
-                                                {{
-                                                event.BillingAddress.FirstName|default:''
-                                                }} {{
-                                                event.BillingAddress.LastName|default:''
-                                                }}
+                                                {{ event.BillingAddress.FirstName|default:'' }} {{ event.BillingAddress.LastName|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.BillingAddress.Company|default:''
-                                                }}
+                                                {{ event.BillingAddress.Company|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.BillingAddress.Address2|default:''
-                                                }}
+                                                {{ event.BillingAddress.Address2|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.BillingAddress.Address1|default:''
-                                                }}
+                                                {{ event.BillingAddress.Address1|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.BillingAddress.City|default:''
-                                                }}, {{
-                                                event.BillingAddress.Region }}
-                                                {{ event.BillingAddress.Zip }}
+                                                {{ event.BillingAddress.City|default:'' }}, {{ event.BillingAddress.Region }} {{ event.BillingAddress.Zip }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.BillingAddress.Country|default:''
-                                                }}
+                                                {{ event.BillingAddress.Country|default:'' }}
                                               </div>
                                               <div>
-                                                {{
-                                                event.BillingAddress.Phone|default:''
-                                                }}
+                                                {{ event.BillingAddress.Phone|default:'' }}
                                               </div>
                                             </div>
                                           </td>
@@ -910,16 +839,13 @@ https://www.castlery.com/uk/sales-and-refunds"
                                           <td style="vertical-align: top">
                                             <div style="color: #666">
                                               <div>
-                                                {{
-                                                event.DeliveryRemarks|default:''
-                                                }}
+                                                {{ event.DeliveryRemarks|default:'' }}
                                               </div>
                                             </div>
                                           </td>
                                           <td style="vertical-align: top">
                                             <div style="color: #666">
-                                              {% for payment in
-                                              event.PaymentMethods %}
+                                              {% for payment in event.PaymentMethods %}
                                               <div>
                                                 {{ payment|default:'' }}
                                               </div>
@@ -967,9 +893,7 @@ https://www.castlery.com/uk/sales-and-refunds"
                                                 font-size: 13px;
                                               "
                                             >
-                                              {{
-                                              event.ShippingPreference|default:''
-                                              }}
+                                            {{ event.ShippingPreference|default:'' }}
                                             </div>
                                           </td>
                                           <td></td>
