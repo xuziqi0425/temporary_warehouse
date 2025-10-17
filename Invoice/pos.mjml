@@ -140,13 +140,11 @@
     </mj-section>
 
     <!-- Browse link -->
-    <mj-section background-color="#773925" padding="0">
-      <mj-column>
-        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="11px" color="#f7f3e7" align="center" padding="0">
-          <a href="{{ event.payment_link }}" style="display: inline-block; background-color: transparent; border: 1px solid #f7f3e7; color: #f7f3e7; text-decoration: none; padding: 8px 20px; border-radius: 2px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em;">
-            BROWSE NEW ARRIVALS
-          </a>
-        </mj-text>
+    <mj-section background-color="#773925" padding="0" >
+      <mj-column >
+        <mj-button href="#" background-color="transparent" border="1px solid #f7f3e7"   width="260px" height="29px" border-radius="2px">
+        <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;"> BROWSE NEW ARRIVALS </span>
+        </mj-button>
       </mj-column>
     </mj-section>
     <!-- Divider -->
@@ -168,13 +166,13 @@
     <mj-section background-color="#773925" padding="0 70px">
       <mj-column width="33.33%">
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" align="center" />
-        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="11px"  color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
           FREE SWATCHES
         </mj-text>
       </mj-column>
       <mj-column width="33.33%">
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" align="center" />
-        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="11px"  color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
           FLAT RATE SHIPPING
         </mj-text>
       </mj-column>
