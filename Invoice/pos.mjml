@@ -22,13 +22,6 @@
         font-style: normal;
       }
 
-      @font-face {
-        font-family: 'MinervaModern';
-        src: url('https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff') format('woff');
-        font-weight: 400;
-        font-style: normal;
-      }
-
       .hey-name {
         font-family: 'AimeItalic', Arial, Helvetica, sans-serif;
         text-align: center;
@@ -38,7 +31,7 @@
       }
 
       .hey-name-content {
-        font-family: 'Aime', Arial, Helvetica, sans-serif;
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;
         text-align: center;
         font-size: 27px;
         color: #f7f3e7;
@@ -50,30 +43,30 @@
           margin: 0 !important;
           padding: 0 !important;
         }
-        
+
         .mj-section table {
           margin: 0 !important;
           border-spacing: 0 !important;
           border-collapse: collapse !important;
         }
-        
+
         .mj-section td {
           padding: 0 !important;
           margin: 0 !important;
         }
-        
+
         /* Ensure seamless background */
         .mj-body {
           background-color: #773925 !important;
         }
-        
+
         .mj-wrapper {
           background-color: #773925 !important;
         }
       }
     </mj-style>
     <mj-attributes>
-      <mj-text font-family="Aime" />
+      <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" />
     </mj-attributes>
   </mj-head>
 
@@ -88,7 +81,7 @@
     <!-- Thank you message -->
     <mj-section background-color="#773925" padding="0">
       <mj-column>
-        <mj-text font-family="Aime" font-size="38px" color="#f7f3e7" align="center">
+        <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="38px" color="#f7f3e7" align="center">
           Thank you for choosing Castlery
         </mj-text>
       </mj-column>
@@ -106,11 +99,11 @@
     <!-- Main content -->
     <mj-section background-color="#773925" padding="0">
       <mj-column>
-        <mj-text font-family="Aime" font-size="17px" color="#f7f3e7" align="center" line-height="1.2">
+        <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="17px" color="#f7f3e7" align="center" line-height="1.2">
           Here is the e-invoice for your recent Castlery order.<br />
           You'll find it attached for your records.​<br /><br />
           If you have any questions, reach out to us at
-           <a href="mailto:help.au@castlery.com" style="font-family: AimeItalic;color: #F7F3E7; text-decoration: none;"><em>hello.sg@castlery.com</em></a>.
+          <a href="mailto:help.au@castlery.com" style="font-family: AimeItalic;color: #D25C1B; text-decoration: none;"><em>hello.sg@castlery.com</em></a>.
         </mj-text>
       </mj-column>
     </mj-section>
@@ -125,7 +118,7 @@
     <!-- Need more inspiration -->
     <mj-section background-color="#773925" padding="10px 0 0px">
       <mj-column>
-        <mj-text font-family="Aime" font-size="28px" color="#f7f3e7" align="center">
+        <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="28px" color="#f7f3e7" align="center">
           Need more home inspiration?
         </mj-text>
       </mj-column>
@@ -133,7 +126,7 @@
 
     <mj-section background-color="#773925" padding="0">
       <mj-column>
-        <mj-text font-family="Aime" font-size="17px" color="#f7f3e7" align="center" padding="0">
+        <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="17px" color="#f7f3e7" align="center" padding="0">
           Check out our newest designs.
         </mj-text>
       </mj-column>
@@ -146,12 +139,14 @@
       </mj-column>
     </mj-section>
 
-    <!-- Browse button -->
+    <!-- Browse link -->
     <mj-section background-color="#773925" padding="0">
       <mj-column>
-        <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" color="#f7f3e7" font-family="SanomatSans" font-size="11px" font-weight="400" width="260px" height="29px" border-radius="2px" padding="0">
-          BROWSE NEW ARRIVALS
-        </mj-button>
+        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="11px" color="#f7f3e7" align="center" padding="0">
+          <a href="{{ event.payment_link }}" style="display: inline-block; background-color: transparent; border: 1px solid #f7f3e7; color: #f7f3e7; text-decoration: none; padding: 8px 20px; border-radius: 2px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em;">
+            BROWSE NEW ARRIVALS
+          </a>
+        </mj-text>
       </mj-column>
     </mj-section>
     <!-- Divider -->
@@ -164,7 +159,7 @@
     <!-- More reasons to love us -->
     <mj-section background-color="#773925" padding="0">
       <mj-column>
-        <mj-text font-family="Aime" font-size="28px" color="#F7F3E7" align="center">
+        <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="28px" color="#F7F3E7" align="center">
           More reasons to love us
         </mj-text>
       </mj-column>
@@ -173,19 +168,19 @@
     <mj-section background-color="#773925" padding="0 70px">
       <mj-column width="33.33%">
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" align="center" />
-        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="11px"  color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
           FREE SWATCHES
         </mj-text>
       </mj-column>
       <mj-column width="33.33%">
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" align="center" />
-        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="11px"  color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
           FLAT RATE SHIPPING
         </mj-text>
       </mj-column>
       <mj-column width="33.33%">
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" align="center" />
-        <mj-text font-family="MinervaModern" font-size="11px" font-weight="700" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
+        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
           30-DAY RETURNS
         </mj-text>
       </mj-column>
@@ -216,7 +211,7 @@
 
     <mj-section background-color="#773925" padding="20px 0 10px">
       <mj-column>
-        <mj-text font-family="SanomatSans" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em">
+        <mj-text font-family="'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em">
           <a href="https://www.castlery.com/au/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
           <a href="https://www.castlery.com/au/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>
