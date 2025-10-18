@@ -596,8 +596,7 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             {{ event.OrderTotal.Shipping.Current|default:'' }}
                                           </td>
                                         </tr>
-                                        {% if event.OrderTotal.Services.Current
-                                        > 0 %}
+                                        {% if event.OrderTotal.Services.Current > 0 %}
                                         <tr align="right">
                                           <td
                                             style="
