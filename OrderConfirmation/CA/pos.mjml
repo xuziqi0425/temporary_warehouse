@@ -215,7 +215,7 @@ https://www.castlery.com/ca/sales-and-refunds" style="
               </div>
               {% endfor %}
             </td>
-            <td align="center" padding="0 5px" style="color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
+            <td align="center" style="padding:0 5px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
 
               <div style="font-size: 16px">
                 {{ item.UnitPrice.DiscountUnitPrice|default:'' }}
@@ -234,10 +234,11 @@ https://www.castlery.com/ca/sales-and-refunds" style="
               </div>
               {% endif %}
             </td>
-            <td align="center" padding="0 5px" style="font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
+            <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
               {{ item.Quantity|default:'' }}
             </td>
-            <td align="left" padding="0 5px" style="
+            <td align="left" style="
+            padding:0 5px;
               color: #3A131F;
               font-size: 16px;
               font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;
@@ -247,19 +248,16 @@ https://www.castlery.com/ca/sales-and-refunds" style="
           </tr>
           {% if item.Warranty %}
           <tr>
-            <td align="left" style="padding: 15px">
+            <td align="left" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" padding-right="40px" style="color: #3A131F;font-size: 16px;" valign="top">
               Extended Warranty: {{ item.Warranty.DurationMonths|default:'' }} months
             </td>
-            <td align="center" style="padding: 15px">
+            <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
               {{ item.Warranty.OfferCost|default:'' }}
             </td>
-            <td align="center" style="padding: 15px">
+            <tdalign="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
               {{ item.Warranty.Quantity|default:'' }}
-            </td>
-            <td align="center" style="
-                                              padding: 15px;
-                                              font-size: 14px;
-                                            "></td>
+              </td>
+              <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top"></td>
           </tr>
           {% endif %}
           <tr>
@@ -304,6 +302,7 @@ https://www.castlery.com/ca/sales-and-refunds" style="
             </td>
             <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
               {{ event.OrderTotal.Services.Current|default:'' }}
+              <br>
               <span style="
               font-size: 0.8rem;
               text-decoration: line-through;
