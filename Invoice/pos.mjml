@@ -143,7 +143,7 @@
     <mj-section background-color="#773925" padding="0" >
       <mj-column >
         <mj-button href="#" background-color="transparent" border="1px solid #f7f3e7"   width="260px" height="29px" border-radius="2px">
-        <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;"> BROWSE NEW ARRIVALS </span>
+        <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> BROWSE NEW ARRIVALS </span>
         </mj-button>
       </mj-column>
     </mj-section>
