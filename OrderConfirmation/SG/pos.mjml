@@ -36,29 +36,30 @@
         color: #3A131F !important;
         text-decoration: none !important;
       }
-      
+
       /* Outlook specific styles to prevent auto-linking */
       .phone-number span {
         color: #3A131F !important;
         text-decoration: none !important;
         mso-color-alt: #3A131F;
       }
-      
+
       /* Prevent Outlook from auto-detecting phone numbers as links */
       [class="phone-number"] {
         mso-padding-alt: 0;
         mso-margin-alt: 0;
       }
-      
+
       /* Additional Outlook-specific overrides */
-      .phone-number, .phone-number * {
+      .phone-number,
+      .phone-number * {
         color: #3A131F !important;
         text-decoration: none !important;
         mso-color-alt: #3A131F;
         mso-text-raise: 0;
         mso-line-height-rule: exactly;
       }
-      
+
       /* Force Outlook to treat as text, not link */
       .phone-number {
         mso-element: para;
@@ -103,7 +104,7 @@
           the details for your order are
           listed below. If you have any
           questions or need to make a
-          change, contact our team at <a href="mailto:help.au@castlery.com" style="color: #F7F3E7; text-decoration: none;"><em>help.au@castlery.com</em></a>. We're here to help.​
+          change, contact our team at <a href="mailto:help.sg@castlery.com" style="color: #F7F3E7; text-decoration: none;"><em>help.sg@castlery.com</em></a>. We're here to help.​
         </mj-text>
       </mj-column>
     </mj-section>
@@ -183,7 +184,7 @@
                     eligible for returns,
                     exchanges, or refunds.
                     <a href="
-https://www.castlery.com/au/sales-and-refunds" style="
+https://www.castlery.com/sg/sales-and-refunds" style="
                         margin-left: 1px;
                         text-decoration: underline;
                         color: #767676;
@@ -276,7 +277,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
               SHIPPING
             </td>
             <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
-              {{ event.OrderTotal.Shipping.Current|default:'' }}
+              {{ event.OrderTotal.Shipping|default:'' }}
             </td>
           </tr>
           {% if event.OrderTotal.Services.Current > 0 %}
@@ -285,12 +286,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
               SERVICES
             </td>
             <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
-              {{ event.OrderTotal.Services.Current|default:'' }}
-              <span style="
-              font-size: 0.8rem;
-              text-decoration: line-through;
-              color: #767676;
-            ">{{ event.OrderTotal.Services.Original|default:'' }}</span>
+              {{ event.OrderTotal.Services|default:'' }}
             </td>
           </tr>
           {% endif %}
@@ -349,9 +345,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
                     {{ event.ShippingAddress.Address2|default:'' }}
                   </div>
                   <div>
-                    {{ event.ShippingAddress.City|default:'' }},
-                    {{ event.ShippingAddress.Region }}
-                    {{ event.ShippingAddress.Zip }}
+                    {{ event.ShippingAddress.City|default:'' }}, {{ event.ShippingAddress.RegionCode|default:'' }} {{ event.ShippingAddress.Zip|default:'' }}
                   </div>
                   <div>
                     {{ event.ShippingAddress.Country|default:'' }}
@@ -389,9 +383,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
                     {{ event.BillingAddress.Address2|default:'' }}
                   </div>
                   <div>
-                    {{ event.BillingAddress.City|default:'' }},
-                    {{ event.BillingAddress.Region }}
-                    {{ event.BillingAddress.Zip }}
+                    {{ event.BillingAddress.City|default:'' }}, {{ event.BillingAddress.RegionCode|default:'' }} {{ event.BillingAddress.Zip|default:'' }}
                   </div>
                   <div>
                     {{ event.BillingAddress.Country|default:'' }}
@@ -485,80 +477,51 @@ https://www.castlery.com/au/sales-and-refunds" style="
     <mj-section background-color="#773925" padding="36px 30px 0">
       <mj-column>
         <mj-text font-style="italic" font-size="16px" color="#F7F3E7" align="center" padding="0 0 16px 0">
-          When will I hear from Castlery next?
+          When will I receive my items?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          You will next hear from us when we
-          are getting your order ready for
-          collection by the carrier. This
-          should be shortly before the
-          beginning of your Delivery ETA
-          window shown on your order
-          confirmation.
+          There is a 'Deliver By' estimate for
+          each item. This is an indication of
+          when your items are expected to
+          arrive in our warehouse. We will
+          send out an SMS and Email with a
+          delivery schedule link closer to
+          your chosen date for you to select
+          the actual delivery date and
+          timeslot. A delivery confirmation
+          email will be sent to you after we
+          have confirmed your delivery timing.
         </mj-text>
 
         <mj-text font-style="italic" font-size="16px" color="#F7F3E7" align="center" padding="0 0 16px 0">
-          When can I expect my order to
-          arrive?
+          How do I view my order? What if I
+          want to change or cancel my order?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          You can expect to receive your
-          delivery within the Estimated
-          Delivery dates shown above. In the
-          event of unforeseen delays, we will
-          contact you as soon as possible. For
-          more information, please click
-          <a href="https://www.castlery.com/au/blog/covid-19?utm_campaign=au-ship-2108&amp;utm_source=system-generated-email&amp;utm_medium=email" style="color:#D25C1B">here</a>.
-        </mj-text>
 
-        <mj-text font-style="italic" font-size="16px" color="#F7F3E7" align="center" padding="0 0 16px 0">
-          How do I track my order?
-        </mj-text>
-        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          Thanks to our interactive live
-          tracking system, checking the
-          status of your order is easy!</br>
-          Just log in to your account,
-          select ‘Orders’, then the item you
-          wish to review, and we’ll take you
-          to a tracking page that will give
-          updated information as your
-          delivery progresses.</br>
-          Alternatively, look out for an
-          email containing tracking
-          information to use on the relevant
-          delivery partner’s website.
-        </mj-text>
+          Visit online
+          <a href="https://www.castlery.com/sg/account/orders" style="color:#D25C1B">Order Status</a>
+          to view the most up-to-date
+          status. If you decide to
+          change/cancel your order, please
+          notify us at least 5 working days
+          before the agreed delivery date
+          and no additional charges will be
+          incurred. Any cancellation/change
+          of order within 5 working days of
+          agreed delivery date will be
+          subject to restocking fees. For
+          more details, visit our
+          <a href="https://www.castlery.com/sg/sales-and-refund?utm_campaign=order-confirmation&amp;utm_source=system-generated-email&amp;utm_medium=email" style="color:#D25C1B">Terms &amp; Conditions</a>.
 
-        <mj-text font-style="italic" font-size="16px" color="#F7F3E7" align="center" padding="0 0 16px 0">
-          How do I view or change my order?
-        </mj-text>
-        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          To view your order just log in to
-          your account on our website and
-          select ‘Orders’. You cannot alter an
-          order once it has been placed and
-          payment processed. Please contact us
-          through
-          <a href="mailto:help.au@castlery.com" style="color:#D25C1B">help.au@castlery.com</a>
-          if you need to alter/cancel or place
-          your order on hold. Please note
-          additional warehousing charges may
-          be applicable.
-        </mj-text>
-
-        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 0">
-          Have any other questions about your
-          order or getting ready for your
-          delivery?
           <br />
-          Feel free to refer to the delivery
-          FAQ
-          <a href="https://res.cloudinary.com/castlery/image/upload/v1689064441/marketing/Cross-Market/Others/AU_Pre-Delivery_Brochure_Digital_v2.pdf" style="color: #D25C1B">here</a>
-          <a href="" style="color: #a45b37">
-          </a>
-          , complete with a Checklist with
-          more important information.
+
+          To process such requests, email us
+          at
+          <a href="mailto:help.sg@castlery.com" style="color:#D25C1B">help.sg@castlery.com</a>. You may also WhatsApp our
+          Customer Service at
+          <a href="https://wa.me/6582410030" style="color:#D25C1B">+65 8241 0030</a>. Please have your order number
+          ready.
         </mj-text>
 
       </mj-column>
@@ -610,13 +573,13 @@ https://www.castlery.com/au/sales-and-refunds" style="
     <mj-section background-color="#773925" padding="0">
       <mj-column>
         <mj-text align="center">
-          <a href="http://www.instagram.com/castleryAU" target="_blank" style="display: inline-block;  vertical-align: middle;">
+          <a href="http://www.instagram.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
           </a>
-          <a href="https://www.facebook.com/CastleryAU" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+          <a href="https://www.facebook.com/CastlerySG" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
           </a>
-          <a href="http://www.pinterest.com/castleryAU" target="_blank" style="display: inline-block;  vertical-align: middle;">
+          <a href="http://www.pinterest.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
           </a>
         </mj-text>
@@ -626,11 +589,11 @@ https://www.castlery.com/au/sales-and-refunds" style="
     <mj-section background-color="#773925" padding="20px 0 15px">
       <mj-column>
         <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em">
-          <a href="https://www.castlery.com/au/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
+          <a href="https://www.castlery.com/sg/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-          <a href="https://www.castlery.com/au/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>
+          <a href="https://www.castlery.com/sg/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-          <a href="https://www.castlery.com/au/referral" style="color: #F7F3E7; text-decoration: none;">REFER A FRIEND</a>
+          <a href="https://www.castlery.com/sg/referral" style="color: #F7F3E7; text-decoration: none;">REFER A FRIEND</a>
         </mj-text>
       </mj-column>
     </mj-section>
