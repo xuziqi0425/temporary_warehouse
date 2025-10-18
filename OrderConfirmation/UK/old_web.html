@@ -619,8 +619,8 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             >
                                           </td>
                                         </tr>
-                                        {% endif %} {% for promotion in
-                                        event.OrderTotal.PromotionAdjustments %}
+                                        {% endif %}
+                                        {% for promotion in event.OrderTotal.PromotionAdjustments %}
                                         <tr align="right">
                                           <td
                                             style="
@@ -634,8 +634,8 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             {{ promotion.Amount|default:'' }}
                                           </td>
                                         </tr>
-                                        {% endfor %} {% if
-                                        event.OrderTotal.TaxTotal > 0 %}
+                                        {% endfor %}
+                                        {% if event.OrderTotal.TaxTotal > 0 %}
                                         <tr align="right">
                                           <td
                                             style="
@@ -649,8 +649,8 @@ https://www.castlery.com/uk/sales-and-refunds"
                                             {{ event.OrderTotal.TaxTotal|default:'' }}
                                           </td>
                                         </tr>
-                                        {% endif %} {% if
-                                        event.OrderTotal.WarrantyTotal > 0 %}
+                                        {% endif %}
+                                        {% if event.OrderTotal.WarrantyTotal > 0 %}
                                         <tr align="right">
                                           <td
                                             style="

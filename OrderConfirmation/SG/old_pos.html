@@ -591,8 +591,8 @@ https://www.castlery.com/sg/sales-and-refunds"
                                             {{ event.OrderTotal.Services|default:'' }}
                                           </td>
                                         </tr>
-                                        {% endif %} {% for promotion in
-                                        event.OrderTotal.PromotionAdjustments %}
+                                        {% endif %}
+                                        {% for promotion in event.OrderTotal.PromotionAdjustments %}
                                         <tr align="right">
                                           <td
                                             style="
