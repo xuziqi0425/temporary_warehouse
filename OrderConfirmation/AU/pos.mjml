@@ -68,7 +68,7 @@
       }
     </mj-style>
     <mj-attributes>
-      <mj-text font-family="Aime" />
+      <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" />
 
     </mj-attributes>
   </mj-head>
@@ -425,8 +425,6 @@ https://www.castlery.com/au/sales-and-refunds" style="
 
 
               <mj-text font-size="16px" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#3A131F" line-height="1.5" padding="0">
-                <div style="color: #3A131F; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;">{{ event.DeliveryRemarks|default:'' }}</div>
-
                 {% for payment in event.PaymentMethods %}
                 <div style="color: #3A131F;font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;">
                   {{ payment|default:'' }}<br />
@@ -476,7 +474,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
     <!-- FAQ Section -->
     <mj-section background-color="#773925" padding="26px 0 0">
       <mj-column>
-        <mj-text font-family="Aime" font-size="28px" color="#F7F3E7" align="center">
+        <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-size="28px" color="#F7F3E7" align="center">
           Frequently-Asked Questions
         </mj-text>
       </mj-column>
