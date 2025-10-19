@@ -90,8 +90,8 @@
     <!-- Hey Customer Name -->
     <mj-section background-color="#773925" padding="0">
       <mj-column>
-        <mj-text font-family="AimeItalic" font-size="28px" color="#9ba3c1" align="center" padding="37px 0 21px">
-          Hey [Customer Name],
+        <mj-text font-family="AimeItalic,'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="28px" color="#9ba3c1" align="center" padding="37px 0 21px">
+          <em>Hey [Customer Name],</em>
         </mj-text>
       </mj-column>
     </mj-section>
