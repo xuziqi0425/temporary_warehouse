@@ -297,13 +297,11 @@
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1;text-align:center;color:#3A131F;">Placed on {{ event.CompletedAt|format_date_string|date:'d F o'|default:'' }}, {{ event.CompletedAt|format_date_string|time:'g:i A'|default:'' }}</div>
                       </td>
                     </tr>
-                    {% if event.SalesCrew %}
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1;text-align:center;color:#3A131F;">Sales Crew: {{ event.SalesCrew|default:'' }}</div>
                       </td>
                     </tr>
-                    {% endif %}
                   </tbody>
                 </table>
               </div>
@@ -511,17 +509,17 @@ https://www.castlery.com/us/sales-and-refunds" style="
                             {{ promotion.Amount|default:'' }}
                           </td>
                         </tr> {% endfor %} {% if event.OrderTotal.TaxTotal > 0 %} <tr>
-                          <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> Sales Tax </td>
+                          <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> SALES TAX </td>
                           <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
                             {{ event.OrderTotal.TaxTotal|default:'' }}
                           </td>
                         </tr> {% endif %} {% if event.OrderTotal.WarrantyTotal > 0 %} <tr>
-                          <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> Warranty Total </td>
+                          <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> WARRANTY TOTAL </td>
                           <td style="padding: 12px 0 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
                             {{ event.OrderTotal.WarrantyTotal|default:'' }}
                           </td>
                         </tr> {% endif %} <tr>
-                          <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> Total </td>
+                          <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> TOTAL </td>
                           <td style="padding: 12px 0 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
                             {{ event.OrderTotal.DisplayTotal|default:'' }}
                           </td>
