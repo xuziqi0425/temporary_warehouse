@@ -297,11 +297,13 @@
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1;text-align:center;color:#3A131F;">Placed on {{ event.CompletedAt|format_date_string|date:'d F o'|default:'' }}, {{ event.CompletedAt|format_date_string|time:'g:i A'|default:'' }}</div>
                       </td>
                     </tr>
+                    {% if event.SalesCrew %}
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1;text-align:center;color:#3A131F;">Sales Crew: {{ event.SalesCrew|default:'' }}</div>
                       </td>
                     </tr>
+                    {% endif %}
                   </tbody>
                 </table>
               </div>
@@ -771,7 +773,8 @@ https://www.castlery.com/us/sales-and-refunds" style="
                   </tr>
                   <tr>
                     <td align="left" style="font-size:0px;padding:0 0 29px 0;word-break:break-word;">
-                      <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:left;color:#F7F3E7;">For Non-Courier deliveries, our delivery partners will contact you to arrange a delivery day and time window. They may also contact you a few hours ahead on the day of delivery as confirmation. <br> Please note the following: <br>
+                      <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:left;color:#F7F3E7;">For Non-Courier deliveries, our delivery partners will contact you to arrange a delivery day and time window. They may also contact you a few hours ahead on the day of delivery as confirmation. <br>
+                        <br> Please note the following: <br>
                         <ul>
                           <li> Please measure and ensure that your items will fit through doors, staircases and lifts in their packaging before you place your order. </li>
                           <br />
@@ -793,9 +796,12 @@ https://www.castlery.com/us/sales-and-refunds" style="
                   </tr>
                   <tr>
                     <td align="left" style="font-size:0px;padding:0 0 29px 0;word-break:break-word;">
-                      <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:left;color:#F7F3E7;">Log in to your Castlery account online to view your most up-to-date Order Status. <br /> If you decide to change or cancel your order, please contact us before the dispatch date and no additional charges will be incurred. To process such requests, email us at <a href="mailto:help.us@castlery.com" style="color: #D25C1B;">help.us@castlery.com</a>. We are available from Monday to Friday, 10am to 6pm, Pacific Standard Time. <br /> Any change or cancellation after warehouse dispatch will incur return shipping and logistics charges. For full details, please visit our <a href="https://www.castlery.com/us/sales-and-refund" style="
+                      <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:left;color:#F7F3E7;">Log in to your Castlery account online to view your most up-to-date Order Status. <br>
+                        <br> If you decide to change or cancel your order, please contact us before the dispatch date and no additional charges will be incurred. To process such requests, email us at <a href="mailto:help.us@castlery.com" style="color: #D25C1B;">help.us@castlery.com</a>. We are available from Monday to Friday, 10am to 6pm, Pacific Standard Time. <br>
+                        <br> Any change or cancellation after warehouse dispatch will incur return shipping and logistics charges. For full details, please visit our <a href="https://www.castlery.com/us/sales-and-refund" style="
                                                   color: #D25C1B;
-                                                ">Sales and Refund</a> Page.</div>
+                                                ">Sales and Refund</a> Page.
+                      </div>
                     </td>
                   </tr>
                 </tbody>
