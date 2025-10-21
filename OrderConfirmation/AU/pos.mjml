@@ -579,23 +579,29 @@ https://www.castlery.com/au/sales-and-refunds" style="
       </mj-column>
     </mj-section>
 
-    <mj-section background-color="#773925" padding="0 70px">
-      <mj-column width="33.33%">
-        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" align="center" />
-        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
-          FREE SWATCHES
-        </mj-text>
-      </mj-column>
-      <mj-column width="33.33%">
-        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" align="center" />
-        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
-          FLAT RATE SHIPPING
-        </mj-text>
-      </mj-column>
-      <mj-column width="33.33%">
-        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" align="center" />
-        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.15em" padding="9px 0 0">
-          30-DAY RETURNS
+    <mj-section background-color="#773925">
+      <mj-column>
+        <mj-text align="center">
+          <div style="white-space: nowrap; text-align: center; display: flex; justify-content: center; align-items: flex-start; flex-wrap: nowrap;">
+            <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
+              <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" style="display: block; margin: 0 auto;" />
+              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;">
+                FREE SWATCHES
+              </div>
+            </div>
+            <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
+              <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" style="display: block; margin: 0 auto;" />
+              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; height: 28px; display: flex; align-items: center; justify-content: center; white-space: normal;position: relative;">
+                FLAT RATE SHIPPING
+              </div>
+            </div>
+            <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
+              <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" style="display: block; margin: 0 auto;" />
+              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;">
+                30-DAY RETURNS
+              </div>
+            </div>
+          </div>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -630,7 +636,9 @@ https://www.castlery.com/au/sales-and-refunds" style="
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
           <a href="https://www.castlery.com/au/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-          <a href="https://www.castlery.com/au/referral" style="color: #F7F3E7; text-decoration: none;">REFER A FRIEND</a>
+          <span style="white-space: nowrap;">
+            <a href="https://www.castlery.com/au/referral" style="color: #F7F3E7; text-decoration: none;">REFER A FRIEND</a>
+          </span>
         </mj-text>
       </mj-column>
     </mj-section>
