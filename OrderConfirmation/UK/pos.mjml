@@ -81,7 +81,7 @@
         <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-size="38px" color="#F7F3E7" align="center">
           Thank you for choosing Castlery
         </mj-text>
-        <mj-image padding="21px 0 30px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002636/email/order-confirmation-main.png" width="680px" />
+        <mj-image padding="29px 0 30px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002636/email/order-confirmation-main.png" width="680px" />
         <mj-text font-size="28px" color="#9BA3C1" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-style="italic" align="center">
           Hey {{ event.ShippingAddress.FirstName|default:'' }}
           {{ event.ShippingAddress.LastName|default:'' }},
@@ -148,7 +148,7 @@
               QTY
             </th>
             <th style=" text-align: center; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;text-transform: uppercase;">
-              {{ event.WithDeliveryDateDisplay|default:'' }}
+              EST DELIVERY
             </th>
           </tr>
           {% for item in event.Items %}
@@ -170,6 +170,7 @@
                       color: #767676;
                       font-size: 13px;
                       margin: 0;
+                      padding-left: 6px;
                     ">
                     {{ item.OptionsText|default:'' }}
                   </div>
@@ -179,6 +180,7 @@
                       font-size: 12px;
                       margin-top: 5px;
                       line-height: 1.5;
+                      padding-left: 6px;
                     ">
                     This customized item is not
                     eligible for returns,
@@ -200,7 +202,7 @@ https://www.castlery.com/uk/sales-and-refunds" style="
                   <div style="
                       text-align: left;
                       line-height: 1.2;
-                      padding-left: 10px;
+                      padding-left: 6px;
                     ">
                     <div style="
                         color: #767676;
@@ -237,7 +239,7 @@ https://www.castlery.com/uk/sales-and-refunds" style="
             <td align="center" padding="0 5px" style="font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
               {{ item.Quantity|default:'' }}
             </td>
-            <td align="left" padding="0 5px" style="
+            <td align="center" padding="0 5px" style="
               color: #3A131F;
               font-size: 16px;
               font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;
@@ -526,7 +528,7 @@ https://www.castlery.com/uk/sales-and-refunds" style="
 
     <mj-section background-color="#773925" padding="36px 30px 0">
       <mj-column>
-        <mj-text font-style="italic" font-size="16px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
           When will I receive my items?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
@@ -546,7 +548,7 @@ https://www.castlery.com/uk/sales-and-refunds" style="
           contact you as soon as possible.
         </mj-text>
 
-        <mj-text font-style="italic" font-size="16px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
           How will my items be delivered?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
@@ -583,7 +585,7 @@ https://www.castlery.com/uk/sales-and-refunds" style="
                                                 ">Delivery Page</a>.
         </mj-text>
 
-        <mj-text font-style="italic" font-size="16px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
           What should I prepare ahead of
           delivery?
         </mj-text>
@@ -645,11 +647,11 @@ https://www.castlery.com/uk/sales-and-refunds" style="
 
         </mj-text>
 
-        <mj-text font-style="italic" font-size="16px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
           How do I view my order? What if I
           want to change or cancel my order?
         </mj-text>
-        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0">
 
           Log in to your Castlery account
           online to view your most
