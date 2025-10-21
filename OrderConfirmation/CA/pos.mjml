@@ -37,6 +37,23 @@
         text-decoration: none !important;
       }
 
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: inline;
+      }
+      .mobile-text {
+        display: none;
+      }
+      
+      @media only screen and (max-width: 600px) {
+        .desktop-text {
+          display: none;
+        }
+        .mobile-text {
+          display: inline;
+        }
+      }
+
       /* Outlook specific styles to prevent auto-linking */
       .phone-number span {
         color: #3A131F !important;
@@ -148,7 +165,7 @@
               QTY
             </th>
             <th style=" text-align: center; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;text-transform: uppercase;">
-             EST DELIVERY
+              EST DELIVERY
             </th>
           </tr>
           {% for item in event.Items %}
@@ -258,8 +275,8 @@ https://www.castlery.com/ca/sales-and-refunds" style="
             </td>
             <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
               {{ item.Warranty.Quantity|default:'' }}
-              </td>
-              <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top"></td>
+            </td>
+            <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top"></td>
           </tr>
           {% endif %}
           <tr>
@@ -678,21 +695,24 @@ https://www.castlery.com/ca/sales-and-refunds" style="
           <div style="white-space: nowrap; text-align: center; display: flex; justify-content: center; align-items: flex-start; flex-wrap: nowrap;">
             <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
               <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" style="display: block; margin: 0 auto;" />
-              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;">
-                FREE SWATCHES
-              </div>
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;line-height: 1.5;">
+                  <span class="desktop-text">FREE SWATCHES</span>
+                  <span class="mobile-text">FREE<br>SWATCHES</span>
+                </div>
             </div>
             <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
               <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" style="display: block; margin: 0 auto;" />
-              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; height: 28px; display: flex; align-items: center; justify-content: center; white-space: normal;position: relative;">
-                FLAT RATE SHIPPING
-              </div>
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;line-height: 1.5;">
+                  <span class="desktop-text">FLAT RATE SHIPPING</span>
+                  <span class="mobile-text">FLAT RATE<br>SHIPPING</span>
+                </div>
             </div>
             <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
               <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" style="display: block; margin: 0 auto;" />
-              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;">
-                30-DAY RETURNS
-              </div>
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;line-height: 1.5;">
+                  <span class="desktop-text">30-DAY RETURNS</span>
+                  <span class="mobile-text">30-DAY<br>RETURNS</span>
+                </div>
             </div>
           </div>
         </mj-text>
@@ -700,7 +720,7 @@ https://www.castlery.com/ca/sales-and-refunds" style="
     </mj-section>
 
     <!-- Footer Section -->
-    <mj-section background-color="#773925" padding="50px 0 35px">
+    <mj-section background-color="#773925" padding="15px 0 35px">
       <mj-column>
         <mj-divider border-color="#F7F3E7" border-width="1px" padding="0 30px" />
       </mj-column>
@@ -724,7 +744,7 @@ https://www.castlery.com/ca/sales-and-refunds" style="
 
     <mj-section background-color="#773925" padding="20px 0 15px">
       <mj-column>
-        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em"  line-height="1.5">
+        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em" line-height="1.5">
           <a href="https://www.castlery.com/ca/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
           <a href="https://www.castlery.com/ca/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>

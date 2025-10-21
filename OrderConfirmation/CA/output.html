@@ -129,6 +129,25 @@
       text-decoration: none !important;
     }
 
+    /* 响应式文字显示 */
+    .desktop-text {
+      display: inline;
+    }
+
+    .mobile-text {
+      display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .desktop-text {
+        display: none;
+      }
+
+      .mobile-text {
+        display: inline;
+      }
+    }
+
     /* Outlook specific styles to prevent auto-linking */
     .phone-number span {
       color: #3A131F !important;
@@ -875,15 +894,24 @@ https://www.castlery.com/ca/sales-and-refunds" style="
                           <div style="white-space: nowrap; text-align: center; display: flex; justify-content: center; align-items: flex-start; flex-wrap: nowrap;">
                             <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
                               <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" style="display: block; margin: 0 auto;" />
-                              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;"> FREE SWATCHES </div>
+                              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;line-height: 1.5;">
+                                <span class="desktop-text">FREE SWATCHES</span>
+                                <span class="mobile-text">FREE<br>SWATCHES</span>
+                              </div>
                             </div>
                             <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
                               <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" style="display: block; margin: 0 auto;" />
-                              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; height: 28px; display: flex; align-items: center; justify-content: center; white-space: normal;position: relative;"> FLAT RATE SHIPPING </div>
+                              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;line-height: 1.5;">
+                                <span class="desktop-text">FLAT RATE SHIPPING</span>
+                                <span class="mobile-text">FLAT RATE<br>SHIPPING</span>
+                              </div>
                             </div>
                             <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
                               <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" style="display: block; margin: 0 auto;" />
-                              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;"> 30-DAY RETURNS </div>
+                              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;line-height: 1.5;">
+                                <span class="desktop-text">30-DAY RETURNS</span>
+                                <span class="mobile-text">30-DAY<br>RETURNS</span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -905,7 +933,7 @@ https://www.castlery.com/ca/sales-and-refunds" style="
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:50px 0 35px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:15px 0 35px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
