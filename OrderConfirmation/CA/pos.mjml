@@ -718,7 +718,7 @@ https://www.castlery.com/ca/sales-and-refunds" style="
 
     <mj-section background-color="#773925" padding="20px 0 15px">
       <mj-column>
-        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em">
+        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em"  line-height="1.5">
           <a href="https://www.castlery.com/ca/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
           <a href="https://www.castlery.com/ca/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>

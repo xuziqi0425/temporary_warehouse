@@ -297,13 +297,11 @@
                         <div style="font-family:'Aime','New York','TimesNewRoman','Times New Roman',Georgia,serif,serif;font-size:16px;line-height:1;text-align:center;color:#3A131F;">Placed on {{ event.CompletedAt|format_date_string|date:'d F o'|default:'' }}, {{ event.CompletedAt|format_date_string|time:'g:i A'|default:'' }}</div>
                       </td>
                     </tr>
-                    {% if event.SalesCrew %}
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:'Aime','New York','TimesNewRoman','Times New Roman',Georgia,serif,serif;font-size:16px;line-height:1;text-align:center;color:#3A131F;">Sales Crew: {{ event.SalesCrew|default:'' }}</div>
                       </td>
                     </tr>
-                    {% endif %}
                   </tbody>
                 </table>
               </div>
@@ -1030,7 +1028,7 @@ https://www.castlery.com/ca/sales-and-refunds" style="
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;letter-spacing:0.2em;line-height:1;text-align:center;text-transform:uppercase;color:#F7F3E7;"><a href="https://www.castlery.com/ca/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
+                        <div style="font-family:SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;"><a href="https://www.castlery.com/ca/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
                           <a href="https://www.castlery.com/ca/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
