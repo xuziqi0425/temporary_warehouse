@@ -713,7 +713,7 @@ https://www.castlery.com/us/sales-and-refunds" style="
             </div>
             <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
               <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" style="display: block; margin: 0 auto;" />
-                <divstyle="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;line-height: 1.5;">
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;line-height: 1.5;">
                   <span class="desktop-text">FLAT RATE SHIPPING</span>
                   <span class="mobile-text">FLAT RATE<br>SHIPPING</span>
                 </div>
