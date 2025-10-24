@@ -498,7 +498,7 @@
           What if I want to add other items?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          You can email our Castlery stylist to help you generate the payment link or simply checkout at our online website:<br>
+          You can email our Castlery stylist to help you generate the payment link or simply checkout at our online website:
           <a href="https://www.castlery.com/au" style="color:#D25C1B">https://www.castlery.com/au</a>
         </mj-text>
 
