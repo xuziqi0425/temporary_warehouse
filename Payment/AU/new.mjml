@@ -36,29 +36,49 @@
         color: #3A131F !important;
         text-decoration: none !important;
       }
-      
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: inline;
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: inline;
+        }
+      }
+
       /* Outlook specific styles to prevent auto-linking */
       .phone-number span {
         color: #3A131F !important;
         text-decoration: none !important;
         mso-color-alt: #3A131F;
       }
-      
+
       /* Prevent Outlook from auto-detecting phone numbers as links */
       [class="phone-number"] {
         mso-padding-alt: 0;
         mso-margin-alt: 0;
       }
-      
+
       /* Additional Outlook-specific overrides */
-      .phone-number, .phone-number * {
+      .phone-number,
+      .phone-number * {
         color: #3A131F !important;
         text-decoration: none !important;
         mso-color-alt: #3A131F;
         mso-text-raise: 0;
         mso-line-height-rule: exactly;
       }
-      
+
       /* Force Outlook to treat as text, not link */
       .phone-number {
         mso-element: para;
@@ -76,55 +96,38 @@
     <!-- header -->
     <mj-section css-class="order-header" background-color="#773925">
       <mj-column>
-        <mj-image padding="44px 0 66px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
-        <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-size="38px" color="#F7F3E7" align="center">
-          Thank you for choosing Castlery
-        </mj-text>
-        <mj-image padding="29px 0 30px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002636/email/order-confirmation-main.png" width="680px" />
+        <mj-image padding="24px 0 37px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-image padding="0 0 20px" src="https://res.cloudinary.com/castlery/image/upload/v1760060244/email/payment-header-img.png" width="680px" />
         <mj-text font-size="28px" color="#9BA3C1" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-style="italic" align="center">
-          Hey {{ event.ShippingAddress.FirstName|default:'' }}
-          {{ event.ShippingAddress.LastName|default:'' }},
+          Hey {{ first_name }} {{ last_name }},
         </mj-text>
       </mj-column>
 
     </mj-section>
 
     <mj-section padding="0 49px" background-color="#773925">
-      <mj-column css-class="order-header-text" padding-bottom="40px">
-        <mj-text font-size="16px" align="center" padding-bottom="0px" line-height="1.2">
-          Your order <em>#{{ event.ReferenceNumber|default:'' }}</em> is in and confirmed.
-        </mj-text>
+      <mj-column css-class="order-header-text" padding-bottom="30px">
+
         <mj-text font-size="16px" align="center" padding-top="2px" line-height="1.2">
-          We're so excited to get your new pieces to you!​
+          Thank you for visiting us! <br>
+          We’ve created this invoice for the items you loved in our showroom.​
         </mj-text>
+
+
+        <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="29px" border-radius="2px" padding="23px 0px">
+          <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> CHECK OUT NOW </span>
+        </mj-button>
+
+
         <mj-text font-size="16px" align="center" line-height="1.2">
-          We’ll be in touch with updates as
-          your delivery date approaches. All
-          the details for your order are
-          listed below. If you have any
-          questions or need to make a
-          change, contact our team at <a href="mailto:help.au@castlery.com" style="color: #F7F3E7; text-decoration: none;"><em>help.au@castlery.com</em></a>. We're here to help.​
+          This payment link is active until the end of today. Once your payment is complete, we'll send you a separate order confirmation email.​​<br>
+          <br>
+
+          All the items you were interested in are listed below:
         </mj-text>
       </mj-column>
     </mj-section>
-    <!-- order details -->
-    <mj-section padding="25px 0 0px" background-color="#F6F3E7">
-      <mj-column>
-        <mj-text font-size="28px" align="center" color="#3A131F">
-          Order #{{ event.ReferenceNumber|default:''}}
-        </mj-text>
-        <mj-text font-size="16px" align="center" padding-top="11px" color="#3A131F">
-          Placed on
-          {{ event.CompletedAt|format_date_string|date:'d F o'|default:'' }},
-          {{ event.CompletedAt|format_date_string|time:'g:i A'|default:'' }}
-        </mj-text>
-        {% if event.SalesCrew %}
-        <mj-text color="#3A131F" font-size="16px" align="center">
-          Sales Crew: {{ event.SalesCrew|default:'' }}
-        </mj-text>
-        {% endif %}
-      </mj-column>
-    </mj-section>
+
     <!-- Order Items Table -->
     <mj-section background-color="#F6F3E7" padding="0 5px">
       <mj-column>
@@ -173,26 +176,6 @@
                     ">
                     {{ item.OptionsText|default:'' }}
                   </div>
-                  {% if item.IsCustomized %}
-                  <div style="
-                      color: #767676;
-                      font-size: 12px;
-                      margin-top: 5px;
-                      line-height: 1.5;
-                      padding-left: 6px;
-                    ">
-                    This customized item is not
-                    eligible for returns,
-                    exchanges, or refunds.
-                    <a href="
-https://www.castlery.com/au/sales-and-refunds" style="
-                        margin-left: 1px;
-                        text-decoration: underline;
-                        color: #767676;
-                        white-space: nowrap;
-                      ">More info here.</a>
-                  </div>
-                  {% endif %}
                 </div>
               </div>
               {% for op in item.BundleLineItems %}
@@ -247,7 +230,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
             </td>
           </tr>
           <tr>
-            <td height="30px">
+            <td height="14px">
               &nbsp;
             </td>
           </tr>
@@ -257,11 +240,11 @@ https://www.castlery.com/au/sales-and-refunds" style="
     </mj-section>
     <mj-section background-color="#F6F3E7" padding="0">
       <mj-column>
-        <mj-divider border-color="#E0D5C7" border-width="1px" padding="0px 30px" />
+        <mj-divider border-color="#E0D5C7" border-width="1px" padding="0px 30px 15px" />
       </mj-column>
     </mj-section>
     <mj-section padding="0 30px" background-color="#F6F3E7">
-      <mj-column width="100%" border-bottom="1px solid #E0D5C7;">
+      <mj-column width="100%" border-bottom="1px solid #E0D5C7;" padding-bottom="10px">
         <!-- 使用表格来实现精确的两列布局 -->
         <mj-table>
           <tr>
@@ -281,18 +264,13 @@ https://www.castlery.com/au/sales-and-refunds" style="
               {{ event.OrderTotal.Shipping.Current|default:'' }}
             </td>
           </tr>
-          {% if event.OrderTotal.Services.Current > 0 %}
+          {% if event.OrderTotal.Services.Current  %}
           <tr align="right">
             <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;">
               SERVICES
             </td>
             <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
               {{ event.OrderTotal.Services.Current|default:'' }}
-              <span style="
-              font-size: 0.8rem;
-              text-decoration: line-through;
-              color: #767676;
-            ">{{ event.OrderTotal.Services.Original|default:'' }}</span>
             </td>
           </tr>
           {% endif %}
@@ -322,6 +300,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
               {{ event.OrderTotal.DisplayTotal|default:'' }}
             </td>
           </tr>
+          <tr>
         </mj-table>
       </mj-column>
     </mj-section>
@@ -352,8 +331,8 @@ https://www.castlery.com/au/sales-and-refunds" style="
                   </div>
                   <div>
                     {{ event.ShippingAddress.City|default:'' }},
-                    {{ event.ShippingAddress.Region }}
-                    {{ event.ShippingAddress.Zip }}
+                    {{ event.ShippingAddress.RegionCode|default:'' }}
+                    {{ event.ShippingAddress.Zip|default:'' }}
                   </div>
                   <div>
                     {{ event.ShippingAddress.Country|default:'' }}
@@ -392,12 +371,13 @@ https://www.castlery.com/au/sales-and-refunds" style="
                   </div>
                   <div>
                     {{ event.BillingAddress.City|default:'' }},
-                    {{ event.BillingAddress.Region }}
-                    {{ event.BillingAddress.Zip }}
+                    {{ event.BillingAddress.RegionCode|default:'' }}
+                    {{ event.BillingAddress.Zip|default:'' }}
                   </div>
                   <div>
                     {{ event.BillingAddress.Country|default:'' }}
                   </div>
+
                   <!--[if mso]>
                   <div style="color: #3A131F; text-decoration: none; mso-color-alt: #3A131F;">
                     <span style="color: #3A131F; text-decoration: none; mso-color-alt: #3A131F;">{{ event.BillingAddress.Phone|default:'' }}</span>
@@ -415,42 +395,27 @@ https://www.castlery.com/au/sales-and-refunds" style="
         </mj-table>
       </mj-column>
     </mj-section>
-
-    <!-- Payment Method and Shipping Preference -->
-    <mj-section padding="5px 40px 5px 0px" background-color="#F6F3E7">
+    {% if event.ShippingPreference %}
+    <!-- Delivery Remarks -->
+    <mj-section background-color="#F6F3E7" padding="5px 0 0px 5px">
       <mj-column width="100%">
         <mj-table>
           <tr>
-            <td style="padding: 0 20px 0 5px; vertical-align: top; width: 50%;color: #3A131F;">
-
-              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;text-transform: uppercase;padding: 0;">PAYMENT METHOD</div>
-
-
-              <mj-text font-size="16px" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#3A131F" line-height="1.5" padding="0">
-                {% for payment in event.PaymentMethods %}
-                <div style="color: #3A131F;font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;">
-                  {{ payment|default:'' }}<br />
-                </div>
-                {% endfor %}
+            <td style="color: #3A131F;letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding: 0">
+              SHIPPING PREFERENCE
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mj-text font-size="16px" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#3A131F" line-height="1.5" padding-top="0px">
+                <div style="color: #3A131F;font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;"> {{ event.ShippingPreference|default:'-' }}</div>
               </mj-text>
             </td>
-            {% if event.ShippingPreference %}
-            <td style="padding: 0 0 0 20px; vertical-align: top; width: 50%;color: #3A131F;">
-
-              <div style="letter-spacing: 0.15em;font-size:9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;text-transform: uppercase;padding: 0;letter-spacing: 0.15em;color: #3A131F;">SHIPPING PREFERENCE</div>
-
-              <mj-text font-size="16px" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#3A131F" line-height="1.5" padding="0">
-                <div style="color: #3A131F;font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;">
-                  {{ event.ShippingPreference|default:'' }}
-                </div>
-              </mj-text>
-            </td>
-            {% endif %}
           </tr>
         </mj-table>
       </mj-column>
     </mj-section>
-
+    {% endif %}
     <!-- Delivery Remarks -->
     <mj-section background-color="#F6F3E7" padding="5px 0 9px 5px">
       <mj-column width="100%">
@@ -485,89 +450,60 @@ https://www.castlery.com/au/sales-and-refunds" style="
     <mj-section background-color="#773925" padding="36px 30px 0">
       <mj-column>
         <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
-          When will I hear from Castlery next?
+          How can I make payment using the payment link in the email?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          You will next hear from us when we
-          are getting your order ready for
-          collection by the carrier. This
-          should be shortly before the
-          beginning of your Delivery ETA
-          window shown on your order
-          confirmation.
+          You can simply click on the payment link provided in the email and it will redirect you to a secure payment page where you can enter your payment details and complete the transaction using Stripe, our trusted payment processor.
         </mj-text>
 
         <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
-          When can I expect my order to
-          arrive?
+          What payment methods can I use with the payment link?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          You can expect to receive your
-          delivery within the Estimated
-          Delivery dates shown above. In the
-          event of unforeseen delays, we will
-          contact you as soon as possible. For
-          more information, please click
-          <a href="https://www.castlery.com/au/blog/covid-19?utm_campaign=au-ship-2108&amp;utm_source=system-generated-email&amp;utm_medium=email" style="color:#D25C1B">here</a>.
+          You can use various payment methods such as credit cards and debit cards.
         </mj-text>
 
         <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
-          How do I track my order?
+          Can I use the payment link to pay for multiple items or services?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          Thanks to our interactive live
-          tracking system, checking the
-          status of your order is easy!</br>
-          Just log in to your account,
-          select ‘Orders’, then the item you
-          wish to review, and we’ll take you
-          to a tracking page that will give
-          updated information as your
-          delivery progresses.</br>
-          Alternatively, look out for an
-          email containing tracking
-          information to use on the relevant
-          delivery partner’s website.
+          Yes, if you have multiple items, you can use the same payment link provided by clicking the “Pay Now” button.
         </mj-text>
 
         <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
-          How do I view or change my order?
+          How do I know if my payment was successful?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          To view your order just log in to
-          your account on our website and
-          select ‘Orders’. You cannot alter an
-          order once it has been placed and
-          payment processed. Please contact us
-          through
-          <a href="mailto:help.au@castlery.com" style="color:#D25C1B">help.au@castlery.com</a>
-          if you need to alter/cancel or place
-          your order on hold. Please note
-          additional warehousing charges may
-          be applicable.
+          Once you have completed the payment process using the payment link, you will receive a order confirmation email from Castlery shortly after you have made the payment. You can also check your bank or credit card statement for the transaction.
+        </mj-text>
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          The payment expiry link has expired. What should I do next?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
+          You can reach out to our Castlery stylist that spoke to you earlier at the showroom.<br>
+          <span style="color: #D25C1B;">{{ event.bcc_email }}</span>
+        </mj-text>
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          What if I want to add other items?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
+          You can email our Castlery stylist to help you generate the payment link or simply checkout at our online website:<br>
+          <a href="https://www.castlery.com/au" style="color:#D25C1B">https://www.castlery.com/au</a>
         </mj-text>
 
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          What should I do if I encounter an issue with making payment using the payment link?
+        </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0">
-          Have any other questions about your
-          order or getting ready for your
-          delivery?
-          <br />
-          Feel free to refer to the delivery
-          FAQ
-          <a href="https://res.cloudinary.com/castlery/image/upload/v1689064441/marketing/Cross-Market/Others/AU_Pre-Delivery_Brochure_Digital_v2.pdf" style="color: #D25C1B">here</a>
-          <a href="" style="color: #a45b37">
-          </a>
-          , complete with a Checklist with
-          more important information.
+          If you encounter any issues while making payment using the payment link, please contact our either our Castlery stylist or you could Whatsapp/Live Chat our Customer Experience Team.
         </mj-text>
-
       </mj-column>
     </mj-section>
 
     <!-- More reasons to love us Section -->
     <mj-section background-color="#773925" padding="0">
       <mj-column>
-        <mj-divider border-color="#F7F3E7" border-width="1px" padding="47px 30px 17px" />
+        <mj-divider border-color="#F7F3E7" border-width="1px" padding="47px 30px 15px" />
       </mj-column>
     </mj-section>
 
@@ -582,32 +518,37 @@ https://www.castlery.com/au/sales-and-refunds" style="
     <mj-section background-color="#773925">
       <mj-column>
         <mj-text align="center">
-          <div style="white-space: nowrap; text-align: center; display: flex; justify-content: center; align-items: flex-start; flex-wrap: nowrap;">
-            <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
-              <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" style="display: block; margin: 0 auto;" />
-              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;">
-                FREE SWATCHES
-              </div>
-            </div>
-            <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
-              <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" style="display: block; margin: 0 auto;" />
-              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; height: 28px; display: flex; align-items: center; justify-content: center; white-space: normal;position: relative;">
-                FLAT RATE SHIPPING
-              </div>
-            </div>
-            <div style="display: inline-block; width: 33.33%; text-align: center; vertical-align: top;">
-              <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" style="display: block; margin: 0 auto;" />
-              <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; display: flex; align-items: center; justify-content: center;">
-                30-DAY RETURNS
-              </div>
-            </div>
-          </div>
+          <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+            <tr>
+              <td width="33.33%" align="center" style="text-align: center; vertical-align: top;">
+                <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" style="display: block; margin: 0 auto;" />
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; line-height: 1.5;">
+                  <span class="desktop-text">FREE SWATCHES</span>
+                  <span class="mobile-text">FREE<br>SWATCHES</span>
+                </div>
+              </td>
+              <td width="33.33%" align="center" style="text-align: center; vertical-align: top;">
+                <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" style="display: block; margin: 0 auto;" />
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; line-height: 1.5;">
+                  <span class="desktop-text">FLAT RATE SHIPPING</span>
+                  <span class="mobile-text">FLAT RATE<br>SHIPPING</span>
+                </div>
+              </td>
+              <td width="33.33%" align="center" style="text-align: center; vertical-align: top;">
+                <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" style="display: block; margin: 0 auto;" />
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; line-height: 1.5;">
+                  <span class="desktop-text">30-DAY RETURNS</span>
+                  <span class="mobile-text">30-DAY<br>RETURNS</span>
+                </div>
+              </td>
+            </tr>
+          </table>
         </mj-text>
       </mj-column>
     </mj-section>
 
     <!-- Footer Section -->
-    <mj-section background-color="#773925" padding="50px 0 35px">
+    <mj-section background-color="#773925" padding="15px 0 35px">
       <mj-column>
         <mj-divider border-color="#F7F3E7" border-width="1px" padding="0 30px" />
       </mj-column>
@@ -631,7 +572,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
 
     <mj-section background-color="#773925" padding="20px 0 15px">
       <mj-column>
-        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em"  line-height="1.5">
+        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em" line-height="1.5">
           <a href="https://www.castlery.com/au/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
           <a href="https://www.castlery.com/au/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>

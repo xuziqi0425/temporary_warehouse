@@ -72,23 +72,23 @@
 
   <mj-body background-color="#773925" width="680px">
     <!-- Header Section -->
-    <mj-section background-color="#773925" padding="44px 0 46px">
+    <mj-section background-color="#773925" padding="44px 0 26px">
       <mj-column>
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" alt="Castlery" />
       </mj-column>
     </mj-section>
 
     <!-- Thank you message -->
-    <mj-section background-color="#773925">
+    <mj-section background-color="#773925" padding="0 0 14px">
       <mj-column>
-        <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="37px" color="#f7f3e7" align="center">
+        <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="37px" color="#f7f3e7" align="center" line-height="1.2">
          <em>Good news:</em>
           your swatches are on their way!
         </mj-text>
       </mj-column>
     </mj-section>
     <!-- Banner image -->
-    <mj-section background-color="#773925" padding="13px 0 29px">
+    <mj-section background-color="#773925" padding="0 0 29px">
       <mj-column padding="0">
         <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760062888/email/swatch_first.jpg" width="680px" height="253px" alt="Banner" padding="0" />
       </mj-column>
@@ -185,7 +185,7 @@
             </a>
           </mj-text>
 
-          <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-size="16px" color="#f7f3e7" align="center" padding="12px 0 0">
+          <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-size="16px" color="#f7f3e7" align="center" padding="12px 0 0" line-height="1.2">
             <a href="https://www.castlery.com/au/warranty" target="_blank" style="color: #f7f3e7; text-decoration: none;">
               Shop with confidence. Check product <br> listing for full warranty details.
             </a>
@@ -193,7 +193,7 @@
         </mj-column>
       </mj-section>
     </mj-wrapper>
-    <mj-section background-color="#773925" padding="20px 0 10px">
+    <mj-section background-color="#773925" padding="27px 0 10px">
       <mj-column>
         <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="18px" color="#f7f3e7" align="center" line-height="1.2">
           In the meantime, start planning for your dream home
@@ -211,7 +211,7 @@
       </mj-column>
     </mj-section>
     <!-- Divider -->
-    <mj-section background-color="#773925" padding="33px 0 19px">
+    <mj-section background-color="#773925" padding="25px 0">
       <mj-column>
         <mj-divider border-color="#f7f3e7" border-width="1px" />
       </mj-column>
