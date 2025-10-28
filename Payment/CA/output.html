@@ -261,7 +261,7 @@
                                     <tr>
                                       <td align="center" bgcolor="transparent" role="presentation" style="border:1px solid #f7f3e7;border-radius:2px;cursor:auto;height:29px;mso-padding-alt:10px 25px;background:transparent;" valign="middle">
                                         <a href="{{ event.payment_link }}" style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;" target="_blank">
-                                          <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> CHECK OUT NOW </span>
+                                          <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> Pay Now </span>
                                         </a>
                                       </td>
                                     </tr>
@@ -507,19 +507,19 @@
                                       {{ event.OrderTotal.Services.Current|default:'' }}
                                     </td>
                                   </tr> {% endif %} {% if event.OrderTotal.TaxTotal > 0 %} <tr>
-                                    <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> Sales Tax </td>
+                                    <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> SALES TAX </td>
                                     <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
                                       {{ event.OrderTotal.TaxTotal|default:'' }}
                                     </td>
                                   </tr> {% endif %} {% if event.OrderTotal.WarrantyTotal > 0 %} <tr>
-                                    <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> Warranty Total </td>
+                                    <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> WARRANTY TOTAL </td>
                                     <td style="padding: 12px 0 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
                                       {{ event.OrderTotal.WarrantyTotal|default:'' }}
                                     </td>
                                   </tr>
                                   <tr> {% endif %}
                                   <tr align="right">
-                                    <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> Total </td>
+                                    <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> TOTAL </td>
                                     <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
                                       {{ event.OrderTotal.DisplayTotal|default:'' }}
                                     </td>
