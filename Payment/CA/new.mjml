@@ -1,0 +1,639 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      .order-header-text div {
+        color: #F7F3E7 !important;
+        text-align: center;
+      }
+
+      .order-sec div {
+        color: #3A131F;
+      }
+
+      .phone-number {
+        color: #3A131F !important;
+        text-decoration: none !important;
+      }
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: inline;
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: inline;
+        }
+      }
+
+      /* Outlook specific styles to prevent auto-linking */
+      .phone-number span {
+        color: #3A131F !important;
+        text-decoration: none !important;
+        mso-color-alt: #3A131F;
+      }
+
+      /* Prevent Outlook from auto-detecting phone numbers as links */
+      [class="phone-number"] {
+        mso-padding-alt: 0;
+        mso-margin-alt: 0;
+      }
+
+      /* Additional Outlook-specific overrides */
+      .phone-number,
+      .phone-number * {
+        color: #3A131F !important;
+        text-decoration: none !important;
+        mso-color-alt: #3A131F;
+        mso-text-raise: 0;
+        mso-line-height-rule: exactly;
+      }
+
+      /* Force Outlook to treat as text, not link */
+      .phone-number {
+        mso-element: para;
+        mso-element-wrap: avoid;
+        mso-element-anchor-horizontal: paragraph;
+        mso-element-anchor-vertical: paragraph;
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" />
+
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#ffffff" width="680px">
+    <!-- header -->
+    <mj-section css-class="order-header" background-color="#773925">
+      <mj-column>
+        <mj-image padding="24px 0 37px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-image padding="0 0 20px" src="https://res.cloudinary.com/castlery/image/upload/v1760060244/email/payment-header-img.png" width="680px" />
+        <mj-text font-size="28px" color="#9BA3C1" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-style="italic" align="center">
+          Hey {{ first_name }} {{ last_name }},
+        </mj-text>
+      </mj-column>
+
+    </mj-section>
+
+    <mj-section padding="0" background-color="#773925">
+      <mj-column css-class="order-header-text" padding-bottom="30px">
+
+        <mj-text font-size="16px" align="center" padding-top="2px" line-height="1.2">
+          Thank you for visiting us! <br>
+          We’ve created this invoice for the items you loved in our showroom.​
+        </mj-text>
+
+
+        <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="29px" border-radius="2px" padding="23px 0px">
+          <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> CHECK OUT NOW </span>
+        </mj-button>
+
+
+        <mj-text font-size="16px" align="center" line-height="1.2">
+          This payment link is active until the end of today. Once your payment is complete, we'll send you a separate order confirmation email.​​<br>
+          <br>
+
+          All the items you were interested in are listed below:
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Order Items Table -->
+    <mj-section background-color="#F6F3E7" padding="20px 5px 0px">
+      <mj-column>
+        <mj-table color="#3A131F">
+          <colgroup>
+            <col style="width: 317px" />
+            <col style="width: 148px" />
+            <col style="width: 60px" />
+            <col style="width: 140px" />
+          </colgroup>
+          <!-- Table Header -->
+          <tr>
+            <th style="text-align: left; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;">
+              ITEM DESCRIPTION
+            </th>
+            <th style="text-align: center; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;">
+              UNIT PRICE
+            </th>
+            <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;">
+              QTY
+            </th>
+            <th style=" text-align: center; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;">
+              EST DELIVERY
+            </th>
+          </tr>
+          {% for item in event.Items %}
+          <tr>
+            <td align="left" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" padding-right="40px" style="color: #3A131F;" valign="top">
+              <div style="line-height: 1.2;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;">
+                <div>
+                  <div style="margin-bottom: 5px;font-size: 16px;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;">
+                    {{ item.ProductName|default:'' }}
+                    {% if item.Clearance %}
+                    <span style="
+                        color: #D25C1B;
+                        margin-left: 5px;
+                      ">
+                      Clearance </span>
+                    {% endif %}
+                  </div>
+                  <div style="
+                      color: #767676;
+                      font-size: 13px;
+                      margin: 0;
+                      padding-left: 6px;
+                    ">
+                    {{ item.OptionsText|default:'' }}
+                  </div>
+                </div>
+              </div>
+              {% for op in item.BundleLineItems %}
+              <div>
+                <div>
+                  <div style="
+                      text-align: left;
+                      line-height: 1.2;
+                      padding-left: 6px;
+                    ">
+                    <div style="
+                        color: #767676;
+                        font-size: 12px;
+                        margin-top: 2px;
+                        font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;
+                      ">
+                      {{ op|default:'' }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </td>
+            <td align="center" padding="0 5px" style="color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
+
+              <div style="font-size: 16px">
+                {{ item.UnitPrice.DiscountUnitPrice|default:'' }}
+              </div>
+
+              {% if item.UnitPrice.OriginalPrice %}
+              <div>
+                <div style="
+                    font-size: 16px;
+                    text-decoration: line-through;
+                    color: #767676;
+                    font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;
+                  ">
+                  {{ item.UnitPrice.OriginalPrice|default:'' }}
+                </div>
+              </div>
+              {% endif %}
+            </td>
+            <td align="center" padding="0 5px" style="font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
+              {{ item.Quantity|default:'' }}
+            </td>
+            <td align="center" padding="0 5px" style="
+              color: #3A131F;
+              font-size: 16px;
+              font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;
+            " valign="top">
+              {{ item.Deliver|default:'' }}
+            </td>
+          </tr>
+          {% if item.Warranty %}
+          <tr>
+            <td align="left" padding-right="40px" style="color: #3A131F;font-size: 16px;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
+              Extended Warranty: {{ item.Warranty.DurationMonths|default:'' }} months
+            </td>
+            <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
+              {{ item.Warranty.OfferCost|default:'' }}
+            </td>
+            <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
+              {{ item.Warranty.Quantity|default:'' }}
+            </td>
+            <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top"></td>
+          </tr>
+          {% endif %}
+          <tr>
+            <td height="14px">
+              &nbsp;
+            </td>
+          </tr>
+          {% endfor %}
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    {% if event.OrderTotal.PromotionAdjustments and event.OrderTotal.PromotionAdjustments|length > 0 %}
+    <mj-section padding="0 30px" background-color="#F6F3E7">
+      <mj-column width="100%" border-top="1px solid #E0D5C7;" padding="15px 0">
+        <!-- 使用表格来实现精确的两列布局22122 -->
+        {{JSON.stringify(event.OrderTotal.PromotionAdjustments)}}1111
+        <mj-table>
+          {% for promotion in event.OrderTotal.PromotionAdjustments %}
+          <tr align="right">
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;text-transform: uppercase;letter-spacing: 0.15em;">
+              {{ promotion.Name|default:'' }}
+            </td>
+            <td style="padding: 8px 0 8px 5px; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
+              {{ promotion.Amount|default:'' }}
+            </td>
+          </tr>
+          {% endfor %}
+          <tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    {% endif %}
+    <mj-section background-color="#F6F3E7" padding="0">
+      <mj-column>
+        <mj-divider border-color="#E0D5C7" border-width="1px" padding="0px 30px 15px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 30px" background-color="#F6F3E7">
+      <mj-column width="100%" border-bottom="1px solid #E0D5C7;" padding-bottom="10px">
+        <!-- 使用表格来实现精确的两列布局 -->
+        <mj-table>
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;">
+              ITEM SUBTOTAL
+            </td>
+
+            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
+              {{ event.OrderTotal.ItemSubtotal|default:'' }}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;">
+              SHIPPING
+            </td>
+            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
+              {{ event.OrderTotal.Shipping|default:'' }}
+            </td>
+          </tr>
+          {% if event.OrderTotal.Services.Current > 0 %}
+          <tr align="right">
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;">
+              SERVICES
+            </td>
+            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
+              {{ event.OrderTotal.Services.Current|default:'' }}
+            </td>
+          </tr>
+          {% endif %}
+          {% if event.OrderTotal.TaxTotal > 0 %}
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;">
+              Sales Tax
+            </td>
+            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
+              {{ event.OrderTotal.TaxTotal|default:'' }}
+            </td>
+          </tr>
+          {% endif %}
+          {% if event.OrderTotal.WarrantyTotal > 0 %}
+          <tr>
+            <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;">
+              Warranty Total
+            </td>
+            <td style="padding: 12px 0 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
+              {{ event.OrderTotal.WarrantyTotal|default:'' }}
+            </td>
+          </tr>
+          <tr>
+            {% endif %}
+          <tr align="right">
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;">
+              Total
+            </td>
+            <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
+              {{ event.OrderTotal.DisplayTotal|default:'' }}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- Address and Payment Information -->
+    <mj-section padding="20px 5px 0px " background-color="#F6F3E7">
+      <mj-column width="100%">
+        <!-- Delivery and Billing Address -->
+        <mj-table>
+          <tr>
+            <td style="padding: 0 20px 0 0; vertical-align: top; width: 50%;color: #3A131F;">
+
+              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;text-transform: uppercase;color: #3A131F;padding:0"> DELIVERY ADDRESS</div>
+
+              <mj-text font-size="16px" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#3A131F" line-height="1.2" padding="0">
+                <div style="color: #3A131F;font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;">
+                  <div>
+                    {{ event.ShippingAddress.FirstName|default:'' }}
+                    {{ event.ShippingAddress.LastName|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.ShippingAddress.Company|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.ShippingAddress.Address1|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.ShippingAddress.Address2|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.ShippingAddress.City|default:'' }},
+                    {{ event.ShippingAddress.Region|default:'' }}
+                    {{ event.ShippingAddress.Zip|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.ShippingAddress.Country|default:'' }}
+                  </div>
+                  <!--[if mso]>
+                  <div style="color: #3A131F; text-decoration: none; mso-color-alt: #3A131F;">
+                    <span style="color: #3A131F; text-decoration: none; mso-color-alt: #3A131F;">{{ event.ShippingAddress.Phone|default:'' }}</span>
+                  </div>
+                  <![endif]-->
+                  <!--[if !mso]><!-->
+                  <div class="phone-number" style="color: #3A131F !important; text-decoration: none !important;">
+                    <span style="color: #3A131F !important; text-decoration: none !important;">{{ event.ShippingAddress.Phone|default:'' }}</span>
+                  </div>
+                  <!--<![endif]-->
+                </div>
+              </mj-text>
+            </td>
+            <td style="padding: 0; vertical-align: top; width: 50%;color: #3A131F;">
+
+              <div style="letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;text-transform: uppercase;color: #3A131F;padding:0"> BILLING ADDRESS</div>
+
+              <mj-text font-size="16px" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#3A131F" line-height="1.5" padding="0">
+                <div style="color: #3A131F;font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;">
+                  <div>
+                    {{ event.BillingAddress.FirstName|default:'' }}
+                    {{ event.BillingAddress.LastName|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.BillingAddress.Company|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.BillingAddress.Address1|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.BillingAddress.Address2|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.BillingAddress.City|default:'' }},
+                    {{ event.BillingAddress.Region|default:'' }}
+                    {{ event.BillingAddress.Zip|default:'' }}
+                  </div>
+                  <div>
+                    {{ event.BillingAddress.Country|default:'' }}
+                  </div>
+
+                  <!--[if mso]>
+                  <div style="color: #3A131F; text-decoration: none; mso-color-alt: #3A131F;">
+                    <span style="color: #3A131F; text-decoration: none; mso-color-alt: #3A131F;">{{ event.BillingAddress.Phone|default:'' }}</span>
+                  </div>
+                  <![endif]-->
+                  <!--[if !mso]><!-->
+                  <div class="phone-number" style="color: #3A131F !important; text-decoration: none !important;">
+                    <span style="color: #3A131F !important; text-decoration: none !important;">{{ event.BillingAddress.Phone|default:'' }}</span>
+                  </div>
+                  <!--<![endif]-->
+                </div>
+              </mj-text>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    {% if event.ShippingPreference %}
+    <!-- Delivery Remarks -->
+    <mj-section background-color="#F6F3E7" padding="5px 0 0px 5px">
+      <mj-column width="100%">
+        <mj-table>
+          <tr>
+            <td style="color: #3A131F;letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding: 0">
+              SHIPPING PREFERENCE
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mj-text font-size="16px" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#3A131F" line-height="1.5" padding-top="0px">
+                <div style="color: #3A131F;font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;"> {{ event.ShippingPreference|default:'-' }}</div>
+              </mj-text>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    {% endif %}
+    <!-- Delivery Remarks -->
+    <mj-section background-color="#F6F3E7" padding="5px 0 9px 5px">
+      <mj-column width="100%">
+        <mj-table>
+          <tr>
+            <td style="color: #3A131F;letter-spacing: 0.15em;font-size: 9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding: 0">
+
+              DELIVERY REMARKS
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mj-text font-size="16px" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#3A131F" line-height="1.5" padding-top="0px">
+                <div style="color: #3A131F;font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif;"> {{ event.DeliveryRemarks|default:'-' }}</div>
+              </mj-text>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- FAQ Section -->
+    <mj-section background-color="#773925" padding="26px 0 0">
+      <mj-column>
+        <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-size="28px" color="#F7F3E7" align="center">
+          Frequently-Asked Questions
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="36px 30px 0">
+      <mj-column>
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          How can I make payment using the payment link in the email?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
+          You can simply click on the payment link provided in the email and it will redirect you to a secure payment page where you can enter your payment details and complete the transaction using Stripe, our trusted payment processor.
+        </mj-text>
+
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          What payment methods can I use with the payment link?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
+          You can use various payment methods such as credit cards and debit cards.
+        </mj-text>
+
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          Can I use the payment link to pay for multiple items or services?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
+          Yes, if you have multiple items, you can use the same payment link provided by clicking the “Pay Now” button.
+        </mj-text>
+
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          How do I know if my payment was successful?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
+          Once you have completed the payment process using the payment link, you will receive a order confirmation email from Castlery shortly after you have made the payment. You can also check your bank or credit card statement for the transaction.
+        </mj-text>
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          The payment expiry link has expired. What should I do next?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
+          You can reach out to our Castlery stylist that spoke to you earlier at the showroom.<br>
+          <span style="color: #D25C1B;">{{ event.bcc_email }}</span>
+        </mj-text>
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          What if I want to add other items?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
+          You can email our Castlery stylist to help you generate the payment link or simply checkout at our online website:
+          <a href="https://www.castlery.com/ca" style="color:#D25C1B">https://www.castlery.com/ca</a>
+        </mj-text>
+
+        <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
+          What should I do if I encounter an issue with making payment using the payment link?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0">
+          If you encounter any issues while making payment using the payment link, please contact our either our Castlery stylist or you could Whatsapp/Live Chat our Customer Experience Team.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- More reasons to love us Section -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-divider border-color="#F7F3E7" border-width="1px" padding="47px 30px 15px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925">
+      <mj-column>
+        <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-size="28px" color="#F7F3E7" align="center">
+          More reasons to love us
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925">
+      <mj-column>
+        <mj-text align="center">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+            <tr>
+              <td width="33.33%" align="center" style="text-align: center; vertical-align: top;">
+                <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/free_swatches.png" width="43px" style="display: block; margin: 0 auto;" />
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; line-height: 1.5;">
+                  <span class="desktop-text">FREE SWATCHES</span>
+                  <span class="mobile-text">FREE<br>SWATCHES</span>
+                </div>
+              </td>
+              <td width="33.33%" align="center" style="text-align: center; vertical-align: top;">
+                <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760078859/email/flat_rate.png" width="43px" style="display: block; margin: 0 auto;" />
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; line-height: 1.5;">
+                  <span class="desktop-text">FLAT RATE SHIPPING</span>
+                  <span class="mobile-text">FLAT RATE<br>SHIPPING</span>
+                </div>
+              </td>
+              <td width="33.33%" align="center" style="text-align: center; vertical-align: top;">
+                <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760079235/email/returns.png" width="43px" style="display: block; margin: 0 auto;" />
+                <div style="font-family: SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; padding: 9px 0 0; min-height: 28px; line-height: 1.5;">
+                  <span class="desktop-text">30-DAY RETURNS</span>
+                  <span class="mobile-text">30-DAY<br>RETURNS</span>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Section -->
+    <mj-section background-color="#773925" padding="15px 0 35px">
+      <mj-column>
+        <mj-divider border-color="#F7F3E7" border-width="1px" padding="0 30px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text align="center">
+          <a href="http://www.instagram.com/castleryCA" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
+          </a>
+          <a href="https://www.facebook.com/CastleryCA" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
+          </a>
+          <a href="http://www.pinterest.com/castleryCA" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="20px 0 15px">
+      <mj-column>
+        <mj-text font-family="SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em" line-height="1.5">
+          <a href="https://www.castlery.com/ca/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <a href="https://www.castlery.com/ca/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <span style="white-space: nowrap;">
+            <a href="https://www.castlery.com/ca/referral" style="color: #F7F3E7; text-decoration: none;">REFER A FRIEND</a>
+          </span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 30px">
+      <mj-column>
+        <mj-text font-size="13px" color="#F7F3E7" align="center">
+          Mailing Address: 333 Bay Street, Suite 2400,Toronto, Ontario, M5H 2T6, Canada
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 44px">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/v1760003274/email/template-v-update-last-bottom.png" width="98px" align="center" />
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

@@ -378,8 +378,16 @@
             " valign="top">
                               {{ item.Deliver|default:'' }}
                             </td>
-                          </tr>
-                          <tr>
+                          </tr> {% if item.Warranty %} <tr>
+                            <td align="left" padding-right="40px" style="color: #3A131F;font-size: 16px;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top"> Extended Warranty: {{ item.Warranty.DurationMonths|default:'' }} months </td>
+                            <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
+                              {{ item.Warranty.OfferCost|default:'' }}
+                            </td>
+                            <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top">
+                              {{ item.Warranty.Quantity|default:'' }}
+                            </td>
+                            <td align="center" style="padding:0 5px;font-size: 16px;color: #3A131F;font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif;" valign="top"></td>
+                          </tr> {% endif %} <tr>
                             <td height="14px"> &nbsp; </td>
                           </tr> {% endfor %}
                         </table>
@@ -395,7 +403,7 @@
       </table>
     </div>
     <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#F6F3E7" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    {% if event.OrderTotal.PromotionAdjustments and event.OrderTotal.PromotionAdjustments|length > 0 %}
+      {% if event.OrderTotal.PromotionAdjustments and event.OrderTotal.PromotionAdjustments|length > 0 %}
     <div style="background:#F6F3E7;background-color:#F6F3E7;margin:0px auto;max-width:680px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
         <tbody>
@@ -491,26 +499,31 @@
                                   <tr>
                                     <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> SHIPPING </td>
                                     <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
-                                      {{ event.OrderTotal.Shipping.Current|default:'' }}
+                                      {{ event.OrderTotal.Shipping|default:'' }}
                                     </td>
-                                  </tr> {% if event.OrderTotal.Services.Current  %} <tr align="right">
+                                  </tr> {% if event.OrderTotal.Services.Current > 0 %} <tr align="right">
                                     <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> SERVICES </td>
                                     <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
                                       {{ event.OrderTotal.Services.Current|default:'' }}
                                     </td>
-                                  </tr> {% endif %} <tr>
-                                    <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> GST (INCLUDED IN PRICE) </td>
+                                  </tr> {% endif %} {% if event.OrderTotal.TaxTotal > 0 %} <tr>
+                                    <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> Sales Tax </td>
                                     <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
                                       {{ event.OrderTotal.TaxTotal|default:'' }}
                                     </td>
-                                  </tr>
-                                  <tr>
-                                    <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> TOTAL (INCL. GST) </td>
+                                  </tr> {% endif %} {% if event.OrderTotal.WarrantyTotal > 0 %} <tr>
+                                    <td style="padding: 8px 0 ; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> Warranty Total </td>
                                     <td style="padding: 12px 0 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
+                                      {{ event.OrderTotal.WarrantyTotal|default:'' }}
+                                    </td>
+                                  </tr>
+                                  <tr> {% endif %}
+                                  <tr align="right">
+                                    <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 70%;letter-spacing: 0.15em;"> Total </td>
+                                    <td style="padding: 8px 0; text-align: right; font-size: 16px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 30%; white-space: nowrap;">
                                       {{ event.OrderTotal.DisplayTotal|default:'' }}
                                     </td>
                                   </tr>
-                                  <tr>
                                 </table>
                               </td>
                             </tr>
@@ -562,7 +575,7 @@
                                     {{ event.ShippingAddress.Address2|default:'' }}
                                   </div>
                                   <div>
-                                    {{ event.ShippingAddress.City|default:'' }}, {{ event.ShippingAddress.RegionCode|default:'' }}
+                                    {{ event.ShippingAddress.City|default:'' }}, {{ event.ShippingAddress.Region|default:'' }}
                                     {{ event.ShippingAddress.Zip|default:'' }}
                                   </div>
                                   <div>
@@ -592,7 +605,7 @@
                                     {{ event.BillingAddress.Address2|default:'' }}
                                   </div>
                                   <div>
-                                    {{ event.BillingAddress.City|default:'' }}, {{ event.BillingAddress.RegionCode|default:'' }}
+                                    {{ event.BillingAddress.City|default:'' }}, {{ event.BillingAddress.Region|default:'' }}
                                     {{ event.BillingAddress.Zip|default:'' }}
                                   </div>
                                   <div>
@@ -786,7 +799,7 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:0 0 29px 0;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:left;color:#F7F3E7;">You can email our Castlery stylist to help you generate the payment link or simply checkout at our online website: <a href="https://www.castlery.com/au" style="color:#D25C1B">https://www.castlery.com/au</a></div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:left;color:#F7F3E7;">You can email our Castlery stylist to help you generate the payment link or simply checkout at our online website: <a href="https://www.castlery.com/ca" style="color:#D25C1B">https://www.castlery.com/ca</a></div>
                       </td>
                     </tr>
                     <tr>
@@ -952,13 +965,13 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1;text-align:center;color:#000000;"><a href="http://www.instagram.com/castleryAU" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1;text-align:center;color:#000000;"><a href="http://www.instagram.com/castleryCA" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
                           </a>
-                          <a href="https://www.facebook.com/CastleryAU" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+                          <a href="https://www.facebook.com/CastleryCA" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
                           </a>
-                          <a href="http://www.pinterest.com/castleryAU" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                          <a href="http://www.pinterest.com/castleryCA" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
                           </a>
                         </div>
@@ -985,12 +998,12 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;"><a href="https://www.castlery.com/au/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
+                        <div style="font-family:SanomatSans, Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;"><a href="https://www.castlery.com/ca/privacy-policy" style="color: #F7F3E7; text-decoration: none;">PRIVACY POLICY</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-                          <a href="https://www.castlery.com/au/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>
+                          <a href="https://www.castlery.com/ca/contact-us" style="color: #F7F3E7; text-decoration: none;">CONTACT US</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
                           <span style="white-space: nowrap;">
-                            <a href="https://www.castlery.com/au/referral" style="color: #F7F3E7; text-decoration: none;">REFER A FRIEND</a>
+                            <a href="https://www.castlery.com/ca/referral" style="color: #F7F3E7; text-decoration: none;">REFER A FRIEND</a>
                           </span>
                         </div>
                       </td>
@@ -1004,15 +1017,31 @@
         </tbody>
       </table>
     </div>
-    <!--[if mso | IE]></td></tr></table><![endif]-->
-    <!-- <mj-section background-color="#773925" padding="0 0 30px">
-      <mj-column>
-        <mj-text font-size="13px" color="#F7F3E7" align="center">
-          Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        </mj-text>
-      </mj-column>
-    </mj-section> -->
-    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#773925;background-color:#773925;margin:0px auto;max-width:680px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 0 30px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1;text-align:center;color:#F7F3E7;">Mailing Address: 333 Bay Street, Suite 2400,Toronto, Ontario, M5H 2T6, Canada</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="background:#773925;background-color:#773925;margin:0px auto;max-width:680px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
         <tbody>
