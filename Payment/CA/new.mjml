@@ -115,7 +115,7 @@
 
 
         <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="29px" border-radius="2px" padding="23px 0px">
-          <span style="font-size: 18px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> Pay Now </span>
+          <span style="font-size: 18px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> PAY NOW </span>
         </mj-button>
 
 
@@ -504,7 +504,7 @@
           Can I use the payment link to pay for multiple items or services?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
-          Yes, if you have multiple items, you can use the same payment link provided by clicking the “Pay Now” button.
+          Yes, if you have multiple items, you can use the same payment link provided by clicking the “PAY NOW” button.
         </mj-text>
 
         <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
