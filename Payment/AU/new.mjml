@@ -114,8 +114,8 @@
         </mj-text>
 
 
-        <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="29px" border-radius="2px" padding="23px 0px">
-          <span style="font-size: 18px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> PAY NOW </span>
+       <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="10px">
+          <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> PAY NOW </span>
         </mj-button>
 
 
@@ -492,7 +492,7 @@
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2" padding="0 0 29px 0">
           You can reach out to our Castlery stylist that spoke to you earlier at the showroom.<br>
-          <span style="color: #D25C1B;">{{ event.bcc_email }}</span>
+          <a href='{{ event.bcc_email }}' style="color:#D25C1B">{{ event.bcc_email }}</a>
         </mj-text>
         <mj-text font-style="italic" font-size="20px" color="#F7F3E7" align="center" padding="0 0 16px 0">
           What if I want to add other items?
