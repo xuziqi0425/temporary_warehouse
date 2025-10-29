@@ -115,7 +115,7 @@
 
 
         <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="29px" border-radius="2px" padding="23px 0px">
-          <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> Pay Now </span>
+          <span style="font-size: 18px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> Pay Now </span>
         </mj-button>
 
 

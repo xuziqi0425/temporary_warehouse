@@ -115,7 +115,7 @@
 
 
         <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="29px" border-radius="2px" padding="23px 0px">
-          <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> Pay Now </span>
+          <span style="font-size: 18px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> Pay Now </span>
         </mj-button>
 
 
@@ -621,13 +621,13 @@
       </mj-column>
     </mj-section>
 
-    <!-- <mj-section background-color="#773925" padding="0 0 30px">
+    <mj-section background-color="#773925" padding="0 0 30px">
       <mj-column>
         <mj-text font-size="13px" color="#F7F3E7" align="center">
-          Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          Mailing Address: 1 Giltspur Street Farringdon London United Kingdom EC1A 9DD
         </mj-text>
       </mj-column>
-    </mj-section> -->
+    </mj-section>
 
     <mj-section background-color="#773925" padding="0 0 44px">
       <mj-column>
