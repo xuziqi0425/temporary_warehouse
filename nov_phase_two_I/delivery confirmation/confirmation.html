@@ -1,129 +1,145 @@
-<html><head>
-<style type="text/css">@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+<html>
 
-@font-face {
-font-family: "MinervaModern";
-src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
-url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff") format("woff");
-}
-</style>
-</head><body>
-<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%">
-<tbody>
-<tr>
-<td align="center" bgcolor="#f2f2f2">
-<table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; background-color: #ffffff" width="800">
-<tbody>
-<tr>
-<td align="center">
-<table border="0" cellpadding="0" cellspacing="0" style="font-family: poppins, Arial, Helvetica, sans-serif;" width="614">
-<tbody><!-- SG header without navigation.txt --><#include "1092" /><!-- Main -->
-<tr>
-<td colspan="2"><!-- Email desc for cust --></td>
-</tr>
-<tr>
-<td height="10"> </td>
-</tr>
-<tr>
-<td align="center" style="vertical-align: top"><!-- Title -->
-<table>
-<tbody>
-<tr>
-<td height="42"> </td>
-</tr>
-<tr>
-<td align="center" style="
+<head>
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+
+        @font-face {
+            font-family: "MinervaModern";
+            src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
+                url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff") format("woff");
+        }
+    </style>
+</head>
+
+<body>
+    <table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+            <tr>
+                <td align="center" bgcolor="#f2f2f2">
+                    <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; background-color: #ffffff"
+                        width="800">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                    <table border="0" cellpadding="0" cellspacing="0"
+                                        style="font-family: poppins, Arial, Helvetica, sans-serif;" width="614">
+                                        <tbody><!-- SG header without navigation.txt -->
+                                            <#include "1092" /><!-- Main -->
+                                            <tr>
+                                                <td colspan="2"><!-- Email desc for cust --></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10"> </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="vertical-align: top"><!-- Title -->
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td height="42"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="
 font-size: 30px;
 color: #424242;
 font-weight: 700;
 line-height: 36px;
 ">Your delivery has been confirmed!<br />
-<#setting date_format="dd MMM yyyy"> ${transaction.custbody_cslr_scheduled_delivery_date} <#setting time_format="h:mm a"> ${transaction.custbody_cslr_slot_start_time} - ${transaction.custbody_cslr_slot_end_time}</td>
-</tr>
-<tr>
-<td height="40"> </td>
-</tr>
-</tbody>
-</table>
-<!-- Order Info -->
+                                                                    <#setting date_format="dd MMM yyyy">
+                                                                        ${transaction.custbody_cslr_scheduled_delivery_date}
+                                                                        <#setting time_format="h:mm a">
+                                                                            ${transaction.custbody_cslr_slot_start_time}
+                                                                            - ${transaction.custbody_cslr_slot_end_time}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="40"> </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- Order Info -->
 
-<table style="background: #DBCFB5" width="614">
-<tbody>
-<tr>
-<td height="23.5"> </td>
-</tr>
-<tr>
-<td align="center" style="
+                                                    <table style="background: #DBCFB5" width="614">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td height="23.5"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="
 font-size: 30px;
 color: #424242;
 font-weight: 700;
 line-height: 36px;
 ">Order #${transaction.custbody_cslr_sales_order_number}</td>
-</tr>
-<tr>
-<td height="10"> </td>
-</tr>
-<tr>
-<td align="center" style="
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="10"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="
 font-size: 18px;
 color: #424242;
 font-weight: 400;
 line-height: 24px;
 ">Shipment <span style="font-weight: 700">#${transaction.tranid}</span></td>
-</tr>
-<tr>
-<td height="23.5"> </td>
-</tr>
-</tbody>
-</table>
-<!-- row 2 -->
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="23.5"> </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- row 2 -->
 
-<table>
-<tbody>
-<tr>
-<td height="40"> </td>
-</tr>
-<tr>
-<td align="center" style="
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td height="40"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="
 font-size: 16px;
 color: #424242;
 line-height: 24px;
 ">Hi <span style="font-weight: 700">${customer.firstname}</span>,</td>
-</tr>
-<tr>
-<td height="25"> </td>
-</tr>
-</tbody>
-</table>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="25"> </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
 
-<table>
-<tbody>
-<tr>
-<td align="center" style="
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="center" style="
 font-size: 16px;
 color: #424242;
 line-height: 1.5;
 ">Please ensure that details shown below are correct.</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td height=" 40"> </td>
-</tr>
-<tr>
-<td align="center"><!-- Shipping Address -->
-<table style="border-collapse: separate; border-spacing: 10px 0px" width="614">
-<thead>
-<tr style="background: #DBCFB5">
-<th style="padding: 15px; font-size: 16px; color: #424242; font-weight: 700; line-height: 24px" width="50%">Contact Details</th>
-<th style="padding: 15px; font-size: 16px; color: #424242; font-weight: 700; line-height: 24px" width="50%">Shipping Address</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height=" 40"> </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><!-- Shipping Address -->
+                                                    <table style="border-collapse: separate; border-spacing: 10px 0px"
+                                                        width="614">
+                                                        <thead>
+                                                            <tr style="background: #DBCFB5">
+                                                                <th style="padding: 15px; font-size: 16px; color: #424242; font-weight: 700; line-height: 24px"
+                                                                    width="50%">Contact Details</th>
+                                                                <th style="padding: 15px; font-size: 16px; color: #424242; font-weight: 700; line-height: 24px"
+                                                                    width="50%">Shipping Address</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="
 padding: 10px;
 font-size: 16px;
 color: #424242;
@@ -132,10 +148,14 @@ border: 1px solid #DBCFB5;
 text-align: center;
 vertical-align: middle;
 "><span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
-<span>${customer.email}</span><br />
-<span>${transaction.custbody_cslr_phone} <#if transaction.custbody_cslr_alternative_phone?length!=0><br />
-${transaction.custbody_cslr_alternative_phone} </#if> </span></td>
-<td align="center" style="
+                                                                    <span>${customer.email}</span><br />
+                                                                    <span>${transaction.custbody_cslr_phone} <#if
+                                                                            transaction.custbody_cslr_alternative_phone?length!=0>
+                                                                            <br />
+                                                                            ${transaction.custbody_cslr_alternative_phone}
+                                                                        </#if> </span>
+                                                                </td>
+                                                                <td align="center" style="
 padding: 10px;
 font-size: 16px;
 color: #424242;
@@ -144,87 +164,129 @@ border: 1px solid #DBCFB5;
 text-align: center;
 vertical-align: middle;
 ">${transaction.custbody_cslr_address1}<br />
-<#if transaction.custbody_cslr_address2?length!=0> ${transaction.custbody_cslr_address2}<br />
-</#if> ${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip}</td>
-</tr>
-<tr>
-<td height="40"> </td>
-</tr>
-</tbody>
-</table>
+                                                                    <#if transaction.custbody_cslr_address2?length!=0>
+                                                                        ${transaction.custbody_cslr_address2}<br />
+                                                                    </#if> ${transaction.custbody_cslr_city}
+                                                                    ${transaction.custbody_cslr_zip}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="40"> </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
 
-<table width="614">
-<tbody>
-<tr>
-<td align="center" style="
+                                                    <table width="614">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="center" style="
 font-size: 16px;
 color: #424242;
 line-height: 1.5;
 ">
-<p>Specific item(s) from your shipment to be delivered</p>
+                                                                    <p>Specific item(s) from your shipment to be
+                                                                        delivered</p>
 
-<table style="border-spacing: 0;">
-<thead>
-<tr style="background: #DBCFB5;font-size: 16px; color: rgb(66, 66, 66); line-height: 24px;text-decoration: underline;">
-<th style="padding:12.5px;">Item ID</th>
-<th style="padding:12.5px;">Item Name</th>
-<th style="padding:12.5px">Quantity</th>
-</tr>
-</thead>
-<tbody><!-- Item Iterator.txt --><#include "3405" />
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td height="30"> </td>
-</tr>
-<tr>
-<td align="center" style="
+                                                                    <table style="border-spacing: 0;">
+                                                                        <thead>
+                                                                            <tr
+                                                                                style="background: #DBCFB5;font-size: 16px; color: rgb(66, 66, 66); line-height: 24px;text-decoration: underline;">
+                                                                                <th style="padding:12.5px;">Item ID</th>
+                                                                                <th style="padding:12.5px;">Item Name
+                                                                                </th>
+                                                                                <th style="padding:12.5px">Quantity</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody><!-- Item Iterator.txt -->
+                                                                            <#include "3405" />
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="30"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="
 font-size: 16px;
 color: #424242;
 line-height: 1.5;
 padding-left: 20px;
 padding-right: 20px;
-">To prepare for your delivery, please refer to the <strong style="">attached delivery FAQ</strong> for useful information. For deliveries to condominium, your management may require you to fill up an application form. Should you require further details, feel free to contact us <strong style=""><a href="https://www.castlery.com/sg/contact-us" style="color: #A45B37;" target="_blank">here</a>.</strong><br />
-<br />
-As part of our COVID-19 safety measures, you may opt for contactless delivery and our delivery partners will place your unassembled item(s) at your doorstep upon arrival. To do so, please contact us at <span style="color: #A45B37;">help@castlery.com</span>.<br />
-<br />
-<strong style="">In addition, we would like to assure that necessary steps are taken to ensure safety and minimize exposure and contact.<br />
-<br />
-Please feel free to contact us if there is any concerns or special requests with regards to your delivery. </strong><br />
-<br />
-<strong style="">NOTE:</strong>
-<p style="font-style:italic;">If you wish to change or cancel your delivery order, please notify us at least 5 business days *(Monday-Friday, 9am-6pm, excluding Public Holidays) before the agreed delivery date with no additional charges.<br />
-<br />
-<strong style="">*The day/date you inform us, will not be regarded as a business day in advance. </strong></p>
+">To prepare for your delivery, please refer to the <strong style="">attached delivery FAQ</strong> for useful
+                                                                    information. For deliveries to condominium, your
+                                                                    management may require you to fill up an application
+                                                                    form. Should you require further details, feel free
+                                                                    to contact us <strong style=""><a
+                                                                            href="https://www.castlery.com/sg/contact-us"
+                                                                            style="color: #A45B37;"
+                                                                            target="_blank">here</a>.</strong><br />
+                                                                    <br />
+                                                                    As part of our COVID-19 safety measures, you may opt
+                                                                    for contactless delivery and our delivery partners
+                                                                    will place your unassembled item(s) at your doorstep
+                                                                    upon arrival. To do so, please contact us at <span
+                                                                        style="color: #A45B37;">help@castlery.com</span>.<br />
+                                                                    <br />
+                                                                    <strong style="">In addition, we would like to
+                                                                        assure that necessary steps are taken to ensure
+                                                                        safety and minimize exposure and contact.<br />
+                                                                        <br />
+                                                                        Please feel free to contact us if there is any
+                                                                        concerns or special requests with regards to
+                                                                        your delivery. </strong><br />
+                                                                    <br />
+                                                                    <strong style="">NOTE:</strong>
+                                                                    <p style="font-style:italic;">If you wish to change
+                                                                        or cancel your delivery order, please notify us
+                                                                        at least 5 business days *(Monday-Friday,
+                                                                        9am-6pm, excluding Public Holidays) before the
+                                                                        agreed delivery date with no additional
+                                                                        charges.<br />
+                                                                        <br />
+                                                                        <strong style="">*The day/date you inform us,
+                                                                            will not be regarded as a business day in
+                                                                            advance. </strong>
+                                                                    </p>
 
-<p style="font-style:italic;">For more details, refer to the <a href="https://6998539.app.netsuite.com/core/media/media.nl?id=6914171&c=6998539&h=p-PXxICTjpiZwxuQFigzP0pk33qxWYRRne4TV2s9zHiRJo-H&_xt=.pdf" style="color: #A45B37;" target="_blank">delivery FAQ</a> or visit our <a href="https://www.castlery.com/sg/sales-and-refunds" style="color: #A45B37;">Terms and Conditions</a>.</p>
-</td>
-</tr>
-<tr>
-<td height="30"> </td>
-</tr>
-<tr>
-<td align="center" style="
+                                                                    <p style="font-style:italic;">For more details,
+                                                                        refer to the <a
+                                                                            href="https://6998539.app.netsuite.com/core/media/media.nl?id=6914171&c=6998539&h=p-PXxICTjpiZwxuQFigzP0pk33qxWYRRne4TV2s9zHiRJo-H&_xt=.pdf"
+                                                                            style="color: #A45B37;"
+                                                                            target="_blank">delivery FAQ</a> or visit
+                                                                        our <a
+                                                                            href="https://www.castlery.com/sg/sales-and-refunds"
+                                                                            style="color: #A45B37;">Terms and
+                                                                            Conditions</a>.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="30"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="
 font-size: 16px;
 color: #424242;
 line-height: 1.5;
 "> </td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<!-- SG FAQ.txt --><#include "1095" /><!-- SG footer.txt --><#include "1093" />
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</body></html>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- SG FAQ.txt -->
+                            <#include "1095" /><!-- SG footer.txt -->
+                            <#include "1093" />
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
