@@ -1,0 +1,7 @@
+<#list transaction.item as itemLine>
+	<tr align="center" style="font-size: 16px;text-align: center;color:rgb(66, 66, 66);">
+		<td style="padding: 16px; line-height: 24px; ">${itemLine.item}</td>
+		<td style="padding: 16px; line-height: 24px; ;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 475px;">${itemLine.description}</td>
+		<td style="padding: 16px; line-height: 24px;">${itemLine.quantity}</td>
+	</tr>
+</#list>
