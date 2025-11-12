@@ -1,0 +1,157 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: inline;
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      @media only screen and (max-width: 480px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: inline;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-size="16px" align="center" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#F7F3E7" line-height="1.2"/>
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section css-class="order-header" background-color="#773925" padding="33px 0 38px">
+      <mj-column>
+        <mj-image padding-bottom="59px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-text font-size="34px" color="#F7F3E7" align="center">
+          Your refund is on its way!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- order details -->
+    <mj-section padding="14px 0 0">
+      <mj-column width="634px" padding="0">
+        <mj-text >
+          Great news,${customer.firstName}, your refund has been processed and should reach you in 3 to 5 working days. ​
+        </mj-text>
+        <mj-text>
+          If you experience any issues, we recommend contacting your bank or card issuer directly. Please feel free to keep us updated if there’s anything we can assist with along the way, we’re here to help.​
+        </mj-text>
+        <mj-text  >
+          <ins>Please ignore this email if your refund is used as credit for change order processing.​</ins>
+        </mj-text>
+        <mj-text >
+          Thank you for choosing Castlery — we look forward to serving you again soon.
+        </mj-text>
+        <mj-text padding="34px 0 4px">
+          Warmest ,
+        </mj-text>
+        <mj-text font-size="27px" font-style="italic">
+          Castlery
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#773925"  padding="29px 0 47px">
+      <mj-column>
+        <mj-divider border-color="#F7F3E7" border-width="1px"  />
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#773925" padding="0 0 4px">
+      <mj-column>
+        <mj-text align="center" padding="0 0 37px" font-size="28px">
+        Still curious?
+        </mj-text>
+        <mj-button href="https://www.castlery.com/sg/faq" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="30px" border-radius="2px">
+          <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> EXPLORE OUR FAQ </span>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <!-- Divider -->
+    <mj-section background-color="#773925" padding="25px 0">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" />
+      </mj-column>
+    </mj-section>
+    <!-- Footer Section -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text align="center">
+          <a href="http://www.instagram.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
+          </a>
+          <a href="https://www.facebook.com/CastlerySG" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
+          </a>
+          <a href="http://www.pinterest.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="25px 0 10px">
+      <mj-column>
+        <mj-text font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em" line-height="1.5">
+          <a href="https://www.castlery.com/sg/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">PRIVACY POLICY</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <a href="https://www.castlery.com/sg/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">CONTACT US</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <span style="white-space: nowrap;">
+            <a href="https://www.castlery.com/sg/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">REFER A FRIEND</a>
+          </span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 16px">
+      <mj-column>
+        <mj-text font-size="13px" color="#F7F3E7" align="center">
+          Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 52px">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/v1760003274/email/template-v-update-last-bottom.png" width="98px" align="center" />
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
+</body>
+
+</html>

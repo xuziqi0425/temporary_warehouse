@@ -109,14 +109,8 @@
                 ${itemLine.quantity}
               </td>
             </tr>
-
           </#list>
         </mj-table>
-      </mj-column>
-    </mj-section>
-    <mj-section background-color="#F6F3E7" padding="0">
-      <mj-column>
-        <mj-divider border-color="#E0D5C7" border-width="1px" padding="0px 30px" />
       </mj-column>
     </mj-section>
 
