@@ -29,11 +29,21 @@
 
       /* 响应式文字显示 */
       .desktop-text {
-        display: inline;
+        display: '';
       }
 
       .mobile-text {
         display: none;
+      }
+
+      .tableLabel {
+        vertical-align: top;
+        font-size: 12px;
+        font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+        padding-bottom: 10px;
+        letter-spacing: 0.15em;
+        font-weight: 400;
+        color: #D15D27;
       }
 
       @media only screen and (max-width: 480px) {
@@ -52,46 +62,144 @@
   </mj-head>
   <mj-body background-color="#773925" width="680px">
     <!-- header -->
-    <mj-section css-class="order-header" background-color="#773925" padding="33px 0 10px">
+    <mj-section background-color="#773925" padding="33px 0 10px">
       <mj-column>
         <mj-image padding-bottom="59px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
         <mj-text font-size="34px" color="#F7F3E7" align="center">
-          Your order is ready to go.
+          Good news—your order is ready to go!​
         </mj-text>
         <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
           Hi ${transaction.custbody_cslr_addressee},
         </mj-text>
-        <mj-text  color="#F7F3E7" align="center" padding-bottom="21px">
-          Your order #1234567890 is still waiting to be dispatched.​ <br />
-          Book a delivery slot below to receive it!​
+        <mj-text color="#F7F3E7" align="center" padding-bottom="21px">
+          Your order is ready for dispatch. Our delivery partner, BJS Home Delivery, will contact you within 3 business days to arrange your delivery date.
         </mj-text>
-        <mj-button href='${transaction.custbody_cslr_delivery_schedule_link}' background-color="transparent" border="1px solid #f7f3e7" width="260px" height="30px" border-radius="2px">
-          <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> SCHEDULE DELIVERY </span>
-        </mj-button>
-        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="34px 64px 0">
-          You can schedule delivery anytime from 4 business days up to 2 months ahead. For dates beyond 2 months, you’ll need to wait until they fall within that window before booking.​
+      </mj-column>
+    </mj-section>
+    <mj-section padding="14px 0 0px" background-color="#F6F3E7">
+      <mj-column background-color="#F6F3E7">
+        <mj-text font-size="27px" align="center" color="#3A131F" padding="35px 0 13px">
+          Order #${transaction.custbody_cslr_sales_order_number}
         </mj-text>
-        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="44px 0 0px">
+        <mj-text font-size="16px" align="center" color="#3A131F">
+          Shipment #${transaction.tranid}
+        </mj-text>
+        <!-- Order Items Table -->
+        <mj-table color="#3A131F" padding="15px 20px 40px">
+          <colgroup>
+            <col style="width: 100px" />
+            <col style="width: 280px" />
+            <col style="width: 110px" />
+          </colgroup>
+          <!-- Table Header -->
+          <tr>
+            <th class="tableLabel">
+              ITEM ID
+            </th>
+            <th class="tableLabel">
+              ITEM NAME
+            </th>
+            <th class="tableLabel">
+              QUANTITY
+            </th>
+          </tr>
+          <#list transaction.item as itemLine>
+            <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+              <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                ${itemLine.item}
+              </td>
+              <td align="center" padding="0 5px" valign="top">
+                ${itemLine.description}
+              </td>
+              <td align="center" padding="0 5px" valign="top">
+                ${itemLine.quantity}
+              </td>
+            </tr>
+          </#list>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="28px 0 7px">
+          Before then, please take a moment to ensure your details are accurate:​
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#F6F3E7" padding="33px 0 10px">
+      <mj-column>
+        <mj-table color="#3A131F" padding="15px 20px 40px">
+          <colgroup>
+            <col style="width: 211px" />
+            <col style="width: 32px" />
+            <col style="width: 347px" />
+          </colgroup>
+
+          <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+            <td class="tableLabel" align="right" padding="0 5px">
+              NAME
+            </td>
+            <td>&nbsp;</td>
+            <td align="left" padding="0 5px" valign="top">
+              [FNAME]
+            </td>
+          </tr>
+          <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+            <td class="tableLabel" align="right" padding="0 5px">
+              EMAIL
+            </td>
+            <td>&nbsp;</td>
+            <td align="left" padding="0 5px" valign="top">
+              [CUSTOMER EMAIL]
+            </td>
+          </tr>
+          <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+            <td class="tableLabel" align="right" padding="0 5px">
+              SHIPPING ADDRESS
+            </td>
+            <td>&nbsp;</td>
+            <td align="left" padding="0 5px" valign="top">
+              Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erattpat.
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="27px 0 0px">
           Important to note
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" padding="14px 87px 0 36px">
           <ul>
             <li>
-              If you do not schedule delivery within 2 months of your order being ready for dispatch, you may incur a 5% storage fee. For more information, please view our <a href="https://www.castlery.com/sg/delivery" target="_blank" style="color:#D25C1B !important;cursor:pointer;"> <ins>Terms & Conditions.</ins></a>
+              Delivery slots are subject to availability. Specific date or time requests may incur additional charges.
             </li>
-            <br />
+            <br>
             <li>
-              We’d love to help you receive your Castlery order as soon as possible. For assistance, please don’t hesitate to reach out by replying to this email.
+              To track your delivery, contact BJS Home Delivery at 01922 645850 or customerservice@bjshomedelivery.com, quoting your shipment number.
+            </li>
+            <br>
+            <li>
+              Please inform Castlery of any residential restrictions (e.g., narrow stairways, parking limitations, or vehicle height limits) upon receiving this email.
+            </li>
+            <br>
+            <li>
+              For the safety of our delivery partners, items weighing over 85kg can only be delivered to the ground floor if there’s no lift access.
+            </li>
+            <br>
+            <li>
+              Any modifications to your shipment at this stage may incur a 20%–30% restocking fee.
             </li>
           </ul>
         </mj-text>
       </mj-column>
     </mj-section>
-
     <!-- Divider -->
-    <mj-section background-color="#773925" padding="25px 0">
+    <mj-section background-color="#773925" padding="0 0 25px">
       <mj-column>
-        <mj-divider border-color="#f7f3e7" border-width="1px" />
+        <mj-divider border-color="#f7f3e7" border-width="1px" padding-top="0"/>
       </mj-column>
     </mj-section>
     <!-- Footer Section -->
