@@ -36,6 +36,10 @@
         display: none;
       }
 
+      .mobile-top-text {
+        padding: 34px 64px 0;
+      }
+
       @media only screen and (max-width: 480px) {
         .desktop-text {
           display: none;
@@ -43,6 +47,14 @@
 
         .mobile-text {
           display: inline;
+        }
+
+        .mobile-ul {
+          padding-left: 13px;
+        }
+
+        .mobile-top-text {
+          padding: 34px 32px 0;
         }
       }
     </mj-style>
@@ -61,21 +73,21 @@
         <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
           Hi ${transaction.custbody_cslr_addressee},
         </mj-text>
-        <mj-text  color="#F7F3E7" align="center" padding-bottom="21px">
+        <mj-text color="#F7F3E7" align="center" padding-bottom="21px">
           Your order #1234567890 is still waiting to be dispatched.​ <br />
           Book a delivery slot below to receive it!​
         </mj-text>
         <mj-button href='${transaction.custbody_cslr_delivery_schedule_link}' background-color="transparent" border="1px solid #f7f3e7" width="260px" height="30px" border-radius="2px">
           <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> SCHEDULE DELIVERY </span>
         </mj-button>
-        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="34px 64px 0">
+        <mj-text font-size="16px" color="#F7F3E7" align="center" css-class="mobile-top-text">
           You can schedule delivery anytime from 4 business days up to 2 months ahead. For dates beyond 2 months, you’ll need to wait until they fall within that window before booking.​
         </mj-text>
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding="44px 0 0px">
           Important to note
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" padding="14px 87px 0 36px">
-          <ul>
+          <ul class="mobile-ul">
             <li>
               If you do not schedule delivery within 2 months of your order being ready for dispatch, you may incur a 5% storage fee. For more information, please view our <a href="https://www.castlery.com/sg/delivery" target="_blank" style="color:#D25C1B !important;cursor:pointer;"> <ins>Terms & Conditions.</ins></a>
             </li>

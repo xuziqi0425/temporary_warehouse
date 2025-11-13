@@ -41,6 +41,9 @@
         display: none;
       }
 
+      .bottom-text {
+        padding:0 76px 41px;
+      }
       @media only screen and (max-width: 600px) {
         .desktop-text {
           display: none;
@@ -48,6 +51,9 @@
 
         .mobile-text {
           display: inline;
+        }
+        .bottom-text {
+          padding:0 25px 41px;
         }
       }
     </mj-style>
@@ -199,7 +205,7 @@
         </mj-table>
       </mj-column>
     </mj-section>
-    <mj-section padding="0 76px 41px" background-color="#773925">
+    <mj-section css-class="bottom-text" background-color="#773925">
       <mj-column>
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding="0">
           Delivery notice

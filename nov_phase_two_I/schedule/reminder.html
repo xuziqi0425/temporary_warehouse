@@ -6,7 +6,6 @@
   <!--[if !mso]><!-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--<![endif]-->
-  <meta name="format-detection" content="telephone=no,email=no,address=no,date=no,url=no">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css">
@@ -116,6 +115,10 @@
       font-display: swap;
     }
 
+    .important-note {
+      list-style-type: disc;
+    }
+
     * {
       font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
     }
@@ -129,6 +132,10 @@
       display: none;
     }
 
+    .mobile-top-text {
+      padding: 34px 64px 0;
+    }
+
     @media only screen and (max-width: 480px) {
       .desktop-text {
         display: none;
@@ -136,6 +143,14 @@
 
       .mobile-text {
         display: inline;
+      }
+
+      .mobile-ul {
+        padding-left: 13px;
+      }
+
+      .mobile-top-text {
+        padding: 34px 32px 0;
       }
     }
 
@@ -199,7 +214,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:34px 64px 0;word-break:break-word;">
+                      <td align="center" class="mobile-top-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">You can schedule delivery anytime from 4 business days up to 2 months ahead. For dates beyond 2 months, you’ll need to wait until they fall within that window before booking.​</div>
                       </td>
                     </tr>
@@ -211,7 +226,7 @@
                     <tr>
                       <td align="left" style="font-size:0px;padding:14px 87px 0 36px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:left;color:#F7F3E7;">
-                          <ul>
+                          <ul class="mobile-ul">
                             <li> If you do not schedule delivery within 2 months of your order being ready for dispatch, you may incur a 5% storage fee. For more information, please view our <a href="https://www.castlery.com/sg/delivery" target="_blank" style="color:#D25C1B !important;cursor:pointer;"> <ins>Terms & Conditions.</ins></a>
                             </li>
                             <br />

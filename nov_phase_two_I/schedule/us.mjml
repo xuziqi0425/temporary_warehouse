@@ -54,6 +54,9 @@
         .mobile-text {
           display: inline;
         }
+        .mobile-ul {
+          padding-left: 13px;
+        }
       }
     </mj-style>
     <mj-attributes>
@@ -172,7 +175,7 @@
           Important to note
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="left" padding="14px 87px 0 36px">
-          <ul>
+          <ul class="mobile-ul">
             <li>
               Delivery slots are subject to availability. Specific date or time requests may incur additional charges.
             </li>
