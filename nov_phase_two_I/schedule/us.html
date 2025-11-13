@@ -6,6 +6,7 @@
   <!--[if !mso]><!-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--<![endif]-->
+  <meta name="format-detection" content="telephone=no,email=no,address=no,date=no,url=no">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css">
@@ -300,17 +301,19 @@
                           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                             <td class="tableLabel" align="right" padding="0 5px"> NAME </td>
                             <td>&nbsp;</td>
-                            <td align="left" padding="0 5px" valign="top"> [FNAME] </td>
+                            <td align="left" padding="0 5px" valign="top"> ${customer.firstname} ${customer.middlename} ${customer.lastname} </td>
                           </tr>
                           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                             <td class="tableLabel" align="right" padding="0 5px"> EMAIL </td>
                             <td>&nbsp;</td>
-                            <td align="left" padding="0 5px" valign="top"> [CUSTOMER EMAIL] </td>
+                            <td align="left" padding="0 5px" valign="top"> ${customer.email} </td>
                           </tr>
                           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                             <td class="tableLabel" align="right" padding="0 5px"> SHIPPING ADDRESS </td>
                             <td>&nbsp;</td>
-                            <td align="left" padding="0 5px" valign="top"> Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erattpat. </td>
+                            <td align="left" padding="0 5px" valign="top"> ${transaction.custbody_cslr_address1}<br />
+                              <#if transaction.custbody_cslr_address2?length!=0> ${transaction.custbody_cslr_address2}<br />
+                              </#if>${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip} </td>
                           </tr>
                         </table>
                       </td>
