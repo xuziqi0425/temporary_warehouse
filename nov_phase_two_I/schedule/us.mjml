@@ -130,9 +130,9 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-section background-color="#F6F3E7" padding="33px 0 10px">
+    <mj-section background-color="#F6F3E7" padding="0">
       <mj-column>
-        <mj-table color="#3A131F" padding="15px 20px 40px">
+        <mj-table color="#3A131F" padding="37px 20px 40px">
           <colgroup>
             <col style="width: 211px" />
             <col style="width: 32px" />
@@ -140,30 +140,32 @@
           </colgroup>
 
           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
-            <td class="tableLabel" align="right" padding="0 5px">
+            <td class="tableLabel" align="right" >
               NAME
             </td>
             <td>&nbsp;</td>
-            <td align="left" padding="0 5px" valign="top">
-              [FNAME]
+            <td align="left" style="padding:0 5px 30px;" valign="top">
+              ${customer.firstname} ${customer.middlename} ${customer.lastname}
             </td>
           </tr>
           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
-            <td class="tableLabel" align="right" padding="0 5px">
+            <td class="tableLabel" align="right">
               EMAIL
             </td>
             <td>&nbsp;</td>
-            <td align="left" padding="0 5px" valign="top">
-              [CUSTOMER EMAIL]
+            <td align="left" style="padding:0 5px 30px;" valign="top">
+              ${customer.email}
             </td>
           </tr>
           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
-            <td class="tableLabel" align="right" padding="0 5px">
+            <td class="tableLabel" align="right" >
               SHIPPING ADDRESS
             </td>
             <td>&nbsp;</td>
             <td align="left" padding="0 5px" valign="top">
-              Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erattpat.
+             ${transaction.custbody_cslr_address1}<br />
+                <#if transaction.custbody_cslr_address2?length!=0> ${transaction.custbody_cslr_address2}<br />
+                </#if>${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip}
             </td>
           </tr>
         </mj-table>

@@ -22,7 +22,7 @@
             <#list transaction.item as itemLine>
                 <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                     <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                        ${itemLine.item} </td>
+                        <a href="javascript:void(0)" style="text-decoration:none;cursor:text;"> ${itemLine.item} </a> </td>
                     <td align="center" padding="0 5px" valign="top"> ${itemLine.description} </td>
                     <td align="center" padding="0 5px" valign="top"> ${itemLine.quantity} </td>
                 </tr>

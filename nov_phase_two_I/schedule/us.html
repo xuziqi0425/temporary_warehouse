@@ -243,7 +243,9 @@
                           </tr>
                           <#list transaction.item as itemLine>
                             <tr style="font-size: 15px;text-align: center;color: #3A131F;">
-                              <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'> ${itemLine.item} </td>
+                              <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                                <a href="javascript:void(0)" style="text-decoration:none;cursor:text;">${itemLine.item} </a>
+                              </td>
                               <td align="center" padding="0 5px" valign="top"> ${itemLine.description} </td>
                               <td align="center" padding="0 5px" valign="top"> ${itemLine.quantity} </td>
                             </tr>
@@ -289,13 +291,13 @@
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:33px 0 10px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:0;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="left" style="font-size:0px;padding:15px 20px 40px;word-break:break-word;">
+                      <td align="left" style="font-size:0px;padding:37px 20px 40px;word-break:break-word;">
                         <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                           <colgroup>
                             <col style="width: 211px" />
@@ -303,21 +305,27 @@
                             <col style="width: 347px" />
                           </colgroup>
                           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
-                            <td class="tableLabel" align="right" padding="0 5px"> NAME </td>
+                            <td class="tableLabel" align="right"> NAME </td>
                             <td>&nbsp;</td>
-                            <td align="left" padding="0 5px" valign="top"> ${customer.firstname} ${customer.middlename} ${customer.lastname} </td>
+                            <td align="left" style="padding:0 5px 30px;" valign="top"> ${customer.firstname} ${customer.middlename} ${customer.lastname} </td>
                           </tr>
                           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
-                            <td class="tableLabel" align="right" padding="0 5px"> EMAIL </td>
+                            <td class="tableLabel" align="right"> EMAIL </td>
                             <td>&nbsp;</td>
-                            <td align="left" padding="0 5px" valign="top"> ${customer.email} </td>
+                            <td align="left" style="padding:0 5px 30px;" valign="top"> 
+                              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;"> ${customer.email} </a>
+                            </td>
                           </tr>
                           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
-                            <td class="tableLabel" align="right" padding="0 5px"> SHIPPING ADDRESS </td>
+                            <td class="tableLabel" align="right"> SHIPPING ADDRESS </td>
                             <td>&nbsp;</td>
-                            <td align="left" padding="0 5px" valign="top"> ${transaction.custbody_cslr_address1}<br />
+                            <td align="left" padding="0 5px" valign="top"> 
+                              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;"> ${transaction.custbody_cslr_address1}<br />
+                              ${transaction.custbody_cslr_address1}<br />
                               <#if transaction.custbody_cslr_address2?length!=0> ${transaction.custbody_cslr_address2}<br />
-                              </#if>${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip} </td>
+                              </#if>${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip}
+                              </a>
+                            </td>
                           </tr>
                         </table>
                       </td>
