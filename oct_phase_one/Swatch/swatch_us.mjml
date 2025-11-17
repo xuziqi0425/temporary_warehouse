@@ -260,7 +260,7 @@
 
     <mj-section background-color="#773925" padding="0 0 20px">
       <mj-column>
-        <mj-text font-size="13px" color="#F7F3E7" align="center">
+        <mj-text font-size="13px" color="#F7F3E7" align="center" line-height="1.2">
           Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
         </mj-text>
       </mj-column>

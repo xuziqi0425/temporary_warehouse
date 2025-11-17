@@ -57,11 +57,12 @@
           display: inline !important;
         }
       }
-      
+
       /* 针对不支持媒体查询的客户端 */
       [data-ogsc] .desktop-text {
         display: inline !important;
       }
+
       [data-ogsc] .mobile-text {
         display: none !important;
       }
@@ -216,9 +217,9 @@
                     <td style="text-align: center; padding-top: 9px;">
                       <div style="font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; line-height: 1.2;">
                         <!-- 桌面版本 -->
-                        <span style="display: inline !important;" class="desktop-text">FREE SWATCHES</span>
+                        <span class="desktop-text">FREE SWATCHES</span>
                         <!-- 移动版本 -->
-                        <span style="display: none !important;" class="mobile-text">FREE<br>SWATCHES</span>
+                        <span class="mobile-text">FREE<br>SWATCHES</span>
                       </div>
                     </td>
                   </tr>
@@ -235,9 +236,9 @@
                     <td style="text-align: center; padding-top: 9px;">
                       <div style="font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; line-height: 1.2;">
                         <!-- 桌面版本 -->
-                        <span style="display: inline !important;" class="desktop-text">FLAT RATE SHIPPING</span>
+                        <span class="desktop-text">FLAT RATE SHIPPING</span>
                         <!-- 移动版本 -->
-                        <span style="display: none !important;" class="mobile-text">FLAT RATE<br>SHIPPING</span>
+                        <span class="mobile-text">FLAT RATE<br>SHIPPING</span>
                       </div>
                     </td>
                   </tr>
@@ -254,9 +255,9 @@
                     <td style="text-align: center; padding-top: 9px;">
                       <div style="font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif; font-size: 11px; color: #F7F3E7; text-align: center; text-transform: uppercase; letter-spacing: 0.15em; line-height: 1.2;">
                         <!-- 桌面版本 -->
-                        <span style="display: inline !important;" class="desktop-text">30-DAY RETURNS</span>
+                        <span class="desktop-text">30-DAY RETURNS</span>
                         <!-- 移动版本 -->
-                        <span style="display: none !important;" class="mobile-text">30-DAY<br>RETURNS</span>
+                        <span class="mobile-text">30-DAY<br>RETURNS</span>
                       </div>
                     </td>
                   </tr>
@@ -307,7 +308,7 @@
 
     <mj-section background-color="#773925" padding="0 0 20px">
       <mj-column>
-        <mj-text font-size="13px" color="#F7F3E7" align="center">
+        <mj-text font-size="13px" color="#F7F3E7" align="center" line-height="1.2">
           Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
         </mj-text>
       </mj-column>

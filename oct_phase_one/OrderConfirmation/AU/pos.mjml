@@ -93,7 +93,7 @@
     <!-- header -->
     <mj-section css-class="order-header" background-color="#773925">
       <mj-column>
-        <mj-image padding="44px 0 66px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-image padding="22px 0 34px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
         <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" font-size="38px" color="#F7F3E7" align="center">
           Thank you for choosing Castlery
         </mj-text>
@@ -469,7 +469,7 @@ https://www.castlery.com/au/sales-and-refunds" style="
     </mj-section>
 
     <!-- Delivery Remarks -->
-    <mj-section background-color="#F6F3E7" padding="5px 0 9px 5px">
+    <mj-section background-color="#F6F3E7" padding="5px 0 24px 5px">
       <mj-column width="100%">
         <mj-table>
           <tr>
