@@ -132,7 +132,7 @@
     .tableLabel {
       vertical-align: top;
       font-size: 12px;
-      font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+      font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;;
       padding-bottom: 10px;
       letter-spacing: 0.15em;
       font-weight: 400;
@@ -231,8 +231,8 @@
                       <td align="left" style="font-size:0px;padding:15px 20px 40px;word-break:break-word;">
                         <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                           <colgroup>
-                            <col style="width: 100px" />
-                            <col style="width: 280px" />
+                            <col style="width: 110px" />
+                            <col />
                             <col style="width: 110px" />
                           </colgroup>
                           <!-- Table Header -->
@@ -244,9 +244,9 @@
                           <#list transaction.item as itemLine>
                             <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                               <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                                <a href="javascript:void(0)" style="text-decoration:none;cursor:text;">${itemLine.item} </a>
+                                <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F;"> ${itemLine.item} </a>
                               </td>
-                              <td align="center" padding="0 5px" valign="top"> ${itemLine.description} </td>
+                              <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F;"> ${itemLine.description} </td>
                               <td align="center" padding="0 5px" valign="top"> ${itemLine.quantity} </td>
                             </tr>
                           </#list>
@@ -313,14 +313,14 @@
                             <td class="tableLabel" align="right"> EMAIL </td>
                             <td>&nbsp;</td>
                             <td align="left" style="padding:0 5px 30px;" valign="top"> 
-                              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;"> ${customer.email} </a>
+                              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F;"> ${customer.email} </a>
                             </td>
                           </tr>
                           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                             <td class="tableLabel" align="right"> SHIPPING ADDRESS </td>
                             <td>&nbsp;</td>
                             <td align="left" padding="0 5px" valign="top"> 
-                              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;"> ${transaction.custbody_cslr_address1}<br />
+                              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F;"> ${transaction.custbody_cslr_address1}<br />
                               ${transaction.custbody_cslr_address1}<br />
                               <#if transaction.custbody_cslr_address2?length!=0> ${transaction.custbody_cslr_address2}<br />
                               </#if>${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip}
@@ -456,12 +456,12 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:11px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;"><a href="https://www.castlery.com/sg/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">PRIVACY POLICY</a>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:11px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;"><a href="https://www.castlery.com/sg/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">PRIVACY POLICY</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-                          <a href="https://www.castlery.com/sg/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">CONTACT US</a>
+                          <a href="https://www.castlery.com/sg/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">CONTACT US</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
                           <span style="white-space: nowrap;">
-                            <a href="https://www.castlery.com/sg/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">REFER A FRIEND</a>
+                            <a href="https://www.castlery.com/sg/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">REFER A FRIEND</a>
                           </span>
                         </div>
                       </td>

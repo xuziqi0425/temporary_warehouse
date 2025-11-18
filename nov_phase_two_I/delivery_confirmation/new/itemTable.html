@@ -3,8 +3,8 @@
         <table cellpadding="0" cellspacing="0" width="100%" border="0"
             style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
             <colgroup>
-                <col style="width: 100px" />
-                <col style="width: 280px" />
+                <col style="width: 110px" />
+                <col />
                 <col style="width: 110px" />
             </colgroup>
             <!-- Table Header -->
@@ -22,8 +22,8 @@
             <#list transaction.item as itemLine>
                 <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                     <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                        <a href="javascript:void(0)" style="text-decoration:none;cursor:text;"> ${itemLine.item} </a> </td>
-                    <td align="center" padding="0 5px" valign="top"> ${itemLine.description} </td>
+                        <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F;"> ${itemLine.item} </a> </td>
+                    <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> ${itemLine.description} </td>
                     <td align="center" padding="0 5px" valign="top"> ${itemLine.quantity} </td>
                 </tr>
             </#list>

@@ -196,7 +196,7 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:24px;line-height:1;text-align:center;color:#3A131F;">[<#setting date_format="dd MMM yyyy"> ${transaction.custbody_cslr_scheduled_delivery_date} <#setting time_format="h:mm a"> ${transaction.custbody_cslr_slot_start_time} - ${transaction.custbody_cslr_slot_end_time}]</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:24px;line-height:1;text-align:center;color:#3A131F;"><#setting date_format="dd MMM yyyy"> ${transaction.custbody_cslr_scheduled_delivery_date} <#setting time_format="h:mm a"> ${transaction.custbody_cslr_slot_start_time} - ${transaction.custbody_cslr_slot_end_time}</div>
                       </td>
                     </tr>
                     <tr>
@@ -238,7 +238,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:14px 0 0;word-break:break-word;">
+                      <td align="center" style="font-size:0px;padding:14px 20px 0;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">Your Castlery order will reach you soon!<br /> Please double check your details and make sure you're available during delivery.</div>
                       </td>
                     </tr>
@@ -292,7 +292,7 @@
                           <tr class='mobile-text'>
                             <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
                               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;"> CONTACT DETAILS </div>
-                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
                                 <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
                                 <a href="javascript:void(0)"
                                   style="text-decoration:none; color:#3A131F; cursor:text;">${customer.email}</a><br />
@@ -310,9 +310,9 @@
                             <td style="height: 10px;"> &nbsp; </td>
                           </tr>
                           <tr class='mobile-text'>
-                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;line-height: 1.2; ">
                               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;"> SHIPPING ADDRESS </div>
-                              <a href="javascript:void(0)" style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px;text-decoration:none;cursor:text;"> ${transaction.custbody_cslr_address1}<br />
+                              <a href="javascript:void(0)" style="font-size: 16px; color: #3A131F;text-align: center;text-decoration:none;cursor:text;"> ${transaction.custbody_cslr_address1}<br />
                                 <#if transaction.custbody_cslr_address2?length!=0> ${transaction.custbody_cslr_address2}<br />
                                 </#if>${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip}
                               </a>
