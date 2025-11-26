@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+
+@font-face {
+font-family: "MinervaModern";
+src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
+url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff") format("woff");
+}
+</style>
+</head>
+
+<body>
+<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="center" bgcolor="#f2f2f2">
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; background-color: #ffffff"
+width="800">
+<tbody>
+<tr>
+<td align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="614"
+style="font-family: poppins, Arial, Helvetica, sans-serif;">
+<tbody>
+<!-- SG header without navigation.txt -->
+<#include "1092" /><!-- Main -->
+<tr>
+<td height="20"> </td>
+</tr>
+<tr>
+<td align="center" style="vertical-align: top">
+<!-- title -->
+<table>
+<tbody>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 24px;
+">Hi <span style="font-weight: 700">${customer.firstname}</span>,</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">Hope you are doing well. We believe you had previously received communication
+from us regarding your order delay for order #<span
+style="font-weight: 700;">${transaction.custbody_cslr_sales_order_number}</span>,
+and we want to pop in to give you a quick update. </td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">Your [ INSERT ITEM NAME ] has been unfortunately further delayed until [date
+range], as opposed to [ INSERT PREVIOUS PROMISED DELIVERY DATE ] and we regret to
+have to share this disappointing news with you.</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">No action is required on your end if you are agreeable to the new estimated
+delivery range. In the event that you are unable to wait for the order, do reply to
+this email to initiate a cancellation and full refund.</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">Once again, please accept our sincerest apology for this delay. We will do our
+utmost best to deliver your order as soon as possible, and will continue to monitor
+the situation and provide further updates, if any.</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">If you have any further enquires, kindly reply to this email or contact us at <a
+href="mailto: help.sg@castlery.com" style="color: #A45B37;">help.sg@castlery.com</a>
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">Best Regards,<br />
+<span style="font-weight: 700;">The Castlery Team </span>
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- SG FAQ.txt -->
+<#include "1095" />
+<!-- SG footer.txt -->
+<#include "1093" />
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="gmailfix" style="white-space: nowrap; font: 15px courier; line-height: 0"> </div>
+</body>
+
+</html>

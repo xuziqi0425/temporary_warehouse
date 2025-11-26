@@ -1,0 +1,89 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      a {
+        color: #D25C1B;
+        cursor: pointer;
+        text-decoration: none !important;
+      }
+
+      .bottom-text {
+        padding: 0 76px 17px;
+      }
+
+      .text-faq-padding {
+        padding: 16px 30px 0px !important;
+      }
+
+      @media only screen and (max-width: 600px) {
+
+        .bottom-text {
+          padding: 0 25px 17px;
+        }
+
+        .text-faq-padding {
+          padding: 16px 5px 0px !important;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section css-class="order-header" background-color="#773925" padding="33px 0 25px">
+      <mj-column>
+        <mj-image padding-bottom="53px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-text font-size="38px" color="#F7F3E7" align="center" padding="10px 40px">
+          We know this hasn't been fun. Thanks for bearing with us.
+        </mj-text>
+        <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
+          Hi ${customer.firstname},
+        </mj-text>
+        <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2">
+         We’re really sorry—your [ITEM NAME / ORDER NUMBER] has been delayed again. It’s now expected to arrive between [NEW DATE RANGE], a little later than the earlier [PREVIOUS DATE].
+          <br />
+          <br />
+          If you’re okay to wait, we’ll keep your order on hold for now. If you’d rather not, simply reply to this email and we’ll take care of the cancellation and full refund for you.
+          <br />
+          <br />
+         We know another delay isn’t what you hoped for. Thank you for your patience while we work to get this to you as quickly as possible.
+        </mj-text>
+         <mj-text font-size="17px" color="#F7F3E7" align="center" padding="20px 0 0">
+          Hanging in there with you,
+        </mj-text>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="14px 0 0" font-style="italic">
+          Castlery
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-include path="../components/footer.mjml" />
+  </mj-body>
+</mjml>

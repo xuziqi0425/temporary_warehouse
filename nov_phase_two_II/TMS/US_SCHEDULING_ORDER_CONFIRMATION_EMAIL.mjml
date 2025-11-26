@@ -1,0 +1,270 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: '';
+      }
+
+      a {
+        color: #9BA3C1;
+        text-decoration: underline;
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: table-row;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section css-class="order-header" background-color="#773925" padding="33px 0 20px">
+      <mj-column>
+        <mj-image padding-bottom="53px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-text font-size="37px" color="#F7F3E7" align="center">
+          Your order will be with you ASAP!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- order details -->
+    <mj-section padding="31px 0 0px" background-color="#F6F3E7">
+      <mj-column background-color="#F6F3E7">
+        <mj-text font-size="28px" align="center" color="#3A131F" padding="0 0 2px">
+          Order #<span th:text="${data.salesOrderNumber}">***</span>
+        </mj-text>
+        <mj-text font-size="17px" align="center" color="#3A131F">
+          Shipment #<span th:text="${data.shipmentNumber}">***</span>
+        </mj-text>
+        <!-- Order Items Table -->
+        <mj-table color="#3A131F" padding="25px 20px 30px">
+          <colgroup>
+            <col style="width: 110px" />
+            <col />
+            <col style="width: 110px" />
+          </colgroup>
+          <!-- Table Header -->
+          <tr>
+            <th style="text-align: center; font-size: 12px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+              ITEM ID
+            </th>
+            <th style="text-align: center; font-size: 12px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+              ITEM NAME
+            </th>
+            <th style="text-align: center; font-size: 12px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
+              QUANTITY
+            </th>
+          </tr>
+          <span th:each="itemLine:${data.items}">
+            <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+              <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                <span th:text="${itemLine.id}">***</span>
+              </td>
+              <td align="center" padding="0 5px" valign="top">
+                <span th:text="${itemLine.name}">***</span>
+              </td>
+              <td align="center" padding="0 5px" valign="top">
+                <span th:text="${itemLine.quantity}">***</span>
+              </td>
+            </tr>
+          </span>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#773925" padding="19px 20px 14px">
+      <mj-column>
+        <mj-text font-size="27px" color="#9BA3C1" font-style="italic" align="center">
+          Hi <span th:text="${data.consigneeFirstName}">***</span>,
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 0 0" line-height="1.2">
+          Good news—your item (s) have arrived at our warehouse and are being prepped for shipping.
+          <br />
+          <br />
+          <u>What’s next?</u>
+          <br />
+          Keep an eye out for our tracking email. It’ll include carrier details and tracking info. Once your order is with our delivery partner, they’ll reach out to schedule your delivery.
+          <br />
+          <br />
+          Please double-check your details:
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- Address Section -->
+    <mj-section padding="14px 0 41px" background-color="#773925">
+      <mj-column>
+        <mj-table width="100%" padding="0 31px">
+          <tr class='desktop-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+                CONTACT DETAILS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span th:text="${data.consigneeFirstName}">***</span>
+                <span th:text="${data.consigneeMiddleName}">***</span> <span th:text="${data.consigneeLastName}">***</span><br />
+                <span style="color: #3A131F !important; text-decoration: none !important;" th:text="${data.consigneeEmail}">***</span><br />
+                <span style="color: #3A131F !important; text-decoration: none !important;" th:text="${data.consigneePhone}">***
+                </span>
+                <span style="color: #3A131F !important; text-decoration: none !important;" th:text="${data.consigneeAltPhone}">***
+                </span>
+              </div>
+            </td>
+            <td style="width: 4%;">&nbsp;</td>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                SHIPPING ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span th:text="${data.consigneeAddress1}">***</span><br />
+                <span th:text="${data.consigneeAddress2}">***</span><br /> <span th:text="${data.consigneeCity}">***</span>
+                <span th:text="${data.consigneeState}">***</span> <span th:text="${data.consigneeZip}">***</span>
+              </div>
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+                CONTACT DETAILS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span th:text="${data.consigneeFirstName}">***</span>
+                <span th:text="${data.consigneeMiddleName}">***</span> <span th:text="${data.consigneeLastName}">***</span><br />
+                <span style="color: #3A131F !important; text-decoration: none !important;" th:text="${data.consigneeEmail}">***</span><br />
+                <span style="color: #3A131F !important; text-decoration: none !important;" th:text="${data.consigneePhone}">***
+                </span>
+                <span style="color: #3A131F !important; text-decoration: none !important;" th:text="${data.consigneeAltPhone}">***
+                </span>
+              </div>
+            </td>
+          </tr>
+
+          <tr class='mobile-text'>
+            <td style="height: 10px;">
+              &nbsp;
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+                SHIPPING ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span th:text="${data.consigneeAddress1}">***</span><br />
+                <span th:text="${data.consigneeAddress2}">***</span><br /> <span th:text="${data.consigneeCity}">***</span>
+                <span th:text="${data.consigneeState}">***</span> <span th:text="${data.consigneeZip}">***</span>
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section css-class="bottom-text" background-color="#773925" padding="0 30px">
+      <mj-column>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="0">
+          Need to make changes?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 0" line-height="1.2">
+          If you’d like to update your order or postpone delivery, please let us know within 24 hours of receiving this email to avoid any fees.​
+          <br />
+          <br />
+          <u>Important:</u><br />
+          Items purchased on Clearance or Final Sale aren’t eligible for changes or cancellations.
+        </mj-text>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="36px 0 0">
+          More questions?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 36px" line-height="1.2">
+        Our <a href="https://www.castlery.com/us/help-center" target="_blank">FAQs</a> and <a href="https://www.castlery.com/us/sales-and-refunds" target="_blank">Terms and Conditions</a> may help, or just reach out via chat, WhatsApp at +1 424-888-7789, or email us.We’re always happy to help.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- Footer Section -->
+    <!-- Divider -->
+    <mj-section background-color="#773925" padding="0 0 25px">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" padding-top="0" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text align="center">
+          <a href="http://www.instagram.com/castleryus" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
+          </a>
+          <a href="https://www.facebook.com/CastleryUS" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
+          </a>
+          <a href="http://www.pinterest.com/castleryus" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="25px 0 10px">
+      <mj-column>
+        <mj-text font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em" line-height="1.5">
+          <a href="https://www.castlery.com/us/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">PRIVACY POLICY</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <a href="https://www.castlery.com/us/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">CONTACT US</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <span style="white-space: nowrap;">
+            <a href="https://www.castlery.com/us/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">REFER A FRIEND</a>
+          </span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 16px">
+      <mj-column>
+        <mj-text font-size="13px" color="#F7F3E7" align="center">
+          Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 52px">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/v1760003274/email/template-v-update-last-bottom.png" width="98px" align="center" />
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

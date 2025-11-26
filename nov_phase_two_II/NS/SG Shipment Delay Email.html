@@ -1,0 +1,190 @@
+
+ <html><head>
+<style type="text/css">@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+
+@font-face {
+font-family: "MinervaModern";
+src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
+url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff") format("woff");
+}
+</style>
+</head><body>
+<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="center" bgcolor="#f2f2f2">
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; background-color: #ffffff" width="800">
+<tbody>
+<tr>
+<td align="center">
+<table border="0" cellpadding="0" cellspacing="0" style="font-family: poppins, Arial, Helvetica, sans-serif;" width="614">
+<tbody><!-- SG header without navigation.txt --><#include "1092" /><!-- Main -->
+<tr>
+<td height="10"> </td>
+</tr>
+<tr>
+<td align="center" style="vertical-align: top"><!-- title -->
+<table>
+<tbody>
+<tr>
+<td height="43"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-family: MinervaModern, Arial, Helvetica, sans-serif;
+font-size: 30px;
+color: #424242;
+font-weight: 700;
+line-height: 36px;
+">We are Sorry.</td>
+</tr>
+<tr>
+<td height="45"> </td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 24px;
+">Hi <span style="font-weight: 700">${customer.firstname}</span>,</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">Thank you for shopping at Castlery. We wanted to get in touch with you with an update on your shipment from Order <span style="font-weight: 700;">#${transaction.custbody_cslr_sales_order_number}</span>.<br />
+<br />
+We regret to inform you that we are experiencing a shipping delay and your following item(s) will not be delivered within the original estimated delivery timeframe.</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">
+<p>Item(s) from your shipment which were affected.</p>
+
+<table style="border-spacing: 0;">
+<thead>
+<tr style="background: #DBCFB5; font-size: 16px; color: rgb(66, 66, 66); line-height: 24px; text-decoration: underline;">
+<th style="padding: 12.5px;">Item Name</th>
+<th style="padding: 12.5px;">New Estimated Delivery Timeframe</th>
+</tr>
+</thead>
+<tbody><#list transaction.item as itemLine><#if itemLine.custcol_cslr_include_in_delay_email>
+<tr align="center" style="font-size: 16px; text-align: center; color: rgb(66, 66, 66);">
+<td style="padding: 16px; line-height: 24px;">${itemLine.description}</td>
+<td style="padding: 16px; line-height: 24px;">end <#setting date_format=" MMMM yyyy">${itemLine.custcol_cslr_promised_delivery_date}</td>
+</tr>
+</#if></#list>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">At this stage, we want to provide full transparency that your shipment is now expected to be delivered within the timeframe indicated above. Please respond to this email and let us know of your preferred option moving forward:</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">A) Wait for the shipment (Email notification will be sent once the shipment is available)<br />
+B) Exchange to other in-stock items</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">Our agent will be in touch with you shortly once we receive your response.</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">Thank you for your patience and understanding!</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">Best Regards,<br />
+<span style="font-weight: 700;">The Castlery Team</span></td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- SG FAQ.txt --><#include "1095" /><!-- SG footer.txt --><#include "1093" />
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="gmailfix" style="white-space: nowrap; font: 15px courier; line-height: 0"> </div>
+</body></html>

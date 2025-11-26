@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+
+    @font-face {
+      font-family: "MinervaModern";
+      src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
+      url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff") format("woff");
+    }
+  </style>
+</head>
+
+<body>
+<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+  <tr>
+    <td align="center" bgcolor="#f2f2f2">
+      <table border="0" cellpadding="0" cellspacing="0"
+             style="margin: 0 auto; background-color: #ffffff"
+             width="800">
+        <tbody>
+        <tr>
+          <td align="center">
+            <table border="0" cellpadding="0" cellspacing="0" width="614"
+                   style="font-family: poppins, Arial, Helvetica, sans-serif;">
+              <tbody>
+              <!-- us-header-without-navigation -->
+              <tr>
+                <td>
+                  <table border="0" cellspacing="0" cellpadding="0" width="614" align="center">
+                    <tbody>
+                    <tr height="30"></tr>
+                    <tr>
+                      <td align="center" style="vertical-align: top; width: 214px" width="214">
+                        <a href="https://www.castlery.com/us"
+                           style="display: inline-block; border: none; outline: none"
+                           title="Castlery.com"
+                           target="_blank">
+                          <img
+                              src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1636338526/email/castlery-logo-terracotta.png"
+                              width="155" style="
+                  width: 155px;
+                  border: none;
+                  outline: none;
+                  display: inline-block;
+                " alt="Castlery"/>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td height="30" style="border-bottom: 1px solid #c1af86">&emsp;</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- Main -->
+              <tr>
+                <td align="center" style="vertical-align: top">
+
+                  <!-- Title -->
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td height="30"></td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="
+font-family: MinervaModern, Arial, Helvetica, sans-serif;
+font-size: 30px;
+color: #424242;
+font-weight: 700;
+line-height: 36px;
+">It's On Its Way!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="40"></td>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- Order Info -->
+                  <table style="background: #DBCFB5" width="614">
+                    <tbody>
+                    <tr>
+                      <td height="23.5"></td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="
+font-size: 30px;
+color: #424242;
+font-weight: 700;
+line-height: 36px;
+">Order #<span th:text="${data.custbodyCslrSalesOrderNumber}">***</span></td>
+                    </tr>
+                    <tr>
+                      <td height="10"></td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="
+font-size: 18px;
+color: #424242;
+font-weight: 400;
+line-height: 24px;
+">Shipment <span style="font-weight: 700">#<span th:text="${data.tranid}">***</span></span></td>
+                    </tr>
+                    <tr>
+                      <td height="23.5"></td>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- row 2 -->
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td height="40"></td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 24px;
+">Hi <span style="font-weight: 700"><span th:text="${data.customerFirstname}">***</span></span>,
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="25"></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td align="center" style="
+font-size: 14px;
+color: #424242;
+line-height: 1.5;
+">Great news! Your order has been dispatched and is in transit to our third-party partner's final
+                        delivery terminal. We have two origin zones - dependent on your shipment's
+                        delivery
+                        address, your order may either ship from our Los Angeles CA, or Edison NJ
+                        warehouse.
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td height="40"></td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="
+font-size: 14px;
+color: #424242;
+line-height: 1.5;
+"><u><strong>Current Shipping Estimates:</strong></u><br/><strong>LOCAL DELIVERY ZONES*</strong>
+                        Please
+                        expect to be contacted within the next 5-10 business days to schedule a
+                        delivery
+                        appointment.<br/><strong>NON-LOCAL DELIVERY ZONES*</strong> Please expect to
+                        be
+                        contacted within the next 10-14 business days to schedule a delivery
+                        appointment.<br/>(Please see below for clarification on these
+                        zones)<br/><br/>If
+                        you do not receive a notification within the stipulated timeframe, you may
+                        call
+                        <strong><span th:text="${data.carrierName}"></span> at <span th:text="${data.carrierPhone}"></span></strong>
+                        and quote your <strong>Shipment
+                          Number</strong>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="40"></td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="
+font-size: 14px;
+color: #424242;
+line-height: 1.5;
+"><u><strong>Important</strong></u> - Please let us know if the below address is incorrect or needs
+                        to
+                        be changed within 24 hours of receiving this email.<br/>Kindly review the
+                        packing
+                        list with product information regarding this shipment.<br/><strong>Note: Any
+                          modification to your shipment will incur a 20% restocking fee.</strong>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="40"></td>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- Customer Info -->
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td style="
+font-size: 16px;
+color: #424242;
+font-weight: 700;
+line-height: 24px;
+">Name
+                      </td>
+                      <td width="10"></td>
+                      <td>:</td>
+                      <td width="10"></td>
+                      <td style="
+font-size: 16px;
+color: #424242;
+line-height: 24px;
+"><span th:text="${data.customerFirstname}">***</span> <span th:text="${data.customerLastname}">***</span></td>
+                    </tr>
+                    <tr>
+                      <td style="
+font-size: 16px;
+color: #424242;
+font-weight: 700;
+line-height: 24px;
+">Email
+                      </td>
+                      <td width="10"></td>
+                      <td>:</td>
+                      <td width="10"></td>
+                      <td style="
+font-size: 16px;
+color: #424242;
+line-height: 24px;
+"><span th:text="${data.customerEmail}">***</span></td>
+                    </tr>
+                    <tr>
+                      <td style="
+font-size: 16px;
+color: #424242;
+font-weight: 700;
+line-height: 24px;
+">Contact
+                      </td>
+                      <td width="10"></td>
+                      <td>:</td>
+                      <td width="10"></td>
+                      <td style="
+font-size: 16px;
+color: #424242;
+line-height: 24px;
+"><span th:text="${data.custbodyCslrPhone}">***</span>
+                        <br/><span th:text="${data.custbodyCslrAlternativePhone}">***</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="25"></td>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- Shipping Address -->
+                  <table style="
+border-collapse: separate;
+border-spacing: 10px 0px;
+" width="475">
+                    <thead>
+                    <tr style="background: #DBCFB5">
+                      <th style="
+padding: 12.5px;
+font-size: 16px;
+color: #424242;
+font-weight: 700;
+line-height: 24px;
+">Shipping Address
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td align="center" style="
+padding: 30px;
+font-size: 16px;
+color: #424242;
+line-height: 24px;
+border: 1px solid #DBCFB5;
+text-align: center;
+"><span th:text="${data.custbodyCslrAddress1}">***</span><br/>
+                        <span th:if = "${#strings.length(data.custbodyCslrAddress2) != 0 }">
+                          <span th:text="${data.custbodyCslrAddress2}">***</span> <br />
+                        </span>
+											<span th:text="${data.custbodyCslrCity}">***</span>  <span th:text="${data.custbodyCslrState}">***</span>
+                      <span th:text="${data.custbodyCslrZip}">***</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="40"></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td align="center" style="
+font-size: 14px;
+color: #424242;
+line-height: 1.5;
+"><strong>*LOCAL DELIVERY ZONES CLASSIFIED AS PER BELOW:</strong><br/><strong>Orders shipping from
+                        the
+                        Edison, NJ Warehouse to: </strong>NJ State, New York City, and Philadelphia
+                        are
+                        "<span style="font-weight: bold">Local Delivery Zones</span>".<br/><strong>Orders
+                          shipping from the Los Angeles, CA Warehouse to: </strong>Southern
+                        California and
+                        Northern California are "<span style="font-weight: bold">Local Delivery
+																		Zones</span>".<br/>
+                        <strong>*NON-LOCAL DELIVERY ZONES CLASSIFIED AS PER BELOW:</strong><br/>All
+                        orders
+                        shipping to destination zones not listed above are "<span
+                            style="font-weight: bold">Non-Local Delivery Zones</span>".
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="40"></td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="
+font-size: 16px;
+color: #424242;
+line-height: 1.5;
+">
+                        <p>Specific item(s) from your shipment to be delivered</p>
+
+                        <table style="border-spacing: 0;">
+                          <thead>
+                          <tr
+                              style="background: #DBCFB5;font-size: 16px; color: rgb(66, 66, 66); line-height: 24px;text-decoration: underline;">
+                            <th style="padding:12.5px;">Item ID</th>
+                            <th style="padding:12.5px;">Item Name</th>
+                            <th style="padding:12.5px">Quantity</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <!-- Item Iterator.txt -->
+													<span th:each="itemLine:${data.item}">
+                          <tr align="center"
+                              style="font-size: 16px;text-align: center;color:rgb(66, 66, 66);">
+                            <td style="padding: 16px; line-height: 24px; "><span th:text="${itemLine.item}">***</span> </td>
+                            <td
+                                style="padding: 16px; line-height: 24px; ;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 475px;">
+															<span th:text="${itemLine.description}">***</span>
+                            </td>
+                            <td style="padding: 16px; line-height: 24px;"><span th:text="${itemLine.quantity}">***</span></td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height="50"></td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- US FAQ start -->
+        <tr align="center">
+          <td>
+            <table width="614">
+              <tbody>
+              <tr>
+                <td height="40" style="border-top: 1px solid #dbcfb5"></td>
+              </tr>
+              <tr>
+                <td align="center" style="
+              font-size: 26px;
+              color: #323433;
+              font-weight: 400;
+              font-family: MinervaModern, Arial, sans-serif;
+              line-height: 24px;
+            ">
+                  More questions?
+                </td>
+              </tr>
+              <tr>
+                <td height="25"></td>
+              </tr>
+              <tr>
+                <td align="center" style="font-size: 16px; height: 40px">
+                  <a href="https://www.castlery.com/us/faq" style="text-decoration: none;">
+                    <table style="border: 1px solid #c1af86;
+							font-size: 16px;
+							color: #c1af86;
+							font-family: poppins, Arial, sans-serif;
+							line-height: 20px;
+							padding: 10px 53px;
+							background-color: transparent;">
+                      <tr>
+                        <td valign="middle"><span style="text-decoration: none;">Read Our FAQ</span>
+                        </td>
+                        <td valign="middle">
+                          <div style="width: 18px; height: 16px;"><img
+                              src="https://res.cloudinary.com/cslrstag/image/upload/f_auto,q_auto,w_18,h_16,c_scale/v1635815669/email/icons/arrow-wheat.png"
+                              style="
+										display: block;
+										width: 18px;
+										height: 16px;
+									" alt="read our FAQ"/></div>
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td height="60"></td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="
+				border-collapse: collapse;
+				border-spacing: 0;
+        background-color: #a45b37;
+        font-family: MinervaModern, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+      ">
+              <tbody>
+              <tr>
+                <td height="50" colspan="3">&emsp;</td>
+              </tr>
+              <tr>
+                <td width="33%" style="text-align: center">
+                  <a style="text-decoration: none; text-decoration: none !important"
+                     href="https://www.castlery.com/us/contact-us">
+                    <img
+                        src="https://res.cloudinary.com/cslrstag/image/upload/f_auto,q_auto/v1636094353/email/icons/live-chat.png"
+                        width="47.5" style="display: block; margin: auto;"/>
+                    <p style="color: #dbcfb5; text-decoration: none;">LIVE CHAT</p>
+                  </a>
+                </td>
+                <td width="33%" style="text-align: center">
+                  <a href="https://wa.me/14248887789"
+                     style="text-decoration: none; text-decoration: none !important"><img
+                      src="https://res.cloudinary.com/cslrstag/image/upload/f_auto,q_auto/v1636094353/email/icons/call-us.png"
+                      width="47.5" style="display: block; margin: auto;"/>
+                    <p style="color: #dbcfb5;white-space: nowrap; text-decoration: none;">WhatsApp +1 424-888-7789</p>
+                  </a>
+                </td>
+                <td width="33%" style="text-align: center">
+                  <a href="mailto:help.us@castlery.com"
+                     style="text-decoration: none; text-decoration: none !important"><img
+                      src="https://res.cloudinary.com/cslrstag/image/upload/f_auto,q_auto/v1636094353/email/icons/email-us.png"
+                      width="47.5" style="display: block; margin: auto;"/>
+                    <p style="color: #dbcfb5; text-decoration: none;">EMAIL US</p>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td height="50" colspan="3">&emsp;</td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="40"></td>
+        </tr>
+        <!-- FAQ end -->
+        <!-- US Footer  -->
+        <tr>
+          <td>
+            <table border="0" cellpadding="0" cellspacing="0" align="center">
+              <tbody>
+              <tr>
+                <td>
+                  <table border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tbody>
+                    <tr>
+                      <td>
+                        <a style="
+                        color: #323433;
+                        font-size: 13px;
+                        text-decoration: none;
+                        display: block;
+                      " href="https://www.facebook.com/CastleryUS" target="_blank">
+                          <img
+                              src="https://cslr-email.s3-ap-southeast-1.amazonaws.com/ERP/swatch-email/facebook.jpg"
+                              height="20" alt="FB.jpg"/></a>
+                      </td>
+                      <td width="30"></td>
+                      <td>
+                        <a style="
+                        color: #323433;
+                        font-size: 13px;
+                        text-decoration: none;
+                        display: block;
+                      " href="http://www.instagram.com/castleryus" target="_blank">
+                          <img
+                              src="https://cslr-email.s3-ap-southeast-1.amazonaws.com/ERP/swatch-email/instagram.jpg"
+                              height="20" alt="IG.jpg"/></a>
+                      </td>
+                      <td width="30"></td>
+                      <td>
+                        <a style="
+                        color: #323433;
+                        font-size: 13px;
+                        text-decoration: none;
+                        display: block;
+                      " href="http://www.pinterest.com/castleryus" target="_blank">
+                          <img
+                              src="https://cslr-email.s3-ap-southeast-1.amazonaws.com/ERP/swatch-email/pinterest.jpg"
+                              height="20" alt="Pinterest.jpg"/></a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+                <td height="40"></td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body>
+
+</html>

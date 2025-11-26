@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+
+@font-face {
+font-family: "MinervaModern";
+src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
+url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff") format("woff");
+}
+</style>
+</head>
+
+<body>
+<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="center" bgcolor="#f2f2f2">
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; background-color: #ffffff;"
+width="800">
+<tbody>
+<tr align="center">
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="614"
+style="font-family: poppins, Arial, Helvetica, sans-serif;">
+<tbody>
+<!-- AU header without navigation.txt -->
+<#include "1097" /><!-- Main -->
+<tr>
+<td height="10"> </td>
+</tr>
+<tr>
+<td align="center" style="vertical-align: top;">
+<#-- title -->
+<table>
+<tbody>
+<tr>
+<td height="43"> </td>
+</tr>
+<tr>
+<td align="center"
+style="font-family: MinervaModern, Arial, Helvetica, sans-serif;font-size: 30px; color: #323433; font-weight: 700; line-height: 36px;">
+We are Sorry.</td>
+</tr>
+<tr>
+<td height="45"> </td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr>
+<td align="center" style="font-size: 16px; color: #323433; line-height: 24px;">Hi
+<span style="font-weight: 700;">${customer.firstname}</span>,
+</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr>
+<td align="center"
+style="font-size: 16px; color: #323433; line-height: 1.5; padding-left: 20px; padding-right: 20px;">
+Thank you for shopping at Castlery.
+<br/><br/>We regret to inform you that we are experiencing an incoming container delay and your following ordered item(s) from Order <span
+style="font-weight: 700;">#${transaction.custbody_cslr_sales_order_number}</span> will not be delivered within the original stated delivery estimate.
+</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center"
+style="font-size: 16px; color: #323433; line-height: 1.5; padding-left: 20px; padding-right: 20px;">
+<p>Item(s) from your shipment which were affected.</p>
+<table style="border-spacing: 0;">
+<thead>
+<tr
+style="background: #DBCFB5; font-size: 16px; color: rgb(66, 66, 66); line-height: 24px; text-decoration: underline;">
+<th style="padding: 12.5px;">Item Name</th>
+<th style="padding: 12.5px;">Estimated Delivery</th>
+</tr>
+</thead>
+<tbody>
+<#list transaction.item as itemLine>
+<#if itemLine.custcol_cslr_include_in_delay_email>
+<tr align="center"
+style="font-size: 16px; text-align: center; color: rgb(66, 66, 66);">
+
+<td style="padding: 16px; line-height: 24px;">${itemLine.description}</td>
+<td style="padding: 16px; line-height: 24px;">end <#setting date_format=" MMMM yyyy">${itemLine.custcol_cslr_promised_delivery_date}</td>
+</tr>
+</#if>
+</#list>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center"
+style="font-size: 16px; color: #323433; line-height: 1.5; padding-left: 20px; padding-right: 20px;">Unfortunately, Castlery operations have been impacted by the current surge of COVID-19 and the effects it is having on the greater community.
+<br/><br/>We will closely be monitoring the situation and will provide further updates where applicable.
+<br/><br/>Upon receiving the item(s) into our warehouse, we will do our best to process and dispatch your order as a priority.
+<br/><br/>You will then receive a notification email containing information in relation to your upcoming delivery.
+</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center"
+style="font-size: 16px; color: #323433; line-height: 1.5; padding-left: 20px; padding-right: 20px;">
+We sincerely apologise for any inconvenience that we may have caused and thank you for your patience and understanding on this matter.
+<!-- We know that this is not the level of service you expect from Castlery, and will strive to make it a better. We
+value you as our customer and look forward to serving you again. -->
+</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+<tr>
+<td align="center"
+style="font-size: 16px; color: #323433; line-height: 1.5; padding-left: 20px; padding-right: 20px;">
+If you have any further enquires, please reply to this email or contact us at <a
+href="mailto: help.au@castlery.com"
+style="color: #A45B37;">help.au@castlery.com</a>. Thank you for being our valued customer.
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+<tr>
+<td align="center"
+style="font-size: 16px; color: #323433; line-height: 1.5; padding-left: 20px; padding-right: 20px;">
+Best Regards,<br />
+<span style="font-weight: 700;">The Castlery Team </span>
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- AU FAQ.txt -->
+<#include "1099" />
+<!-- AU footer.txt -->
+<#include "1098" />
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="gmailfix" style="white-space: nowrap; font: 15px courier; line-height: 0;"> </div>
+
+</body>
+
+</html>
