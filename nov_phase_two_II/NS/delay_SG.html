@@ -57,6 +57,13 @@
       .mj-outlook-group-fix { width:100% !important; }
     </style>
     <![endif]-->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+
+  </style>
+  <!--<![endif]-->
   <style type="text/css">
     @media only screen and (min-width:480px) {
       .mj-column-per-100 {
@@ -118,6 +125,14 @@
       text-decoration: none !important;
     }
 
+    .mobile-text {
+      display: none;
+    }
+
+    .desktop-text {
+      display: '';
+    }
+
     .bottom-text {
       padding: 0 76px 17px;
     }
@@ -126,25 +141,33 @@
       padding: 16px 30px 0px !important;
     }
 
-    ol {
-      list-style-type: none;
-      margin: 0;
-      padding-left: 0;
+    .letter-table {
+      margin: 20px auto 0;
+      width: 100%;
+      max-width: 440px;
+      border-collapse: collapse;
     }
 
-    li {
-      margin: 10px 0;
-      line-height: 1.5;
-      position: relative;
-      padding-left: 30px;
+    .letter-row td {
+      vertical-align: top;
+      line-height: 1.2;
+      color: #F7F3E7;
+    }
+
+    .letter-cell {
+      width: 32px;
+      text-align: left !important;
+      font-size: 11px;
+      padding: 8px 0 12px !important;
+      font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+    }
+
+    .letter-text {
       text-align: left;
-    }
-
-    li::before {
-      content: attr(data-letter);
-      /* 从列表项的 data-letter 属性获取字母 */
-      position: absolute;
-      left: 0;
+      font-size: 17px;
+      text-align: left;
+      padding: 4px 0 12px;
+      line-height: 1.2;
     }
 
     @media only screen and (max-width: 600px) {
@@ -154,6 +177,14 @@
 
       .text-faq-padding {
         padding: 16px 5px 0px !important;
+      }
+
+      .desktop-text {
+        display: none;
+      }
+
+      .mobile-text {
+        display: table-row;
       }
     }
 
@@ -193,12 +224,12 @@
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:32px 0 14px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1;text-align:center;color:#9BA3C1;">Hi ${customer.firstname},</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1;text-align:center;color:#9BA3C1;">Hi stella,</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Thanks for shopping with Castlery. We wanted to give you a quick update on your order (#${transaction.custbody_cslr_sales_order_number}).​ <br />
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Thanks for shopping with Castlery. We wanted to give you a quick update on your order (#121965584).​ <br />
                           <br /> One of your items is running a little late and won’t arrive in the original timeframe.​
                         </div>
                       </td>
@@ -219,29 +250,41 @@
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:14px 0 0px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:14px 0 25px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#F6F3E7;vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:27px 0 26px;word-break:break-word;">
-                        <div style="font-family:'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;font-size:13px;line-height:1;text-align:center;color:#D15D27;">ITEM NAME</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:0px 55px 37px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#3A131F;">${itemLine.description}</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:0 0 26px;word-break:break-word;">
-                        <div style="font-family:'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;font-size:13px;line-height:1;text-align:center;color:#D15D27;">ESTIMATED DELIVERY</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:0 55px 38px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#3A131F;">end <#setting date_format=" MMMM yyyy">${itemLine.custcol_cslr_promised_delivery_date}</div>
+                      <td align="left" style="font-size:0px;padding:0 31px;word-break:break-word;">
+                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                          <tr class='desktop-text'>
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;"> ITEM NAME </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> Casa Rectangular Dining Table </div>
+                            </td>
+                            <td style="width: 4%;">&nbsp;</td>
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;"> ESTIMATED DELIVERY </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> End 03 Dec 2025 </div>
+                            </td>
+                          </tr>
+                          <tr class='mobile-text'>
+                            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing:0.2em; margin-bottom: 26px;line-height: 1;"> ITEM NAME </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> Casa Rectangular Dining Table </div>
+                            </td>
+                          </tr>
+                          <tr class='mobile-text'>
+                            <td style="height: 10px;"> &nbsp; </td>
+                          </tr>
+                          <tr class='mobile-text'>
+                            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;"> ESTIMATED DELIVERY </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> End 03 Dec 2025 </div>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                   </tbody>
@@ -269,10 +312,16 @@
                           <tbody>
                             <tr>
                               <td align="center" class="text-faq-padding" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">We know delays aren’t fun, so here’s how we might make it right:​ <ol>
-                                    <li data-letter="A">Sit tight and wait for the shipment (we’ll send you an email as soon as it’s on the move)​ </li>
-                                    <li data-letter="B">Swap for another in-stock piece</li>
-                                  </ol>
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">We know delays aren’t fun, so here’s how we might make it right:​ <table role="presentation" class="letter-table" style="margin:20px auto 0;width:100%;max-width:440px;border-collapse:collapse;">
+                                    <tr class="letter-row" style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';line-height:1.2;color:#F7F3E7;">
+                                      <td class="letter-cell">A</td>
+                                      <td class="letter-text">Sit tight and wait for the shipment (we’ll send you an email as soon as it’s on the move)​</td>
+                                    </tr>
+                                    <tr class="letter-row" style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';line-height:1.2;color:#F7F3E7;">
+                                      <td class="letter-cell">B</td>
+                                      <td class="letter-text">Swap for another in-stock piece</td>
+                                    </tr>
+                                  </table>
                                   <br />
                                   <br /> Reply to this email or contact us at <a href="mailto: help.sg@castlery.com" style="color: #9BA3C1;">help.sg@castlery.com</a> if you'd like to swap or would prefer a refund and we will take it from there. <br />
                                   <br /> We're really sorry about this. Thanks for hanging in there with us, we really appreciate it.

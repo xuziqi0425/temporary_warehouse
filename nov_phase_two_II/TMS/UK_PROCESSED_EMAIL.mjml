@@ -1,0 +1,259 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: '';
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      .tableLabel {
+        vertical-align: top;
+        font-size: 12px;
+        font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+        padding-bottom: 10px;
+        letter-spacing: 0.15em;
+        font-weight: 400;
+        color: #D15D27;
+      }
+
+      @media only screen and (max-width: 480px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: inline;
+        }
+
+        .mobile-ul {
+          padding-left: 13px;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-size="16px" align="center" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#F7F3E7" line-height="1.2" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section background-color="#773925" padding="33px 0 10px">
+      <mj-column>
+        <mj-image padding-bottom="59px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-text font-size="34px" color="#F7F3E7" align="center">
+          Good news—your order is ready to go!​
+        </mj-text>
+        <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
+          Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>,
+        </mj-text>
+        <mj-text color="#F7F3E7" align="center" padding-bottom="21px">
+          Your order is ready for dispatch. Our delivery partner, BJS Home Delivery, will contact you within 3 business days to arrange your delivery date.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="14px 0 0px" background-color="#F6F3E7">
+      <mj-column background-color="#F6F3E7">
+        <mj-text font-size="27px" align="center" color="#3A131F" padding="35px 0 13px">
+          Order #<span th:text="${data.custbodyCslrSalesOrderNumber}"></span>
+        </mj-text>
+        <mj-text font-size="16px" align="center" color="#3A131F">
+          Shipment #<span th:text="${data.tranid}"></span>
+        </mj-text>
+        <!-- Order Items Table -->
+        <mj-table color="#3A131F" padding="15px 20px 40px">
+          <colgroup>
+            <col style="width: 110px" />
+            <col />
+            <col style="width: 110px" />
+          </colgroup>
+          <!-- Table Header -->
+          <tr>
+            <th class="tableLabel">
+              ITEM ID
+            </th>
+            <th class="tableLabel">
+              ITEM NAME
+            </th>
+            <th class="tableLabel">
+              QUANTITY
+            </th>
+          </tr>
+          <span th:each="itemLine:${data.items}">
+            <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+              <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                <span th:text="${itemLine.item}"></span>
+              </td>
+              <td align="center" padding="0 5px" valign="top">
+                <span th:text="${itemLine.description}"></span>
+              </td>
+              <td align="center" padding="0 5px" valign="top">
+                <span th:text="${itemLine.quantity}"></span>
+              </td>
+            </tr>
+          </span>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="28px 0 7px">
+          Before then, please take a moment to ensure your details are accurate:​
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#F6F3E7" padding="0">
+      <mj-column>
+        <mj-table color="#3A131F" padding="37px 20px 40px">
+          <colgroup>
+            <col style="width: 211px" />
+            <col style="width: 32px" />
+            <col style="width: 347px" />
+          </colgroup>
+
+          <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+            <td class="tableLabel" align="right">
+              NAME
+            </td>
+            <td>&nbsp;</td>
+            <td align="left" style="padding:0 5px 30px;" valign="top">
+              <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>
+            </td>
+          </tr>
+          <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+            <td class="tableLabel" align="right">
+              EMAIL
+            </td>
+            <td>&nbsp;</td>
+            <td align="left" style="padding:0 5px 30px;" valign="top">
+              <span th:text="${data.customerEmail}"></span>
+            </td>
+          </tr>
+          <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+            <td class="tableLabel" align="right">
+              SHIPPING ADDRESS
+            </td>
+            <td>&nbsp;</td>
+            <td align="left" padding="0 5px" valign="top">
+              <span th:text="${data.custbodyCslrAddress1}"></span>
+              <span th:text="${data.custbodyCslrAddress2}"></span>
+              <span th:text="${data.custbodyCslrCity}"></span>
+              <span th:text="${data.custbodyCslrState}"></span>
+              <span th:text="${data.custbodyCslrZip}"></span>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="27px 0 0px">
+          Important to note
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" padding="14px 87px 0 36px">
+          <ul class="mobile-ul">
+            <li>
+              Delivery slots are subject to availability. Specific date or time requests may incur additional charges.
+            </li>
+            <br>
+            <li>
+              To track your delivery, contact BJS Home Delivery at 01922 645850 or customerservice@bjshomedelivery.com, quoting your shipment number.
+            </li>
+            <br>
+            <li>
+              Please inform Castlery of any residential restrictions (e.g., narrow stairways, parking limitations, or vehicle height limits) upon receiving this email.
+            </li>
+            <br>
+            <li>
+              For the safety of our delivery partners, items weighing over 85kg can only be delivered to the ground floor if there’s no lift access.
+            </li>
+            <br>
+            <li>
+              Any modifications to your shipment at this stage may incur a 20%–30% restocking fee.
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- Divider -->
+    <mj-section background-color="#773925" padding="0 0 25px">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" padding-top="0" />
+      </mj-column>
+    </mj-section>
+    <!-- Footer Section -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text align="center">
+          <a href="http://www.instagram.com/castleryuk" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
+          </a>
+          <a href="https://www.facebook.com/CastleryUK" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
+          </a>
+          <a href="http://www.pinterest.com/castleryuk" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="25px 0 10px">
+      <mj-column>
+        <mj-text font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em" line-height="1.5">
+          <a href="https://www.castlery.com/uk/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">PRIVACY POLICY</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <a href="https://www.castlery.com/uk/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">CONTACT US</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <span style="white-space: nowrap;">
+            <a href="https://www.castlery.com/uk/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">REFER A FRIEND</a>
+          </span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 16px">
+      <mj-column>
+        <mj-text font-size="13px" color="#F7F3E7" align="center">
+          Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="0 0 52px">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/v1760003274/email/template-v-update-last-bottom.png" width="98px" align="center" />
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

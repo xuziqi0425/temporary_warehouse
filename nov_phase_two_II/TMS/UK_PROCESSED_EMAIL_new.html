@@ -119,43 +119,36 @@
       font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
     }
 
-    a {
-      color: #D25C1B;
-      cursor: pointer;
-      text-decoration: none !important;
+    /* 响应式文字显示 */
+    .desktop-text {
+      display: '';
     }
 
     .mobile-text {
       display: none;
     }
 
-    .desktop-text {
-      display: '';
+    .tableLabel {
+      vertical-align: top;
+      font-size: 12px;
+      font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+      padding-bottom: 10px;
+      letter-spacing: 0.15em;
+      font-weight: 400;
+      color: #D15D27;
     }
 
-    .bottom-text {
-      padding: 0 76px 17px;
-    }
-
-    .text-faq-padding {
-      padding: 16px 30px 0px !important;
-    }
-
-    @media only screen and (max-width: 600px) {
-      .bottom-text {
-        padding: 0 25px 17px;
-      }
-
-      .text-faq-padding {
-        padding: 16px 5px 0px !important;
-      }
-
+    @media only screen and (max-width: 480px) {
       .desktop-text {
         display: none;
       }
 
       .mobile-text {
-        display: table-row;
+        display: inline;
+      }
+
+      .mobile-ul {
+        padding-left: 13px;
       }
     }
 
@@ -165,18 +158,18 @@
 <body style="word-spacing:normal;background-color:#773925;">
   <div aria-roledescription="email" style="background-color:#773925;" role="article" lang="und" dir="auto">
     <!-- header -->
-    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="order-header-outlook" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div class="order-header" style="background:#773925;background-color:#773925;margin:0px auto;max-width:680px;">
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#773925;background-color:#773925;margin:0px auto;max-width:680px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:33px 0 25px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:33px 0 10px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:53px;word-break:break-word;">
+                      <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:59px;word-break:break-word;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                           <tbody>
                             <tr>
@@ -189,20 +182,197 @@
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 50px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:38px;line-height:1;text-align:center;color:#F7F3E7;">We’re sorry about the delay.</div>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:34px;line-height:1.2;text-align:center;color:#F7F3E7;">Good news—your order is ready to go!​</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:32px 0 14px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1;text-align:center;color:#9BA3C1;">Hi ${customer.firstname},</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1.2;text-align:center;color:#9BA3C1;">Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>,</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:21px;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">Your order is ready for dispatch. Our delivery partner, BJS Home Delivery, will contact you within 3 business days to arrange your delivery date.</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#F6F3E7" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#F6F3E7;background-color:#F6F3E7;margin:0px auto;max-width:680px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:14px 0 0px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#F6F3E7;vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:35px 0 13px;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:27px;line-height:1.2;text-align:center;color:#3A131F;">Order #<span th:text="${data.custbodyCslrSalesOrderNumber}"></span></div>
                       </td>
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Thanks for shopping with Castlery. We wanted to update you on your order <span style="color:#9BA3C1">#${transaction.custbody_cslr_sales_order_number}</span>: unfortunately, your shipment has hit a delay. <br />
-                          <br /> This is due to heavy congestion at Sydney Port—too many containers, not enough space. <br />
-                          <br /> We’ve been doing everything we can to keep things moving and keep you in the loop. At this point, we’re expecting them to arrive at our warehouse by <span style="color:#9BA3C1">[timeframe]</span>.
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#3A131F;">Shipment #<span th:text="${data.tranid}"></span></div>
+                      </td>
+                    </tr>
+                    <!-- Order Items Table -->
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:15px 20px 40px;word-break:break-word;">
+                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                          <colgroup>
+                            <col style="width: 110px" />
+                            <col />
+                            <col style="width: 110px" />
+                          </colgroup>
+                          <!-- Table Header -->
+                          <tr>
+                            <th class="tableLabel"> ITEM ID </th>
+                            <th class="tableLabel"> ITEM NAME </th>
+                            <th class="tableLabel"> QUANTITY </th>
+                          </tr>
+                          <span th:each="itemLine:${data.items}">
+                            <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+                              <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                                <span th:text="${itemLine.item}"></span>
+                              </td>
+                              <td align="center" padding="0 5px" valign="top">
+                                <span th:text="${itemLine.description}"></span>
+                              </td>
+                              <td align="center" padding="0 5px" valign="top">
+                                <span th:text="${itemLine.quantity}"></span>
+                              </td>
+                            </tr>
+                          </span>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:680px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:28px 0 7px;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">Before then, please take a moment to ensure your details are accurate:​</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#F6F3E7" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#F6F3E7;background-color:#F6F3E7;margin:0px auto;max-width:680px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:37px 20px 40px;word-break:break-word;">
+                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                          <colgroup>
+                            <col style="width: 211px" />
+                            <col style="width: 32px" />
+                            <col style="width: 347px" />
+                          </colgroup>
+                          <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+                            <td class="tableLabel" align="right"> NAME </td>
+                            <td>&nbsp;</td>
+                            <td align="left" style="padding:0 5px 30px;" valign="top">
+                              <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>
+                            </td>
+                          </tr>
+                          <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+                            <td class="tableLabel" align="right"> EMAIL </td>
+                            <td>&nbsp;</td>
+                            <td align="left" style="padding:0 5px 30px;" valign="top">
+                              <span th:text="${data.customerEmail}"></span>
+                            </td>
+                          </tr>
+                          <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+                            <td class="tableLabel" align="right"> SHIPPING ADDRESS </td>
+                            <td>&nbsp;</td>
+                            <td align="left" padding="0 5px" valign="top">
+                              <span th:text="${data.custbodyCslrAddress1}"></span>
+                              <span th:text="${data.custbodyCslrAddress2}"></span>
+                              <span th:text="${data.custbodyCslrCity}"></span>
+                              <span th:text="${data.custbodyCslrState}"></span>
+                              <span th:text="${data.custbodyCslrZip}"></span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:680px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:27px 0 0px;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1.2;text-align:center;color:#F7F3E7;">Important to note</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:14px 87px 0 36px;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:left;color:#F7F3E7;">
+                          <ul class="mobile-ul">
+                            <li> Delivery slots are subject to availability. Specific date or time requests may incur additional charges. </li>
+                            <br>
+                            <li> To track your delivery, contact BJS Home Delivery at 01922 645850 or customerservice@bjshomedelivery.com, quoting your shipment number. </li>
+                            <br>
+                            <li> Please inform Castlery of any residential restrictions (e.g., narrow stairways, parking limitations, or vehicle height limits) upon receiving this email. </li>
+                            <br>
+                            <li> For the safety of our delivery partners, items weighing over 85kg can only be delivered to the ground floor if there’s no lift access. </li>
+                            <br>
+                            <li> Any modifications to your shipment at this stage may incur a 20%–30% restocking fee. </li>
+                          </ul>
                         </div>
                       </td>
                     </tr>
@@ -216,93 +386,23 @@
       </table>
     </div>
     <!--[if mso | IE]></td></tr></table><![endif]-->
-    <!-- order details -->
-    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#F6F3E7" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="background:#F6F3E7;background-color:#F6F3E7;margin:0px auto;max-width:680px;">
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
-        <tbody>
-          <tr>
-            <td style="direction:ltr;font-size:0px;padding:14px 0 25px;text-align:center;">
-              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
-              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#F6F3E7;vertical-align:top;" width="100%">
-                  <tbody>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:0 31px;word-break:break-word;">
-                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
-                          <tr class='desktop-text'>
-                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;"> ITEM NAME </div>
-                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ${itemLine.description} </div>
-                            </td>
-                            <td style="width: 4%;">&nbsp;</td>
-                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;"> ESTIMATED DELIVERY </div>
-                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> End <#setting date_format=" MMMM yyyy">${itemLine.custcol_cslr_promised_delivery_date} </div>
-                            </td>
-                          </tr>
-                          <tr class='mobile-text'>
-                            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing:0.2em; margin-bottom: 26px;line-height: 1;"> ITEM NAME </div>
-                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ${itemLine.description} </div>
-                            </td>
-                          </tr>
-                          <tr class='mobile-text'>
-                            <td style="height: 10px;"> &nbsp; </td>
-                          </tr>
-                          <tr class='mobile-text'>
-                            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;"> ESTIMATED DELIVERY </div>
-                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> end <#setting date_format=" MMMM yyyy">${itemLine.custcol_cslr_promised_delivery_date} </div>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!--[if mso | IE]></td></tr></table><![endif]-->
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="bottom-text-outlook" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div class="bottom-text" style="background:#773925;background-color:#773925;margin:0px auto;max-width:680px;">
+    <!-- Divider -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#773925;background-color:#773925;margin:0px auto;max-width:680px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:0 0 25px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td style="vertical-align:top;padding:0;">
-                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                          <tbody>
-                            <tr>
-                              <td align="center" class="text-faq-padding" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Once your items reach our warehouse, we’ll get them to you as quickly as possible and send you a delivery notice right away.​ <br />
-                                  <br /> If you’re happy to wait, no action’s needed. If not, you can cancel anytime for a full refund—just reply to this email or contact us at <a href="mailto: help.au@castlery.com" style="color: #9BA3C1;">help.au@castlery.com.​</a>.​ <br />
-                                  <br /> We’re truly sorry for the delay and grateful for your patience. It’s not the Castlery experience we want for you, and we’ll do everything we can to make it right.​ <br />
-                                  <br />
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td align="center" style="font-size:0px;padding:20px 0 0;word-break:break-word;">
-                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1;text-align:center;color:#F7F3E7;">With care (and extra thanks),</div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td align="center" style="font-size:0px;padding:14px 0 0;word-break:break-word;">
-                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1;text-align:center;color:#F7F3E7;">Castlery</div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0;word-break:break-word;">
+                        <p style="border-top:solid 1px #f7f3e7;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #f7f3e7;font-size:1px;margin:0px auto;width:630px;" role="presentation" width="630px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
                       </td>
                     </tr>
                   </tbody>
@@ -321,33 +421,6 @@
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:0px 0 35px;text-align:center;">
-              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
-              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
-                  <tbody>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:0 30px;word-break:break-word;">
-                        <p style="border-top:solid 1px #F7F3E7;font-size:1px;margin:0px auto;width:100%;">
-                        </p>
-                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #F7F3E7;font-size:1px;margin:0px auto;width:620px;" role="presentation" width="620px" ><tr><td style="height:0;line-height:0;"> &nbsp;
-</td></tr></table><![endif]-->
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!--[if mso | IE]></td></tr></table><![endif]-->
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="background:#773925;background-color:#773925;margin:0px auto;max-width:680px;">
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
-        <tbody>
-          <tr>
             <td style="direction:ltr;font-size:0px;padding:0;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -355,14 +428,13 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1;text-align:center;color:#000000;">
-                          <a href="http://www.instagram.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;"><a href="http://www.instagram.com/castleryuk" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
                           </a>
-                          <a href="https://www.facebook.com/CastlerySG" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+                          <a href="https://www.facebook.com/CastleryUK" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
                           </a>
-                          <a href="http://www.pinterest.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                          <a href="http://www.pinterest.com/castleryuk" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
                           </a>
                         </div>
@@ -389,13 +461,12 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:11px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;">
-                          <a href="https://www.castlery.com/sg/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">PRIVACY POLICY</a>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:11px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;"><a href="https://www.castlery.com/uk/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">PRIVACY POLICY</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-                          <a href="https://www.castlery.com/sg/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">CONTACT US</a>
+                          <a href="https://www.castlery.com/uk/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">CONTACT US</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
                           <span style="white-space: nowrap;">
-                            <a href="https://www.castlery.com/sg/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">REFER A FRIEND</a>
+                            <a href="https://www.castlery.com/uk/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">REFER A FRIEND</a>
                           </span>
                         </div>
                       </td>
@@ -421,7 +492,7 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1;text-align:center;color:#F7F3E7;"> Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1.2;text-align:center;color:#F7F3E7;">Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</div>
                       </td>
                     </tr>
                   </tbody>

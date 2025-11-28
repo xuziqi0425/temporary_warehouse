@@ -33,6 +33,15 @@
         text-decoration: none !important;
       }
 
+      .mobile-text {
+        display: none;
+      }
+
+      .desktop-text {
+        display: '';
+      }
+
+
       .bottom-text {
         padding: 0 76px 17px;
       }
@@ -41,25 +50,33 @@
         padding: 16px 30px 0px !important;
       }
 
-      ol {
-        list-style-type: none;
-        margin: 0;
-        padding-left: 0;
+      .letter-table {
+        margin: 20px auto 0;
+        width: 100%;
+        max-width: 440px;
+        border-collapse: collapse;
       }
 
-      li {
-        margin: 10px 0;
-        line-height: 1.5;
-        position: relative;
-        padding-left: 30px;
+      .letter-row td {
+        vertical-align: top;
+        line-height: 1.2;
+        color: #F7F3E7;
+      }
+
+      .letter-cell {
+        width: 32px;
+        text-align: left !important;
+        font-size: 11px;
+        padding: 8px 0 12px !important;
+        font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+      }
+
+      .letter-text {
         text-align: left;
-      }
-
-      li::before {
-        content: attr(data-letter);
-        /* 从列表项的 data-letter 属性获取字母 */
-        position: absolute;
-        left: 0;
+        font-size: 17px;
+        text-align: left;
+        padding: 4px 0 12px;
+        line-height: 1.2;
       }
 
       @media only screen and (max-width: 600px) {
@@ -70,6 +87,14 @@
 
         .text-faq-padding {
           padding: 16px 5px 0px !important;
+        }
+
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: table-row;
         }
       }
     </mj-style>
@@ -99,21 +124,55 @@
     </mj-section>
 
     <!-- order details -->
-    <mj-section padding="14px 0 0px" background-color="#F6F3E7">
+    <mj-section padding="14px 0 25px" background-color="#F6F3E7">
       <mj-column background-color="#F6F3E7">
+        <mj-table width="100%" padding="0 31px">
+          <tr class='desktop-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;">
+                ITEM NAME
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                ${itemLine.description}
+              </div>
+            </td>
+            <td style="width: 4%;">&nbsp;</td>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;">
+                ESTIMATED DELIVERY
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                End <#setting date_format=" MMMM yyyy">${itemLine.custcol_cslr_promised_delivery_date}
+              </div>
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing:0.2em; margin-bottom: 26px;line-height: 1;">
+                ITEM NAME
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                ${itemLine.description}
+              </div>
+            </td>
+          </tr>
 
-        <mj-text font-size="13px" align="center" color="#D15D27" padding="27px 0 26px" font-family="'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif">
-          ITEM NAME
-        </mj-text>
-        <mj-text font-size="16px" align="center" color="#3A131F" padding="0px 55px 37px" line-height="1.2">
-          ${itemLine.description}
-        </mj-text>
-        <mj-text font-size="13px" align="center" color="#D15D27" padding="0 0 26px" font-family="'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif">
-          ESTIMATED DELIVERY
-        </mj-text>
-        <mj-text font-size="16px" align="center" color="#3A131F" padding="0 55px 38px" line-height="1.2">
-          end <#setting date_format=" MMMM yyyy">${itemLine.custcol_cslr_promised_delivery_date}
-        </mj-text>
+          <tr class='mobile-text'>
+            <td style="height: 10px;">
+              &nbsp;
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;">
+                ESTIMATED DELIVERY
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                End <#setting date_format=" MMMM yyyy">${itemLine.custcol_cslr_promised_delivery_date}
+              </div>
+            </td>
+          </tr>
+        </mj-table>
       </mj-column>
     </mj-section>
 
@@ -121,13 +180,16 @@
       <mj-column padding="0">
         <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" css-class="text-faq-padding">
           We know delays aren’t fun, so here’s how we might make it right:​
-
-          <ol>
-            <li data-letter="A">Sit tight and wait for the shipment
-              (we’ll send you an email as soon as it’s on the move)​
-            </li>
-            <li data-letter="B">Swap for another in-stock piece</li>
-          </ol>
+          <table role="presentation" class="letter-table" style="margin:20px auto 0;width:100%;max-width:440px;border-collapse:collapse;">
+            <tr class="letter-row" style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';line-height:1.2;color:#F7F3E7;">
+              <td class="letter-cell">A</td>
+              <td class="letter-text">Sit tight and wait for the shipment (we’ll send you an email as soon as it’s on the move)​</td>
+            </tr>
+            <tr class="letter-row" style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';line-height:1.2;color:#F7F3E7;">
+              <td class="letter-cell">B</td>
+              <td class="letter-text">Swap for another in-stock piece</td>
+            </tr>
+          </table>
           <br />
           <br />
           Reply to this email or contact us at <a href="mailto: help.sg@castlery.com" style="color: #9BA3C1;">help.sg@castlery.com</a> if you'd like to swap or would prefer a refund and we will take it from there.
