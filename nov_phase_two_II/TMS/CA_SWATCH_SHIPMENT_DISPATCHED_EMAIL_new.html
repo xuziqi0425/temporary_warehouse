@@ -129,6 +129,10 @@
       color: #f7f3e7;
     }
 
+    .mobile-text {
+      display: none;
+    }
+
     /* Mobile fixes for white lines */
     @media only screen and (max-width: 480px) {
       .mj-section {
@@ -154,6 +158,14 @@
 
       .mj-wrapper {
         background-color: #773925 !important;
+      }
+
+      .desktop-text {
+        display: none;
+      }
+
+      .mobile-text {
+        display: table-row;
       }
     }
 
@@ -318,9 +330,9 @@
         </tbody>
       </table>
     </div>
-    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="margin:0px auto;max-width:680px;">
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#773925;background-color:#773925;margin:0px auto;max-width:680px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
         <tbody>
           <tr>
             <td style="direction:ltr;font-size:0px;padding:30px 0 43px;text-align:center;">
@@ -331,22 +343,62 @@
                     <tr>
                       <td align="left" style="font-size:0px;padding:0 20px;word-break:break-word;">
                         <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
-                          <tr>
-                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:15px 0;">
-                              <div style="font-size:13px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px;"> TRACK MY SHIPMENT </div>
-                              <div style="font-family: Aime,'New York', 'TimesNewRoman', 'Times New Roman'; font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;">
-                                <span th:text="${tracking.custrecordCslrTrackingNumber}"></span>
+                          <tr class='desktop-text'>
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;"> TRACK MY SHIPMENT </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                                <span th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
+                                  <span th:text="${tracking.custrecordCslrTrackingNumber}">**</span><br />
+                                </span>
                               </div>
                             </td>
                             <td style="width: 4%;">&nbsp;</td>
-                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: middle;padding:15px 0px;">
-                              <div style="font-size:13px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px;"> SHIPPING ADDRESS </div>
-                              <div style="font-family: Aime,'New York', 'TimesNewRoman', 'Times New Roman'; font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> SHIPPING ADDRESS </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
                                 <span th:text="${data.custbodyCslrAddress1}"></span>
                                 <br />
                                 <span th:if="${#strings.length(data.custbodyCslrAddress2) != 0 }">
-				    <span th:text="${data.custbodyCslrAddress2}">***</span> <br/>
-				</span>
+                  <span th:text="${data.custbodyCslrAddress2}">***</span>
+                  <br/>
+                </span>
+                <span th:text="${data.custbodyCslrCity}">***</span> 
+                <span th:text="${data.custbodyCslrState}">***</span>
+                <span th:text="${data.custbodyCslrZip}">***</span>
+              </div>
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+                 TRACK MY SHIPMENT
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
+                    <span th:text="${tracking.custrecordCslrTrackingNumber}">**</span><br/>
+                  </span>
+              </div>
+            </td>
+          </tr>
+
+          <tr class='mobile-text'>
+            <td style="height: 10px;">
+              &nbsp;
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+                SHIPPING ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span th:text="${data.custbodyCslrAddress1}"></span>
+                <br />
+
+                <span th:if="${#strings.length(data.custbodyCslrAddress2) != 0 }">
+                  <span th:text="${data.custbodyCslrAddress2}">***</span>
+                  <br/>
+                </span>
                 <span th:text="${data.custbodyCslrCity}">***</span> 
                 <span th:text="${data.custbodyCslrState}">***</span>
                 <span th:text="${data.custbodyCslrZip}">***</span>
@@ -623,7 +675,7 @@
                align="center" bgcolor="transparent" role="presentation" style="border:1px solid #f7f3e7;border-radius:2px;cursor:auto;height:30px;mso-padding-alt:10px 25px;background:transparent;" valign="middle"
             >
               <a
-                 href="#" style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;" target="_blank"
+                 href=" www.castlery.com/all-products" style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;" target="_blank"
               >
                 <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> BROWSE ALL </span>
               </a>
@@ -852,8 +904,8 @@
                 >
                   
       <div
-         style="font-family:'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;;font-size:13px;line-height:1;text-align:center;color:#F7F3E7;"
-      >Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</div>
+         style="font-family:'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;;font-size:13px;line-height:1.2;text-align:center;color:#F7F3E7;"
+      >Mailing Address: 333 Bay Street, Suite 2400, Toronto, Ontario, M5H 2T6, Canada</div>
     
                 </td>
               </tr>

@@ -87,19 +87,19 @@
     <mj-section padding="14px 0 0px" background-color="#F6F3E7">
       <mj-column>
         <mj-text font-size="28px" align="center" color="#3A131F" padding="0 0 2px">
-          Order #<span th:text="${data.salesOrderNumber}">***</span>
+          Order #<span th:text="${data.custbodyCslrSalesOrderNumber}">***</span>
         </mj-text>
         <mj-text font-size="17px" align="center" color="#3A131F">
-          Shipment #<span th:text="${data.shipmentNumber}">***</span>
+          Shipment #<span th:text="${data.tranid}">***</span>
         </mj-text>
         <mj-include path="../components/tmsItemTable.mjml" />
       </mj-column>
     </mj-section>
 
-    <mj-section css-class="bottom-text" background-color="#773925">
-      <mj-column padding="0 20px">
+    <mj-section css-class="bottom-text" background-color="#773925" >
+      <mj-column padding="0 25px">
         <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
-          Hi <span th:text="${data.consigneeFirstName}">***</span>,
+          Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>,
         </mj-text>
         <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2">
           Amazing news! Your order has been packed and handed over to DPD. It’s now on its way to you.
@@ -119,8 +119,9 @@
             <li>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi</li>
           </ul>
         </mj-text>
-        <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="10px">
-          <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+        <mj-button  background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="10px">
+          <a style="text-decoration: none;" th:href="${tracking.trackingLink}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+          </a>
         </mj-button>
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="28px">
           A few things to note

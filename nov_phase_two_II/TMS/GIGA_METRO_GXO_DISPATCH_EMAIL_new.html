@@ -209,19 +209,19 @@
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:14px 0 0px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:33px 0 0px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:0 0 2px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#3A131F;">Order #<span th:text="${data.salesOrderNumber}">***</span></div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#3A131F;">Order #<span th:text="${data.custbodyCslrSalesOrderNumber}">***</span></div>
                       </td>
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1;text-align:center;color:#3A131F;">Shipment #<span th:text="${data.shipmentNumber}">***</span></div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1;text-align:center;color:#3A131F;">Shipment #<span th:text="${data.tranid}">***</span></div>
                       </td>
                     </tr>
                     <tr>
@@ -241,10 +241,10 @@
                           <span th:each="itemLine:${data.items}">
                             <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                               <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                                <span th:text="${itemLine.id}">***</span>
+                                <span th:text="${itemLine.item}">***</span>
                               </td>
                               <td align="center" padding="0 5px" valign="top">
-                                <span th:text="${itemLine.name}">***</span>
+                                <span th:text="${itemLine.description}">***</span>
                               </td>
                               <td align="center" padding="0 5px" valign="top">
                                 <span th:text="${itemLine.quantity}">***</span>
@@ -274,12 +274,12 @@
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tbody>
                     <tr>
-                      <td style="vertical-align:top;padding:0;">
+                      <td style="vertical-align:top;padding:0 25px;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
                           <tbody>
                             <tr>
                               <td align="center" style="font-size:0px;padding:32px 0 14px;word-break:break-word;">
-                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1;text-align:center;color:#9BA3C1;">Hi <span th:text="${data.consigneeFirstName}">***</span>,</div>
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1;text-align:center;color:#9BA3C1;">Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>,</div>
                               </td>
                             </tr>
                             <tr>
@@ -300,7 +300,9 @@
                             </tr>
                             <tr>
                               <td align="center" style="font-size:0px;padding:10px 25px;padding-top:28px;word-break:break-word;">
-                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#F7F3E7;">Tracking [#12345678]</div>
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#F7F3E7;">Tracking <span th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
+                                    <span th:text="${tracking.custrecordCslrTrackingNumber}"></span>
+                                  </span></div>
                               </td>
                             </tr>
                             <tr>
@@ -309,9 +311,10 @@
                                   <tbody>
                                     <tr>
                                       <td align="center" bgcolor="transparent" role="presentation" style="border:1px solid #f7f3e7;border-radius:2px;cursor:auto;height:27px;mso-padding-alt:10px 25px;background:transparent;" valign="middle">
-                                        <a href="{{ event.payment_link }}" style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;" target="_blank">
-                                          <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
-                                        </a>
+                                        <p style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;">
+                                          <a style="text-decoration: none;" th:href="${tracking.trackingLink}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+                                          </a>
+                                        </p>
                                       </td>
                                     </tr>
                                   </tbody>
@@ -350,7 +353,7 @@
                               <td align="center" style="font-size:0px;padding:40px 5px 20px;word-break:break-word;">
                                 <p style="border-top:solid 1px #f7f3e7;font-size:1px;margin:0px auto;width:100%;">
                                 </p>
-                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #f7f3e7;font-size:1px;margin:0px auto;width:670px;" role="presentation" width="670px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #f7f3e7;font-size:1px;margin:0px auto;width:620px;" role="presentation" width="620px" ><tr><td style="height:0;line-height:0;"> &nbsp;
 </td></tr></table><![endif]-->
                               </td>
                             </tr>
@@ -365,7 +368,7 @@
                                   <tbody>
                                     <tr>
                                       <td align="center" bgcolor="transparent" role="presentation" style="border:1px solid #f7f3e7;border-radius:2px;cursor:auto;height:27px;mso-padding-alt:10px 25px;background:transparent;" valign="middle">
-                                        <a href="{{ event.payment_link }}" style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;" target="_blank">
+                                        <a href="https://www.castlery.com/us/help-center" style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;" target="_blank">
                                           <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> EXPLORE OUR FAQ </span>
                                         </a>
                                       </td>
@@ -429,13 +432,13 @@
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1;text-align:center;color:#000000;">
-                          <a href="http://www.instagram.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                          <a href="http://www.instagram.com/castleryus" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
                           </a>
-                          <a href="https://www.facebook.com/CastlerySG" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+                          <a href="https://www.facebook.com/CastleryUS" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
                           </a>
-                          <a href="http://www.pinterest.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                          <a href="http://www.pinterest.com/castleryus" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
                           </a>
                         </div>
@@ -463,12 +466,12 @@
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:11px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;">
-                          <a href="https://www.castlery.com/sg/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">PRIVACY POLICY</a>
+                          <a href="https://www.castlery.com/us/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">PRIVACY POLICY</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-                          <a href="https://www.castlery.com/sg/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">CONTACT US</a>
+                          <a href="https://www.castlery.com/us/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">CONTACT US</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
                           <span style="white-space: nowrap;">
-                            <a href="https://www.castlery.com/sg/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">REFER A FRIEND</a>
+                            <a href="https://www.castlery.com/us/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">REFER A FRIEND</a>
                           </span>
                         </div>
                       </td>
@@ -494,7 +497,7 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1;text-align:center;color:#F7F3E7;"> Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1.2;text-align:center;color:#F7F3E7;"> Mailing Address: 1950 W. Corporate Way PMB 95972, Anaheim, CA 92801</div>
                       </td>
                     </tr>
                   </tbody>
