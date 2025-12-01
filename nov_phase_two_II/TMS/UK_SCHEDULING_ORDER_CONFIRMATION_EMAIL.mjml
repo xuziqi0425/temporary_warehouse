@@ -252,7 +252,7 @@
     <mj-section background-color="#773925" padding="0 0 16px">
       <mj-column>
         <mj-text font-size="13px" color="#F7F3E7" align="center">
-          Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          Mailing Address: 1 Giltspur Street Farringdon, London United Kingdom, EC1A 9DD
         </mj-text>
       </mj-column>
     </mj-section>

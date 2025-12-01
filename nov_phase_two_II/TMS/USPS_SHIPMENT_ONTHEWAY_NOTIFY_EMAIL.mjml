@@ -267,7 +267,7 @@
     <mj-section background-color="#773925" padding="0 0 20px">
       <mj-column>
         <mj-text font-size="13px" color="#F7F3E7" align="center">
-          Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          Mailing Address: 1950 W. Corporate Way PMB 95972, Anaheim, CA 92801
         </mj-text>
       </mj-column>
     </mj-section>
