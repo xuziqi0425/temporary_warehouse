@@ -170,6 +170,6 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-include path="../components/footer.mjml" />
+    <mj-include path="../components/footers/au.mjml" />
   </mj-body>
 </mjml>

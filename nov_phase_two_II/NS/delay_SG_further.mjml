@@ -84,6 +84,6 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-include path="../components/footer.mjml" />
+    <mj-include path="../components/footers/sg.mjml" />
   </mj-body>
 </mjml>

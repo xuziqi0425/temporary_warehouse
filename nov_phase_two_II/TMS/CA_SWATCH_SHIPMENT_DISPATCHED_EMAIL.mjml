@@ -147,8 +147,8 @@
                 <br />
 
                 <span th:if="${#strings.length(data.custbodyCslrAddress2) != 0 }">
-				    <span th:text="${data.custbodyCslrAddress2}">***</span> <br/>
-				</span>
+				          <span th:text="${data.custbodyCslrAddress2}">***</span> <br/>
+				        </span>
                 <span th:text="${data.custbodyCslrCity}">***</span> 
                 <span th:text="${data.custbodyCslrState}">***</span>
                 <span th:text="${data.custbodyCslrZip}">***</span>
@@ -221,7 +221,7 @@
     <!-- Browse link -->
     <mj-section background-color="#773925" padding="0">
       <mj-column>
-        <mj-button href="#" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="30px" border-radius="2px">
+        <mj-button href=" www.castlery.com/all-products" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="30px" border-radius="2px">
           <span style="font-size: 11px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> BROWSE ALL </span>
         </mj-button>
       </mj-column>

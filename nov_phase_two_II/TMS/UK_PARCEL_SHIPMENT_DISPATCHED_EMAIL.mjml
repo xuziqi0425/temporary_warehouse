@@ -142,12 +142,12 @@
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="28px">
           Any questions?
         </mj-text>
-        <mj-button href="{{ event.payment_link }}" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 10px ">
+        <mj-button href="https://www.castlery.com/uk/help-center" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 10px ">
           <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> EXPLORE OUR FAQ </span>
         </mj-button>
       </mj-column>
     </mj-section>
 
-    <mj-include path="../components/footer.mjml" />
+    <mj-include path="../components/footers/uk.mjml" />
   </mj-body>
 </mjml>
