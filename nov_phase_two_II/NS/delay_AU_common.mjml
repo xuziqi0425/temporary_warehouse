@@ -1,0 +1,226 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      a {
+        color: #D25C1B;
+        cursor: pointer;
+        text-decoration: none !important;
+      }
+
+      .bottom-text {
+        padding: 0 76px 17px;
+      }
+
+      .text-faq-padding {
+        padding: 16px 30px 0px !important;
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      .desktop-text {
+        display: '';
+      }
+
+      @media only screen and (max-width: 600px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: table-row;
+        }
+
+        .bottom-text {
+          padding: 0 25px 17px;
+        }
+
+        .text-faq-padding {
+          padding: 16px 5px 0px !important;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section css-class="order-header" background-color="#773925" padding="33px 0 48px">
+      <mj-column>
+        <mj-image padding-bottom="0" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+
+      </mj-column>
+    </mj-section>
+
+    <!-- order details -->
+    <mj-section padding="32px 0 0px" background-color="#F6F3E7">
+      <mj-column>
+        <mj-text font-size="28px" align="center" color="#3A131F" padding="0 0 2px">
+          Order #${transaction.custbody_cslr_sales_order_number}
+        </mj-text>
+        <mj-text font-size="17px" align="center" color="#3A131F">
+          Shipment #${transaction.tranid}
+        </mj-text>
+        <mj-include path="../components/itemTable.mjml" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section css-class="bottom-text" background-color="#773925">
+      <mj-column padding="0">
+        <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="12px 0 14px">
+          Hi ${customer.firstname},
+        </mj-text>
+        <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="15px 0px">
+          Good news! Your shipment has left our warehouse and is on its way to you. You can track it anytime with the details below:​
+  
+        </mj-text>
+        <mj-text font-size="11px" color="#F7F3E7" align="center" line-height="1.2" padding="18px 0px 14px" font-family="SanomatSans,'Century Gothic','CenturyGothic','AppleGothic',sans-serif">
+           TRACK ORDER
+        </mj-text>
+        <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="0 0px 25px">
+          Tracking 
+            <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine>
+                #${trackingLine.custrecord_cslr_tracking_number}
+            </#list>
+        </mj-text>
+        <!-- Address Section -->
+
+        <mj-table width="100%" padding="0 31px 34px">
+          <tr class='desktop-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+                CONTACT DETAILS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span>
+                <br />
+                <span>${customer.email}</span>
+                <br />
+                <span>${transaction.custbody_cslr_phone}
+                  <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                    <br />${transaction.custbody_cslr_alternative_phone}
+                  </#if>
+                </span>
+              </div>
+            </td>
+            <td style="width: 4%;">&nbsp;</td>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                SHIPPING ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                ${transaction.custbody_cslr_address1} <br />
+<#if transaction.custbody_cslr_address2?length!=0>
+${transaction.custbody_cslr_address2} <br />
+</#if>
+${transaction.custbody_cslr_city} ${transaction.custbody_cslr_state}
+${transaction.custbody_cslr_zip}, ${transaction.custbody_cslr_country}
+              </div>
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+                CONTACT DETAILS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span>
+                <br />
+                <span>${customer.email}</span>
+                <br />
+                <span>${transaction.custbody_cslr_phone}
+                  <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                    <br />${transaction.custbody_cslr_alternative_phone}
+                  </#if>
+                </span>
+              </div>
+            </td>
+          </tr>
+
+          <tr class='mobile-text'>
+            <td style="height: 10px;">
+              &nbsp;
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+                SHIPPING ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+               ${transaction.custbody_cslr_address1} <br />
+<#if transaction.custbody_cslr_address2?length!=0>
+${transaction.custbody_cslr_address2} <br />
+</#if>
+${transaction.custbody_cslr_city} ${transaction.custbody_cslr_state}
+${transaction.custbody_cslr_zip}, ${transaction.custbody_cslr_country}
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
+            A few things to know
+        </mj-text>
+        <mj-text font-size="17px" color="#F7F3E7" align="center" padding="0 14px 0" line-height="1.2">
+        <ul style="padding-left: 20px;text-align: left;">
+        <li>Deliveries are placed at ground level (entrance, lift lobby, or foot of stairs).</li><br>
+        <li>Shipments may arrive in multiple packages across multiple days. Please keep an eye on your tracking link to avoid missed deliveries.</li><br>
+        <li>For delivery inquiries, visit the <a href="https://ascap.com.au/connect/" style="color: #9BA3C1;"><u>Active Supply Chains website</u></a> or call 1300 272 270 with your tracking number.</li><br>
+        <li>Any shipment modifications from here will incur a 20–30% restocking fee.</li><br>
+        </ul>
+          Your order is almost home—thank you for choosing Castlery.<br/>
+           We can’t wait for you to unbox it.
+          <br />
+          <br />
+          P.S. We’d love to see your new piece at home! Tag us <u style="color: #9BA3C1">@castleryau</u> to share your space.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0" background-color="#773925">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" padding="0 30px 0" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 0 25px" background-color="#773925">
+      <mj-column>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="28px">
+          Any questions?
+        </mj-text>
+        <mj-button href="https://www.castlery.com/au/help-center" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 28px ">
+          <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> EXPLORE OUR FAQ </span>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-include path="../components/footers/au.mjml" />
+  </mj-body>
+</mjml>
