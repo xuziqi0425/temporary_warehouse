@@ -34,11 +34,15 @@
       }
 
       .bottom-text {
-        padding: 0 76px 17px;
+        padding: 0 30px 17px;
       }
 
       .text-faq-padding {
         padding: 16px 30px 0px !important;
+      }
+
+      .box-padding {
+        padding: 0 0 34px !important;
       }
 
       .mobile-text {
@@ -52,6 +56,10 @@
       @media only screen and (max-width: 600px) {
         .desktop-text {
           display: none;
+        }
+
+        .box-padding {
+          padding: 0 31px 34px
         }
 
         .mobile-text {
@@ -100,20 +108,19 @@
         </mj-text>
         <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="15px 0px">
           Good news! Your shipment has left our warehouse and is on its way to you. You can track it anytime with the details below:​
-  
         </mj-text>
-        <mj-text font-size="11px" color="#F7F3E7" align="center" line-height="1.2" padding="18px 0px 14px" font-family="SanomatSans,'Century Gothic','CenturyGothic','AppleGothic',sans-serif">
-           TRACK ORDER
+        <mj-text font-size="12px" color="#F7F3E7" align="center" line-height="1.2" padding="18px 0px 14px" font-family="SanomatSans,'Century Gothic','CenturyGothic','AppleGothic',sans-serif" letter-spacing="1px" >
+          TRACK ORDER
         </mj-text>
-        <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="0 0px 25px">
-          Tracking 
-            <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine>
-                #${trackingLine.custrecord_cslr_tracking_number}
-            </#list>
+        <mj-text font-size="25px" color="#F7F3E7" align="center" line-height="1.2" padding="0 0px 25px">
+          Tracking
+          <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine>
+            #${trackingLine.custrecord_cslr_tracking_number}
+          </#list>
         </mj-text>
         <!-- Address Section -->
 
-        <mj-table width="100%" padding="0 31px 34px">
+        <mj-table width="100%" css-class="box-padding">
           <tr class='desktop-text'>
             <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
@@ -122,13 +129,13 @@
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
                 <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span>
                 <br />
-                <span>${customer.email}</span>
+                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a>
                 <br />
-                <span>${transaction.custbody_cslr_phone}
+                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone}
                   <#if transaction.custbody_cslr_alternative_phone?length!=0>
                     <br />${transaction.custbody_cslr_alternative_phone}
                   </#if>
-                </span>
+                </a>
               </div>
             </td>
             <td style="width: 4%;">&nbsp;</td>
@@ -138,11 +145,11 @@
               </div>
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
                 ${transaction.custbody_cslr_address1} <br />
-<#if transaction.custbody_cslr_address2?length!=0>
-${transaction.custbody_cslr_address2} <br />
-</#if>
-${transaction.custbody_cslr_city} ${transaction.custbody_cslr_state}
-${transaction.custbody_cslr_zip}, ${transaction.custbody_cslr_country}
+                <#if transaction.custbody_cslr_address2?length!=0>
+                  ${transaction.custbody_cslr_address2} <br />
+                </#if>
+                ${transaction.custbody_cslr_city} ${transaction.custbody_cslr_state}
+                ${transaction.custbody_cslr_zip}, ${transaction.custbody_cslr_country}
               </div>
             </td>
           </tr>
@@ -154,13 +161,13 @@ ${transaction.custbody_cslr_zip}, ${transaction.custbody_cslr_country}
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
                 <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span>
                 <br />
-                <span>${customer.email}</span>
+                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a>
                 <br />
-                <span>${transaction.custbody_cslr_phone}
+                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone}
                   <#if transaction.custbody_cslr_alternative_phone?length!=0>
                     <br />${transaction.custbody_cslr_alternative_phone}
                   </#if>
-                </span>
+                </a>
               </div>
             </td>
           </tr>
@@ -176,31 +183,31 @@ ${transaction.custbody_cslr_zip}, ${transaction.custbody_cslr_country}
                 SHIPPING ADDRESS
               </div>
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
-               ${transaction.custbody_cslr_address1} <br />
-<#if transaction.custbody_cslr_address2?length!=0>
-${transaction.custbody_cslr_address2} <br />
-</#if>
-${transaction.custbody_cslr_city} ${transaction.custbody_cslr_state}
-${transaction.custbody_cslr_zip}, ${transaction.custbody_cslr_country}
+                ${transaction.custbody_cslr_address1} <br />
+                <#if transaction.custbody_cslr_address2?length!=0>
+                  ${transaction.custbody_cslr_address2} <br />
+                </#if>
+                ${transaction.custbody_cslr_city} ${transaction.custbody_cslr_state}
+                ${transaction.custbody_cslr_zip}, ${transaction.custbody_cslr_country}
               </div>
             </td>
           </tr>
         </mj-table>
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
-            A few things to know
+          A few things to know
         </mj-text>
         <mj-text font-size="17px" color="#F7F3E7" align="center" padding="0 14px 0" line-height="1.2">
-        <ul style="padding-left: 20px;text-align: left;">
-        <li>Deliveries are placed at ground level (entrance, lift lobby, or foot of stairs).</li><br>
-        <li>Shipments may arrive in multiple packages across multiple days. Please keep an eye on your tracking link to avoid missed deliveries.</li><br>
-        <li>For delivery inquiries, visit the <a href="https://ascap.com.au/connect/" style="color: #9BA3C1;"><u>Active Supply Chains website</u></a> or call 1300 272 270 with your tracking number.</li><br>
-        <li>Any shipment modifications from here will incur a 20–30% restocking fee.</li><br>
-        </ul>
-          Your order is almost home—thank you for choosing Castlery.<br/>
-           We can’t wait for you to unbox it.
+          <ul style="padding-left: 20px;text-align: left;">
+            <li>Deliveries are placed at ground level (entrance, lift lobby, or foot of stairs).</li><br>
+            <li>Shipments may arrive in multiple packages across multiple days. Please keep an eye on your tracking link to avoid missed deliveries.</li><br>
+            <li>For delivery inquiries, visit the <a href="https://ascap.com.au/connect/" style="color: #9BA3C1;"><u>Active Supply Chains website</u></a> or call <a style="color: #F7F3E7 !important; text-decoration: none !important;">1300 272 270</a> with your tracking number.</li><br>
+            <li>Any shipment modifications from here will incur a 20–30% restocking fee.</li><br>
+          </ul>
+          Your order is almost home—thank you for choosing Castlery.<br />
+          We can’t wait for you to unbox it.
           <br />
           <br />
-          P.S. We’d love to see your new piece at home! Tag us <u style="color: #9BA3C1">@castleryau</u> to share your space.
+          P.S. We’d love to see your new piece at home! Tag us <a style="color: #9BA3C1;text-decoration: underline !important;">@castleryau</a> to share your space.
         </mj-text>
 
       </mj-column>
