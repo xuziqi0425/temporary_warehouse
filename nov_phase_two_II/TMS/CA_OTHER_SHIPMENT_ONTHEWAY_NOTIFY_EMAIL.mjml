@@ -115,7 +115,7 @@
 
         <!-- Address Section -->
 
-        <mj-table width="100%" padding="0 31px 34px">
+        <mj-table width="100%" padding="0 10px 34px">
           <tr class='desktop-text'>
             <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
