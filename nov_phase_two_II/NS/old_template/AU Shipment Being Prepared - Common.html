@@ -1,0 +1,340 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+@font-face {
+font-family: "MinervaModern";
+src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
+url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff") format("woff");
+}
+</style>
+</head>
+<body>
+<div leftmargin="0" marginheight="0" marginwidth="0" style="
+margin: 0 auto;
+text-align: center;
+padding: 0;
+background-color: #f2f2f2;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+-webkit-text-size-adjust: none;
+border-image: none;
+" topmargin="0">
+</div>
+<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="center" bgcolor="#f2f2f2">
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; background-color: #ffffff"
+width="800">
+<tbody>
+<tr align="center">
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="614"
+style="font-family: poppins, Arial, Helvetica, sans-serif;">
+<tbody align="center">
+<tr>
+<td colspan="2" height="10"> </td>
+</tr>
+<tr>
+<td colspan="2"><span style="
+font-size: 1px;
+color: #ffffff;
+font-weight: normal;
+font-family: 'Helvetica Neue', Helvetica, Arial,
+sans-serif;
+">Please check your shipping details.</span></td>
+</tr>
+<!-- AU header without navigation.txt -->
+<#include "1097" /><!-- Main -->
+<tr>
+<td height="10"> </td>
+</tr>
+<tr>
+<td align="center" style="vertical-align: top">
+<#-- title -->
+<table>
+<tbody>
+<tr>
+<td height="42"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-family: MinervaModern, Arial,Helvetica, sans-serif;;
+font-size: 30px;
+color: #323433;
+font-weight: 400;
+line-height: 36px;
+">We’re getting it ready!</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+<#-- Order Info -->
+<table style="background: #DBCFB5" width="614">
+<tbody>
+<tr>
+<td height="23.5"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 30px;
+color: #323433;
+font-weight: 700;
+line-height: 36px;
+">Order #${transaction.custbody_cslr_sales_order_number}</td>
+</tr>
+<tr>
+<td height="10"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 18px;
+color: #323433;
+font-weight: 400;
+line-height: 24px;
+">Shipment <span style="font-weight: 700"> #${transaction.tranid}</span></td>
+</tr>
+<tr>
+<td height="23.5"> </td>
+</tr>
+</tbody>
+</table>
+<#-- row 2 -->
+<table>
+<tbody>
+<tr>
+<td height="40"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #323433;
+line-height: 24px;
+">Hi <span style="font-weight: 700">${customer.firstname}</span>, <#-- Hi
+${object_partner_id_name!} , -->
+</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #323433;
+line-height: 1.5;
+">Great news! Your item(s) have reached our warehouse. As such, we are preparing a shipment to you. Please check that your shipping address and contact details are correct:</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+<#-- Customer Info -->
+<table>
+<tbody>
+<tr>
+<td style="
+font-size: 16px;
+color: #323433;
+font-weight: 700;
+line-height: 24px;
+">Name</td>
+<td width="10"> </td>
+<td>:</td>
+<td width="10"> </td>
+<td style="
+font-size: 16px;
+color: #323433;
+line-height: 24px;
+">${customer.firstname} ${customer.middlename} ${customer.lastname}</td>
+</tr>
+<tr>
+<td
+style="font-size: 16px; color: rgb(66, 66, 66); font-weight: 700; line-height: 24px; height: 23px;">
+Email
+</td>
+<td style="height: 23px;" width="10"> </td>
+<td style="height: 23px;">:</td>
+<td style="height: 23px;" width="10"> </td>
+<td
+style="font-size: 16px; color: rgb(66, 66, 66); line-height: 24px; height: 23px;">
+${customer.email}
+</td>
+</tr>
+<tr>
+<td style="
+font-size: 16px;
+color: #323433;
+font-weight: 700;
+line-height: 24px;
+">Contact</td>
+<td width="10"> </td>
+<td>:</td>
+<td width="10"> </td>
+<td style="
+font-size: 16px;
+color: #323433;
+line-height: 24px;
+">${transaction.custbody_cslr_phone}
+<#if transaction.custbody_cslr_alternative_phone?length!=0>
+<br />${transaction.custbody_cslr_alternative_phone}
+</#if>
+</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+</tbody>
+</table>
+<#-- shipping address -->
+<table style="
+border-collapse: separate;
+border-spacing: 10px 0px;
+" width="475">
+<thead>
+<tr style="background: #DBCFB5">
+<th style="
+padding: 12.5px;
+font-size: 16px;
+color: #323433;
+font-weight: 700;
+line-height: 24px;
+">Shipping Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" style="
+padding: 30px;
+font-size: 16px;
+color: #323433;
+line-height: 24px;
+border: 1px solid #DBCFB5;
+text-align: center;
+">${transaction.custbody_cslr_address1}<br />
+<#if transaction.custbody_cslr_address2?length!=0>
+${transaction.custbody_cslr_address2}<br />
+</#if>
+${transaction.custbody_cslr_city} ${transaction.custbody_cslr_state}
+${transaction.custbody_cslr_zip}, ${transaction.custbody_cslr_country}
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #323433;
+line-height: 1.5;
+">If you are ready to receive your shipment, there is no action required from you. We will send a follow up email with tracking details once your shipment has left our warehouse.
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #323433;
+line-height: 1.5;
+"><span style="font-weight: 700">Kindly notify us within 24 hours of this email should you wish to change, cancel, or hold off your delivery.</span> Any request for modification or cancellation thereafter will incur a 20% - 30% restocking fee. Orders may be held for up to 2 months and a holding fee will be charged subsequently at 5% of the item(s) value per month, from the third month onwards and subjected to GST.</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #323433;
+line-height: 1.5;
+"><span style="font-weight: 700">Important:</span> We are unable to accommodate order
+changes, cancellations, returns or exchanges for items marked as
+‘Clearance’ or ‘Final Sale’.
+</td>
+</tr>
+<tr>
+<td height="40" style="height: 40px;"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #323433;
+line-height: 1.5;
+">
+<p>Specific item(s) from your shipment to be delivered</p>
+<table style="border-spacing: 0;">
+<thead>
+<tr
+style="background: #DBCFB5;font-size: 16px; color: rgb(66, 66, 66); line-height: 24px;text-decoration: underline;">
+<th style="padding:12.5px;">Item ID</th>
+<th style="padding:12.5px;">Item Name</th>
+<th style="padding:12.5px">Quantity</th>
+</tr>
+</thead>
+<tbody>
+<!-- Item Iterator.txt -->
+<#include "3405" />
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="40"> </td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td align="center" style="
+font-size: 20px;
+color: #A45B37;
+line-height: 1.5;
+"><span style="font-weight: 700">Getting excited about your delivery?</span>
+</td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 16px;
+color: #323433;
+line-height: 1.5;
+">Great! It's time to get prepared with our Checklist & FAQ by referring to the attached delivery information.
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="50"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- AU FAQ.txt -->
+<#include "1099" />
+<!-- AU footer.txt -->
+<#include "1098" />
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="gmailfix" style="white-space: nowrap; font: 15px courier; line-height: 0"> </div>
+</body>
+</html>
