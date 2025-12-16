@@ -93,7 +93,16 @@
           Hi ${customer.firstname},
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 20px 0" line-height="1.2">
-          Good news! Your item(s) have reached our warehouse and we’re getting your shipment ready. Please take a moment to confirm your details:
+          Good news! Your item(s) have reached our warehouse and we’re getting your shipment ready.
+        </mj-text>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="33px">
+          What's next?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0 20px" line-height="1.2">
+          If your details are correct, you're all set. We'll send a tracking code once your order is on the move.
+          <br>
+          <br>
+          <u>Please double-check your details:</u>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -166,24 +175,30 @@
     <mj-section css-class="bottom-text" background-color="#773925">
       <mj-column>
 
-        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0" line-height="1.2">
-          If your details are correct, you're all set. We'll send a tracking code once your order is on the move.
-          <br>
-          <br>
-          Want to change, cancel, or hold delivery? Just let us know with in 24 hours. After that, changes or cancellations come with a 20–30% restocking fee. Orders can be held for up to 2 months, with a 5% monthly holding fee from the 3rd month (plus GST).
-          <br>
-          <br>
-          Important: Items marked Clearance or Final Sale can’t be changed, cancelled, returned, or exchanged.
-
-          <br>
-          <br>
-          We'll keep you posted every step of the way.
-          <br>
-          Thanks for shopping with Castlery.
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
+          Need to make changes?
         </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0" line-height="1.2">
 
+          Want to change, cancel, or hold delivery? Just let us know within 24 hours. After that, changes or cancellations come with a 20–30% restocking fee. Orders can be held for up to 2 months, with a 5% monthly holding fee from the 3rd month (plus GST).
+          <br>
+          <br>
+          <u> Important:</u>
+          <br>
+          Items marked Clearance or Final Sale cannot be changed, cancelled, returned, or exchanged.​
+          <br>
+          <br>
+          <br>
+
+        </mj-text>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="0">
+          More questions?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 0" line-height="1.2">
+          Check our <a href="https://www.castlery.com/au/help-center" target="_blank" style="color:#9BA3C1">FAQs</a> and <a href="https://www.castlery.com/au/sales-and-refunds" target="_blank" style="color:#9BA3C1">Terms and Conditions</a>, or email us anytime. Thanks for choosing Castlery—we can’t wait for you to enjoy your order.
+        </mj-text>
       </mj-column>
     </mj-section>
-     <mj-include path="../components/footers/au.mjml" />
+    <mj-include path="../components/footers/au.mjml" />
   </mj-body>
 </mjml>

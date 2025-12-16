@@ -93,7 +93,16 @@
           Hi ${customer.firstname},
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 20px 0" line-height="1.2">
-          We’re almost there—your order is getting ready to head off to Perth! Before it goes, please double-check your details below:
+          We’re almost there—your order is getting ready to head off to Perth!
+        </mj-text>
+         <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="33px">
+          What's next?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0 20px" line-height="1.2">
+         You’ll receive a “Ready to be scheduled” email in the next 3–4 weeks, followed by a text from our delivery partner with available dates. Pick the one that works best for you.
+          <br>
+          <br>
+          <u>Please double-check your details:</u>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -166,29 +175,27 @@
     <mj-section css-class="bottom-text" background-color="#773925">
       <mj-column>
 
-        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0" line-height="1.2">
-          If everything looks good, you don’t need to do a thing. Need to make changes? Just reply to this email or WhatsApp/SMS us at <a style="color: #F7F3E7 !important; text-decoration: none !important;">+61 482 072 880</a> within 24 hours. After that, changes or cancellations will incur a 20–30% restocking fee. Orders can be held free for 2 months, with holding fees starting after that.
-          <br>
-          <br>
-
-          <u>Important:</u>
-          <br>
-          Items marked Clearance, Final Sale, or Customised can’t be changed, cancelled, returned, or exchanged.
-
-        </mj-text>
-        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="33px">
-          What happens next
+               <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
+          Need to make changes?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0" line-height="1.2">
-          <ul style="padding-left: 20px;text-align: left;">
 
-            <li>You’ll receive a “Ready to be scheduled” email in the next 3–4 weeks.</li><br>
-            <li>Our delivery partner will text you delivery date options. Pick the one that works best for you.</li><br>
-            <li>Get ready to welcome your new piece home!</li>
-          </ul>
+         Just reply to this email or WhatsApp/SMS us at +61 482 072 880 within 24h ours. After that, changes or cancellations will incur a 20–30% restocking fee. Orders can be held free for 2 months, with holding fees starting after that.
+<br>
+
           <br>
-          Thanks again for choosing Castlery—we can’t wait for you to enjoy your order.
-
+          <u> Important:</u>
+          <br>
+          Items marked Clearance or Final Sale cannot be changed, cancelled, returned, or exchanged.​
+          <br>
+          <br>
+<br>
+        </mj-text>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="0">
+          More questions?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 0" line-height="1.2">
+          Check our <a href="https://www.castlery.com/au/help-center" target="_blank" style="color:#9BA3C1">FAQs</a> and <a href="https://www.castlery.com/au/sales-and-refunds" target="_blank" style="color:#9BA3C1">Terms and Conditions</a>, or email us anytime. Thanks for choosing Castlery—we can’t wait for you to enjoy your order.
         </mj-text>
       </mj-column>
     </mj-section>
