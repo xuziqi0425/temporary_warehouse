@@ -97,7 +97,7 @@
     </mj-section>
 
     <mj-section css-class="bottom-text" background-color="#773925">
-      <mj-column padding="0 25px">
+      <mj-column padding="0px">
         <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
           Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>,
         </mj-text>
