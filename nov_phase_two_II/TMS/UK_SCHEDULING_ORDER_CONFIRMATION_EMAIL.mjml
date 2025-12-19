@@ -121,7 +121,7 @@
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding="36px 0 0">
           What’s next?
         </mj-text>
-        <mj-text font-size="16px" color="#F7F3E7" align="left" line-height="1.2">
+        <mj-text font-size="16px" color="#F7F3E7" align="center" line-height="1.2">
           Keep an eye out for our shipment dispatched email. It’ll include carrier details and carrier tracking info. Once your order is with our delivery partner, they’ll reach out to schedule your delivery.
         </mj-text>
 
@@ -130,7 +130,7 @@
           </a>
         </mj-button>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 0">
-          Please double-check your details:
+         <u>Please double-check your details:</u>
         </mj-text>
       </mj-column>
     </mj-section>

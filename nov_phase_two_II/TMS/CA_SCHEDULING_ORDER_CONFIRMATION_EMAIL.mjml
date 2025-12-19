@@ -116,15 +116,16 @@
           Hi <span th:text="${data.consigneeFirstName}">***</span>,
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 0 0" line-height="1.2">
-          Good news—your item (s) have arrived at our warehouse and are being prepped for shipping.
+          Great news—your item(s) have reached our warehouse and are getting ready to ship.
+        </mj-text>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="27px 0 0">
+          What’s next?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 0 0" line-height="1.2">
+         Once your shipment is handed to our delivery partner, you’ll get a delivery partner tracking email with their details. They’ll then reach out to schedule delivery within 7 business days.
           <br />
           <br />
-          <u>What’s next?</u>
-          <br />
-          Keep an eye out for our tracking email. It’ll include carrier details and tracking info. Once your order is with our delivery partner, they’ll reach out to schedule your delivery.
-          <br />
-          <br />
-          Please double-check your details:
+          <u>Please double-check your details:</u>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -202,17 +203,18 @@
           Need to make changes?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 0" line-height="1.2">
-          If you’d like to update your order or postpone delivery, please let us know within 24 hours of receiving this email to avoid any fees.​
+          If you'd like to cancel, modify, or place your order on hold, please let us know within 24 hours of receiving this email. After this window, changes may incur a 10% storage fee or 20% restocking fee.
           <br />
           <br />
           <u>Important:</u><br />
-          Items purchased on Clearance or Final Sale aren’t eligible for changes or cancellations.
+         Items marked Clearance or Final Sale aren’t eligible for changes, cancellations, returns, or exchanges.
         </mj-text>
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding="36px 0 0">
           More questions?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 36px" line-height="1.2">
-        Our <a href="https://www.castlery.com/ca/help-center" target="_blank">FAQs</a> and <a href="https://www.castlery.com/ca/sales-and-refunds" target="_blank">Terms and Conditions</a> may help, or just reach out via chat, WhatsApp at +1 424-888-7789, or email us.We’re always happy to help.
+
+          Check <a href="https://www.castlery.com/ca/help-center" target="_blank">FAQs</a> and <a href="https://www.castlery.com/ca/sales-and-refunds" target="_blank">Terms and Conditions</a> , or email us anytime. Thanks for choosing Castlery—we can’t wait for you to enjoy your order.
         </mj-text>
       </mj-column>
     </mj-section>

@@ -62,6 +62,11 @@
           padding: 0 25px 17px;
         }
 
+        .mid-padding {
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+
         .text-faq-padding {
           padding: 16px 5px 0px !important;
         }
@@ -97,7 +102,7 @@
     </mj-section>
 
     <mj-section css-class="bottom-text" background-color="#773925">
-      <mj-column padding="0px">
+      <mj-column css-class="mid-padding">
         <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
           Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>,
         </mj-text>
@@ -137,18 +142,28 @@
         </mj-text>
         <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="0">
           <ul style="text-align: left;padding-left: 20px;">
-            <li>With DPD deliveries, you won’t get a scheduling call. Just track progress directly through the link above.</li>
+            <li>Your order will be delivered with threshold delivery, the first dry area of your home (garage, entryway, etc.).</li>
             <br />
-            <li>If you’re not home at delivery, the driver may leave your item safely at your door.​</li>
+            <li>A signature is required upon delivery.​</li>
+            <br />
+            <li>For updates, you can track your order via the link above or call Gigacloud at (626)626-4228.​</li>
           </ul>
         </mj-text>
         <mj-text font-size="17px" color="#F7F3E7" align="center" padding="20px 14px 0" line-height="1.2">
           Your order is almost home—thank you for choosing Castlery. We can’t wait for you to unbox it.
           <br />
           <br />
-          P.S. We’d love to see your new piece at home! Tag us <u style="color: #9BA3C1">@castleryus</u> to share your space.
+          P.S. We’d love to see your new piece at home! Tag us <span style="color: #9BA3C1;">@castleryus</span> to share your space.
         </mj-text>
-        <mj-divider border-color="#f7f3e7" border-width="1px" padding="40px 5px 20px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" background-color="#773925">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" padding="0 30px 0" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 0 25px" background-color="#773925">
+      <mj-column>
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="28px">
           Any questions?
         </mj-text>
