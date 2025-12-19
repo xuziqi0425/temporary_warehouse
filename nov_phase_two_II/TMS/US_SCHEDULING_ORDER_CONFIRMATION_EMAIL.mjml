@@ -219,7 +219,7 @@
           More questions?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 36px" line-height="1.2">
-          Our <a href="https://www.castlery.com/us/help-center" target="_blank">FAQs</a> and <a href="https://www.castlery.com/us/sales-and-refunds" target="_blank">Terms and Conditions</a> may help, or just reach out via chat, WhatsApp at +1 424-888-7789, or email us. We’re always happy to help.
+          Our <a href="https://www.castlery.com/us/help-center" target="_blank" style="color: #9BA3C1 !important;">FAQs</a> and <a href="https://www.castlery.com/us/sales-and-refunds" target="_blank" style="color: #9BA3C1!important;">Terms and Conditions</a> may help, or just reach out via chat, WhatsApp at <a target="_blank" style="color:#F7F3E7!important;text-decoration: none !important;s">+1 424-888-7789</a>, or email us. We’re always happy to help.
         </mj-text>
       </mj-column>
     </mj-section>
