@@ -122,9 +122,13 @@
           What’s next?
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 0 0" line-height="1.2">
-         Once your shipment is handed to our delivery partner, you’ll get a delivery partner tracking email with their details. They’ll then reach out to schedule delivery within 7 business days.
-          <br />
-          <br />
+          Once your shipment is handed to our delivery partner, you’ll get a delivery partner tracking email with their details. They’ll then reach out to schedule delivery within 7 business days.
+        </mj-text>
+        <mj-button background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 10px">
+          <a style="text-decoration: none;" th:href="${data.shipmentMilestoneUrl}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+          </a>
+        </mj-button>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 0 0" line-height="1.2">
           <u>Please double-check your details:</u>
         </mj-text>
       </mj-column>
@@ -207,7 +211,7 @@
           <br />
           <br />
           <u>Important:</u><br />
-         Items marked Clearance or Final Sale aren’t eligible for changes, cancellations, returns, or exchanges.
+          Items marked Clearance or Final Sale aren’t eligible for changes, cancellations, returns, or exchanges.
         </mj-text>
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding="36px 0 0">
           More questions?
