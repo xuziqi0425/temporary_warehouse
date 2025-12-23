@@ -244,7 +244,7 @@
                           <#list transaction.item as itemLine>
                             <tr style="font-size: 16px;text-align: center;color: #3A131F;">
                               <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                                <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F;"> ${itemLine.item} </a>
+                                <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;"> ${itemLine.item} </a>
                               </td>
                               <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> ${itemLine.description} </td>
                               <td align="center" padding="0 5px" valign="top"> ${itemLine.quantity} </td>
@@ -295,6 +295,11 @@
                               <td align="center" style="font-size:0px;padding:0 0px 25px;word-break:break-word;">
                                 <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:25px;line-height:1.2;text-align:center;color:#F7F3E7;">Tracking <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine> #${trackingLine.custrecord_cslr_tracking_number} </#list>
                                 </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="font-size:0px;padding:0 0px 25px;word-break:break-word;">
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1;text-align:center;color:#F7F3E7;">For delivery enquiries, reach out directly to our delivery partner at <a style="color: #9BA3C1 !important;text-decoration: underline !important;">To My Door</a> or call <a style="color: #9BA3C1 !important; text-decoration: none !important;">03 9133 4049</a> with your tracking number.</div>
                               </td>
                             </tr>
                             <!-- Address Section -->
@@ -365,7 +370,6 @@
                                   <ul style="padding-left: 20px;text-align: left;">
                                     <li>Deliveries are placed at ground level (entrance, lift lobby, or foot of stairs).</li><br>
                                     <li>Shipments may arrive in multiple packages across multiple days. Please keep an eye on your tracking link to avoid missed deliveries.</li><br>
-                                    <li>For delivery inquiries, visit the <a href="https://ascap.com.au/connect/" style="color: #9BA3C1;"><u>Active Supply Chains website</u></a> or call <a style="color: #F7F3E7 !important; text-decoration: none !important;">1300 272 270</a> with your tracking number.</li><br>
                                     <li>Any shipment modifications from here will incur a 20–30% restocking fee.</li><br>
                                   </ul> Your order is almost home—thank you for choosing Castlery.<br /> We can’t wait for you to unbox it. <br />
                                   <br /> P.S. We’d love to see your new piece at home! Tag us <a style="color: #9BA3C1;text-decoration: underline !important;">@castleryau</a> to share your space.
@@ -453,7 +457,7 @@
     </div>
     <!--[if mso | IE]></td></tr></table><![endif]-->
     <!-- Footer Section -->
-<include path="../components/footers/au.html" />
+    <#include "footer.html" />
     <!--[if mso | IE]></td></tr></table><![endif]-->
   </div>
 </body>

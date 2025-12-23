@@ -109,7 +109,7 @@
         <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="15px 0px">
           Good news! Your shipment has left our warehouse and is on its way to you. You can track it anytime with the details below:​
         </mj-text>
-        <mj-text font-size="12px" color="#F7F3E7" align="center" line-height="1.2" padding="18px 0px 14px" font-family="SanomatSans,'Century Gothic','CenturyGothic','AppleGothic',sans-serif" letter-spacing="1px" >
+        <mj-text font-size="12px" color="#F7F3E7" align="center" line-height="1.2" padding="18px 0px 14px" font-family="SanomatSans,'Century Gothic','CenturyGothic','AppleGothic',sans-serif" letter-spacing="1px">
           TRACK ORDER
         </mj-text>
         <mj-text font-size="25px" color="#F7F3E7" align="center" line-height="1.2" padding="0 0px 25px">
@@ -117,6 +117,9 @@
           <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine>
             #${trackingLine.custrecord_cslr_tracking_number}
           </#list>
+        </mj-text>
+        <mj-text font-size="17px" align="center" color="#F7F3E7" padding="0 0px 25px">
+          For delivery enquiries, reach out directly to our delivery partner at <a style="color: #9BA3C1 !important;text-decoration: underline !important;">To My Door</a> or call <a style="color: #9BA3C1 !important; text-decoration: none !important;">03 9133 4049</a> with your tracking number.
         </mj-text>
         <!-- Address Section -->
 
@@ -200,7 +203,6 @@
           <ul style="padding-left: 20px;text-align: left;">
             <li>Deliveries are placed at ground level (entrance, lift lobby, or foot of stairs).</li><br>
             <li>Shipments may arrive in multiple packages across multiple days. Please keep an eye on your tracking link to avoid missed deliveries.</li><br>
-            <li>For delivery inquiries, visit the <a href="https://ascap.com.au/connect/" style="color: #9BA3C1;"><u>Active Supply Chains website</u></a> or call <a style="color: #F7F3E7 !important; text-decoration: none !important;">1300 272 270</a> with your tracking number.</li><br>
             <li>Any shipment modifications from here will incur a 20–30% restocking fee.</li><br>
           </ul>
           Your order is almost home—thank you for choosing Castlery.<br />
