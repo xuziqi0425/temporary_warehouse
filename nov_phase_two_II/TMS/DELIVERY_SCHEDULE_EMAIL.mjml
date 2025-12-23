@@ -1,0 +1,179 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: '';
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      .tableLabel {
+        vertical-align: top;
+        font-size: 12px;
+        font-family: 'SanomatSans', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+        padding-bottom: 10px;
+        letter-spacing: 0.15em;
+        font-weight: 400;
+        color: #D15D27;
+      }
+
+      @media only screen and (max-width: 480px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: inline;
+        }
+
+        .mobile-ul {
+          padding-left: 13px;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-size="16px" align="center" font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" color="#F7F3E7" line-height="1.2" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section background-color="#773925" padding="33px 0 10px">
+      <mj-column>
+        <mj-image padding-bottom="59px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-text font-size="34px" color="#F7F3E7" align="center">
+          Your order is ready to go.
+        </mj-text>
+        <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
+          Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>,
+        </mj-text>
+        <mj-text color="#F7F3E7" align="center" padding-bottom="21px">
+          Your order is ready for dispatch.​ Book a delivery slot below to receive it!​
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="14px 0 0px" background-color="#F6F3E7">
+      <mj-column background-color="#F6F3E7">
+        <mj-text font-size="27px" align="center" color="#3A131F" padding="16px 0 1px">
+          Order #<span th:text="${event.params.salesOrderNumber}"></span>
+        </mj-text>
+        <mj-text font-size="16px" align="center" color="#3A131F">
+          Shipment #<span th:text="${event.params.fulfillmentOrderNumber}"></span>
+        </mj-text>
+        <mj-button href="https://www.castlery.com/sg/delivery" background-color="transparent" border="1px solid " width="260px" height="27px" border-radius="2px" padding="16px 10px 28px ">
+          <span style="font-size: 12px;color: #3A131F;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;">SCHEDULE DELIVERY</span>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="28px 20px 7px">
+          You can schedule delivery anytime from 4 business days up to 2 months ahead. For dates beyond 2 months, you’ll need to wait until they fall within that window before booking.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding="27px 0 0px">
+          Good to know
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="left" padding="14px 36px 35px 36px">
+          <ul class="mobile-ul">
+            <li>
+              Delivery slots are subject to availability on a first-come first-served basis.
+            </li>
+            <br>
+            <li>
+              If you'd like to reschedule your delivery, you can do so via the link above.
+            </li>
+            <br>
+            <li>
+              To avoid extra fees, any scheduling changes must be made at least 5 business days (Mon-Fri, 10am-6pm) before the scheduled delivery date. For more details, please read our <a href="https://www.castlery.com/sg/sales-and-refunds" target="_blank" style="color:#bf522b">Terms and Conditions</a>.
+            </li>
+
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- Divider -->
+    <mj-section background-color="#773925" padding="0 0 25px">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" padding-top="0" />
+      </mj-column>
+    </mj-section>
+    <!-- Footer Section -->
+    <mj-section background-color="#773925" padding="0">
+      <mj-column>
+        <mj-text align="center">
+          <a href="http://www.instagram.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
+          </a>
+          <a href="https://www.facebook.com/CastlerySG" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
+          </a>
+          <a href="http://www.pinterest.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+            <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#773925" padding="25px 0 10px">
+      <mj-column>
+        <mj-text font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em" line-height="1.5">
+          <a href="https://www.castlery.com/sg/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">PRIVACY POLICY</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <a href="https://www.castlery.com/sg/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">CONTACT US</a>
+          <span style="color: #dbcfb5; padding: 0 5px"> | </span>
+          <span style="white-space: nowrap;">
+            <a href="https://www.castlery.com/sg/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">REFER A FRIEND</a>
+          </span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- <mj-section background-color="#773925" padding="0 0 16px">
+      <mj-column>
+        <mj-text font-size="13px" color="#F7F3E7" align="center" line-height="1.2">
+          Mailing Address: 1 Giltspur Street Farringdon, London United Kingdom, EC1A 9DD
+        </mj-text>
+      </mj-column>
+    </mj-section> -->
+
+    <mj-section background-color="#773925" padding="0 0 52px">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/v1760003274/email/template-v-update-last-bottom.png" width="98px" align="center" />
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
