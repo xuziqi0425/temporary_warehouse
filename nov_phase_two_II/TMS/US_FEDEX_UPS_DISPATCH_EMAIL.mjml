@@ -104,7 +104,7 @@
     <mj-section css-class="bottom-text" background-color="#773925">
       <mj-column css-class="mid-padding">
         <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
-          Hi <span th:text="${data.consigneeFirstName}">***</span>,
+          Hi <span th:text="${data.customerFirstname}">***</span><span th:text="${data.customerLastname}"></span>,
         </mj-text>
         <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2">
           Your order is packed, loaded, and making its way to you with FedEx. It won’t be long before it’s at your door.

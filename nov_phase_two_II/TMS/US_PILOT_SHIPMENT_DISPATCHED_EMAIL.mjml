@@ -101,7 +101,7 @@
     <mj-section css-class="bottom-text" background-color="#773925">
       <mj-column padding="0">
         <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="15px 0 14px">
-          Hi <span th:text="${data.consigneeFirstName}">***</span>,
+          Hi <span th:text="${data.customerFirstname}">***</span>,
         </mj-text>
         <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="15px 0px">
           Great news—your order has shipped! It’s now with our partner Maersk and on its way to the final delivery terminal. Depending on your address, it may ship from Los Angeles, CA or Edison, NJ warehouse.
