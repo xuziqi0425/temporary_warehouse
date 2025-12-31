@@ -188,7 +188,7 @@
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:32px 0 14px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1.2;text-align:center;color:#9BA3C1;">Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${data.customerLastname}"></span>,</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1.2;text-align:center;color:#9BA3C1;">Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${event.params.customerName}"></span>,</div>
                       </td>
                     </tr>
                     <tr>
@@ -231,7 +231,7 @@
                           <tbody>
                             <tr>
                               <td align="center" bgcolor="transparent" role="presentation" style="border:1px solid ;border-radius:2px;cursor:auto;height:27px;mso-padding-alt:10px 25px;background:transparent;" valign="middle">
-                                <a href="https://www.castlery.com/sg/delivery" style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;" target="_blank">
+                                <a href="${{event.params.scheduleLink}}" style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;" target="_blank">
                                   <span style="font-size: 12px;color: #3A131F;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;">SCHEDULE DELIVERY</span>
                                 </a>
                               </td>
