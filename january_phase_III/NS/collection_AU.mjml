@@ -1,0 +1,236 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: '';
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      a {
+        color: #D25C1B;
+        cursor: pointer;
+      }
+
+
+      .bottom-text {
+        padding: 0 76px 21px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: inline;
+        }
+
+        .bottom-text {
+          padding: 0 25px 21px;
+        }
+
+        .mobile-ul {
+          padding-left: 13px;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section background-color="#773925" padding="33px 0 0">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-text font-size="27px" color="#9BA3C1" font-style="italic" align="center">
+          Hi ${customer.firstname},
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 20px 0" line-height="1.2">
+          Good news! Your item(s) have arrived at our warehouse and are ready for collection.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- order details -->
+    <mj-section padding="31px 0 1px">
+      <mj-column background-color="#F6F3E7" padding-top="20px">
+        <mj-text font-size="27px" align="center" color="#3A131F" padding="0">
+          Order #${transaction.custbody_cslr_sales_order_number}
+        </mj-text>
+        <mj-text font-size="16px" align="center" color="#3A131F">
+          Shipment #${transaction.tranid}
+        </mj-text>
+        <!-- Order Items Table -->
+        <mj-include path="../../nov_phase_two_II/components/itemTable.mjml" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0px 0 20px">
+      <mj-column background-color="#F6F3E7" padding-top="20px">
+        <mj-raw>
+          <tr>
+            <td align="left" style="font-size:0px;padding:15px 20px 30px;word-break:break-word;">
+              <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                <colgroup>
+                  <col style="width: 110px" />
+                  <col />
+                  <col style="width: 110px" />
+                </colgroup>
+                <!-- Table Header -->
+                <tr>
+                  <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+                    TOTAL NO. OF PACKAGES </th>
+                  <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+                    VOLUME</th>
+                  <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
+                    WEIGHT </th>
+                </tr>
+                <#list transaction.item as itemLine>
+                  <tr style="font-size: 16px;text-align: center;color: #3A131F;">
+                    <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                      1
+                    </td>
+                    <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> 10 </td>
+                    <td align="center" padding="0 5px" valign="top"> 10000000 kg </td>
+                  </tr>
+                </#list>
+              </table>
+            </td>
+          </tr>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+    <!-- Address Section -->
+    <mj-section padding="14px 0 16px" background-color="#773925">
+      <mj-column>
+        <mj-table width="100%" padding="0 31px">
+          <tr class='desktop-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                YOUR DETAILS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
+                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a><br />
+                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone} <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                    <br />
+                    <span style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_alternative_phone}</span>
+                  </#if> </a>
+              </div>
+            </td>
+            <td style="width: 4%;">&nbsp;</td>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                COLLECTION ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                ${transaction.custbody_cslr_address1}<br />
+                <#if transaction.custbody_cslr_address2?length!=0>
+                  ${transaction.custbody_cslr_address2}<br />
+                </#if>${transaction.custbody_cslr_city}
+                ${transaction.custbody_cslr_zip}
+              </div>
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                YOUR DETAILS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
+                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a><br />
+                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone} <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                    <br />
+                    <span style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_alternative_phone}</span>
+                  </#if> </a>
+              </div>
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="height: 10px;">&nbsp;</td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                COLLECTION ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                ${transaction.custbody_cslr_address1}<br />
+                <#if transaction.custbody_cslr_address2?length!=0>
+                  ${transaction.custbody_cslr_address2}<br />
+                </#if>${transaction.custbody_cslr_city}
+                ${transaction.custbody_cslr_zip}
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section css-class="bottom-text" background-color="#773925">
+      <mj-column>
+
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
+          Before you collect
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0 30px" line-height="1.2">
+          <ul class="mobile-ul" style="text-align: left;">
+            <li>
+              Please give us 48 hours’ notice <br /><br />
+            </li>
+            <li>
+              Reply to this email or contact <a href="mailto:help.au@castlery.com" style="color:#9BA3C1;text-decoration: none;">help.au@castlery.com</a> to confirm your collection details <br /><br />
+            </li>
+            <li>
+              If you’ve already shared your collection details, you’re all set</li>
+          </ul>
+        </mj-text>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
+          When you arrive
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0 30px" line-height="1.2">
+          <ul class="mobile-ul" style="text-align: left;">
+            <li>
+              Bring the attached document for verification <br /><br />
+            </li>
+            <li>
+              Warehouse hours: Monday–Friday, 8:00 AM to 5:00 PM
+            </li>
+
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-include path="../../nov_phase_two_II/components/footers/sg.mjml" />
+  </mj-body>
+</mjml>

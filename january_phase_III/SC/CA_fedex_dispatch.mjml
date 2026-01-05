@@ -1,0 +1,163 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: '';
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      a {
+        color: #D25C1B;
+        cursor: pointer;
+      }
+
+
+      .bottom-text {
+        box-sizing: border-box;
+        padding: 0 30px 21px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: inline;
+        }
+
+        .bottom-text {
+          padding: 0 25px 21px;
+        }
+
+        .mobile-ul {
+          padding-left: 13px;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section background-color="#773925" padding="33px 0 0">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-text font-family="'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;" font-size="37px" color="#f7f3e7" align="center" line-height="1.2">
+          It’s on its way!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- order details -->
+    <mj-section padding="31px 0 20px">
+      <mj-column background-color="#F6F3E7" padding-top="20px">
+        <mj-text font-size="27px" align="center" color="#3A131F" padding="0">
+          Order #${transaction.custbody_cslr_sales_order_number}
+        </mj-text>
+        <mj-text font-size="16px" align="center" color="#3A131F">
+          Shipment #${transaction.tranid}
+        </mj-text>
+        <!-- Order Items Table -->
+        <mj-include path="../../nov_phase_two_II/components/itemTable.mjml" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Address Section -->
+    <mj-section css-class="bottom-text" background-color="#773925">
+      <mj-column>
+        <mj-text font-size="27px" color="#9BA3C1" font-style="italic" align="center">
+          Hi ${customer.firstname},
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 20px 0" line-height="1.2">
+          Your order is packed, loaded, and making its way to you with FedEx.<br />
+          It won’t be long before it’s at your door.
+          <br /><br />
+          <ul class="mobile-ul" style="text-align: left;">
+            <li>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna<br /><br />
+            </li>
+            <li>
+              Aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea<br /><br />
+
+            </li>
+            <li>
+              Commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla<br /><br />
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+            </li>
+          </ul>
+        </mj-text>
+        <mj-button href="https://www.castlery.com/sg/help-center" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 28px ">
+          <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+        </mj-button>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
+          A few things to note
+        </mj-text>
+
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0 20px" line-height="1.2">
+          <ul class="mobile-ul" style="text-align: left;">
+            <li>
+              Your delivery is handled by FedEx. For tracking, delivery updates, or special requests, use FedEx Delivery Manager to manage your delivery directly.<br /><br />
+            </li>
+            <li>
+              If you’re not home at delivery, FedEx may leave your item safely at your door as part of their standard process.
+            </li>
+          </ul>
+          Your order is almost home—thank you for choosing Castlery. We can’t wait for you to unbox it.
+          <br /><br />
+          P.S. We’d love to see your new piece at home! Tag us <a href="https://www.instagram.com/castlery/" style="color:#9BA3C1;text-decoration: underline;">@castlery</a> to share your space.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" background-color="#773925">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" padding="0 30px 0" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 0 25px" background-color="#773925">
+      <mj-column>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="28px">
+          Any questions?
+        </mj-text>
+        <mj-button href="https://www.castlery.com/sg/help-center" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 28px ">
+          <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> READ OUR FAQ </span>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-include path="../../nov_phase_two_II/components/footers/sg.mjml" />
+  </mj-body>
+</mjml>
