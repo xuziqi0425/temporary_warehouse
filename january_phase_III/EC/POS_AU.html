@@ -137,7 +137,21 @@
       padding: 20px 76px;
     }
 
+    .mobile-table-padding {
+      word-break: break-word;
+      padding: 32px 60px 40px !important;
+    }
+
     @media only screen and (max-width: 600px) {
+
+      /* Scale down all text on small screens - 缩小所有文字一半 */
+      /* 方法1: 使用zoom属性缩放（某些浏览器支持） */
+      /*body {
+          width: 680px;
+          transform-origin: 0 0;
+
+          transform: scale(calc(100vw / 680));
+        }*/
       .desktop-text {
         display: '';
       }
@@ -152,6 +166,23 @@
 
       .mobile-ul {
         padding-left: 13px;
+      }
+
+      .last-section-padding {
+        padding: 0 !important;
+      }
+
+      .mobile-table-padding {
+        word-break: break-word;
+        padding: 32px 25px 40px !important;
+      }
+
+      .quotation-table-padding {
+        padding: 24px 32px 0;
+      }
+
+      .header-padding {
+        padding: 17px 20px 0 !important;
       }
     }
 
@@ -190,7 +221,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:17px 100px 0;word-break:break-word;">
+                      <td align="center" class="header-padding" style="font-size:0px;padding:17px 100px 0;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">Your quotation is ready—you’ll find the breakdown of items, pricing, and delivery details below.</div>
                       </td>
                     </tr>
@@ -216,7 +247,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tbody>
                     <tr>
-                      <td style="background-color:#e4ddca;vertical-align:top;padding:24px 60px 0;">
+                      <td style="background-color:#e4ddca;vertical-align:top;padding:24px 30px 0;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
                           <tbody>
                             <tr>
@@ -235,17 +266,17 @@
                                   <tr style="font-size: 12px;text-align: center;color: #3A131F;">
                                     <td align="left" padding-right="40px" valign="bottom" style="color: #3A131F !important;line-height:1.2"> Castlery Pty Ltd Address line Address line Address </td>
                                     <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> </td>
-                                    <td align="left" valign="bottom">
+                                    <td align="right" valign="bottom">
                                       <mj-text>
-                                        <span style="color: #D15D27;font-size:9px;padding-right:30px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">QUOTATION NO.</span> <span style="color: #3A131F;">XXXXXXXXXX</span>
+                                        <span style="color: #D15D27;font-size:9px;padding-right:30px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">QUOTATION NO.</span> <span style="color: #3A131F;width: 100px;display:inline-block;">XXXXXXXXXX</span>
                                       </mj-text>
                                       <br />
                                       <mj-text style="display:inline-block;padding-top:5px;">
-                                        <span style="color: #D15D27;line-height:22px;font-size:9px;padding-right:30px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">QUOTATION DATE</span> <span style="color: #3A131F;">XXXXXXXXXX</span>
+                                        <span style="color: #D15D27;line-height:1;font-size:9px;padding-right:30px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">QUOTATION DATE</span> <span style="color: #3A131F;width: 100px;display:inline-block;">XXXXXXXXXX</span>
                                       </mj-text>
                                       <br />
                                       <mj-text style="display:inline-block;padding-top:5px;">
-                                        <span style="color: #D15D27;line-height:22px;font-size:9px;padding-right:30px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">QUOTATION EXPIRY</span> <span style="color: #3A131F;">X days</span>
+                                        <span style="color: #D15D27;line-height:1;font-size:9px;padding-right:30px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">QUOTATION EXPIRY</span> <span style="color: #3A131F;width: 100px;display:inline-block;">X days</span>
                                       </mj-text>
                                     </td>
                                   </tr>
@@ -724,7 +755,7 @@
       >
         <tbody>
           <tr>
-                <td align="left" style="font-size:0px;padding:32px 60px 40px;word-break:break-word;">
+                <td align="left"  class="mobile-table-padding">
                 <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-size:13px;table-layout:auto;width:100%;border:none;">
                     <colgroup>
                         <col style="width: 50%" />
@@ -746,21 +777,38 @@
                     </tr>
                     <tr style="font-size: 16px;text-align: center;color: #3A131F;">
                         <td align="left"  valign="top" style="line-height: 1.2;color: #3A131F ;padding:10px 10px;background-color: #f6f1e5;"> 
-                        <mj-text style="text-align: left;">
-                            <span style="color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;width: 100px;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; ">BANK</span> <span style="color: #3A131F;font-size: 12px;">Westpac ​</span>
-                        </mj-text>
-                        <br />
-                        <mj-text style="display:inline-block;padding-top:5px;text-align: left;">
-                        <span style="color: #D15D27;line-height:22px;font-size:9px;padding-right:15px;display:inline-block;width: 100px;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; ">ACCOUNT NAME</span> <span style="color: #3A131F;font-size: 12px;">Castlery Pty Ltd ​</span>
-                        </mj-text>
-                        <br />
-                        <mj-text style="display:inline-block;padding-top:5px;text-align: left;">
-                        <span style="color: #D15D27;line-height:22px;font-size:9px;padding-right:15px;display:inline-block;width: 100px;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; ">BSB</span> <span style="color: #3A131F;font-size: 12px;">032-003 ​</span>
-                        </mj-text>
-                        <br />
-                         <mj-text style="display:inline-block;padding-top:5px;text-align: left;">
-                        <span style="color: #D15D27;line-height:22px;font-size:9px;padding-right:15px;display:inline-block;width: 100px;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; ">ACC</span> <span style="color: #3A131F;font-size: 12px;">525-888</span>
-                        </mj-text>
+                       <table>
+                       <colgroup>
+                        <col style="width: 85px !important" />
+                        <col />
+                       </colgroup>
+                       <tr>
+                        <td style="width: 70px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          BANK
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">Westpac ​</td>
+                       </tr>
+                       <tr>
+                        <td  style="width: 70px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          ACCOUNT NAME
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">Castlery Pty Ltd ​</td>
+                       </tr>
+                       <tr>
+                        <td  style="width: 70px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          BSB
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">032-003 ​</td>
+                       </tr>
+                       <tr>
+                        <td  style="width: 70px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          ACC
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">525-888</td>
+                       </tr>
+                       </table>
+
+               
                         </td>
                         <td align="center" valign="top" style="padding:0 10px">  </td>
                     </tr>
@@ -812,7 +860,7 @@
           
               <tr>
                 <td
-                   align="center" style="font-size:0px;padding:0 100px;word-break:break-word;"
+                   align="center" class="last-section-padding" style="font-size:0px;padding:0 100px;word-break:break-word;"
                 >
                   
       <div
