@@ -1,0 +1,189 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: '';
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      a {
+        color: #D25C1B;
+        cursor: pointer;
+      }
+
+
+      .bottom-text {
+        padding: 0 76px 21px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .desktop-text {
+          display: none;
+        }
+
+        .mobile-text {
+          display: inline;
+        }
+
+        .bottom-text {
+          padding: 0 25px 21px;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section background-color="#773925" padding="33px 0 0">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" padding-bottom="38px" />
+        <mj-text font-size="27px" color="#9BA3C1" font-style="italic" align="center">
+          Hi ${customer.firstname},
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="17px 20px 0" line-height="1.2">
+        Your collection slot is confirmed. Here’s a quick check of what’s prepared for you.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- order details -->
+    <mj-section padding="31px 0 20px" >
+      <mj-column background-color="#F6F3E7" padding-top="20px">
+        <mj-text font-size="27px" color="#3A131F" align="center">
+          [DD Month YYYYY, XX:XX pm — XX:XX pm]
+        </mj-text>
+
+        <mj-text font-size="27px" align="center" color="#3A131F" padding="23px 0 0">
+          Order #${transaction.custbody_cslr_sales_order_number}
+        </mj-text>
+        <mj-text font-size="16px" align="center" color="#3A131F">
+          Shipment #${transaction.tranid}
+        </mj-text>
+        <!-- Order Items Table -->
+        <mj-include path="../../nov_phase_two_II/components/itemTable.mjml" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Address Section -->
+    <mj-section padding="20px 0 25px" background-color="#773925">
+      <mj-column>
+        <mj-table width="100%" padding="0 31px">
+          <tr class='desktop-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                YOUR DETAILS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
+                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a><br />
+                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone} <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                    <br />
+                    <span style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_alternative_phone}</span>
+                  </#if> </a>
+              </div>
+            </td>
+            <td style="width: 4%;">&nbsp;</td>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                COLLECTION ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+               49B Nanyang Valley, #32-D​ Nanyang Valley Apartment Units 49/49​ Singapore 639703
+              </div>
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                YOUR DETAILS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
+                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a><br />
+                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone} <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                    <br />
+                    <span style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_alternative_phone}</span>
+                  </#if> </a>
+              </div>
+            </td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="height: 10px;">&nbsp;</td>
+          </tr>
+          <tr class='mobile-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                COLLECTION ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+               49B Nanyang Valley, #32-D​ Nanyang Valley Apartment Units 49/49​ Singapore 639703
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section css-class="bottom-text" background-color="#773925">
+      <mj-column>
+
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
+          Need anything?
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0 30px" line-height="1.2">
+
+          If you have any concerns or special requests, just reach out. You can also find more details in our <a href="https://www.castlery.com/sg/terms-and-conditions" target="_blank" style="color:#9BA3C1">Terms & Conditions</a>.
+
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+     <mj-section padding="0" background-color="#773925">
+      <mj-column>
+        <mj-divider border-color="#f7f3e7" border-width="1px" padding="0 30px 0" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 0 25px" background-color="#773925">
+      <mj-column>
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="50px">
+        Any questions?
+        </mj-text>
+        <mj-button href="https://www.castlery.com/sg/help-center" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 28px ">
+          <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> READ OUR FAQ </span>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-include path="../../nov_phase_two_II/components/footers/sg.mjml" />
+  </mj-body>
+</mjml>

@@ -43,10 +43,22 @@
 
 
       .bottom-text {
-        padding: 0 76px 21px;
+        padding: 0 46px 21px;
+      }
+
+      .top-text {
+        padding: 17px 105px 0 !important;
       }
 
       @media only screen and (max-width: 600px) {
+        .top-text {
+          padding: 17px 40px 0 !important;
+        }
+
+        .bottom-title {
+          padding-top: 13px !important;
+        }
+
         .desktop-text {
           display: none;
         }
@@ -54,13 +66,8 @@
         .mobile-text {
           display: inline;
         }
-
         .bottom-text {
           padding: 0 25px 21px;
-        }
-
-        .mobile-ul {
-          padding-left: 13px;
         }
       }
     </mj-style>
@@ -72,19 +79,19 @@
     <!-- header -->
     <mj-section background-color="#773925" padding="33px 0 0">
       <mj-column>
-        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" padding-bottom="38px" />
         <mj-text font-size="27px" color="#9BA3C1" font-style="italic" align="center">
           Hi ${customer.firstname},
         </mj-text>
-        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 20px 0" line-height="1.2">
+        <mj-text font-size="16px" color="#F7F3E7" align="center" line-height="1.2" css-class="top-text">
           Good news! Your item(s) have arrived at our warehouse and are ready for collection.
         </mj-text>
       </mj-column>
     </mj-section>
 
     <!-- order details -->
-    <mj-section padding="31px 0 1px">
-      <mj-column background-color="#F6F3E7" padding-top="20px">
+    <mj-section padding="40px 0 1px">
+      <mj-column background-color="#F6F3E7" padding-top="30px">
         <mj-text font-size="27px" align="center" color="#3A131F" padding="0">
           Order #${transaction.custbody_cslr_sales_order_number}
         </mj-text>
@@ -99,20 +106,20 @@
       <mj-column background-color="#F6F3E7" padding-top="20px">
         <mj-raw>
           <tr>
-            <td align="left" style="font-size:0px;padding:15px 20px 30px;word-break:break-word;">
+            <td align="left" style="font-size:0px;padding:9px 20px 40px;word-break:break-word;">
               <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                 <colgroup>
-                  <col style="width: 110px" />
+                  <col style="width: 103px" />
                   <col />
                   <col style="width: 110px" />
                 </colgroup>
                 <!-- Table Header -->
                 <tr>
-                  <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+                  <th style="line-height: 1.2;text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
                     TOTAL NO. OF PACKAGES </th>
-                  <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+                  <th style="line-height: 1.2;text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
                     VOLUME</th>
-                  <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
+                  <th style="line-height: 1.2;text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
                     WEIGHT </th>
                 </tr>
                 <#list transaction.item as itemLine>
@@ -131,7 +138,7 @@
       </mj-column>
     </mj-section>
     <!-- Address Section -->
-    <mj-section padding="14px 0 16px" background-color="#773925">
+    <mj-section padding="30px 0 25px" background-color="#773925">
       <mj-column>
         <mj-table width="100%" padding="0 31px">
           <tr class='desktop-text'>
@@ -154,11 +161,7 @@
                 COLLECTION ADDRESS
               </div>
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
-                ${transaction.custbody_cslr_address1}<br />
-                <#if transaction.custbody_cslr_address2?length!=0>
-                  ${transaction.custbody_cslr_address2}<br />
-                </#if>${transaction.custbody_cslr_city}
-                ${transaction.custbody_cslr_zip}
+                ACR Supply Partner Pty Ltd​ 50 Old Wallgrove Road​ Eastern Creek NSW 2766
               </div>
             </td>
           </tr>
@@ -186,11 +189,7 @@
                 COLLECTION ADDRESS
               </div>
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
-                ${transaction.custbody_cslr_address1}<br />
-                <#if transaction.custbody_cslr_address2?length!=0>
-                  ${transaction.custbody_cslr_address2}<br />
-                </#if>${transaction.custbody_cslr_city}
-                ${transaction.custbody_cslr_zip}
+                ACR Supply Partner Pty Ltd​ 50 Old Wallgrove Road​ Eastern Creek NSW 2766
               </div>
             </td>
           </tr>
@@ -200,11 +199,11 @@
     <mj-section css-class="bottom-text" background-color="#773925">
       <mj-column>
 
-        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0" css-class="bottom-title">
           Before you collect
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0 30px" line-height="1.2">
-          <ul class="mobile-ul" style="text-align: left;">
+          <ul style="text-align: left;padding-left: 0;">
             <li>
               Please give us 48 hours’ notice <br /><br />
             </li>
@@ -215,11 +214,11 @@
               If you’ve already shared your collection details, you’re all set</li>
           </ul>
         </mj-text>
-        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="0">
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="40px" css-class="bottom-title">
           When you arrive
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0 30px" line-height="1.2">
-          <ul class="mobile-ul" style="text-align: left;">
+          <ul style="text-align: left;padding-left: 0;">
             <li>
               Bring the attached document for verification <br /><br />
             </li>

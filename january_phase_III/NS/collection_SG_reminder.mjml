@@ -68,11 +68,11 @@
     <!-- header -->
     <mj-section background-color="#773925" padding="33px 0 0">
       <mj-column>
-        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" padding-bottom="38px" />
         <mj-text font-size="27px" color="#9BA3C1" font-style="italic" align="center">
           Hi ${customer.firstname},
         </mj-text>
-        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="14px 20px 0" line-height="1.2">
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="17px 20px 0" line-height="1.2">
           Here’s a reminder of your upcoming collection. Everything is set for the date and time mentioned below.
         </mj-text>
       </mj-column>
@@ -85,7 +85,7 @@
           [DD Month YYYYY, XX:XX pm — XX:XX pm]
         </mj-text>
 
-        <mj-text font-size="27px" align="center" color="#3A131F" padding="0">
+        <mj-text font-size="27px" align="center" color="#3A131F" padding="23px 0 0">
           Order #${transaction.custbody_cslr_sales_order_number}
         </mj-text>
         <mj-text font-size="16px" align="center" color="#3A131F">
@@ -97,7 +97,7 @@
     </mj-section>
 
     <!-- Address Section -->
-    <mj-section padding="14px 0 16px" background-color="#773925">
+    <mj-section padding="20px 0 25px" background-color="#773925">
       <mj-column>
         <mj-table width="100%" padding="0 31px">
           <tr class='desktop-text'>
@@ -120,11 +120,7 @@
                 COLLECTION ADDRESS
               </div>
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
-                ${transaction.custbody_cslr_address1}<br />
-                <#if transaction.custbody_cslr_address2?length!=0>
-                  ${transaction.custbody_cslr_address2}<br />
-                </#if>${transaction.custbody_cslr_city}
-                ${transaction.custbody_cslr_zip}
+               49B Nanyang Valley, #32-D​ Nanyang Valley Apartment Units 49/49​ Singapore 639703
               </div>
             </td>
           </tr>
@@ -152,11 +148,7 @@
                 COLLECTION ADDRESS
               </div>
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
-                ${transaction.custbody_cslr_address1}<br />
-                <#if transaction.custbody_cslr_address2?length!=0>
-                  ${transaction.custbody_cslr_address2}<br />
-                </#if>${transaction.custbody_cslr_city}
-                ${transaction.custbody_cslr_zip}
+               49B Nanyang Valley, #32-D​ Nanyang Valley Apartment Units 49/49​ Singapore 639703
               </div>
             </td>
           </tr>
@@ -184,7 +176,7 @@
     </mj-section>
     <mj-section padding="0 0 25px" background-color="#773925">
       <mj-column>
-        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="28px">
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="50px">
         Any questions?
         </mj-text>
         <mj-button href="https://www.castlery.com/sg/help-center" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 28px ">

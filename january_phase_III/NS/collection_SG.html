@@ -119,59 +119,35 @@
       font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
     }
 
-    a {
-      color: #D25C1B;
-      cursor: pointer;
-      text-decoration: none;
+    /* 响应式文字显示 */
+    .desktop-text {
+      display: '';
     }
 
     .mobile-text {
       display: none;
     }
 
-    .desktop-text {
-      display: '';
+    a {
+      color: #D25C1B;
+      cursor: pointer;
     }
 
     .bottom-text {
-      padding: 0 76px 17px;
-    }
-
-    .text-faq-padding {
-      padding: 16px 30px 0px !important;
-    }
-
-    .text-padding {
-      padding: 0 20px !important;
-    }
-
-    .top-text {
-      padding: 0 120px !important;
+      padding: 0 76px 21px;
     }
 
     @media only screen and (max-width: 600px) {
-      .top-text {
-        padding: 12px 25px 23px !important;
-      }
-
-      .bottom-text {
-        padding: 0 15px 17px !important;
-      }
-
-      .text-faq-padding {
-        padding: 16px 5px 0px !important;
-      }
-
-      .text-padding {
-        padding: 10px 0 0 !important;
-      }
-
       .desktop-text {
         display: none;
       }
 
       .mobile-text {
-        display: table-row;
+        display: inline;
+      }
+
+      .bottom-text {
+        padding: 0 25px 21px;
       }
     }
 
@@ -186,13 +162,13 @@
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:33px 0 20px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:33px 0 0;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:48px;word-break:break-word;">
+                      <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:38px;word-break:break-word;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                           <tbody>
                             <tr>
@@ -205,13 +181,13 @@
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:0 0 14px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;font-style:italic;line-height:1;text-align:center;color:#9BA3C1;">Hi ${customer.firstname},</div>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:27px;font-style:italic;line-height:1;text-align:center;color:#9BA3C1;">Hi ${customer.firstname},</div>
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" class="top-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Thanks for your Castlery purchase. Your delivery slot has been reserved as follows:</div>
+                      <td align="center" style="font-size:0px;padding:17px 20px 0;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">Your collection slot is confirmed. Here’s a quick check of what’s prepared for you.</div>
                       </td>
                     </tr>
                   </tbody>
@@ -225,54 +201,130 @@
     </div>
     <!--[if mso | IE]></td></tr></table><![endif]-->
     <!-- order details -->
-    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#F6F3E7" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="background:#F6F3E7;background-color:#F6F3E7;margin:0px auto;max-width:680px;">
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F3E7;background-color:#F6F3E7;width:100%;">
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:680px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:14px 0 25px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:31px 0 20px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#F6F3E7;vertical-align:top;" width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:25px;line-height:1.2;text-align:center;color:#3A131F;">[DD Month YYYYY, XX:XX pm — XX:XX pm]</div>
+                      <td style="background-color:#F6F3E7;vertical-align:top;padding-top:20px;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:27px;line-height:1;text-align:center;color:#3A131F;">[DD Month YYYYY, XX:XX pm — XX:XX pm]</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="font-size:0px;padding:23px 0 0;word-break:break-word;">
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:27px;line-height:1;text-align:center;color:#3A131F;">Order #${transaction.custbody_cslr_sales_order_number}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1;text-align:center;color:#3A131F;">Shipment #${transaction.tranid}</div>
+                              </td>
+                            </tr>
+                            <!-- Order Items Table -->
+                            <tr>
+                              <td align="left" style="font-size:0px;padding:15px 20px 30px;word-break:break-word;">
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                  <colgroup>
+                                    <col style="width: 110px" />
+                                    <col />
+                                    <col style="width: 110px" />
+                                  </colgroup>
+                                  <!-- Table Header -->
+                                  <tr>
+                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM ID </th>
+                                    <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM NAME </th>
+                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> QUANTITY </th>
+                                  </tr>
+                                  <#list transaction.item as itemLine>
+                                    <tr style="font-size: 16px;text-align: center;color: #3A131F;">
+                                      <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                                        <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;"> ${itemLine.item} </a>
+                                      </td>
+                                      <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> ${itemLine.description} </td>
+                                      <td align="center" padding="0 5px" valign="top"> ${itemLine.quantity} </td>
+                                    </tr>
+                                  </#list>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </td>
                     </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+    <!-- Address Section -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:680px;" width="680" bgcolor="#773925" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#773925;background-color:#773925;margin:0px auto;max-width:680px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0 25px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
                     <tr>
                       <td align="left" style="font-size:0px;padding:0 31px;word-break:break-word;">
                         <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
-                          <#list transaction.item as itemLine>
-                            <#if itemLine.custcol_cslr_include_in_delay_email>
-                              <tr class='desktop-text'>
-                                <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
-                                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 14px;line-height: 1;"> YOUR DETAILS </div>
-                                  <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> [Name]<br /> [Email]<br /> [Contact Number] </div>
-                                </td>
-                                <td style="width: 4%;">&nbsp;</td>
-                                <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
-                                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 0.2em; margin-bottom: 14px;line-height: 1;"> COLLECTION ADDRESS </div>
-                                  <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> 49B Nanyang Valley, #32-DNanyang Valley Apartment Units 49/49Singapore 639703 </div>
-                                </td>
-                              </tr>
-                              <tr class='mobile-text'>
-                                <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
-                                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing:0.2em; margin-bottom: 16px;line-height: 1;"> YOUR DETAILS </div>
-                                  <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> [Name]<br /> [Email]<br /> [Contact Number] </div>
-                                </td>
-                              </tr>
-                              <tr class='mobile-text'>
-                                <td style="height: 10px;"> &nbsp; </td>
-                              </tr>
-                              <tr class='mobile-text'>
-                                <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:0 0 15px 0;">
-                                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 16px;line-height: 1;"> COLLECTION ADDRESS </div>
-                                  <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> 49B Nanyang Valley, #32-DNanyang Valley Apartment Units 49/49Singapore 639703 </div>
-                                </td>
-                              </tr>
-                            </#if>
-                          </#list>
+                          <tr class='desktop-text'>
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> YOUR DETAILS </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
+                                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a><br />
+                                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone} <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                                    <br />
+                                    <span style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_alternative_phone}</span>
+                                  </#if> </a>
+                              </div>
+                            </td>
+                            <td style="width: 4%;">&nbsp;</td>
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> COLLECTION ADDRESS </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> 49B Nanyang Valley, #32-D​ Nanyang Valley Apartment Units 49/49​ Singapore 639703 </div>
+                            </td>
+                          </tr>
+                          <tr class='mobile-text'>
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> YOUR DETAILS </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
+                                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a><br />
+                                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone} <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                                    <br />
+                                    <span style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_alternative_phone}</span>
+                                  </#if> </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class='mobile-text'>
+                            <td style="height: 10px;">&nbsp;</td>
+                          </tr>
+                          <tr class='mobile-text'>
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+                              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> COLLECTION ADDRESS </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> 49B Nanyang Valley, #32-D​ Nanyang Valley Apartment Units 49/49​ Singapore 639703 </div>
+                            </td>
+                          </tr>
                         </table>
                       </td>
                     </tr>
@@ -291,43 +343,18 @@
         <tbody>
           <tr>
             <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
-              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="text-padding-outlook" style="vertical-align:top;width:680px;" ><![endif]-->
-              <div class="mj-column-per-100 mj-outlook-group-fix text-padding" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Please confirm by <span style="color:#9BA3C1">[DATE]</span> before 5pm if this timing works for you.<br /> If we don’t hear back, your delivery will need to be rescheduled.</div>
+                      <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#F7F3E7;">Need anything?</div>
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:25px 10px 10px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:27px;line-height:1;text-align:center;color:#F7F3E7;">Before your delivery</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:10px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1;text-align:center;color:#F7F3E7;">To ensure a smooth delivery, please take a moment to review our <a href="https://www.castlery.com/sg/pages/delivery-faqs" style="color:#9BA3C1;text-decoration: underline;">delivery FAQ</a> for guidance, or refer to our <a href="https://www.castlery.com/sg/pages/terms-and-conditions" style="color:#9BA3C1;text-decoration: underline;">Terms & Conditions</a> for more details.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:40px 10px 10px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:27px;line-height:1;text-align:center;color:#F7F3E7;">For condominium deliveries</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:10px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1;text-align:center;color:#F7F3E7;">Your building management may require a delivery application form.<br /> You can find our delivery partner’s details here to assist with this process.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:40px 10px 10px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:27px;line-height:1;text-align:center;color:#F7F3E7;">Need help?</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:10px 10px 4px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1;text-align:center;color:#F7F3E7;">If you have any concerns or special requests, feel free to contact us at <a href="mailto:help.sg@castlery.com" style="color:#9BA3C1;">help.sg@castlery.com</a>.</div>
+                      <td align="center" style="font-size:0px;padding:0 30px;word-break:break-word;">
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">If you have any concerns or special requests, just reach out. You can also find more details in our <a href="https://www.castlery.com/sg/terms-and-conditions" target="_blank" style="color:#9BA3C1">Terms & Conditions</a>.</div>
                       </td>
                     </tr>
                   </tbody>
@@ -378,7 +405,7 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;padding-top:50px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#F7F3E7;">Got more questions?</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#F7F3E7;">Any questions?</div>
                       </td>
                     </tr>
                     <tr>

@@ -30,7 +30,7 @@
       a {
         color: #D25C1B;
         cursor: pointer;
-        text-decoration: none ;
+        text-decoration: none;
       }
 
       .mobile-text {
@@ -54,7 +54,14 @@
         padding: 0 20px !important;
       }
 
+      .top-text {
+        padding: 0 120px !important;
+      }
+
       @media only screen and (max-width: 600px) {
+        .top-text {
+          padding: 12px 25px 23px !important;
+        }
 
         .bottom-text {
           padding: 0 15px 17px !important;
@@ -65,8 +72,7 @@
         }
 
         .text-padding {
-
-          padding: 0 !important;
+          padding:10px 0 0 !important;
         }
 
         .desktop-text {
@@ -84,13 +90,13 @@
   </mj-head>
   <mj-body background-color="#773925" width="680px">
     <!-- header -->
-    <mj-section background-color="#773925" padding="33px 0 25px">
+    <mj-section background-color="#773925" padding="33px 0 20px">
       <mj-column>
-        <mj-image padding-bottom="53px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
-        <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
+        <mj-image padding-bottom="48px" src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" />
+        <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="0 0 14px">
           Hi ${customer.firstname},
         </mj-text>
-        <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2">
+        <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" css-class="top-text">
 
           Thanks for your Castlery purchase. Your delivery slot has been reserved as follows:
         </mj-text>
@@ -99,7 +105,7 @@
     <!-- order details -->
     <mj-section padding="14px 0 25px" background-color="#F6F3E7">
       <mj-column background-color="#F6F3E7">
-        <mj-text font-size="17px" color="#3A131F" align="center" line-height="1.2">
+        <mj-text font-size="25px" color="#3A131F" align="center" line-height="1.2">
 
           [DD Month YYYYY, XX:XX pm — XX:XX pm]
         </mj-text>
@@ -107,8 +113,8 @@
           <#list transaction.item as itemLine>
             <#if itemLine.custcol_cslr_include_in_delay_email>
               <tr class='desktop-text'>
-                <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;">
+                <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
+                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 14px;line-height: 1;">
                     YOUR DETAILS
                   </div>
                   <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
@@ -118,8 +124,8 @@
                   </div>
                 </td>
                 <td style="width: 4%;">&nbsp;</td>
-                <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;">
+                <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
+                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 0.2em; margin-bottom: 14px;line-height: 1;">
                     COLLECTION ADDRESS
                   </div>
                   <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
@@ -128,8 +134,8 @@
                 </td>
               </tr>
               <tr class='mobile-text'>
-                <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing:0.2em; margin-bottom: 26px;line-height: 1;">
+                <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
+                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing:0.2em; margin-bottom: 16px;line-height: 1;">
                     YOUR DETAILS
                   </div>
                   <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
@@ -146,8 +152,8 @@
                 </td>
               </tr>
               <tr class='mobile-text'>
-                <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 26px;line-height: 1;">
+                <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:0 0 15px 0;">
+                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 16px;line-height: 1;">
                     COLLECTION ADDRESS
                   </div>
                   <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
@@ -163,41 +169,41 @@
 
     <mj-section css-class="bottom-text" background-color="#773925">
       <mj-column css-class="text-padding">
-        <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2">
+        <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="10px">
           Please confirm by <span style="color:#9BA3C1">[DATE]</span> before 5pm if this timing works for you.<br />
           If we don’t hear back, your delivery will need to be rescheduled.
         </mj-text>
-        <mj-text font-size="27px" color="#F7F3E7" align="center" padding-top="20px">
+        <mj-text font-size="27px" color="#F7F3E7" align="center" padding="25px 10px 10px">
           Before your delivery
         </mj-text>
-        <mj-text font-size="17px" color="#F7F3E7" align="center" padding-top="20px">
+        <mj-text font-size="17px" color="#F7F3E7" align="center" padding="10px">
           To ensure a smooth delivery, please take a moment to review our <a href="https://www.castlery.com/sg/pages/delivery-faqs" style="color:#9BA3C1;text-decoration: underline;">delivery FAQ</a> for guidance, or refer to our <a href="https://www.castlery.com/sg/pages/terms-and-conditions" style="color:#9BA3C1;text-decoration: underline;">Terms & Conditions</a> for more details.
         </mj-text>
-        <mj-text font-size="27px" color="#F7F3E7" align="center" padding-top="20px">
+        <mj-text font-size="27px" color="#F7F3E7" align="center" padding="40px 10px 10px">
           For condominium deliveries
         </mj-text>
-        <mj-text font-size="17px" color="#F7F3E7" align="center" padding-top="20px">
+        <mj-text font-size="17px" color="#F7F3E7" align="center" padding="10px">
           Your building management may require a delivery application form.<br />
           You can find our delivery partner’s details here to assist with this process.
         </mj-text>
-        <mj-text font-size="27px" color="#F7F3E7" align="center" padding-top="20px">
+        <mj-text font-size="27px" color="#F7F3E7" align="center" padding="40px 10px 10px">
           Need help?
         </mj-text>
-        <mj-text font-size="17px" color="#F7F3E7" align="center" padding-top="20px">
+        <mj-text font-size="17px" color="#F7F3E7" align="center" padding="10px 10px 4px">
           If you have any concerns or special requests, feel free to contact us at <a href="mailto:help.sg@castlery.com" style="color:#9BA3C1;">help.sg@castlery.com</a>.
         </mj-text>
-        
+
       </mj-column>
     </mj-section>
-     <mj-section padding="0" background-color="#773925">
+    <mj-section padding="0" background-color="#773925">
       <mj-column>
         <mj-divider border-color="#f7f3e7" border-width="1px" padding="0 30px 0" />
       </mj-column>
     </mj-section>
     <mj-section padding="0 0 25px" background-color="#773925">
       <mj-column>
-        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="28px">
-         Got more questions?
+        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="50px">
+          Got more questions?
         </mj-text>
         <mj-button href="https://www.castlery.com/sg/help-center" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 28px ">
           <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> READ OUR FAQ </span>

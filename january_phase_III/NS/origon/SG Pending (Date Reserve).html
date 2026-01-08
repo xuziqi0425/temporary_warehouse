@@ -1,0 +1,211 @@
+
+ <!DOCTYPE html>
+<html>
+
+<head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+
+@font-face {
+font-family: "MinervaModern";
+src: url("https://res.cloudinary.com/castlery/raw/upload/v1635923096/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.eot"),
+url("https://res.cloudinary.com/castlery/raw/upload/v1635923099/email/fonts/MINERVAMODERN_WEB/MINERVAMODERNRegular.woff") format("woff");
+}
+</style>
+</head>
+
+<body>
+<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="center" bgcolor="#f2f2f2">
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; background-color: #ffffff"
+width="800">
+<tbody>
+<tr>
+<td align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="614"
+style="font-family: poppins, Arial, Helvetica, sans-serif;">
+<tbody>
+<!-- SG header without navigation.txt -->
+<#include "1092" /> <!-- Main -->
+<tr>
+<td align="center" style="vertical-align: top">
+<!-- Title -->
+<table>
+<tbody>
+<tr>
+<td height="20"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-family: MinervaModern, Arial, Helvetica, sans-serif;
+font-size: 26px;
+color: #424242;
+font-weight: 700;
+line-height: 36px;
+">Your delivery has been reserved!</td>
+</tr>
+<tr>
+<td height="20"> </td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr>
+<td height="20"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 14px;
+color: #424242;
+line-height: 24px;
+">Hi <span style="font-weight: 700">${customer.firstname}</span>,</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr>
+<td align="center" style="
+font-size: 14px;
+color: #424242;
+line-height: 1.5;
+">Thank you for your purchase with Castlery!<br>As requested, we have reserved a slot for you as
+follows:</td>
+</tr>
+<tr>
+<td height="25"> </td>
+</tr>
+</tbody>
+</table>
+
+<table width="80%" align="center"
+style="font-size: 13px; line-height: 1.5; text-align:center;">
+<tbody>
+<tr>
+<th style="background: #DBCFB5;color: rgb(66, 66, 66); width: 25%;">Delivery Date</th>
+<td>${transaction.custbody_cslr_scheduled_delivery_date}</td>
+</tr>
+<tr>
+<th style="background: #DBCFB5;color: rgb(66, 66, 66); width: 25%;">Customer</th>
+<td>${customer.firstname} ${customer.middlename} ${customer.lastname}</td>
+</tr>
+<tr>
+<th style="background: #DBCFB5;color: rgb(66, 66, 66); width: 25%;">Email</th>
+<td>${customer.email}</td>
+</tr>
+<tr>
+<th style="background: #DBCFB5;color: rgb(66, 66, 66); width: 25%;">Contact</th>
+<td>${transaction.custbody_cslr_phone}
+<#if transaction.custbody_cslr_alternative_phone?length!=0> /
+${transaction.custbody_cslr_alternative_phone}</#if>
+</td>
+</tr>
+<tr>
+<th style="background: #DBCFB5;color: rgb(66, 66, 66); width: 25%;">Address</th>
+<td>${transaction.custbody_cslr_address1}<#if
+transaction.custbody_cslr_address2?length!=0>, ${transaction.custbody_cslr_address2}
+</#if> ${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip}</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=" 40"> </td>
+</tr>
+<tr>
+<td align="center">
+<table width="614">
+<tbody>
+<tr>
+<td align="center" style="
+font-size: 14px;
+color: #424242;
+line-height: 1.5;
+padding-left: 20px;
+padding-right: 20px;
+">Please revert to us by <b><span
+style="color:#e74c3c;">${transaction.custbody_cslr_date_reserved_cut_off}</span>
+before
+5pm </b> on whether the reserved slot is convenient for you. Otherwise, we will not
+be able
+to process your delivery and a re-scheduling of delivery date will be required.<br />
+<br />
+To facilitate delivery of your furniture, please refer to the <strong style="">linked
+delivery
+FAQ below</strong> for useful information. As part of our COVID-19 safety measures,
+you may
+opt for <strong style="">contactless delivery</strong> and our delivery partners will
+place
+your unassembled item(s) at your doorstep upon arrival. To do so, please contact us at <span style="color: #A45B37;">help@castlery.com</span><br />
+<br />
+For deliveries to condominium, your management may require you to fill up an
+application form.
+You may find the details of our delivery partner <strong style=""><a
+href="https://6998539.app.netsuite.com/core/media/media.nl?id=201929&c=6998539&h=gJuKlpxhgd7NaqdjSYgZ32KTP2pNZWT2-aiUq_6-3vyVafV2&_xt=.pdf"
+target="_blank" style="color: #A45B37;">here</a>.</strong><br />
+<br />
+In light of the current COVID-19 situation and the regulations implemented, we would
+like to
+assure you that our delivery partners have taken necessary steps to ensure safety and
+minimize
+exposure and contact.<br />
+Delivery teams undergo temperature screening daily, practice good hygiene and ensure
+that
+masks are worn at all times, throughout the delivery.<br />
+<br />
+We will continue to follow recommended precautionary measures by health authorities
+and
+monitor the situation closely.<br />
+<br />
+Please feel free to contact us if there is any concerns or special requests with
+regards to
+your delivery.<br />
+<br />
+<strong style="">NOTE:</strong><br />
+<p style="font-style:italic;">For more details, refer to the <a
+href="https://6998539.app.netsuite.com/core/media/media.nl?id=1890488&c=6998539&h=q1ulzeESUNHRi4sB0092bmsPrqpcPGedENIhE2N8V7W2P979&_xt=.pdf"
+target="_blank" style="color: #A45B37">delivery FAQ</a> or visit our <a
+href="https://www.castlery.com/sg/sales-and-refunds" style="color: #A45B37;">Terms
+and Conditions</a>.</p>
+</td>
+</tr>
+<tr>
+<td height="30"> </td>
+</tr>
+<tr>
+<td align="center" style="
+font-size: 14px;
+color: #424242;
+line-height: 1.5;
+"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- SG FAQ.txt -->
+<#include "1095" />
+<!-- SG footer.txt -->
+<#include "1093" />
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+
+</html>

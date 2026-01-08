@@ -134,10 +134,22 @@
     }
 
     .bottom-text {
-      padding: 0 76px 21px;
+      padding: 0 46px 21px;
+    }
+
+    .top-text {
+      padding: 17px 105px 0 !important;
     }
 
     @media only screen and (max-width: 600px) {
+      .top-text {
+        padding: 17px 40px 0 !important;
+      }
+
+      .bottom-title {
+        padding-top: 13px !important;
+      }
+
       .desktop-text {
         display: none;
       }
@@ -148,10 +160,6 @@
 
       .bottom-text {
         padding: 0 25px 21px;
-      }
-
-      .mobile-ul {
-        padding-left: 13px;
       }
     }
 
@@ -172,7 +180,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:38px;word-break:break-word;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                           <tbody>
                             <tr>
@@ -190,7 +198,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:14px 20px 0;word-break:break-word;">
+                      <td align="center" class="top-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">Good news! Your item(s) have arrived at our warehouse and are ready for collection.</div>
                       </td>
                     </tr>
@@ -210,13 +218,13 @@
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:31px 0 1px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:40px 0 1px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tbody>
                     <tr>
-                      <td style="background-color:#F6F3E7;vertical-align:top;padding-top:20px;">
+                      <td style="background-color:#F6F3E7;vertical-align:top;padding-top:30px;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
                           <tbody>
                             <tr>
@@ -284,18 +292,18 @@
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
                           <tbody>
                             <tr>
-                              <td align="left" style="font-size:0px;padding:15px 20px 30px;word-break:break-word;">
+                              <td align="left" style="font-size:0px;padding:9px 20px 40px;word-break:break-word;">
                                 <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                                   <colgroup>
-                                    <col style="width: 110px" />
+                                    <col style="width: 103px" />
                                     <col />
                                     <col style="width: 110px" />
                                   </colgroup>
                                   <!-- Table Header -->
                                   <tr>
-                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> TOTAL NO. OF PACKAGES </th>
-                                    <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> VOLUME</th>
-                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> WEIGHT </th>
+                                    <th style="line-height: 1.2;text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> TOTAL NO. OF PACKAGES </th>
+                                    <th style="line-height: 1.2;text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> VOLUME</th>
+                                    <th style="line-height: 1.2;text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> WEIGHT </th>
                                   </tr>
                                   <#list transaction.item as itemLine>
                                     <tr style="font-size: 16px;text-align: center;color: #3A131F;">
@@ -327,7 +335,7 @@
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#773925;background-color:#773925;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:14px 0 16px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:30px 0 25px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:680px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
@@ -350,10 +358,7 @@
                             <td style="width: 4%;">&nbsp;</td>
                             <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
                               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> COLLECTION ADDRESS </div>
-                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ${transaction.custbody_cslr_address1}<br />
-                                <#if transaction.custbody_cslr_address2?length!=0> ${transaction.custbody_cslr_address2}<br />
-                                </#if>${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip}
-                              </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ACR Supply Partner Pty Ltd​ 50 Old Wallgrove Road​ Eastern Creek NSW 2766 </div>
                             </td>
                           </tr>
                           <tr class='mobile-text'>
@@ -375,10 +380,7 @@
                           <tr class='mobile-text'>
                             <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
                               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> COLLECTION ADDRESS </div>
-                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ${transaction.custbody_cslr_address1}<br />
-                                <#if transaction.custbody_cslr_address2?length!=0> ${transaction.custbody_cslr_address2}<br />
-                                </#if>${transaction.custbody_cslr_city} ${transaction.custbody_cslr_zip}
-                              </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ACR Supply Partner Pty Ltd​ 50 Old Wallgrove Road​ Eastern Creek NSW 2766 </div>
                             </td>
                           </tr>
                         </table>
@@ -404,14 +406,14 @@
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0;word-break:break-word;">
+                      <td align="center" class="bottom-title" style="font-size:0px;padding:10px 25px;padding-top:0;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#F7F3E7;">Before you collect</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:0 30px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">
-                          <ul class="mobile-ul" style="text-align: left;">
+                          <ul style="text-align: left;padding-left: 0;">
                             <li> Please give us 48 hours’ notice <br /><br />
                             </li>
                             <li> Reply to this email or contact <a href="mailto:help.au@castlery.com" style="color:#9BA3C1;text-decoration: none;">help.au@castlery.com</a> to confirm your collection details <br /><br />
@@ -422,14 +424,14 @@
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0;word-break:break-word;">
+                      <td align="center" class="bottom-title" style="font-size:0px;padding:10px 25px;padding-top:40px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#F7F3E7;">When you arrive</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:0 30px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">
-                          <ul class="mobile-ul" style="text-align: left;">
+                          <ul style="text-align: left;padding-left: 0;">
                             <li> Bring the attached document for verification <br /><br />
                             </li>
                             <li> Warehouse hours: Monday–Friday, 8:00 AM to 5:00 PM </li>
