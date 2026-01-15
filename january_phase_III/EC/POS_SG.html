@@ -265,7 +265,7 @@
                                     <col style="width: 300px" />
                                   </colgroup>
                                   <tr style="font-size: 12px;text-align: center;color: #3A131F;">
-                                    <td align="left" padding-right="40px" valign="bottom" style="color: #3A131F !important;line-height:1.2"> CASTLERY Pty Ltd<br /> Level 21, 233 Castlereagh St<br /> Sydney, NSW 2000<br /> ABN: 27615061679 </td>
+                                    <td align="left" padding-right="40px" valign="bottom" style="color: #3A131F !important;line-height:1.2"> CASTLERY Pte Ltd<br /> 601 Machpherson Road<br /> Singapore 368242<br /> GST Registration No. 201327477H </td>
                                     <td align="right" valign="top">
                                       <mj-text>
                                         <span style="color: #D15D27;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION NO.</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;">{{ event.QuotationNumber }}</span>
@@ -276,7 +276,7 @@
                                       </mj-text>
                                       <br />
                                       <mj-text style="display:inline-block;padding-top:5px;">
-                                        <span style="color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION EXPIRY</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;"> 7 days</span>
+                                        <span style="color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION EXPIRY</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;"> See Remarks</span>
                                       </mj-text>
                                     </td>
                                   </tr>
@@ -332,7 +332,7 @@
                                     </td>
                                     <td align="center" valign="top" style='color: #3A131F !important;padding-left: 10px;'> <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> {{ event.ShippingAddress.Phone }} </a> </td>
                                     <td align="center" valign="top" style="padding-left: 10px;"> <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> {{ event.SalesCrew }} ({{ event.SalesEmail }}) </a> </td>
-                                    <td align="center" valign="top" style="padding-left: 10px;"> AUD </td>
+                                    <td align="center" valign="top" style="padding-left: 10px;"> SGD </td>
                                   </tr>
                                 </table>
                               </td>
@@ -413,7 +413,7 @@
                                   <tr>
                                     <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;"> ITEM SUBTOTAL </td>
                                     <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
-                                      {{ event.OrderTotal.ItemSubtotal }}
+                                      {{ event.OrderTotal.DisplayTotal }}
                                     </td>
                                   </tr>
                                   <tr>
@@ -532,8 +532,6 @@
                                   <ul class="mobile-ul" style="text-align: left;">
                                     <li> Items marked ‘Clearance’, ‘Final Sale’, ‘Display’, ‘As-Is’, ‘Customised’, or ‘Customisable’ are not eligible for return, exchange, refund, or cancellation. See Sales & Refunds for full T&Cs. <br /><br />
                                     </li>
-                                    <li> Prices are valid for 7 days (AU) from the quotation date.<br /><br />
-                                    </li>
                                     <li> Lead times reflect live inventory at the time of quotation and may change. Check our website for current estimates.<br /><br />
                                     </li>
                                     <li> Room of Choice Service (if selected) includes delivery to your chosen room only; unpacking, assembly, and rubbish removal not included.<br /><br />
@@ -586,7 +584,7 @@
                                   </tr>
                                   <tr style="font-size: 16px;text-align: center;color: #3A131F;">
                                     <td align="center" valign="top" style="line-height: 1.2;color: #3A131F ;padding:20px 10px 15px;font-size: 12px;"> Full payment is required before delivery can be scheduled or fulfilled.​</td>
-                                    <td align="center" valign="top" style="padding:20px 10px 0;font-size: 12px;"> Refer to <a href="https://www.castlery.com/au/warranty" style="color:#9BA3C1;text-decoration: underline;">Warranty</a> for full T&Cs. </td>
+                                    <td align="center" valign="top" style="padding:20px 10px 0;font-size: 12px;"> Refer to <a href="https://www.castlery.com/sg/warranty" style="color:#9BA3C1;text-decoration: underline;">Warranty</a> for full T&Cs. </td>
                                   </tr>
                                   <tr style="font-size: 16px;text-align: center;color: #3A131F;">
                                     <td align="left" valign="top" style="line-height: 1.2;color: #3A131F ;padding:10px 10px;background-color: #f6f1e5;">
@@ -638,7 +636,7 @@
                                         </tr>
                                         <tr>
                                           <td style="width: 150px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;"> ACCOUNT NAME </td>
-                                          <td style="color: #3A131F;font-size: 12px;">Castlery Pty Ltd ​</td>
+                                          <td style="color: #3A131F;font-size: 12px;">Castlery Pte Ltd ​</td>
                                         </tr>
                                         <tr>
                                           <td style="width: 150px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;"> BSB </td>
@@ -655,7 +653,7 @@
                                     <td style="padding-top: 5px;text-align: center;color: #854026; font-size: 21px;  font-family: Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-weight: 400;"> Warranty Terms</td>
                                   </tr>
                                   <tr style="font-size: 16px;text-align: center;color: #3A131F;">
-                                    <td align="center" valign="top" style="line-height: 1.2;color: #3A131F ;padding:10px 10px 20px;font-size: 12px;"> Refer to <a href="https://www.castlery.com/au/warranty" style="color:#9BA3C1;text-decoration: underline;">Warranty</a> for full T&Cs. </td>
+                                    <td align="center" valign="top" style="line-height: 1.2;color: #3A131F ;padding:10px 10px 20px;font-size: 12px;"> Refer to <a href="https://www.castlery.com/sg/warranty" style="color:#9BA3C1;text-decoration: underline;">Warranty</a> for full T&Cs. </td>
                                   </tr>
                                 </table>
                               </td>
@@ -739,13 +737,13 @@
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1;text-align:center;color:#000000;">
-                          <a href="http://www.instagram.com/castleryAU" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                          <a href="http://www.instagram.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
                           </a>
-                          <a href="https://www.facebook.com/CastleryAU" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+                          <a href="https://www.facebook.com/CastlerySG" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
                           </a>
-                          <a href="http://www.pinterest.com/castleryau" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                          <a href="http://www.pinterest.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
                           </a>
                         </div>
@@ -773,12 +771,12 @@
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:11px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;">
-                          <a href="https://www.castlery.com/au/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">PRIVACY POLICY</a>
+                          <a href="https://www.castlery.com/sg/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">PRIVACY POLICY</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-                          <a href="https://www.castlery.com/au/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">CONTACT US</a>
+                          <a href="https://www.castlery.com/sg/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">CONTACT US</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
                           <span style="white-space: nowrap;">
-                            <a href="https://www.castlery.com/au/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">REFER A FRIEND</a>
+                            <a href="https://www.castlery.com/sg/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">REFER A FRIEND</a>
                           </span>
                         </div>
                       </td>

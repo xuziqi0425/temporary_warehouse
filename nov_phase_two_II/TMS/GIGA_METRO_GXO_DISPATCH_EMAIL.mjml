@@ -124,15 +124,31 @@
             <li>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi</li>
           </ul>
         </mj-text>
-        <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="28px">
-          Tracking <span th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
-            <span th:text="${tracking.custrecordCslrTrackingNumber}"></span>
-          </span>
-        </mj-text>
-        <mj-button background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="10px">
-          <a style="text-decoration: none;" th:href="${tracking.trackingLink}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
-          </a>
-        </mj-button>
+   
+        <mj-raw>
+          <div th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="center" style="padding-top: 10px;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="center" style="font-size: 28px; color: #F7F3E7; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;">
+                        Tracking <span th:text="${tracking.custrecordCslrTrackingNumber}"></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding-top: 10px;">
+                        <a th:href="${tracking.trackingLink}" style="display: inline-block; text-decoration: none; background-color: transparent; border: 1px solid #f7f3e7; width: 260px; height: 27px; border-radius: 2px; padding: 10px; text-align: center; line-height: 27px;">
+                          <span style="font-size: 12px; color: #f7f3e7; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </mj-raw>
         <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="10px 0">
           <br />
           Most orders arrive within 5-10 business days, but please note that deliveries to certain areas may take up to 15 days.

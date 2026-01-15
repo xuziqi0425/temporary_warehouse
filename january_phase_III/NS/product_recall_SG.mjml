@@ -111,7 +111,7 @@
     <!-- order details -->
     <mj-section padding="0">
       <mj-column background-color="#F6F3E7" css-class="text-padding">
-        <mj-text font-size="12px" color="#D15D27" align="center" line-height="1.2" padding-top="25px">
+        <mj-text font-size="12px" color="#D15D27" align="center" line-height="1.2" padding-top="25px" font-family="SanomatSans,'Century Gothic','CenturyGothic','AppleGothic',sans-serif" letter-spacing="0.15em">
           OPTION 1
         </mj-text>
         <mj-text font-size="24px" color="#3A131F" align="center" line-height="1.2" padding="2px 0 26px">
@@ -124,7 +124,7 @@
     </mj-section>
     <mj-section padding="10px 0 0">
       <mj-column background-color="#F6F3E7" css-class="text-padding">
-        <mj-text font-size="12px" color="#D15D27" align="center" line-height="1.2" padding-top="25px">
+        <mj-text font-size="12px" color="#D15D27" align="center" line-height="1.2" padding-top="25px" font-family="SanomatSans,'Century Gothic','CenturyGothic','AppleGothic',sans-serif" letter-spacing="0.15em">
           OPTION 2
         </mj-text>
         <mj-text font-size="24px" color="#3A131F" align="center" line-height="1.2" padding="2px 0 26px">

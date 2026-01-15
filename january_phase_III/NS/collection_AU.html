@@ -248,17 +248,17 @@
                                   </colgroup>
                                   <!-- Table Header -->
                                   <tr>
-                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM ID </th>
-                                    <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM NAME </th>
-                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> QUANTITY </th>
+                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM ID </th>
+                                    <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM NAME </th>
+                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> QUANTITY </th>
                                   </tr>
                                   <#list transaction.item as itemLine>
                                     <tr style="font-size: 16px;text-align: center;color: #3A131F;">
-                                      <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                                        <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;"> ${itemLine.item} </a>
+                                      <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;padding-top: 10px;'>
+                                        <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> ${itemLine.item} </a>
                                       </td>
-                                      <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> ${itemLine.description} </td>
-                                      <td align="center" padding="0 5px" valign="top"> ${itemLine.quantity} </td>
+                                      <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F ;padding-top: 10px;"> ${itemLine.description} </td>
+                                      <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F ;padding-top: 10px;"> ${itemLine.quantity} </td>
                                     </tr>
                                   </#list>
                                 </table>
@@ -307,9 +307,9 @@
                                   </tr>
                                   <#list transaction.item as itemLine>
                                     <tr style="font-size: 16px;text-align: center;color: #3A131F;">
-                                      <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'> 1 </td>
-                                      <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> 10 </td>
-                                      <td align="center" padding="0 5px" valign="top"> 10000000 kg </td>
+                                      <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;line-height: 1;'> ${transaction.custbody_cslr_total_no_of_packages} </td>
+                                      <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F;">${transaction.custbody_cslr_total_volume} M3</td>
+                                      <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F;">${transaction.custbody_cslr_total_gross_weight} KG</td>
                                     </tr>
                                   </#list>
                                 </table>
@@ -358,7 +358,7 @@
                             <td style="width: 4%;">&nbsp;</td>
                             <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
                               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> COLLECTION ADDRESS </div>
-                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ACR Supply Partner Pty Ltd​ 50 Old Wallgrove Road​ Eastern Creek NSW 2766 </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ACR Supply Partner Pty Ltd<br /> 50 Old Wallgrove Road<br /> Eastern Creek NSW 2766 </div>
                             </td>
                           </tr>
                           <tr class='mobile-text'>
@@ -380,7 +380,7 @@
                           <tr class='mobile-text'>
                             <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
                               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> COLLECTION ADDRESS </div>
-                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ACR Supply Partner Pty Ltd​ 50 Old Wallgrove Road​ Eastern Creek NSW 2766 </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> ACR Supply Partner Pty Ltd<br /> 50 Old Wallgrove Road<br /> Eastern Creek NSW 2766 </div>
                             </td>
                           </tr>
                         </table>
@@ -490,13 +490,13 @@
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1;text-align:center;color:#000000;">
-                          <a href="http://www.instagram.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                          <a href="http://www.instagram.com/castleryAU" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/camera_icon.png" width="24px" style="display: block;" />
                           </a>
-                          <a href="https://www.facebook.com/CastlerySG" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
+                          <a href="https://www.facebook.com/CastleryAU" target="_blank" style="display: inline-block; margin: 0 55px; vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151734/email/f_icon.png" width="12px" style="display: block;" />
                           </a>
-                          <a href="http://www.pinterest.com/castlerysg" target="_blank" style="display: inline-block;  vertical-align: middle;">
+                          <a href="http://www.pinterest.com/castleryau" target="_blank" style="display: inline-block;  vertical-align: middle;">
                             <img src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760151735/email/pinter_icon.png" width="18px" style="display: block;" />
                           </a>
                         </div>
@@ -524,12 +524,12 @@
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:11px;letter-spacing:0.2em;line-height:1.5;text-align:center;text-transform:uppercase;color:#F7F3E7;">
-                          <a href="https://www.castlery.com/sg/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">PRIVACY POLICY</a>
+                          <a href="https://www.castlery.com/au/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">PRIVACY POLICY</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-                          <a href="https://www.castlery.com/sg/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">CONTACT US</a>
+                          <a href="https://www.castlery.com/au/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">CONTACT US</a>
                           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
                           <span style="white-space: nowrap;">
-                            <a href="https://www.castlery.com/sg/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">REFER A FRIEND</a>
+                            <a href="https://www.castlery.com/au/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">REFER A FRIEND</a>
                           </span>
                         </div>
                       </td>

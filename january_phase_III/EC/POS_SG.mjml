@@ -1,0 +1,553 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468005/Aime-Regular_j8zelb.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Aime';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740467973/Aime-Italic_mguvib.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SanomatSans';
+        src: url('https://res.cloudinary.com/castlery/raw/upload/v1740468116/SanomatSans-Regular-Web_lf0shn.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
+      }
+
+      /* 响应式文字显示 */
+      .desktop-text {
+        display: '';
+      }
+
+      .mobile-text {
+        display: none;
+      }
+
+      a {
+        color: #D25C1B;
+        cursor: pointer;
+      }
+
+
+      .bottom-text {
+        padding: 20px 76px;
+      }
+
+      .mobile-table {
+        display: none;
+      }
+
+      @media only screen and (max-width: 600px) {
+
+        /* Scale down all text on small screens - 缩小所有文字一半 */
+        /* 方法1: 使用zoom属性缩放（某些浏览器支持） */
+        /*body {
+          width: 680px;
+          transform-origin: 0 0;
+
+          transform: scale(calc(100vw / 680));
+        }*/
+        .desktop-text {
+          display: '';
+        }
+
+        .mobile-text {
+          display: inline;
+        }
+
+        .bottom-text {
+          padding: 0 25px 21px;
+        }
+
+        .mobile-ul {
+          padding-left: 13px;
+        }
+
+        .last-section-padding {
+          padding: 0 !important;
+        }
+
+        .mobile-table {
+          display: block;
+        }
+
+        .web-table {
+          display: none;
+        }
+
+        .quotation-table-padding {
+          padding: 24px 32px 0;
+        }
+
+        .header-padding {
+          padding: 17px 20px 0 !important;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text font-family="Aime,'New York', 'TimesNewRoman', 'Times New Roman'" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#773925" width="680px">
+    <!-- header -->
+    <mj-section background-color="#773925" padding="33px 0 0">
+      <mj-column>
+        <mj-image src="https://res.cloudinary.com/castlery/image/upload/f_auto,q_auto/v1760002634/email/castlery-logo-v-update.png" width="202px" padding-bottom="38px" />
+        <mj-text font-size="27px" color="#9BA3C1" font-style="italic" align="center">
+         Hi [Customer Name],
+        </mj-text>
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="17px 100px 0" line-height="1.2" css-class="header-padding">
+          Your quotation is ready—you’ll find the breakdown of items, pricing, and delivery details below.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- order details -->
+    <mj-section padding="27px 0 0">
+      <mj-column background-color="#e4ddca" padding="24px 30px 0">
+        <mj-text font-size="27px" align="left" color="#854026" padding="0">
+          Quotation
+        </mj-text>
+        <mj-raw>
+          <tr>
+            <td style="font-size:0px;padding:11px 0 22px;word-break:break-word;">
+              <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;padding:0">
+                <colgroup>
+                  <col style="width: 103px" />
+
+                  <col style="width: 300px" />
+                </colgroup>
+                <tr style="font-size: 12px;text-align: center;color: #3A131F;">
+                  <td align="left" padding-right="40px" valign="bottom" style="color: #3A131F !important;line-height:1.2">
+                    CASTLERY Pte Ltd<br />
+                    601 Machpherson Road<br />
+                    Singapore 368242<br />
+                    GST Registration No. 201327477H
+                  </td>
+
+                  <td align="right" valign="top">
+                    <mj-text>
+                      <span style="color: #D15D27;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION NO.</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;">{{ event.QuotationNumber }}</span>
+                    </mj-text>
+                    <br />
+                    <mj-text style="display:inline-block;padding-top:5px;">
+                      <span style="color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION DATE</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;"> {{ event.QuotationDate }}</span>
+                    </mj-text>
+                    <br />
+                    <mj-text style="display:inline-block;padding-top:5px;">
+                      <span style="color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION EXPIRY</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;">  See Remarks</span>
+                    </mj-text>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </mj-raw>
+        <mj-table width="100%" padding="0 10px 34px">
+          <tr class='desktop-text'>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+                SHIPPING ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
+              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> 
+                {{ event.ShippingAddress.FirstName }} {{ event.ShippingAddress.LastName }} <br />
+                 {{ event.ShippingAddress.Address1 }} <br />
+                {% if event.ShippingAddress.Address2 is not none %}
+                {{ event.ShippingAddress.Address2 }} <br />
+                {% else %}
+
+                {% endif %}
+                {{ event.ShippingAddress.Country }} {{ event.ShippingAddress.Zip}}
+                </a>
+              </div>
+            </td>
+            <td style="width: 4%;">&nbsp;</td>
+            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
+              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+                BILLING ADDRESS
+              </div>
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
+              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> 
+                {{ event.BillingAddress.FirstName }} {{ event.BillingAddress.LastName }} <br />
+                 {{ event.BillingAddress.Address1 }} <br />
+                {% if event.BillingAddress.Address2 is not none %}
+                {{ event.BillingAddress.Address2 }} <br />
+                {% else %}
+
+                {% endif %}
+                {% if event.BillingAddress.Company is not none %}
+                {{ event.BillingAddress.Company }} <br />
+                {% else %}
+
+                {% endif %}
+                {{ event.BillingAddress.Country }} {{ event.BillingAddress.Zip}}
+                </a>
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+
+        <mj-raw>
+          <tr>
+            <td align="left" style="font-size:0px;padding:9px 0 20px;word-break:break-word;">
+              <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;padding:0">
+                <colgroup>
+                  <col style="width: 123px" />
+                  <col style="width: 100px" />
+                  <col style="width: 100px" />
+                  <col style="width: 130px" />
+                </colgroup>
+                <!-- Table Header -->
+                <tr>
+                  <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;line-height: 1;">
+                    CUSTOMER ACCOUNT </th>
+                  <th style="padding-left: 10px;text-align: center; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
+                    CONTACT</th>
+                  <th style="padding-left: 10px;text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
+                    SALES REP </th>
+                  <th style="padding-left: 10px;text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
+                    CURRENCY </th>
+                </tr>
+
+                <tr style="font-size: 12px;text-align: center;color: #3A131F;">
+                  <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                   <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">  {{ person.FirstName }} {{ person.LastName }} ({{ person.email }}) </a>
+                  </td>
+                  <td align="center" valign="top" style='color: #3A131F !important;padding-left: 10px;'> <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> {{ event.ShippingAddress.Phone }} </a> </td>
+                  <td align="center" valign="top" style="padding-left: 10px;"> <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> {{ event.SalesCrew }} ({{ event.SalesEmail }}) </a> </td>
+                  <td align="center" valign="top" style="padding-left: 10px;"> SGD </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column background-color="#F6F2E6" padding="18px 0 0">
+        <mj-raw>
+          <tr>
+            <td align="left" style="font-size:0px;padding:15px 20px 30px;word-break:break-word;">
+              <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                <colgroup>
+                  <col style="width: 45px" />
+                  <col style="width: 120px" />
+                  <col style="width: 180px" />
+                  <col style="width: 70px" />
+                  <col style="width: 40px" />
+                  <col style="width: 50px" />
+                </colgroup>
+                <!-- Table Header -->
+                <tr>
+                  <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;">
+                    S/N </th>
+                  <th style="text-align: center; font-size: 9px; padding-left: 10px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;line-height: 1.2;">
+                    LEAD TIME </th>
+                  <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;">
+                    ITEM DESCRIPTION</th>
+                  <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;">
+                    UNIT PRICE </th>
+                  <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;">
+                    QTY </th>
+                  <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;">
+                    SUBTOTAL </th>
+                </tr>
+                {% for item in event.Items %}
+                <tr style="font-size: 12px;text-align: center;color: #3A131F;">
+                  <td align="center" valign="top" style='color: #3A131F !important;line-height: 1.2;'>
+                    {{ forloop.counter }}
+                  </td>
+                  <td align="center" valign="top" style="line-height: 1.2;color: #3A131F ;padding:0 10px"> {{ item.Deliver }}
+
+                  </td>
+                  <td align="center" valign="top" style="padding:0 10px;line-height: 1.2;"> {{ item.VariantName }}</td>
+                  <td align="center" valign="top" style='color: #3A131F !important;padding:0 10px;line-height: 1.2;'>
+                    {{ item.UnitPrice.DiscountUnitPrice }}
+                  </td>
+                  <td align="center" valign="top" style="line-height: 1.2;color: #3A131F;padding:0 10px"> {{ item.Quantity }}</td>
+                  <td align="center" valign="top" style="padding:0 0 0 10px;line-height: 1.2;"> {{ item.UnitPrice.DiscountUnitPrice }} </td>
+                </tr>
+                {% endfor %}
+              </table>
+            </td>
+          </tr>
+        </mj-raw>
+        <mj-divider border-color="#c3b6af" border-width="1px" />
+        <mj-table>
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;">
+              ITEM SUBTOTAL
+            </td>
+
+            <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
+              {{ event.OrderTotal.DisplayTotal }}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;">
+              SHIPPING
+            </td>
+
+            <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
+              {% if event.OrderTotal.Shipping is not none %}
+                {{ event.OrderTotal.Shipping.Current }}
+              {% else %}
+              Free
+              {% endif %}
+            </td>
+          </tr>
+             
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;text-transform:uppercase;">
+              Services 
+            </td>
+
+            <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
+              {% if event.OrderTotal.Services is not none %}
+                                {{ event.OrderTotal.Services }}
+                              {% else %}
+                                $0
+                              {% endif %}
+            </td>
+          </tr>
+       
+          {% for item in event.ServiceItems %}
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;text-transform:uppercase;">
+              Services - {{ item.ServiceType }}
+            </td>
+
+            <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
+              ${{ item.ServiceFee }}
+            </td>
+          </tr>
+          {% endfor %}
+          {% for item in event.OrderTotal.PromotionAdjustments %}
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;text-transform:uppercase;">
+              {{ item.Name }}
+            </td>
+
+            <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
+              {{ item.Amount }}
+            </td>
+          </tr>
+          {% endfor %}
+
+          {% for item in event.DiscountCode %}
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;">
+              COUPON CODE
+            </td>
+
+            <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
+              {{ item }}
+            </td>
+          </tr>
+          {% endfor %}
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;">
+              GST
+            </td>
+
+            <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
+              {{ event.OrderTotal.TaxTotal }}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column background-color="#e4ddca" padding="0 ">
+        <mj-table>
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;">
+              TOTAL (EXCL GST)
+            </td>
+
+            <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
+              {{ event.OrderTotal.TotalWithoutTax }}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;">
+              TOTAL (INCL GST)
+            </td>
+            <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
+              {{ event.OrderTotal.DisplayTotal }}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column background-color="#F6F2E6" padding="29px 0 25px">
+        <mj-text font-size="21px" color="#854026" align="center" padding-top="0">
+          Remarks
+        </mj-text>
+        <mj-text font-size="12px" color="#3A131F" align="center" padding="0 30px" line-height="1.2">
+          <ul class="mobile-ul" style="text-align: left;">
+            <li>
+              Items marked ‘Clearance’, ‘Final Sale’, ‘Display’, ‘As-Is’, ‘Customised’, or ‘Customisable’ are not eligible for return, exchange, refund, or cancellation. See Sales & Refunds for full T&Cs. <br /><br />
+            </li>
+            <li>
+              Lead times reflect live inventory at the time of quotation and may change. Check our website for current estimates.<br /><br />
+            </li>
+            <li>
+              Room of Choice Service (if selected) includes delivery to your chosen room only; unpacking, assembly, and rubbish removal not included.<br /><br />
+            </li>
+            <li>
+              White Glove Service (if selected) includes unpacking, assembly, and packaging removal.<br /><br />
+            </li>
+            <li>
+              If neither service is selected, Standard Delivery applies (doorstep only, excludes unpacking, assembly, and rubbish removal). The delivery fee is listed under Shipping.
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column background-color="#e4ddca" padding="0">
+        <mj-raw>
+          <tr>
+            <td align="left" style="word-break: break-word;padding: 40px 60px !important;" class="web-table">
+              <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-size:13px;table-layout:auto;width:100%;border:none;">
+                <colgroup>
+                  <col style="width: 50%" />
+                  <col />
+                </colgroup>
+                <!-- Table Header -->
+                <tr>
+                  <th style="text-align: center;color: #854026; font-size: 21px;  font-family: Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-weight: 400;">
+                    Payment Terms</th>
+                  <th style="text-align: center; color: #854026;font-size: 21px; font-family: Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-weight: 400;">
+                    Warranty Terms </th>
+
+                </tr>
+
+                <tr style="font-size: 16px;text-align: center;color: #3A131F;">
+
+                  <td align="center" valign="top" style="line-height: 1.2;color: #3A131F ;padding:20px 10px 15px;font-size: 12px;"> Full payment is required before delivery can be scheduled or fulfilled.​</td>
+                  <td align="center" valign="top" style="padding:20px 10px 0;font-size: 12px;"> Refer to <a href="https://www.castlery.com/sg/warranty" style="color:#9BA3C1;text-decoration: underline;">Warranty</a> for full T&Cs. </td>
+                </tr>
+                <tr style="font-size: 16px;text-align: center;color: #3A131F;">
+                  <td align="left" valign="top" style="line-height: 1.2;color: #3A131F ;padding:10px 10px;background-color: #f6f1e5;">
+                    <table>
+                      <colgroup>
+                        <col style="width: 85px !important" />
+                        <col />
+                      </colgroup>
+                      <tr>
+                        <td style="width: 70px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          BANK
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">Westpac ​</td>
+                      </tr>
+                      <tr>
+                        <td style="width: 70px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          ACCOUNT NAME
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">Castlery Pte Ltd ​</td>
+                      </tr>
+                      <tr>
+                        <td style="width: 70px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          BSB
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">032-003 ​</td>
+                      </tr>
+                      <tr>
+                        <td style="width: 70px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          ACC
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">525-888</td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td align="center" valign="top" style="padding:0 10px"> </td>
+                </tr>
+              </table>
+            </td>
+            <td align="left" style="word-break: break-word;" class="mobile-table">
+              <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-size:13px;table-layout:auto;width:100%;border:none;">
+                <tr>
+                  <td style="padding-top: 15px;text-align: center;color: #854026; font-size: 21px;  font-family: Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-weight: 400;">
+                    Payment Terms</td>
+                </tr>
+                <tr style="font-size: 16px;text-align: center;color: #3A131F;">
+                  <td align="center" valign="top" style="line-height: 1.2;color: #3A131F ;padding:10px 10px 0px;font-size: 12px;"> Full payment is required before delivery can be scheduled or fulfilled.​</td>
+                </tr>
+                <tr style="font-size: 16px;text-align: center;color: #3A131F;">
+
+                  <td align="left" valign="top" style="line-height: 1.2;color: #3A131F ;padding:10px;">
+                    <table style="padding: 10px; background-color: #f6f1e5;width:100%">
+                      <colgroup>
+                        <col style="width: 180px !important" />
+                        <col />
+                      </colgroup>
+                      <tr>
+                        <td style="width: 150px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-top: 15px;">
+                          BANK
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;padding-top: 15px;">Westpac ​</td>
+                      </tr>
+                      <tr>
+                        <td style="width: 150px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          ACCOUNT NAME
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">Castlery Pte Ltd ​</td>
+                      </tr>
+                      <tr>
+                        <td style="width: 150px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;">
+                          BSB
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;">032-003 ​</td>
+                      </tr>
+                      <tr>
+                        <td style="width: 150px;color: #D15D27;font-size:9px;padding-right:15px;display:inline-block;text-align: right; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 15px;">
+                          ACC
+                        </td>
+                        <td style="color: #3A131F;font-size: 12px;padding-bottom: 15px;">525-888</td>
+                      </tr>
+                    </table>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td style="padding-top: 5px;text-align: center;color: #854026; font-size: 21px;  font-family: Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-weight: 400;">
+                    Warranty Terms</td>
+                </tr>
+                <tr style="font-size: 16px;text-align: center;color: #3A131F;">
+                  <td align="center" valign="top" style="line-height: 1.2;color: #3A131F ;padding:10px 10px 20px;font-size: 12px;"> Refer to <a href="https://www.castlery.com/sg/warranty" style="color:#9BA3C1;text-decoration: underline;">Warranty</a> for full T&Cs. </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+    <mj-section css-class="bottom-text" background-color="#773925">
+      <mj-column>
+
+        <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0" line-height="1.2" css-class="last-section-padding">
+          If you’re ready to proceed or need to make any changes, just reach out—we’ll be happy to help.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-include path="../../nov_phase_two_II/components/footers/sg.mjml" />
+  </mj-body>
+</mjml>

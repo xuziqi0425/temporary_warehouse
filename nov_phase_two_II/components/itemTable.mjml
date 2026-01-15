@@ -9,20 +9,20 @@
         </colgroup>
         <!-- Table Header -->
         <tr>
-          <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+          <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
             ITEM ID </th>
-          <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+          <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
             ITEM NAME </th>
-          <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
+          <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
             QUANTITY </th>
         </tr>
         <#list transaction.item as itemLine>
           <tr style="font-size: 16px;text-align: center;color: #3A131F;">
-            <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;"> ${itemLine.item} </a>
+            <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;padding-top: 10px;'>
+              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> ${itemLine.item} </a>
             </td>
-            <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> ${itemLine.description} </td>
-            <td align="center" padding="0 5px" valign="top"> ${itemLine.quantity} </td>
+            <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F ;padding-top: 10px;"> ${itemLine.description} </td>
+            <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F ;padding-top: 10px;"> ${itemLine.quantity} </td>
           </tr>
         </#list>
       </table>

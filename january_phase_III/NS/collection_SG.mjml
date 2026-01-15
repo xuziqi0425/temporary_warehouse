@@ -82,7 +82,7 @@
     <mj-section padding="31px 0 20px" >
       <mj-column background-color="#F6F3E7" padding-top="20px">
         <mj-text font-size="27px" color="#3A131F" align="center">
-          [DD Month YYYYY, XX:XX pm — XX:XX pm]
+         <#setting date_format="dd MMM yyyy"> ${transaction.custbody_cslr_scheduled_delivery_date} <#setting time_format="h:mm a"> ${transaction.custbody_cslr_slot_start_time} - ${transaction.custbody_cslr_slot_end_time}
         </mj-text>
 
         <mj-text font-size="27px" align="center" color="#3A131F" padding="23px 0 0">
@@ -163,7 +163,7 @@
         </mj-text>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="0 30px" line-height="1.2">
 
-          If you have any concerns or special requests, just reach out. You can also find more details in our <a href="https://www.castlery.com/sg/terms-and-conditions" target="_blank" style="color:#9BA3C1">Terms & Conditions</a>.
+          If you have any concerns or special requests, just reach out. You can also find more details in our <a href="https://www.castlery.com/sg/sales-and-refunds" target="_blank" style="color:#9BA3C1">Terms & Conditions</a>.
 
         </mj-text>
 

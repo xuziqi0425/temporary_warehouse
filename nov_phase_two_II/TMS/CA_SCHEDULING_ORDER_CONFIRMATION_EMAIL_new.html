@@ -226,7 +226,7 @@
                           <span th:each="itemLine:${data.items}">
                             <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                               <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                                <span th:text="${itemLine.id}">***</span>
+                                <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> <span th:text="${itemLine.id}">***</span> </a>
                               </td>
                               <td align="center" padding="0 5px" valign="top">
                                 <span th:text="${itemLine.name}">***</span>
@@ -400,7 +400,7 @@
                       <td align="center" style="font-size:0px;padding:20px 0 0;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:16px;line-height:1.2;text-align:center;color:#F7F3E7;">If you'd like to cancel, modify, or place your order on hold, please let us know within 24 hours of receiving this email. After this window, changes may incur a 10% storage fee or 20% restocking fee. <br />
                           <br />
-                          <u>Important:</u><br /> Items marked Clearance or Final Sale aren’t eligible for changes, cancellations, returns, or exchanges.
+                          <u>Important:</u><br /> Items marked <em>Clearance or Final Sale</em> aren’t eligible for changes, cancellations, returns, or exchanges.
                         </div>
                       </td>
                     </tr>

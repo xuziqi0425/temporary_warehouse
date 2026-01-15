@@ -237,42 +237,54 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:25px;line-height:1.2;text-align:center;color:#3A131F;">[DD Month YYYYY, XX:XX pm — XX:XX pm]</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:25px;line-height:1.2;text-align:center;color:#3A131F;">
+                          <#setting date_format="dd MMM yyyy"> ${transaction.custbody_cslr_scheduled_delivery_date} <#setting time_format="h:mm a"> ${transaction.custbody_cslr_slot_start_time} - ${transaction.custbody_cslr_slot_end_time}
+                        </div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:0 31px;word-break:break-word;">
                         <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
-                          <#list transaction.item as itemLine>
-                            <#if itemLine.custcol_cslr_include_in_delay_email>
-                              <tr class='desktop-text'>
-                                <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
-                                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 14px;line-height: 1;"> YOUR DETAILS </div>
-                                  <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> [Name]<br /> [Email]<br /> [Contact Number] </div>
-                                </td>
-                                <td style="width: 4%;">&nbsp;</td>
-                                <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
-                                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 0.2em; margin-bottom: 14px;line-height: 1;"> COLLECTION ADDRESS </div>
-                                  <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> 49B Nanyang Valley, #32-DNanyang Valley Apartment Units 49/49Singapore 639703 </div>
-                                </td>
-                              </tr>
-                              <tr class='mobile-text'>
-                                <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
-                                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing:0.2em; margin-bottom: 16px;line-height: 1;"> YOUR DETAILS </div>
-                                  <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> [Name]<br /> [Email]<br /> [Contact Number] </div>
-                                </td>
-                              </tr>
-                              <tr class='mobile-text'>
-                                <td style="height: 10px;"> &nbsp; </td>
-                              </tr>
-                              <tr class='mobile-text'>
-                                <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:0 0 15px 0;">
-                                  <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 16px;line-height: 1;"> COLLECTION ADDRESS </div>
-                                  <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> 49B Nanyang Valley, #32-DNanyang Valley Apartment Units 49/49Singapore 639703 </div>
-                                </td>
-                              </tr>
-                            </#if>
-                          </#list>
+                          <tr class='desktop-text'>
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
+                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 14px;line-height: 1;"> YOUR DETAILS </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
+                                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a><br />
+                                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone} <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                                    <br />
+                                    <span style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_alternative_phone}</span>
+                                  </#if> </a>
+                              </div>
+                            </td>
+                            <td style="width: 4%;">&nbsp;</td>
+                            <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
+                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 0.2em; margin-bottom: 14px;line-height: 1;"> COLLECTION ADDRESS </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> 49B Nanyang Valley, #32-D Nanyang Valley Apartment Units 49/49Singapore 639703 </div>
+                            </td>
+                          </tr>
+                          <tr class='mobile-text'>
+                            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:22px 0 15px 0;">
+                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing:0.2em; margin-bottom: 16px;line-height: 1;"> YOUR DETAILS </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+                                <span>${customer.firstname} ${customer.middlename} ${customer.lastname}</span><br />
+                                <a style="color: #3A131F !important; text-decoration: none !important;">${customer.email}</a><br />
+                                <a style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_phone} <#if transaction.custbody_cslr_alternative_phone?length!=0>
+                                    <br />
+                                    <span style="color: #3A131F !important; text-decoration: none !important;">${transaction.custbody_cslr_alternative_phone}</span>
+                                  </#if> </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class='mobile-text'>
+                            <td style="height: 10px;"> &nbsp; </td>
+                          </tr>
+                          <tr class='mobile-text'>
+                            <td style="width: 90%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:0 0 15px 0;">
+                              <div style="font-size:11px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 0.2em; margin-bottom: 16px;line-height: 1;"> COLLECTION ADDRESS </div>
+                              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px"> 49B Nanyang Valley, #32-D Nanyang Valley Apartment Units 49/49Singapore 639703 </div>
+                            </td>
+                          </tr>
                         </table>
                       </td>
                     </tr>
@@ -297,7 +309,7 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Please confirm by <span style="color:#9BA3C1">[DATE]</span> before 5pm if this timing works for you.<br /> If we don’t hear back, your delivery will need to be rescheduled.</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Please confirm by <span style="color:#9BA3C1">${transaction.custbody_cslr_date_reserved_cut_off}</span> before 5pm if this timing works for you.<br /> If we don’t hear back, your delivery will need to be rescheduled.</div>
                       </td>
                     </tr>
                     <tr>
@@ -307,7 +319,7 @@
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1;text-align:center;color:#F7F3E7;">To ensure a smooth delivery, please take a moment to review our <a href="https://www.castlery.com/sg/pages/delivery-faqs" style="color:#9BA3C1;text-decoration: underline;">delivery FAQ</a> for guidance, or refer to our <a href="https://www.castlery.com/sg/pages/terms-and-conditions" style="color:#9BA3C1;text-decoration: underline;">Terms & Conditions</a> for more details.</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1;text-align:center;color:#F7F3E7;">To ensure a smooth delivery, please take a moment to review our <a href="https://6998539.app.netsuite.com/core/media/media.nl?id=1890488&c=6998539&h=q1ulzeESUNHRi4sB0092bmsPrqpcPGedENIhE2N8V7W2P979&_xt=.pdf" style="color:#9BA3C1;text-decoration: underline;">delivery FAQ</a> for guidance, or refer to our <a href="https://www.castlery.com/sg/sales-and-refunds" style="color:#9BA3C1;text-decoration: underline;">Terms & Conditions</a> for more details.</div>
                       </td>
                     </tr>
                     <tr>

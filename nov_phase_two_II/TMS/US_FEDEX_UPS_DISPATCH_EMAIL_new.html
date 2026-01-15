@@ -243,10 +243,10 @@
                             <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.2em;font-weight: 400;color: #D15D27;"> ITEM NAME </th>
                             <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.2em;font-weight: 400;color: #D15D27;white-space: nowrap;"> QUANTITY </th>
                           </tr>
-                          <span th:each="itemLine:${data.items}">
+                          <span th:each="itemLine:${data.item}">
                             <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                               <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                                <span th:text="${itemLine.item}">***</span>
+                                <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> <span th:text="${itemLine.item}">***</span> </a>
                               </td>
                               <td align="center" padding="0 5px" valign="top">
                                 <span th:text="${itemLine.description}">***</span>
@@ -299,29 +299,27 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;padding-top:10px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#F7F3E7;">Tracking <span th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
-                            <span th:text="${tracking.custrecordCslrTrackingNumber}"></span>
-                          </span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:10px;word-break:break-word;">
-                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;width:260px;line-height:100%;">
-                          <tbody>
-                            <tr>
-                              <td align="center" bgcolor="transparent" role="presentation" style="border:1px solid #f7f3e7;border-radius:2px;cursor:auto;height:27px;mso-padding-alt:10px 25px;background:transparent;" valign="middle">
-                                <p style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;">
-                                  <a style="text-decoration: none;" th:href="${tracking.trackingLink}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+                    <div th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td align="center" style="padding-top: 10px;">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td align="center" style="font-size: 28px; color: #F7F3E7; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;"> Tracking <span th:text="${tracking.custrecordCslrTrackingNumber}"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="padding-top: 10px;">
+                                  <a th:href="${tracking.trackingLink}" style="display: inline-block; text-decoration: none; background-color: transparent; border: 1px solid #f7f3e7; width: 260px; height: 27px; border-radius: 2px; padding: 10px; text-align: center; line-height: 27px;">
+                                    <span style="font-size: 12px; color: #f7f3e7; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
                                   </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;padding-top:28px;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:28px;line-height:1;text-align:center;color:#F7F3E7;">Good to know</div>

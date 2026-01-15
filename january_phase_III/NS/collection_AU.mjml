@@ -66,6 +66,7 @@
         .mobile-text {
           display: inline;
         }
+
         .bottom-text {
           padding: 0 25px 21px;
         }
@@ -124,11 +125,11 @@
                 </tr>
                 <#list transaction.item as itemLine>
                   <tr style="font-size: 16px;text-align: center;color: #3A131F;">
-                    <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                      1
+                    <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;line-height: 1;'>
+                      ${transaction.custbody_cslr_total_no_of_packages}
                     </td>
-                    <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> 10 </td>
-                    <td align="center" padding="0 5px" valign="top"> 10000000 kg </td>
+                    <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F;">${transaction.custbody_cslr_total_volume} M3</td>
+                    <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F;">${transaction.custbody_cslr_total_gross_weight} KG</td>
                   </tr>
                 </#list>
               </table>
@@ -161,7 +162,9 @@
                 COLLECTION ADDRESS
               </div>
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
-                ACR Supply Partner Pty Ltd​ 50 Old Wallgrove Road​ Eastern Creek NSW 2766
+                ACR Supply Partner Pty Ltd<br />
+                50 Old Wallgrove Road<br />
+                Eastern Creek NSW 2766
               </div>
             </td>
           </tr>
@@ -189,7 +192,9 @@
                 COLLECTION ADDRESS
               </div>
               <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
-                ACR Supply Partner Pty Ltd​ 50 Old Wallgrove Road​ Eastern Creek NSW 2766
+                  ACR Supply Partner Pty Ltd<br />
+                50 Old Wallgrove Road<br />
+                Eastern Creek NSW 2766
               </div>
             </td>
           </tr>
@@ -230,6 +235,6 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-include path="../../nov_phase_two_II/components/footers/sg.mjml" />
+    <mj-include path="../../nov_phase_two_II/components/footers/au.mjml" />
   </mj-body>
 </mjml>

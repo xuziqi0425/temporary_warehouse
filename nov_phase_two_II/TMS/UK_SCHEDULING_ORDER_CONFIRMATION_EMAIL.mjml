@@ -97,7 +97,7 @@
           <span th:each="itemLine:${data.items}">
             <tr style="font-size: 15px;text-align: center;color: #3A131F;">
               <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                <span th:text="${itemLine.id}">***</span>
+                 <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> <span th:text="${itemLine.id}">***</span> </a>
               </td>
               <td align="center" padding="0 5px" valign="top">
                 <span th:text="${itemLine.name}">***</span>
@@ -126,7 +126,7 @@
         </mj-text>
 
         <mj-button  background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="10px">
-          <a style="text-decoration: none;" th:href="${tracking.trackingLink}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+          <a style="text-decoration: none;" th:href="${tracking.shipmentMilestoneUrl}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
           </a>
         </mj-button>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 0">
@@ -239,12 +239,12 @@
     <mj-section background-color="#773925" padding="25px 0 10px">
       <mj-column>
         <mj-text font-size="11px" color="#F7F3E7" align="center" text-transform="uppercase" letter-spacing="0.2em" line-height="1.5">
-          <a href="https://www.castlery.com/ca/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">PRIVACY POLICY</a>
+          <a href="https://www.castlery.com/uk/privacy-policy" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">PRIVACY POLICY</a>
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
-          <a href="https://www.castlery.com/ca/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">CONTACT US</a>
+          <a href="https://www.castlery.com/uk/contact-us" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">CONTACT US</a>
           <span style="color: #dbcfb5; padding: 0 5px"> | </span>
           <span style="white-space: nowrap;">
-            <a href="https://www.castlery.com/ca/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">REFER A FRIEND</a>
+            <a href="https://www.castlery.com/uk/referral" style="color: #F7F3E7; text-decoration: none;font-family: 'SanomatSans', Helvetica Neue, Helvetica, Arial, sans-serif;">REFER A FRIEND</a>
           </span>
         </mj-text>
       </mj-column>
