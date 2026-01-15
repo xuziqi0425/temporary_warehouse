@@ -288,13 +288,17 @@
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Great news—your order has been packed and handed over to our delivery partner. Once it reaches their terminal, they’ll contact you to schedule a convenient delivery. <br />
                           <br /> Your shipment details: <br />
                           <ul style="text-align: left;padding-left: 0px;line-height: 1.2;">
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</li>
-                            <br />
-                            <li>Aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea</li>
-                            <br />
-                            <li>Commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla </li>
-                            <br />
-                            <li>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi</li>
+                            <li>Order Number: <span th:text="${data.custbodyCslrSalesOrderNumber}">Jan</span></li>
+                            <li>Shipment Date: <span th:text="${data.actualDispatchDate}">Jan</span></li>
+                            <li>Delivery Partner: <span th:text="${data.carrierName}">Jan</span></li>
+                            <li>Tracking ID: <span th:text="${data.commaSeperatedTraNums}">Jan</span></li>
+                            <li>Delivery Address: <span th:text="${data.custbodyCslrAddress1}"></span>
+                              <span th:text="${data.custbodyCslrAddress2}"></span>
+                              <span th:text="${data.custbodyCslrCity}"></span>
+                              <span th:text="${data.custbodyCslrState}"></span>
+                              <span th:text="${data.custbodyCslrZip}"></span>
+                            </li>
+                            <li>Contact: <span th:text="${data.custbodyCslrPhone}"></span> <span th:text="${data.custbodyCslrAlternativePhone}"></span></li>
                           </ul>
                         </div>
                       </td>

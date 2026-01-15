@@ -126,7 +126,7 @@
         </mj-text>
 
         <mj-button  background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="10px">
-          <a style="text-decoration: none;" th:href="${tracking.shipmentMilestoneUrl}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+          <a style="text-decoration: none;" th:href="${data.shipmentMilestoneUrl}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
           </a>
         </mj-button>
         <mj-text font-size="16px" color="#F7F3E7" align="center" padding="20px 0 0">
@@ -253,7 +253,7 @@
     <mj-section background-color="#773925" padding="0 0 16px">
       <mj-column>
         <mj-text font-size="13px" color="#F7F3E7" align="center" line-height="1.2">
-          Mailing Address: 1 Giltspur Street Farringdon, London United Kingdom, EC1A 9DD
+         <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #F7F3E7 !important;line-height: 1;"> Mailing Address: 1 Giltspur Street Farringdon, London United Kingdom, EC1A 9DD</a>
         </mj-text>
       </mj-column>
     </mj-section>

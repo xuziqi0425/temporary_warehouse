@@ -262,7 +262,7 @@
     <mj-section background-color="#773925" padding="0 0 16px">
       <mj-column>
         <mj-text font-size="13px" color="#F7F3E7" align="center" line-height="1.2">
-          Mailing Address: 333 Bay Street, Suite 2400, Toronto, Ontario, M5H 2T6, Canada
+          <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #F7F3E7 !important;line-height: 1;">Mailing Address: 333 Bay Street, Suite 2400, Toronto, Ontario, M5H 2T6, Canada</a>
         </mj-text>
       </mj-column>
     </mj-section>

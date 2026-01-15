@@ -116,20 +116,20 @@
                 </colgroup>
                 <!-- Table Header -->
                 <tr>
-                  <th style="line-height: 1.2;text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+                  <th style="line-height: 1.2;text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
                     TOTAL NO. OF PACKAGES </th>
-                  <th style="line-height: 1.2;text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
+                  <th style="line-height: 1.2;text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;">
                     VOLUME</th>
-                  <th style="line-height: 1.2;text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
+                  <th style="line-height: 1.2;text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
                     WEIGHT </th>
                 </tr>
                 <#list transaction.item as itemLine>
                   <tr style="font-size: 16px;text-align: center;color: #3A131F;">
-                    <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;line-height: 1;'>
+                    <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;line-height: 1; padding-top: 10px;'>
                       ${transaction.custbody_cslr_total_no_of_packages}
                     </td>
-                    <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F;">${transaction.custbody_cslr_total_volume} M3</td>
-                    <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F;">${transaction.custbody_cslr_total_gross_weight} KG</td>
+                    <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F; padding-top: 10px;">${transaction.custbody_cslr_total_volume} M3</td>
+                    <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F; padding-top: 10px;">${transaction.custbody_cslr_total_gross_weight} KG</td>
                   </tr>
                 </#list>
               </table>
