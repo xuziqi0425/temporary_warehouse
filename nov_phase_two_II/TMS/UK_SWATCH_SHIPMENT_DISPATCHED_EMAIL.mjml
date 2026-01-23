@@ -133,6 +133,7 @@
                 SHIPPING ADDRESS
               </div>
               <div style="font-family: Aime,'New York', 'TimesNewRoman', 'Times New Roman'; font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;">
+               <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">
                <span th:text="${data.custbodyCslrAddress1}"></span>
                 <span th:if="${#strings.length(data.custbodyCslrAddress2) != 0 }">
                     <span th:text="${data.custbodyCslrAddress2}">***</span> <br />
@@ -140,6 +141,7 @@
                 <span th:text="${data.custbodyCslrCity}">***</span> 
                 <span th:text="${data.custbodyCslrState}">***</span>
                 <span th:text="${data.custbodyCslrZip}">***</span>
+                </a>
               </div>
             </td>
           </tr>

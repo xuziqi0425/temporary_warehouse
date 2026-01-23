@@ -318,18 +318,22 @@
                             <td class="tableLabel" align="right"> EMAIL </td>
                             <td>&nbsp;</td>
                             <td align="left" style="padding:0 5px 30px;" valign="top">
-                              <span th:text="${data.customerEmail}"></span>
+                              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">
+                                <span th:text="${data.customerEmail}"></span>
+                              </a>
                             </td>
                           </tr>
                           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
                             <td class="tableLabel" align="right"> SHIPPING ADDRESS </td>
                             <td>&nbsp;</td>
                             <td align="left" padding="0 5px" valign="top">
-                              <span th:text="${data.custbodyCslrAddress1}"></span>
-                              <span th:text="${data.custbodyCslrAddress2}"></span>
-                              <span th:text="${data.custbodyCslrCity}"></span>
-                              <span th:text="${data.custbodyCslrState}"></span>
-                              <span th:text="${data.custbodyCslrZip}"></span>
+                              <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">
+                                <span th:text="${data.custbodyCslrAddress1}"></span>
+                                <span th:text="${data.custbodyCslrAddress2}"></span>
+                                <span th:text="${data.custbodyCslrCity}"></span>
+                                <span th:text="${data.custbodyCslrState}"></span>
+                                <span th:text="${data.custbodyCslrZip}"></span>
+                              </a>
                             </td>
                           </tr>
                         </table>
@@ -365,7 +369,7 @@
                           <ul class="mobile-ul">
                             <li> Delivery slots are subject to availability. Specific date or time requests may incur additional charges. </li>
                             <br>
-                            <li> To track your delivery, contact BJS Home Delivery at 01922 645850 or customerservice@bjshomedelivery.com, quoting your shipment number. </li>
+                            <li> To track your delivery, contact <span th:text="${data.carrierName}"></span> at <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"><span th:text="${data.carrierPhone}"></span></a> or <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">customerservice@bjshomedelivery.com</a>, quoting your shipment number. </li>
                             <br>
                             <li> Please inform Castlery of any residential restrictions (e.g., narrow stairways, parking limitations, or vehicle height limits) upon receiving this email. </li>
                             <br>

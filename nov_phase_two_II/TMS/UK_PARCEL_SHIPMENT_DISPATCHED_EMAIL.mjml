@@ -130,10 +130,30 @@
             <li>Contact: <span th:text="${data.custbodyCslrPhone}"></span> <span th:text="${data.custbodyCslrAlternativePhone}"></span></li>
           </ul>
         </mj-text>
-        <mj-button background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="10px">
-          <a style="text-decoration: none;" th:href="${tracking.trackingLink}"><span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
-          </a>
-        </mj-button>
+          <mj-raw>
+          <div th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="center" style="padding-top: 10px;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="center" style="font-size: 28px; color: #F7F3E7; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;">
+                        Tracking <span th:text="${tracking.custrecordCslrTrackingNumber}"></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding-top: 10px;">
+                        <a th:href="${tracking.trackingLink}" style="display: inline-block; text-decoration: none; background-color: transparent; border: 1px solid #f7f3e7; width: 260px; height: 27px; border-radius: 2px; padding: 10px; text-align: center; line-height: 27px;">
+                          <span style="font-size: 12px; color: #f7f3e7; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </mj-raw>
         <mj-text font-size="28px" color="#F7F3E7" align="center" padding-top="28px">
           A few things to note
         </mj-text>
@@ -148,7 +168,7 @@
           Your order is almost home—thank you for choosing Castlery. We can’t wait for you to unbox it.
           <br />
           <br />
-          P.S. We’d love to see your new piece at home! Tag us <u style="color: #9BA3C1">@castleryuk</u> to share your space.
+           <em>P.S.</em> We’d love to see your new piece at home! Tag us <u style="color: #9BA3C1">@castleryuk</u> to share your space.
         </mj-text>
       </mj-column>
     </mj-section>

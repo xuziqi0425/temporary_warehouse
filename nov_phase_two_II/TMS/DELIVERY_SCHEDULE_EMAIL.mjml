@@ -73,7 +73,7 @@
           Your order is ready to go.
         </mj-text>
         <mj-text font-size="28px" color="#9BA3C1" font-style="italic" align="center" padding="32px 0 14px">
-          Hi <span th:text="${data.customerFirstname}"></span> <span th:text="${event.params.customerName}"></span>,
+          Hi <span th:text="${event.params.customerName}"></span>,
         </mj-text>
         <mj-text color="#F7F3E7" align="center" padding-bottom="21px">
           Your order is ready for dispatch.​ Book a delivery slot below to receive it!​
@@ -117,7 +117,7 @@
             </li>
             <br>
             <li>
-              To avoid extra fees, any scheduling changes must be made at least 5 business days (Mon-Fri, 10am-6pm) before the scheduled delivery date. For more details, please read our <a href="https://www.castlery.com/sg/sales-and-refunds" target="_blank" style="color:#bf522b">Terms and Conditions</a>.
+              To avoid extra fees, any scheduling changes must be made at least 5 business days <a href="javascript:void(0)" style="color:#bf522b">(Mon-Fri, 10am-6pm)</a> before the scheduled delivery date. For more details, please read our <a href="https://www.castlery.com/sg/sales-and-refunds" target="_blank" style="color:#bf522b">Terms and Conditions</a>.
             </li>
 
           </ul>
@@ -161,13 +161,13 @@
       </mj-column>
     </mj-section>
 
-    <!-- <mj-section background-color="#773925" padding="0 0 16px">
+    <mj-section background-color="#773925" padding="0 0 16px">
       <mj-column>
         <mj-text font-size="13px" color="#F7F3E7" align="center" line-height="1.2">
-          Mailing Address: 1 Giltspur Street Farringdon, London United Kingdom, EC1A 9DD
+         <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #F7F3E7 !important;line-height: 1;"> Mailing Address: 601 MacPherson Road #07-01 Singapore 368242</a>
         </mj-text>
       </mj-column>
-    </mj-section> -->
+    </mj-section>
 
     <mj-section background-color="#773925" padding="0 0 52px">
       <mj-column>

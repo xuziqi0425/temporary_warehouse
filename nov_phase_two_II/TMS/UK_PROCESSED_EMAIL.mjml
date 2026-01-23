@@ -124,7 +124,9 @@
             </td>
             <td>&nbsp;</td>
             <td align="left" style="padding:0 5px 30px;" valign="top">
+             <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">
               <span th:text="${data.customerEmail}"></span>
+              </a>
             </td>
           </tr>
           <tr style="font-size: 15px;text-align: center;color: #3A131F;">
@@ -133,11 +135,13 @@
             </td>
             <td>&nbsp;</td>
             <td align="left" padding="0 5px" valign="top">
+            <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">
               <span th:text="${data.custbodyCslrAddress1}"></span>
               <span th:text="${data.custbodyCslrAddress2}"></span>
               <span th:text="${data.custbodyCslrCity}"></span>
               <span th:text="${data.custbodyCslrState}"></span>
               <span th:text="${data.custbodyCslrZip}"></span>
+              </a>
             </td>
           </tr>
         </mj-table>
@@ -155,7 +159,7 @@
             </li>
             <br>
             <li>
-              To track your delivery, contact BJS Home Delivery at 01922 645850 or customerservice@bjshomedelivery.com, quoting your shipment number.
+              To track your delivery, contact <span th:text="${data.carrierName}"></span> at <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"><span th:text="${data.carrierPhone}"></span></a> or <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">customerservice@bjshomedelivery.com</a>, quoting your shipment number.
             </li>
             <br>
             <li>

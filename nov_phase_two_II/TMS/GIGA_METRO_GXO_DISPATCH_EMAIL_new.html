@@ -342,7 +342,7 @@
                             <br />
                             <li>A signature is required upon delivery.​</li>
                             <br />
-                            <li>For updates, you can track your order via the link above or call Gigacloud at (626)626-4228.​</li>
+                            <li>For updates, you can track your order via the link above or call <span th:text="${data.carrierName}"></span> at <span th:text="${data.carrierPhoneNumber}"></span>.​</li>
                           </ul>
                         </div>
                       </td>
@@ -350,7 +350,8 @@
                     <tr>
                       <td align="center" style="font-size:0px;padding:20px 14px 0;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Your order is almost home—thank you for choosing Castlery. We can’t wait for you to unbox it. <br />
-                          <br /> P.S. We’d love to see your new piece at home! Tag us <span style="color: #9BA3C1;">@castleryus</span> to share your space.
+                          <br />
+                          <em>P.S.</em> We’d love to see your new piece at home! Tag us <span style="color: #9BA3C1;">@castleryus</span> to share your space.
                         </div>
                       </td>
                     </tr>
@@ -536,7 +537,9 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1.2;text-align:center;color:#F7F3E7;"> Mailing Address: 1950 W. Corporate Way PMB 95972, Anaheim, CA 92801</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1.2;text-align:center;color:#F7F3E7;">
+                          <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #F7F3E7 !important;line-height: 1;"> Mailing Address: 1950 W. Corporate Way PMB 95972, Anaheim, CA 92801</a>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
