@@ -145,7 +145,7 @@
               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
                 TRACK MY SHIPMENT
               </div>
-              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px;font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;">
                 <span th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
                   <span th:text="${tracking.custrecordCslrTrackingNumber}">**</span><br />
                 </span>
@@ -156,7 +156,7 @@
               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
                 SHIPPING ADDRESS
               </div>
-              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px;font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;">
                 <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">
                 <span th:text="${data.custbodyCslrAddress1}"></span>
                 <br />
@@ -177,7 +177,7 @@
               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
                  TRACK MY SHIPMENT
               </div>
-              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px;font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;">
                 <span th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
                     <span th:text="${tracking.custrecordCslrTrackingNumber}">**</span><br/>
                   </span>
@@ -195,7 +195,7 @@
               <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
                 SHIPPING ADDRESS
               </div>
-              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px">
+              <div style="font-size: 16px; color: #3A131F; line-height: 1.3; text-align: center;padding:0 30px;font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif, serif;">
                 <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">
                 <span th:text="${data.custbodyCslrAddress1}"></span>
                 <br />
