@@ -95,7 +95,7 @@
             </th>
           </tr>
           <span th:each="itemLine:${data.items}">
-            <tr style="font-size: 15px;text-align: center;color: #3A131F;">
+            <tr style="font-size: 15px;text-align: center;color: #3A131F;line-height: 1;">
               <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
  <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> <span th:text="${itemLine.id}">***</span> </a>
               </td>
