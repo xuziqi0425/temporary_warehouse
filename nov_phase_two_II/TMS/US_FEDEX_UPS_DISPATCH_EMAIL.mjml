@@ -26,7 +26,9 @@
       * {
         font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
       }
-
+body{
+  background-color: #773925 !important;
+}
       a {
         color: #D25C1B;
         cursor: pointer;
@@ -89,7 +91,7 @@
     </mj-section>
 
     <!-- order details -->
-    <mj-section padding="14px 0 0px" background-color="#F6F3E7">
+    <mj-section padding="30px 0 0px" background-color="#F6F3E7">
       <mj-column>
         <mj-text font-size="28px" align="center" color="#3A131F" padding="0 0 2px">
           Order #<span th:text="${data.custbodyCslrSalesOrderNumber}">***</span>
@@ -143,8 +145,8 @@
                     </tr>
                     <tr>
                       <td align="center" style="padding-top: 10px;">
-                        <a th:href="${tracking.trackingLink}" style="display: inline-block; text-decoration: none; background-color: transparent; border: 1px solid #f7f3e7; width: 260px; height: 27px; border-radius: 2px; padding: 10px; text-align: center; line-height: 27px;">
-                          <span style="font-size: 12px; color: #f7f3e7; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+                        <a th:href="${tracking.trackingLink}" style="display: inline-block; text-decoration: none; background-color: transparent; border: 1px solid #f7f3e7; width: 260px; border-radius: 2px; padding:10px; text-align: center;">
+                          <span style="font-size: 12px; color: #f7f3e7; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; letter-spacing: 0.15em;line-height: 1;vertical-align: middle;"> TRACK SHIPMENT </span>
                         </a>
                       </td>
                     </tr>
@@ -169,7 +171,7 @@
           Your order is almost home—thank you for choosing Castlery. We can’t wait for you to unbox it.
           <br />
           <br />
-           <em>P.S.</em> We’d love to see your new piece at home! Tag us <span style="color: #9BA3C1;">@castleryus</span> to share your space.
+           <em>P.S.</em> We’d love to see your new piece at home! Tag us <a style="color: #9BA3C1 !important;text-decoration: underline !important;" href="http://www.instagram.com/castleryus" >@castleryus</a> to share your space.
         </mj-text>
       </mj-column>
     </mj-section>

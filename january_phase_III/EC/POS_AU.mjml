@@ -63,7 +63,9 @@
         .desktop-text {
           display: '';
         }
-
+        .mobile-width {
+          width: 65px !important;
+        }
         .mobile-text {
           display: inline;
         }
@@ -128,10 +130,10 @@
                 <colgroup>
                   <col style="width: 103px" />
 
-                  <col style="width: 300px" />
+                  <col  />
                 </colgroup>
                 <tr style="font-size: 12px;text-align: center;color: #3A131F;">
-                  <td align="left" padding-right="40px" valign="bottom" style="color: #3A131F !important;line-height:1.2">     
+                  <td align="left" valign="bottom" style="color: #3A131F !important;line-height:1.2">     
                    <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> CASTLERY Pty Ltd<br />
                     Level 21, 233 Castlereagh St<br />
                     Sydney, NSW 2000<br />
@@ -139,17 +141,18 @@
                   </td>
 
                   <td align="right" valign="top">
-                    <mj-text>
-                      <span style="color: #D15D27;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION NO.</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;">{{ event.QuotationNumber }}</span>
-                    </mj-text>
+                    <span style="white-space: nowrap;">
+                      <span style="color: #D15D27;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 5px;">QUOTATION NO.</span> <span style="color: #3A131F;width: 80px;display:inline-block;text-align: left;" class="mobile-width">{{ event.QuotationNumber }}</span>
+                    </span>
                     <br />
-                    <mj-text style="display:inline-block;padding-top:5px;">
-                      <span style="color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION DATE</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;"> {{ event.QuotationDate }}</span>
-                    </mj-text>
+                    <span style="white-space: nowrap;">
+                      <span style="display:inline-block;padding-top:5px;color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 5px;">QUOTATION DATE</span> <span style="color: #3A131F;width: 80px;display:inline-block;text-align: left;" class="mobile-width"> {{ event.QuotationDate }}</span>
+                    </span>
                     <br />
-                    <mj-text style="display:inline-block;padding-top:5px;">
-                      <span style="color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION EXPIRY</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;"> 7 days</span>
-                    </mj-text>
+                    <span style="white-space: nowrap;">
+                      <span style="display:inline-block;padding-top:5px;color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 5px;">QUOTATION EXPIRY</span> <span style="color: #3A131F;width: 80px;display:inline-block;text-align: left;" class="mobile-width"> 7 days</span>
+                    </span>
+                    
                   </td>
                 </tr>
               </table>
@@ -159,10 +162,10 @@
         <mj-table width="100%" padding="0 10px 34px">
           <tr class='desktop-text'>
             <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
+              <div style="font-size:9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;">
                 SHIPPING ADDRESS
               </div>
-              <div style="font-size: 16px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
+              <div style="font-size: 12px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
               <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> 
                  {{ event.ShippingAddress.FirstName }} {{ event.ShippingAddress.LastName }} <br />
                   {{ event.ShippingAddress.Address1 }} <br />
@@ -177,10 +180,10 @@
             </td>
             <td style="width: 4%;">&nbsp;</td>
             <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-              <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
+              <div style="font-size:9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;">
                 BILLING ADDRESS
               </div>
-              <div style="font-size: 16px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
+              <div style="font-size: 12px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
               <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> 
                 {{ event.BillingAddress.FirstName }} {{ event.BillingAddress.LastName }} <br />
                 {{ event.BillingAddress.Address1 }} <br />
@@ -212,8 +215,8 @@
                   <col style="width: 50px" />
                 </colgroup>
                 <!-- Table Header -->
-                <tr>
-                  <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;line-height: 1;">
+                <tr style="line-height: 1.1;vertical-align: bottom;">
+                  <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;word-break: normal !important;">
                     CUSTOMER ACCOUNT </th>
                   <th style="padding-left: 10px;text-align: center; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;">
                     CONTACT</th>
@@ -224,7 +227,7 @@
                 </tr>
 
                 <tr style="font-size: 12px;text-align: center;color: #3A131F;line-height: 1;">
-                  <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                  <td align="center" valign="top" style='color: #3A131F !important;'>
                      <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> {{ person.FirstName }} {{ person.LastName }} ({{ person.email }}) </a>
                   </td>
                   <td align="center" valign="top" style='color: #3A131F !important;padding-left: 10px;'> <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> {{ event.ShippingAddress.Phone }} </a> </td>
@@ -253,7 +256,7 @@
                   <col style="width: 50px" />
                 </colgroup>
                 <!-- Table Header -->
-                <tr>
+                <tr style="line-height: 1.1;vertical-align: bottom;">
                   <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;">
                     S/N </th>
                   <th style="text-align: center; font-size: 9px; padding-left: 10px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;min-width: 70px !important;">

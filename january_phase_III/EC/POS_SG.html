@@ -155,6 +155,10 @@
         display: '';
       }
 
+      .mobile-width {
+        width: 65px !important;
+      }
+
       .mobile-text {
         display: inline;
       }
@@ -262,24 +266,24 @@
                                 <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#3A131F;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;padding:0">
                                   <colgroup>
                                     <col style="width: 103px" />
-                                    <col style="width: 300px" />
+                                    <col />
                                   </colgroup>
                                   <tr style="font-size: 12px;text-align: center;color: #3A131F;">
-                                    <td align="left" padding-right="40px" valign="bottom" style="color: #3A131F !important;line-height:1.2">
+                                    <td align="left" valign="bottom" style="color: #3A131F !important;line-height:1.2">
                                       <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> CASTLERY Pte Ltd<br /> 601 Machpherson Road<br /> Singapore 368242<br /> GST Registration No. 201327477H</a>
                                     </td>
                                     <td align="right" valign="top">
-                                      <mj-text>
-                                        <span style="color: #D15D27;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION NO.</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;">{{ event.QuotationNumber }}</span>
-                                      </mj-text>
+                                      <span style="white-space: nowrap;">
+                                        <span style="color: #D15D27;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 5px;">QUOTATION NO.</span> <span style="color: #3A131F;width: 80px;display:inline-block;text-align: left;" class="mobile-width">{{ event.QuotationNumber }}</span>
+                                      </span>
                                       <br />
-                                      <mj-text style="display:inline-block;padding-top:5px;">
-                                        <span style="color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION DATE</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;"> {{ event.QuotationDate }}</span>
-                                      </mj-text>
+                                      <span style="white-space: nowrap;">
+                                        <span style="display:inline-block;padding-top:5px;color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 5px;">QUOTATION DATE</span> <span style="color: #3A131F;width: 80px;display:inline-block;text-align: left;" class="mobile-width"> {{ event.QuotationDate }}</span>
+                                      </span>
                                       <br />
-                                      <mj-text style="display:inline-block;padding-top:5px;">
-                                        <span style="color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 15px;">QUOTATION EXPIRY</span> <span style="color: #3A131F;width: 90px;display:inline-block;text-align: left;"> See Remarks</span>
-                                      </mj-text>
+                                      <span style="white-space: nowrap;">
+                                        <span style="display:inline-block;padding-top:5px;color: #D15D27;line-height:1;font-size:9px;display:inline-block;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-right: 5px;">QUOTATION EXPIRY</span> <span style="color: #3A131F;width: 80px;display:inline-block;text-align: left;" class="mobile-width"> See Remarks</span>
+                                      </span>
                                     </td>
                                   </tr>
                                 </table>
@@ -290,8 +294,8 @@
                                 <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                                   <tr class='desktop-text'>
                                     <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                                      <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;"> SHIPPING ADDRESS </div>
-                                      <div style="font-size: 16px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
+                                      <div style="font-size:9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27; letter-spacing: 1px; margin-bottom: 8px;"> SHIPPING ADDRESS </div>
+                                      <div style="font-size: 12px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
                                         <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">
                                           {{ event.ShippingAddress.FirstName }} {{ event.ShippingAddress.LastName }} <br />
                                           {{ event.ShippingAddress.Address1 }} <br /> {% if event.ShippingAddress.Address2 is not none %} {{ event.ShippingAddress.Address2 }} <br /> {% else %} {% endif %} {{ event.ShippingAddress.Country }} {{ event.ShippingAddress.Zip}}
@@ -300,8 +304,8 @@
                                     </td>
                                     <td style="width: 4%;">&nbsp;</td>
                                     <td style="width: 48%;background-color: #F6F2E6;  text-align: center; vertical-align: top;padding:11px 0 15px 0;">
-                                      <div style="font-size:12px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> BILLING ADDRESS </div>
-                                      <div style="font-size: 16px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
+                                      <div style="font-size:9px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;color: #D15D27;  letter-spacing: 1px; margin-bottom: 8px;"> BILLING ADDRESS </div>
+                                      <div style="font-size: 12px; color: #3A131F; line-height: 1.2; text-align: center;padding:0 30px">
                                         <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;">
                                           {{ event.BillingAddress.FirstName }} {{ event.BillingAddress.LastName }} <br />
                                           {{ event.BillingAddress.Address1 }} <br /> {% if event.BillingAddress.Address2 is not none %} {{ event.BillingAddress.Address2 }} <br /> {% else %} {% endif %} {% if event.BillingAddress.Company is not none %} {{ event.BillingAddress.Company }} <br /> {% else %} {% endif %} {{ event.BillingAddress.Country }} {{ event.BillingAddress.Zip}}
@@ -322,8 +326,8 @@
                                     <col style="width: 50px" />
                                   </colgroup>
                                   <!-- Table Header -->
-                                  <tr>
-                                    <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;line-height: 1;"> CUSTOMER ACCOUNT </th>
+                                  <tr style="line-height: 1.1;vertical-align: bottom;">
+                                    <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;word-break: normal !important;"> CUSTOMER ACCOUNT </th>
                                     <th style="padding-left: 10px;text-align: center; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> CONTACT</th>
                                     <th style="padding-left: 10px;text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> SALES REP </th>
                                     <th style="padding-left: 10px;text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> CURRENCY </th>
@@ -372,18 +376,20 @@
                                   <colgroup>
                                     <col style="width: 45px" />
                                     <col style="width: 120px" />
-                                    <col style="width: 180px" />
+                                    <col style="width: 150px" />
                                     <col style="width: 70px" />
+                                    <col style="width: 40px" />
                                     <col style="width: 40px" />
                                     <col style="width: 50px" />
                                   </colgroup>
                                   <!-- Table Header -->
-                                  <tr>
+                                  <tr style="line-height: 1.1;vertical-align: bottom;">
                                     <th style="text-align: center; font-size: 9px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;"> S/N </th>
                                     <th style="text-align: center; font-size: 9px; padding-left: 10px;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;line-height: 1.1;min-width: 70px !important;"> LEAD TIME </th>
-                                    <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;"> ITEM DESCRIPTION</th>
-                                    <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;"> UNIT PRICE </th>
+                                    <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;word-break: normal !important;"> ITEM DESCRIPTION</th>
+                                    <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;word-break: normal !important;"> UNIT PRICE </th>
                                     <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;"> QTY </th>
+                                    <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;"> DISCOUNT </th>
                                     <th style="text-align: center; font-size: 9px; padding-left: 10px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #3A131F;white-space: nowrap;"> SUBTOTAL </th>
                                   </tr> {% for item in event.Items %} <tr style="font-size: 12px;text-align: center;color: #3A131F;line-height: 1;">
                                     <td align="center" valign="top" style='color: #3A131F !important;padding-bottom: 10px;'>
@@ -397,6 +403,7 @@
                                       {{ item.UnitPrice.DiscountUnitPrice }}
                                     </td>
                                     <td align="center" valign="top" style="color: #3A131F;padding:0 10px 10px;"> {{ item.Quantity }}</td>
+                                    <td align="center" valign="top" style="padding:0 10px 10px;"> {{ item.Discount | floatformat:2 }}</td>
                                     <td align="center" valign="top" style="padding:0 10px 10px;"> ${{ item.SellPrice | floatformat:2 }} </td>
                                   </tr> {% endfor %}
                                 </table>
@@ -416,7 +423,7 @@
                                   <tr>
                                     <td style="padding: 8px 0; text-align: right; font-size: 9px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; color: #3A131F; width: 80%;letter-spacing: 0.15em;"> ITEM SUBTOTAL </td>
                                     <td style="padding: 8px 0; text-align: right; font-size: 12px; font-family: 'Aime','New York', 'TimesNewRoman', 'Times New Roman',Georgia, serif, serif; color: #3A131F; width: 20%; white-space: nowrap;">
-                                      {{ event.OrderTotal.DisplayTotal }}
+                                      {{ event.OrderTotal.ItemSubtotal }}
                                     </td>
                                   </tr>
                                   <tr>

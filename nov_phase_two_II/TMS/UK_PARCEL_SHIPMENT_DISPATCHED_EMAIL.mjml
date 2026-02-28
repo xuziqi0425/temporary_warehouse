@@ -90,7 +90,7 @@
     </mj-section>
 
     <!-- order details -->
-    <mj-section padding="14px 0 0px" background-color="#F6F3E7">
+    <mj-section padding="30px 0 0px" background-color="#F6F3E7">
       <mj-column>
         <mj-text font-size="28px" align="center" color="#3A131F" padding="0 0 2px">
           Order #<span th:text="${data.custbodyCslrSalesOrderNumber}">***</span>
@@ -168,7 +168,7 @@
           Your order is almost home—thank you for choosing Castlery. We can’t wait for you to unbox it.
           <br />
           <br />
-           <em>P.S.</em> We’d love to see your new piece at home! Tag us <u style="color: #9BA3C1">@castleryuk</u> to share your space.
+           <em>P.S.</em> We’d love to see your new piece at home! Tag us <a style="color: #9BA3C1 !important;text-decoration: underline !important;" href="https://www.instagram.com/castleryuk" >@castleryuk</a> to share your space.
         </mj-text>
       </mj-column>
     </mj-section>

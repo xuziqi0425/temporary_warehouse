@@ -22,6 +22,9 @@
         font-style: normal;
         font-display: swap;
       }
+      body{
+        background-color: #773925 !important;
+      }
 
       * {
         font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
@@ -90,7 +93,7 @@
           Shipment #<span th:text="${data.tranid}"></span>
         </mj-text>
         <!-- Order Items Table -->
-        <mj-include path="../../nov_phase_two_II/components/itemTable.mjml" />
+        <mj-include path="../../nov_phase_two_II/components/tmsItemTable.mjml" />
       </mj-column>
     </mj-section>
 
@@ -111,18 +114,36 @@
             <li>Tracking #: <span th:text="${data.commaSeperatedTraNums}"></span></li>
             <li>Delivery Estimate: 3-5 business days</li>
             <li>Delivery Address:
+            <a style="color: #F7F3E7 !important;text-decoration: none !important;cursor:text;" href="javascript:void(0)">
               <span th:text="${data.custbodyCslrAddress1}"></span>
               <span th:text="${data.custbodyCslrAddress2}"></span>
               <span th:text="${data.custbodyCslrCity}"></span>
               <span th:text="${data.custbodyCslrState}"></span>
               <span th:text="${data.custbodyCslrZip}"></span>
+              </a>
             </li>
             <li>Contact: 8184582400</li>
           </ul>
         </mj-text>
-        <mj-button background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 45px ">
-          <a style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;text-decoration: none;" th:href="${tracking.trackingLink}"> TRACK SHIPMENT </a>
-        </mj-button>
+              <mj-raw>
+          <div th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="center" style="padding-top: 10px;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="center" style="padding-top: 10px;">
+                        <a th:href="${tracking.trackingLink}" style="display: inline-block; text-decoration: none; background-color: transparent; border: 1px solid #f7f3e7; width: 260px;  border-radius: 2px; padding: 10px; text-align: center;">
+                          <span style="font-size: 12px; color: #f7f3e7; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </mj-raw>
         <mj-text font-size="27px" color="#F7F3E7" align="center" padding-top="0">
           A few things to note
         </mj-text>
@@ -138,7 +159,7 @@
           </ul>
           Your order is almost home—thank you for choosing Castlery. We can’t wait for you to unbox it.
           <br /><br />
-          P.S. We’d love to see your new piece at home! Tag us <a href="https://www.instagram.com/castlery/" style="color:#9BA3C1;text-decoration: underline;">@castlery</a> to share your space.
+          <em>P.S.</em> We’d love to see your new piece at home! Tag us <a href="http://www.instagram.com/castleryCA" style="color:#9BA3C1;text-decoration: underline;">@castleryca</a> to share your space.
         </mj-text>
 
       </mj-column>
@@ -154,7 +175,7 @@
           Any questions?
         </mj-text>
         <mj-button href="https://www.castlery.com/ca/help-center" background-color="transparent" border="1px solid #f7f3e7" width="260px" height="27px" border-radius="2px" padding="30px 10px 28px ">
-          <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> READ OUR FAQ </span>
+          <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;">EXPLORE OUR FAQ </span>
         </mj-button>
       </mj-column>
     </mj-section>

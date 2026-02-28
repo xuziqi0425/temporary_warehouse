@@ -115,6 +115,10 @@
       font-display: swap;
     }
 
+    body {
+      background-color: #773925 !important;
+    }
+
     * {
       font-family: 'Aime', 'New York', 'TimesNewRoman', 'Times New Roman', Georgia, serif;
     }
@@ -236,17 +240,21 @@
                                   </colgroup>
                                   <!-- Table Header -->
                                   <tr>
-                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM ID </th>
-                                    <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM NAME </th>
-                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> QUANTITY </th>
+                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.2em;font-weight: 400;color: #D15D27;"> ITEM ID </th>
+                                    <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.2em;font-weight: 400;color: #D15D27;"> ITEM NAME </th>
+                                    <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.2em;font-weight: 400;color: #D15D27;white-space: nowrap;"> QUANTITY </th>
                                   </tr>
                                   <span th:each="itemLine:${data.item}">
-                                    <tr style="font-size: 16px;text-align: center;color: #3A131F;">
-                                      <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;padding-top: 10px;'>
-                                        <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> ${itemLine.item} </a>
+                                    <tr style="font-size: 15px;text-align: center;color: #3A131F;line-height: 1;">
+                                      <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
+                                        <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> <span th:text="${itemLine.item}">***</span> </a>
                                       </td>
-                                      <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F ;padding-top: 10px;"> ${itemLine.description} </td>
-                                      <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F ;padding-top: 10px;"> ${itemLine.quantity} </td>
+                                      <td align="center" padding="0 5px" valign="top">
+                                        <span th:text="${itemLine.description}">***</span>
+                                      </td>
+                                      <td align="center" padding="0 5px" valign="top">
+                                        <span th:text="${itemLine.quantity}">***</span>
+                                      </td>
                                     </tr>
                                   </span>
                                 </table>
@@ -291,32 +299,36 @@
                             <li>Delivery Partner: <span th:text="${data.carrierName}"></span></li>
                             <li>Tracking #: <span th:text="${data.commaSeperatedTraNums}"></span></li>
                             <li>Delivery Estimate: 3-5 business days</li>
-                            <li>Delivery Address: <span th:text="${data.custbodyCslrAddress1}"></span>
-                              <span th:text="${data.custbodyCslrAddress2}"></span>
-                              <span th:text="${data.custbodyCslrCity}"></span>
-                              <span th:text="${data.custbodyCslrState}"></span>
-                              <span th:text="${data.custbodyCslrZip}"></span>
+                            <li>Delivery Address: <a style="color: #F7F3E7 !important;text-decoration: none !important;cursor:text;" href="javascript:void(0)">
+                                <span th:text="${data.custbodyCslrAddress1}"></span>
+                                <span th:text="${data.custbodyCslrAddress2}"></span>
+                                <span th:text="${data.custbodyCslrCity}"></span>
+                                <span th:text="${data.custbodyCslrState}"></span>
+                                <span th:text="${data.custbodyCslrZip}"></span>
+                              </a>
                             </li>
                             <li>Contact: 8184582400</li>
                           </ul>
                         </div>
                       </td>
                     </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:30px 10px 45px ;word-break:break-word;">
-                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;width:260px;line-height:100%;">
-                          <tbody>
-                            <tr>
-                              <td align="center" bgcolor="transparent" role="presentation" style="border:1px solid #f7f3e7;border-radius:2px;cursor:auto;height:27px;mso-padding-alt:10px 25px;background:transparent;" valign="middle">
-                                <p style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;">
-                                  <a style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;text-decoration: none;" th:href="${tracking.trackingLink}"> TRACK SHIPMENT </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
+                    <div th:each="tracking:${data.recmachcustrecordCslrTrackingParentRecord}">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td align="center" style="padding-top: 10px;">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td align="center" style="padding-top: 10px;">
+                                  <a th:href="${tracking.trackingLink}" style="display: inline-block; text-decoration: none; background-color: transparent; border: 1px solid #f7f3e7; width: 260px;  border-radius: 2px; padding: 10px; text-align: center;">
+                                    <span style="font-size: 12px; color: #f7f3e7; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif; letter-spacing: 0.15em;"> TRACK SHIPMENT </span>
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0;word-break:break-word;">
                         <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:27px;line-height:1;text-align:center;color:#F7F3E7;">A few things to note</div>
@@ -329,7 +341,8 @@
                             <li> Your delivery is handled by FedEx. For tracking, delivery updates, or special requests, use FedEx Delivery Manager to manage your delivery directly.<br /><br />
                             </li>
                             <li> If you’re not home at delivery, FedEx may leave your item safely at your door as part of their standard process. </li>
-                          </ul> Your order is almost home—thank you for choosing Castlery. We can’t wait for you to unbox it. <br /><br /> P.S. We’d love to see your new piece at home! Tag us <a href="https://www.instagram.com/castlery/" style="color:#9BA3C1;text-decoration: underline;">@castlery</a> to share your space.
+                          </ul> Your order is almost home—thank you for choosing Castlery. We can’t wait for you to unbox it. <br /><br />
+                          <em>P.S.</em> We’d love to see your new piece at home! Tag us <a href="http://www.instagram.com/castleryCA" style="color:#9BA3C1;text-decoration: underline;">@castleryca</a> to share your space.
                         </div>
                       </td>
                     </tr>
@@ -391,7 +404,7 @@
                             <tr>
                               <td align="center" bgcolor="transparent" role="presentation" style="border:1px solid #f7f3e7;border-radius:2px;cursor:auto;height:27px;mso-padding-alt:10px 25px;background:transparent;" valign="middle">
                                 <a href="https://www.castlery.com/ca/help-center" style="display:inline-block;width:208px;background:transparent;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:2px;" target="_blank">
-                                  <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;"> READ OUR FAQ </span>
+                                  <span style="font-size: 12px;color: #f7f3e7;font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;">EXPLORE OUR FAQ </span>
                                 </a>
                               </td>
                             </tr>
@@ -515,7 +528,9 @@
                   <tbody>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1.2;text-align:center;color:#F7F3E7;"> Mailing Address: 333 Bay Street, Suite 2400, Toronto, Ontario, M5H 2T6, Canada</div>
+                        <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:13px;line-height:1.2;text-align:center;color:#F7F3E7;">
+                          <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #F7F3E7 !important;line-height: 1;"> Mailing Address: 333 Bay Street, Suite 2400, Toronto, Ontario, M5H 2T6, Canada</a>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
