@@ -237,17 +237,17 @@
                           </colgroup>
                           <!-- Table Header -->
                           <tr>
-                            <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM ID </th>
-                            <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM NAME </th>
-                            <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;padding-bottom: 10px;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> QUANTITY </th>
+                            <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM ID </th>
+                            <th style="text-align: center; font-size: 11px; font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;"> ITEM NAME </th>
+                            <th style="text-align: center; font-size: 11px;  font-family: 'SanomatSans','Century Gothic','CenturyGothic','AppleGothic',sans-serif;letter-spacing: 0.15em;font-weight: 400;color: #D15D27;white-space: nowrap;"> QUANTITY </th>
                           </tr>
                           <#list transaction.item as itemLine>
                             <tr style="font-size: 16px;text-align: center;color: #3A131F;">
-                              <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;'>
-                                <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;"> ${itemLine.item} </a>
+                              <td align="center" padding-right="40px" valign="top" style='color: #3A131F !important;padding-top: 10px;'>
+                                <a href="javascript:void(0)" style="text-decoration:none;cursor:text;color: #3A131F !important;line-height: 1;"> ${itemLine.item} </a>
                               </td>
-                              <td align="center" padding="0 5px" valign="top" style="line-height: 1.2;color: #3A131F ;"> ${itemLine.description} </td>
-                              <td align="center" padding="0 5px" valign="top"> ${itemLine.quantity} </td>
+                              <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F ;padding-top: 10px;"> ${itemLine.description} </td>
+                              <td align="center" padding="0 5px" valign="top" style="line-height: 1;color: #3A131F ;padding-top: 10px;"> ${itemLine.quantity} </td>
                             </tr>
                           </#list>
                         </table>
@@ -283,7 +283,7 @@
                             </tr>
                             <tr>
                               <td align="center" style="font-size:0px;padding:15px 0px;word-break:break-word;">
-                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Good news! Your shipment has left our warehouse and is on its way to you. You can track it anytime with the details below:​</div>
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:17px;line-height:1.2;text-align:center;color:#F7F3E7;">Good news! Your shipment has left our warehouse and is on its way to you. You can follow its journey anytime using the tracking link below.</div>
                               </td>
                             </tr>
                             <tr>
@@ -293,7 +293,9 @@
                             </tr>
                             <tr>
                               <td align="center" style="font-size:0px;padding:0 0px 25px;word-break:break-word;">
-                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:25px;line-height:1.2;text-align:center;color:#F7F3E7;">Tracking <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine> #${trackingLine.custrecord_cslr_tracking_number} </#list>
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:25px;line-height:1.2;text-align:center;color:#F7F3E7;">Tracking <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine>
+                                    <a href="${trackingLine.trackingLink}" style="color: #F7F3E7 !important; text-decoration: none !important;">#${trackingLine.custrecord_cslr_tracking_number}</a>
+                                  </#list>
                                 </div>
                               </td>
                             </tr>

@@ -107,7 +107,7 @@
           Hi ${customer.firstname},
         </mj-text>
         <mj-text font-size="17px" color="#F7F3E7" align="center" line-height="1.2" padding="15px 0px">
-          Good news! Your shipment has left our warehouse and is on its way to you. You can track it anytime with the details below:​
+          Good news! Your shipment has left our warehouse and is on its way to you. You can follow its journey anytime using the tracking link below.
         </mj-text>
         <mj-text font-size="12px" color="#F7F3E7" align="center" line-height="1.2" padding="18px 0px 14px" font-family="SanomatSans,'Century Gothic','CenturyGothic','AppleGothic',sans-serif" letter-spacing="1px">
           TRACK ORDER
@@ -115,7 +115,7 @@
         <mj-text font-size="25px" color="#F7F3E7" align="center" line-height="1.2" padding="0 0px 25px">
           Tracking
           <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine>
-            #${trackingLine.custrecord_cslr_tracking_number}
+            <a href="${trackingLine.trackingLink}" style="color: #F7F3E7 !important; text-decoration: none !important;">#${trackingLine.custrecord_cslr_tracking_number}</a>
           </#list>
         </mj-text>
         <mj-text font-size="17px" align="center" color="#F7F3E7" padding="0 0px 25px">

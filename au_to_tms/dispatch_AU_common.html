@@ -293,7 +293,8 @@
                             </tr>
                             <tr>
                               <td align="center" style="font-size:0px;padding:0 0px 25px;word-break:break-word;">
-                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:25px;line-height:1.2;text-align:center;color:#F7F3E7;">Tracking <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine> #<span th:text="${trackingLine.custrecord_cslr_tracking_number}">***</span>
+                                <div style="font-family:Aime,'New York', 'TimesNewRoman', 'Times New Roman';font-size:25px;line-height:1.2;text-align:center;color:#F7F3E7;">Tracking <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine>
+                                    <a href="${trackingLine.custrecord_cslr_tracking_number}" style="color: #9da3bf !important; text-decoration: underline !important;">#<span th:text="${trackingLine.custrecord_cslr_tracking_number}">***</span></a>
                                   </#list>
                                 </div>
                               </td>

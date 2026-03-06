@@ -115,7 +115,7 @@
         <mj-text font-size="25px" color="#F7F3E7" align="center" line-height="1.2" padding="0 0px 25px">
           Tracking
           <#list transaction.recmachcustrecord_cslr_tracking_parent_record as trackingLine>
-            #<span th:text="${trackingLine.custrecord_cslr_tracking_number}">***</span>
+           <a href="${trackingLine.custrecord_cslr_tracking_number}" style="color: #9da3bf !important; text-decoration: underline !important;">#<span th:text="${trackingLine.custrecord_cslr_tracking_number}">***</span></a>
           </#list>
         </mj-text>
         <mj-text font-size="17px" align="center" color="#F7F3E7" padding="0 0px 25px">
