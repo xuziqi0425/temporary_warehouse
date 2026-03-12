@@ -119,7 +119,7 @@
           </#list>
         </mj-text>
         <mj-text font-size="17px" align="center" color="#F7F3E7" padding="0 0px 25px">
-          For delivery enquiries, reach out directly to our delivery partner at <a style="color: #9BA3C1 !important;text-decoration: underline !important;">To My Door</a> or call <a style="color: #9BA3C1 !important; text-decoration: none !important;">03 9133 4049</a> with your tracking number.
+          For delivery enquiries, reach out directly to our delivery partner at <a style="color: #9BA3C1 !important;text-decoration: underline !important;" href="https://www.tomydoor.com.au">To My Door</a> or call <a style="color: #9BA3C1 !important; text-decoration: none !important;">03 9133 4049</a> with your tracking number.
         </mj-text>
         <!-- Address Section -->
 
