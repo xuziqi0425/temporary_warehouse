@@ -595,13 +595,13 @@
       </mj-column>
     </mj-section>
 
-    <!-- <mj-section background-color="#773925" padding="0 0 30px">
+    <mj-section background-color="#773925" padding="0 0 30px">
       <mj-column>
         <mj-text font-size="13px" color="#F7F3E7" align="center">
-          Mailing Address: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          Mailing Address: 601 MacPherson Road #07-01 Singapore 368242
         </mj-text>
       </mj-column>
-    </mj-section> -->
+    </mj-section>
 
     <mj-section background-color="#773925" padding="0 0 44px">
       <mj-column>
